@@ -1,0 +1,132 @@
+/*----------------------------------------------------
+Colors: #42838D, #D45C4F, #F0A09A, #BE2D2A, #D7615E
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+
+---------------------------------------------------- */
+
+/*-------------------------KONIGELD BACKOFFICE CSS---------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+/*General CSS
+============================================================================================ */
+html *, html :after, html :before {
+    box-sizing: inherit;
+}
+
+.flex-align-left, .grid-align-left {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-pack: start!important;
+    justify-content: flex-start!important;
+}
+
+.flex-align-center, .grid-align-center {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
+.flex-align-right, .grid-align-right {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-pack: end!important;
+    justify-content: flex-end!important;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.icon, svg {
+    display: inline-block;
+}
+
+.pad-vert-small {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.content-width-extra-large, .content-width-large {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 868px !important;
+}
+
+/* Header CSS
+============================================================================================ */
+.content {
+    width: 276px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.konibanner {
+    height: 42px;
+    overflow: hidden;
+    color: #FFFFFF;
+    background-color: #D45C4F;
+}
+
+.konibanner .content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.konibanner .column {
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 4;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.konibanner .column-fill {
+    -ms-flex: 2;
+    flex: 2;
+}
+
+.konibanner .column > * {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.konibanner a {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: inherit!important;
+    line-height: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.konibanner a.logo svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* End Header CSS
+============================================================================================ */

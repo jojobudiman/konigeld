@@ -1,0 +1,40 @@
+/*font Variables*/
+$dos: 'Dosis', sans-serif;
+/*Color Variables*/
+
+$baseColor: #D45C4F;
+$pink : #F0A09A;
+$red : #BE2D2A;
+$secondColor : #D7615E;
+$white : #FFFFFF;
+$black : #000000;
+$dip: #0b1033;
+$blu : #42838D;
+//$gray: #757575;
+$pfont: #7c8d93;
+
+
+
+// Mixins
+@mixin transition($property: all, $duration: 400ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay;
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+.col-md-offset-right-1,.col-lg-offset-right-1{
+    margin-right: 8.33333333%;
+}
+// Font family link
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+//@font-face {
+//    font-family: "ralH";
+//    src: url(../fonts/theme-font/Arial.ttf.woff);
+//}

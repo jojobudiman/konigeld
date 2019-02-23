@@ -1,0 +1,347 @@
+/*----------------------------------------------------
+Colors: #42838D, #D45C4F, #F0A09A, #BE2D2A, #D7615E
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+
+---------------------------------------------------- */
+
+/*-------------------------KONIGELD MERCHANT DASHBOARD CSS---------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+/*General CSS
+============================================================================================ */
+html *, html :after, html :before {
+    box-sizing: inherit;
+}
+
+.koniboard * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 0;
+}
+
+/*End General CSS
+============================================================================================ */
+
+/*Navigation CSS
+============================================================================================ */
+
+.koniboard .header {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #42838D;
+    color: #FFFFFF;
+    z-index: 650;
+    font-size: 14px;
+    line-height: 1.715;
+}
+
+.koniboard .hamburger__trigger {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0 24px;
+    color: #aeb1b5;
+    background-color: inherit;
+}
+
+.koniboard .hamburger__trigger.hamburger__trigger--active, .koniboard .hamburger__trigger:hover {
+    color: #FFFFFF;
+}
+
+.koniboard button {
+    display: inline-block;
+    border: 0;
+    background: none;
+    font-size: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: auto;
+    padding: 0;
+    line-height: 1;
+}
+
+.koniboard .hamburger__trigger-icon {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.koniboard .hamburger__title {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.koniboard .hamburger {
+    min-width: 216px;
+    color: #fff;
+    background-color: #42838D;
+    position: relative;
+    font-size: 16px;
+}
+
+.koniboard .hamburger__blade {
+    position: fixed;
+    z-index: 100;
+    top: 56px;
+    left: -320px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    bottom: 0;
+    width: 320px;
+    border-left: 1px #000000 solid;
+    background: #fff;
+    color: #000000;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+}
+
+.koniboard .hamburger__blade.hamburger__blade--open {
+    -webkit-transform: translate3d(320px, 0, 0);
+    transform: translate3d(320px, 0, 0);
+}
+
+.koniboard .hamburger__blade.hamburger__blade--open.hamburger__blade--not-blocking {
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.2);
+}
+
+.koniboard .hamburger__blade .hamburger__content {
+    height: 100%;
+}
+
+.koniboard .hamburger__content {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.koniboard .hamburger__section {
+    padding: 24px 0 104px 16px;
+    width: 324px;
+}
+
+.koniboard .hamburger__section .hamburger__section__item-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-block;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.koniboard .hamburger__section__item-list {
+    min-height: 32px;
+}
+
+.koniboard a {
+    text-decoration: none;
+}
+
+.koniboard ul, .koniboard li {
+    margin: 0;
+    padding: 0;
+    list-style: none outside;
+}
+
+.koniboard .hamburger__section__item-list-item {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.koniboard .hamburger__section__item-list-item__icon {
+    margin: 20px 12px;
+    /*display: block;
+    width: 88px*/
+}
+
+.koniboard .hamburger__section__item-list-item__icon .hamburger__section__item-list-item__block {
+    display: inline-flex;
+}
+
+.koniboard .hamburger__section__item-list-item__block {
+    -webkit-transition: -webkit-transform .2s cubic-bezier(0.005, 1.425, 0.755, 1.235);
+    transition: -webkit-transform .2s cubic-bezier(0.005, 1.425, 0.755, 1.235);
+    transition: transform .2s cubic-bezier(0.005, 1.425, 0.755, 1.235);
+    transition: transform .2s cubic-bezier(0.005, 1.425, 0.755, 1.235), -webkit-transform .2s cubic-bezier(0.005, 1.425, 0.755, 1.235);
+}
+
+.koniboard .hamburger__section__item-list-item__block .hamburger__section__item-list-item__svg {
+    display: block;
+    margin: 4px auto 8px;
+    border-radius: 10px;
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.koniboard .hamburger__section__item-list-item__block .hamburger__section__item-list-item__svg {
+    fill: #000000;
+}
+
+.koniboard .hamburger__section__item-list-item__block .hamburger__section__item-list-item__label {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    padding-left: 15px;
+    line-height: normal;
+    text-align: center;
+    min-height: 32px;
+    color: #000000;
+}
+
+.koniboard .hamburger__section__item-list-item__label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.koniboard .header__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.koniboard .header__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    pointer-events: none;
+}
+
+.koniboard .header__actions__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 8px;
+}
+
+.koniboard .header__wrapper .header__logo {
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+.koniboard .header__flex-spacer {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.koniboard .header__button {
+    cursor: pointer;
+}
+
+.koniboard .account__container {
+    position: relative;
+}
+
+.koniboard .account-menu__trigger {
+    font-weight: 700;
+    cursor: pointer;
+    color: #FFFFFF;
+    height: 56px;
+    white-space: nowrap;
+    padding-right: 24px;
+}
+
+.koniboard button {
+    display: inline-block;
+    border: 0;
+    background: none;
+    font-size: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: auto;
+    padding: 0;
+    line-height: 1;
+}
+
+.koniboard .arrow-down {
+    position: relative;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+}
+
+.koniboard .arrow-down--point-down {
+    top: -3px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.koniboard .arrow-down--animated {
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*End Navigation CSS
+============================================================================================ */
