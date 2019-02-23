@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class dashboardcore extends CI_Controller {
+class dashboard-test extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,9 +20,9 @@ class dashboardcore extends CI_Controller {
 	 */
 
     function index() {
-        $this->load->view('mercss2');
-        $this->load->view('eng_main_dashboard');
-        $this->load->view('merjs2');
+        $this->load->view('mercss');
+        $this->load->view('mer_eng_dashboard');
+        $this->load->view('konijs');
 	}
 
 }

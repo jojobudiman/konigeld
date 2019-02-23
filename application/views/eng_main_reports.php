@@ -408,17 +408,48 @@
           </ul>
         </nav>
       </div>
-
-      <main class="dashboard-layout">
-        <!-- Breadcrumb-->
-        <div class="dashboard-header-layout-sidebar ">
-          <a href="#" class="dashboard-header-sidebar"></a>
-        </div>
-        <div class="dashboard-header-layout-content">
-          <div class="animated fadeIn">
-
+      <div class="animated fadeIn">
+        <main class="dashboard-layout">
+          <!-- Sidebar-->
+          <div class="dashboard-header-layout-sidebar dashboard-header-sidebar-nav">
+            <a href="#" class="dashboard-header-sidebar-parent-item">
+              Reports
+            </a>
+            <div class="dashboard-header-sidebar-parent-children" style="max-height: 320px;">
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Summary</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Methods</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Product Sales</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Category Sales</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Employee Sales</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Discounts</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Modifier Sales</a>
+            </div>
           </div>
-        </div>
-      </main>
+          <!--End Sidebar-->
+          <!--Container-->
+          <div class="dashboard-header-layout-content">
+            <div class="page-layout-flex page-layout">
+              <div class="page-layout-content reports-main-viewport">
+                <div class="reports-content">
+                  <div class="filter-bar-border">
+                    <div class="filter-bar">
+                      <div class="filter-bar-filters">
+                        <div class="filter-bar-item filter-date">
+                          <button class="konibutton button-first button-left button-first button-segment grid-col" type="button">
+                          </button>
+                          <div class="filter-segment float-left">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
   </body>
 </html>

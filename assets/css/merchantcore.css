@@ -207,6 +207,8 @@ label {
 }
 button {
 	border-radius: 0
+	-webkit-font-smoothing: antialiased;
+	text-transform: none;
 }
 button:focus {
 	outline: 1px dotted;
@@ -12726,7 +12728,7 @@ body {
 	padding: 0;
 }
 
-.dashboard-header-layout .page-layout-content {
+.page-layout, .dashboard-header-layout .page-layout-content {
 	overflow-y: visible;
 	padding: 32px 32px 104px;
 }
@@ -12740,6 +12742,10 @@ body {
 	display: table;
 }
 
+.reports-main-viewport:after {
+	clear: both;
+}
+
 .reports-content {
 	float: none;
 	width: auto;
@@ -12750,7 +12756,86 @@ body {
 	min-height: calc(100vh - 56px);
 }
 
-
 .filter-bar {
+	display: flex;
+  justify-content: space-between;
+  padding-bottom: 6px;
+}
+
+.filter-bar-border {
 	border-bottom: 1px #000000;
+}
+
+.filter-bar-filters {
+	flex: 0 1 auto;
+}
+
+.filter-bar-item {
+	margin: 0 12px 12px 0;
+	float: left;
+}
+
+.filter-bar-item--date-filter .button-left, .filter-date .button-left {
+    padding: 0 11px 0 12px;
+}
+
+.button-first {
+	border-radius: 5px 0 0 5px;
+}
+
+.button-left, .button-right {
+	min-width: 28px;
+}
+
+.konibutton {
+	height: 40px;
+	min-width: 80px;
+	padding: 0 16px;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 38px;
+	font-weight: 500;
+	transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: inline-block;
+}
+
+.button-segment {
+	border-radius: 0;
+	min-width: 0;
+}
+
+.button-segment:active {
+	color: #42838D;
+}
+
+.konibutton:active, .konibutton:active:hover {
+	background-color: #EBEDEF;
+}
+
+.konibutton, .konibutton:hover {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+.grid-col {
+	float: left;
+	min-height: 1px;
+}
+
+.konibutton {
+	cursor: pointer;
+	text-align: center;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.filter-bar-item--date-filter .header-filter-date-button, .filter-date .filter-date-button {
+    padding: 0 10px;
 }
