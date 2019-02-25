@@ -8,5 +8,6 @@
 
 <!-- Plugins and scripts required by this view-->
 <script src="<?php echo base_url();?>assets/js/Chart.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/numeral.js"></script>
 <script src="<?php echo base_url();?>assets/js/custom-tooltips.min.js"></script>
 <script src="<?php echo base_url();?>assets/merchant/src/js/main.js"></script>

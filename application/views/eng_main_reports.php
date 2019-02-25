@@ -411,12 +411,12 @@
       <div class="animated fadeIn">
         <main class="dashboard-layout">
           <!-- Sidebar-->
-          <div class="dashboard-header-layout-sidebar dashboard-header-sidebar-nav">
+          <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
             <a href="#" class="dashboard-header-sidebar-parent-item">
               Reports
             </a>
             <div class="dashboard-header-sidebar-parent-children" style="max-height: 320px;">
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Summary</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Sales Summary</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Methods</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Product Sales</a>
@@ -436,15 +436,339 @@
                     <div class="filter-bar">
                       <div class="filter-bar-filters">
                         <div class="filter-bar-item filter-date">
-                          <button class="konibutton button-first button-left button-first button-segment grid-col" type="button">
+                          <button data-role="back" class="button-segment button-first button-left arrow-left grid-col konibutton" type="button">
                           </button>
                           <div class="filter-segment float-left">
+                            <div class="filter-datee dropdown">
+                              <button class="dropdown-trigger fill filter-date-button button-segment arrow-down konibutton" type="button">
+                                <script>
+                                var today = new Date();
+                                var dd = today.getDate();
+                                var mm = today.getMonth()+1;
+                                var yyyy = today.getFullYear();
+
+                                if(dd<10) {
+                                  dd = '0'+dd
+                                }
+
+                                if(mm<10) {
+                                  mm = '0'+mm
+                                }
+
+                                today = dd + '/' + mm + '/' + yyyy;
+                                document.write(today);
+                                </script>
+                              </button>
+                              <div class="popover-fly-down filter-popover popover">
+                                <div class="grid-col grid-col-17-24 filter-calendar-well">
+                                  <div class="grid-row">
+                                    <div class="calendar grid-col grid-col-24-24">
+                                      <div class="calendar-header">
+                                        <div class="calendar-title-nav" data-role="calendar-back"><</div>
+                                        <div class="calendar-title">February 2019</div>
+                                        <div class="calendar-title-nav" data-rotle="calendar-forward">></div>
+                                      </div>
+                                      <div class="calendar-month">
+                                        <div class="calendar-weekdays">
+                                          <div class="calendar-weekday">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                          <div class="calendar-weekday">
+                                            <div class="calendar-day-number">M</div>
+                                          </div>
+                                          <div class="calendar-weekday">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-weekday">
+                                            <div class="calendar-day-number">W</div>
+                                          </div>
+                                          <div class="calendar-weekday">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-weekday">
+                                            <div class="calendar-day-number">F</div>
+                                          </div>
+                                          <div class="calendar-weekday">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                        <div class="calendar-week">
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">M</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">W</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">F</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                        </div>
+                                        <div class="calendar-week">
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">M</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">W</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">F</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                        </div>
+                                        <div class="calendar-week">
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">M</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">W</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">F</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                        </div>
+                                        <div class="calendar-week">
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">M</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">W</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">F</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                        </div>
+                                        <div class="calendar-week">
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">M</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">W</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">F</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                        </div>
+                                        <div class="calendar-week">
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">M</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">W</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">T</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">F</div>
+                                          </div>
+                                          <div class="calendar-day">
+                                            <div class="calendar-day-number">S</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="date-filter-custom">
+                                        <div class="grid-row date-filter-custom-labels">
+                                          <div class="grid-col date-filter-custom-date">
+                                            Start
+                                          </div>
+                                          <div class="grid-col date-filter-custom-date float-right">
+                                            End
+                                          </div>
+                                        </div>
+                                        <div class="grid-row date-filter-custom-inputs">
+                                          <div class="grid-col date-filter-input date-filter-custom-date begin-date">
+                                            <input type="text" class="input date-input" name="">
+                                          </div>
+                                          -
+                                          <div class="grid-col date-filter-input date-filter-custom-date end-date float-right">
+                                            <input type="text" class="input date-input" name="">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <div class="grid-col grid-col-7-24 date-filter-dates">
+                                  <div class="date-filter-button">
+                                    <button class="konibutton fill date-filter-button" type="button">Today</button>
+                                    <button class="konibutton fill date-filter-button" type="button">Yesterday</button>
+                                    <button class="konibutton fill date-filter-button" type="button">This Week</button>
+                                    <button class="konibutton fill date-filter-button" type="button">Last Week</button>
+                                    <button class="konibutton fill date-filter-button" type="button">This Month</button>
+                                    <button class="konibutton fill date-filter-button" type="button">Last Month</button>
+                                    <button class="konibutton fill date-filter-button" type="button">This Year</button>
+                                    <button class="konibutton fill date-filter-button" type="button">Last Year</button>
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                            <button data-role="forward" class="button-segment button-right arrow-right grid-col konibutton" type="button">
+                            </button>
+                          </div>
+                      </div>
+                      <div class="filter-bar-actions">
+                        <div class="filter-bar-item">
+                          <form class="" action="" method="post">
+                            <button class="konibutton" type="button">Export</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-row reports-chart-row">
+                    <div class="grid-col grid-col-24-24">
+                      <div class="sales-summary-heading">
+                        <div class="sales-summary-chart">
+                          <h5 class="sales-summary-chart-title">
+                            Time of Day
+                          </h5>
+                          <p class="sales-summary-chart-desc">
+                              Gross sales on dd/mm/yyy were 'insert amount'. This was <span class="sales-summary-chart-desc-positive">up Rp 85000.00</span> from the closeset Saturday the previous year.
+                          </p>
+                        </div>
+                        <div class="sales-summary-chart-legend">
+                          <div class="sales-summary-chart-legend-item">
+                            <spam class="sales-summary-chart-legend-item-label">24 Feb 2019</spam>
+                            <div class="sales-summary-chart-legend-item-label sales-circle circle-blue"></div>
+                          </div>
+                          <div class="sales-summary-chart-legend-item">
+                            <spam class="sales-summary-chart-legend-item-label">25 Feb 2018</spam>
+                            <div class="sales-summary-chart-legend-item-label sales-circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="reports-chart-parent">
+                        <div class="reports-chart">
+                          <canvas id="sales-summary-chart" class="sales-summary-time-of-the-day-chart"></canvas>
+                          <div id="chart-tooltip"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reports-table-transition">
+                    <div class="reports-table table table-flex">
+                      <div class="table-header">
+                        <div class="table-row">
+                          <div class="table-header-cell"></div>
+                          <div class="table-header-cell right">Sales</div>
+                          <div class="table-header-cell right">Refund</div>
+                          <div class="table-header-cell right">Net</div>
+                        </div>
+                      </div>
+                      <div class="table-set">
+                          <div class="table-row strong">
+                            <div class="table-cell"><span class="table-label">Gross Sales</span></div>
+                            <div class="table-cell right">Rp amount</div>
+                            <div class="table-cell right">Rp amount</div>
+                            <div class="table-cell right">Rp amount</div>
+                          </div>
+                          <div class="table-row">
+                            <div class="table-cell"><span class="table-label">Discounts</span></div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                          </div>
+                          <div class="table-row strong">
+                            <div class="table-cell"><span class="table-label">Net Sales</span></div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                          </div>
+                          <div class="table-row super-strong">
+                            <div class="table-cell"><span class="table-label">Total Collected</span></div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                          </div>
+                          <div class="table-inner table-inner-row table-row">
+                            <div class="table-inner table-cell"><span class="table-label">Cash</span></div>
+                            <div class="table-inner table-cell right">Rp 0.00</div>
+                            <div class="table-inner table-cell right">Rp 0.00</div>
+                            <div class="table-inner table-cell right">Rp 0.00</div>
+                          </div>
+                          <div class="table-row super-strong">
+                            <div class="table-cell"><span class="table-label">Net Total</span></div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                            <div class="table-cell right">Rp 0.00</div>
+                          </div>
+                        </div>
+
+
+                          </div>
 
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
