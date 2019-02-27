@@ -49,6 +49,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'english_home';
+$route['default_controller'] = 'en/home';
 $route['404_override'] = 'error404';
 $route['translate_uri_dashes'] = FALSE;
+
+//CUSTOM ROUTING 101
+$route['en/home'] = 'english_home';
+$route['en/about'] = 'english_about';
+$route['en/features'] = 'english_feature';
+$route['en/pricing'] = 'english_pricing';
+
+
+//CUSTOM ROUTE DASHBOARD KONIGELD
+/*$route['dashboard/(:any)'] = 'dashboard/sales/$1';
+$route['dashboard/sales/(:any)'] = 'dashboard/sales/$1/$2';*/

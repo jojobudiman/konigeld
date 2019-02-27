@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class reports extends CI_Controller {
+class reports_salestrends extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,7 +21,7 @@ class reports extends CI_Controller {
 
     function index() {
         $this->load->view('merchant-css');
-        $this->load->view('eng_main_reports');
+        $this->load->view('eng_main_reports_salestrends');
         $this->load->view('merchant-js');
 	}
 
