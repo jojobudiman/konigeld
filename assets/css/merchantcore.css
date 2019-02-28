@@ -139,14 +139,13 @@ sup {
 	top: -.5em
 }
 a {
-	color: #20a8d8;
+	color: #42838D;
 	text-decoration: none;
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects
 }
-a:hover {
-	color: #167495;
-	text-decoration: underline
+a:hover, a:active {
+	outline: 0;
 }
 a:not([href]):not([tabindex]) {
 	color: inherit;
@@ -205,8 +204,7 @@ th {
 	text-align: inherit
 }
 label {
-	display: inline-block;
-	margin-bottom: .5rem
+	cursor: pointer;
 }
 button {
 	background: 0 0;
@@ -222,14 +220,21 @@ button:focus {
 	outline: 1px dotted;
 	outline: 5px auto -webkit-focus-ring-color
 }
+i {
+	color: transparent;
+	display: inline-block;
+}
 input, button, select, optgroup, textarea {
 	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit
 }
-button, input {
-	overflow: visible
+input {
+	border: 0;
+}
+button {
+	overflow: visible;
 }
 button, select {
 	text-transform: none
@@ -12744,6 +12749,11 @@ body {
 	overflow-y: auto;
 }
 
+.dashboard-header-layout-content .product-library-parent {
+	overflow: hidden;
+	height: calc(100vh - 56px);
+}
+
 .reports-main-viewport {
 	zoom: 1;
 }
@@ -12865,12 +12875,24 @@ body {
 	width: 100%;
 }
 
+.grid-col-19-24 {
+	width: 79.16667%;
+}
+
+.grid-col-18-24 {
+	width: 75%;
+}
+
 .grid-col-17-24 {
 	width: 70.83333%;
 }
 
 .grid-col-7-24 {
 	width: 29.16667%;
+}
+
+.grid-col-5-24 {
+	width: 20.83333%;
 }
 
 .konibutton {
@@ -12942,6 +12964,10 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.1), 0 1px 16px 0 rgba(0,0,0,.1), 0 2px 4px 0 rgba(0,0,0,.1);
     visibility: hidden;
     transition: visibility 0s linear .3s,opacity .3s ease,transform .3s cubic-bezier(.175,.855,.32,1.275);
+}
+
+.popover-filter {
+	width: 250px;
 }
 
 .popover-active {
@@ -13594,8 +13620,509 @@ body {
 	color: #FFFFFF;
 }
 
+.button-primary {
+	background: #2996CC;
+	color: #FFFFFF;
+}
+
 .sales-chart-legend-item-label {
 	color: #000000;
 	font-size: 14px;
 	word-wrap: break-word;
+}
+
+/*PAYMENT METHODS*/
+.table-auto-viewport {
+	position: relative;
+	width: 100%;
+}
+
+.super-table, .super-table-content {
+	height: inherit;
+}
+
+.payment-method-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	position: relative;
+}
+
+.super-table-header {
+	border-bottom: 1px solid #D5D9DC;
+}
+
+.super-table-row-content {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+}
+
+.super-table-cell {
+	padding: 0 16px;
+}
+
+.super-table-cell-header {
+	color: #000000;
+	font-weight: 700;
+}
+
+.super-table-fixed-column {
+  border-right: 1px dotted #aeb1b5;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.type-align-left {
+	text-align: left;
+}
+
+.type-align-right {
+	text-align: right;
+}
+
+.location-dropdown-button-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 200px;
+}
+
+.input-icon {
+	position: relative;
+}
+
+.input-search-fluid {
+	width: 100%;
+}
+
+.input-search {
+	width: 256px;
+}
+
+.input-icon-search-input-clear {
+	padding-right: 36px;
+}
+
+.input-icon-search-icon {
+	position: absolute;
+	top: 20px;
+	content: "";
+	z-index: 1;
+}
+
+.input-icon-search-icon, .input-icon-search-icon-focused {
+	left: 10px;
+	margin-top: -8.5px;
+}
+
+.input-icon-search-icon-clear {
+	margin-top: -8px;
+	left: auto;
+	right: 10px;
+}
+
+.input-icon-search-input, .input-icon-search-input-clear {
+	width: 100%;
+	padding-left: 37px;
+}
+
+.popover-list-filter-input {
+	border-width: 0 0 1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.form-checkbox:last-of-type {
+	margin-bottom: 0;
+}
+
+.location-dropdown-option {
+	padding: 13px 10px;
+	margin: 0;
+}
+
+.location-dropdown-option:hover {
+	background-color: #D4EAF5;
+}
+
+.location-dropdown-option-select-all {
+	font-weight: 700;
+}
+
+.form-checkbox {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.form-checkbox-content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.form-checkbox-input:checked+.form-checkbox-check {
+	display: block;
+}
+
+.form-checkbox-check {
+	position: absolute;
+	left: 5px;
+	top: 1px;
+	border: 2px solid #42838D;
+	border-width: 0 2px 2px 0;
+	width: 6px;
+	height: 11px;
+	transform: rotate(45deg);
+}
+
+.form-checkbox-label {
+	font-size: 14px;
+	line-height: 1.715;
+	font-weight: inherit;
+	flex: 1;
+	max-width: 600px;
+	cursor: pointer;
+}
+
+.form-checkbox-label-text {
+	color: #000000;
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.location-dropdown-vertical-collection-list {
+	max-height: 30vh;
+	overflow-y: auto;
+}
+
+/*PRODUCT LIBRARY*/
+.product-outer-flex-div {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+
+.product-catalog-table {
+	flex: 0 1 auto;
+	display: flex;
+	overflow: auto;
+}
+
+.product-table td:first-child, .product-table th:first-child {
+	padding-left: 36px;
+}
+
+.konitable {
+	overflow: auto;
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.konitable table {
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+.konitable thead {
+	position: static;
+	top: 0;
+	z-index: 2;
+	box-sizing: border-box;
+	border-collapse: separate;
+}
+
+.konitable th {
+	z-index: 2;
+}
+
+.konitable tr td {
+	border-bottom: 1px solid #D5D9DC;
+}
+
+.item-table-name {
+	width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: sticky;
+  top: 0px;
+}
+
+.item-table-name-2 {
+	width: 100px;
+	min-width: 100px;
+	max-width: 100px;
+	touch-action: pan-y;
+	user-select: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	position: sticky;
+	top: 0px;
+}
+
+.konitable-container {
+	display: flex;
+	align-items: center;
+}
+
+td .table-item-name-column {
+	color: #42838D;
+}
+
+.table-row-selectable:hover {
+	background-color: #D4EAF5;
+}
+
+.table-row-selectable:hover > .table-cell, .table-row-selectable:hover > td {
+	background-color: #D4EAF5;
+	cursor: pointer;
+}
+.table-row-selectable-is-selected, .table-row-selectable-is-selected:hover, .table-row-selectable-is-selected:hover > .table-cell, .table-row-selectable-is-selected:hover > td, .table-row-selectable-is-selected > .table-cell, .table-row-selectable-is-selected > td {
+	background-color: #42838D;
+	color #FFFFFF;
+	cursor: default;
+}
+
+/*POPUP LAYOUT FOR INSERT, UPDAT*/
+
+.crud-layout {
+	display: flex;
+  flex-flow: column;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 799;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.35s ease-out;
+	background: #FFFFFF;
+}
+
+.dialog {
+	display: flex;
+	flex-direction: column;
+}
+
+.dialog-header {
+	z-index: 1;
+	flex-basis: 72px;
+	box-shadow: 0 0 2px 0 rgba(0 , 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+	display: block;
+
+}
+
+.dialog-header-content {
+	display: flex;
+	flex: auto 0 0;
+	padding: 0 32px;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.dialog-header-part {
+	line-height: 2.2;
+	padding-top: 20px;
+	flex: 33% 1 1;
+}
+
+.dialog-header-title {
+	padding-top: 20px;
+	flex: 33% 1 1;
+	text-align: center;
+	width: calc(100% - 36px);
+	margin: 0;
+	padding: 20px 16px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.333;
+}
+
+.dialog-primary-actions {
+	flex: 33% 1 1;
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 16px;
+}
+
+.dialog-primary-actions-primary {
+	white-space: nowrap;
+}
+
+.dialog-body {
+	padding: 32px 16px;
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow: column;
+	overflow-y: auto;
+}
+
+.dialog-content {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form-fieldset {
+	border: none;
+	margin: 0 auto;
+	padding: 0 0 40px;
+	max-width: 800px;
+}
+
+.fieldset {
+	min-width: inherit;
+}
+
+.form-legend:last-of-type {
+	margin: 0;
+}
+
+.form-legend {
+	margin: 0;
+  padding-bottom: 16px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: inherit;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.form-table {
+	border: 1px solid #D5D9DC;
+	border-width: 1px 1px 0;
+	transition: border-color 0.2s ease-in-out;
+}
+
+.form-row {
+	display: flex;
+	position: relative;
+}
+
+.form-table .form-row:first-of-type {
+	border-width: 0;
+}
+
+.form-field {
+	display: flex;
+	width: 100%;
+}
+
+.form-field-label {
+	min-height: 50.01px;
+  padding: 13px 16px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.715;
+  border-bottom: 1px #D5D9DC solid;
+  position: relative;
+  width: calc(100% - 200px);
+  width: 200px;
+  font-weight: 700;
+  background-color: #ebedef;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-field-content {
+	border-bottom: 1px #D5D9DC solid;
+	position: relative;
+	width: calc(100% - 204px);
+}
+
+.form-field-input {
+	display: block;
+  min-height: 50.01px;
+  padding: 13px 16px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.715;
+  width: 100%;
+  background-color: transparent;
+}
+
+.select-down {
+	position: relative;
+	display: block;
+}
+
+.form-select-input {
+	position: relative;
+	width: calc(100% + 170px);
+	display: block;
+	padding: 13px 16px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.form-select-input:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	right: 0;
+	margin-top: -3px;
+	border-bottom: 2px solid #42838D;
+	border-right: 2px solid #42838D;
+	transform: rotate(45deg) translateY(-50%);
+	transition: all .4s ease-in-out;
+	transform-origin: 50% 0;
+}
+
+.select-down.opened .form-select-input:after {
+  margin-top: 3px;
+  transform: rotate(-135deg) translateY(-50%);
+}
+
+.form-select-options {
+	position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  border: 1px solid #D5D9DC;
+  box-sizing: border-box;
+  box-shadow: 0 2px 1px rgba(0,0,0,.07);
+  background: #FFFFFF;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-15px);
+}
+
+.form-select-custom-options {
+	position: relative;
+	display: block;
+	padding: 0 22px;
+	border-bottom: 1px solid #D5D9DC;
+	font-size: 18px;
+	font-weight: 700;
+	color: #000000;
+	line-height: 47px;
+	cursor: pointer;
+	transition: all .4s ease-in-out;
+}
+
+.select-down.opened .form-select-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0);
 }

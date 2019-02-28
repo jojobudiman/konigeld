@@ -25,6 +25,97 @@ $(function() {
     $('.koni-body-index').toggleClass('active');
   });
 });
+/************************
+TABLE ROW HYPERLINK
+************************/
+
+$('*[data-href]').on("click",function() {
+  window.location = $(this).data('href');
+});
+
+/************************
+END TABLE ROW HYPERLINK
+************************/
+
+/************************
+CUSTOM SELECT
+************************/
+$(".select-down").each(function() {
+  var classes = $(this).attr("class"),
+    id = $(this).attr("id"),
+    name = $(this).attr("name");
+  var template = '<div class="' + classes + '">';
+  template +=
+    '<span class="form-select-input">' +
+    $(this).attr("placeholder") +
+    "</span>";
+  template += '<div class="form-select-options">';
+  $(this)
+    .find("option")
+    .each(function() {
+      template +=
+        '<span class="form-select-custom-options ' +
+        $(this).attr("class") +
+        '" data-value="' +
+        $(this).attr("value") +
+        '">' +
+        $(this).html() +
+        "</span>";
+    });
+  template += "</div></div>";
+
+  $(this).wrap('<div class="form-field-content"></div>');
+  $(this).hide();
+  $(this).after(template);
+});
+/*$(".custom-option:first-of-type").hover(
+  function() {
+    $(this)
+      .parents(".custom-options")
+      .addClass("option-hover");
+  },
+  function() {
+    $(this)
+      .parents(".custom-options")
+      .removeClass("option-hover");
+  }
+);*/
+$(".form-select-input").on("click", function() {
+  $("html").one("click", function() {
+    $(".select-down").removeClass("opened");
+  });
+  $(this)
+    .parents(".select-down")
+    .toggleClass("opened");
+  event.stopPropagation();
+});
+$(".form-select-custom-options").on("click", function() {
+  $(this)
+    .parents(".form-select-input")
+    .find("select")
+    .val($(this).data("value"));
+  $(this)
+    .parents(".form-select-options")
+    .find(".form-select-custom-options")
+    .removeClass("selection");
+  $(this).addClass("selection");
+  $(this)
+    .parents(".select-down")
+    .removeClass("opened");
+  $(this)
+    .parents(".select-down")
+    .find(".form-select-input")
+    .text($(this).text());
+});
+
+/************************
+END CUSTOM SELECT
+************************/
+
+
+/************************
+CHART.JS
+************************/
 
 Chart.defaults.global.defaultFontColor = '#42838D';
 Chart.defaults.global.defaultFontFamily = 'Dosis';
