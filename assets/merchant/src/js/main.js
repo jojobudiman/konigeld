@@ -20,6 +20,18 @@
   });
 })(jQuery);*/
 
+/************************
+BUTTON HYPERLINK
+************************/
+
+/*$('#add_product').click(function() {
+  window.location='<?php echo base_url(); ?>semester8/konigeld/products_library_add';
+});*/
+
+/************************
+END BUTTON HYPERLINK
+************************/
+
 $(function() {
   $('.navbar-toggler').on('click', function() {
     $('.koni-body-index').toggleClass('active');
@@ -111,6 +123,48 @@ $(".form-select-custom-options").on("click", function() {
 /************************
 END CUSTOM SELECT
 ************************/
+
+/************************
+TEXTBOX NUMBERS ONLY
+************************/
+
+function setInputFilter(textbox, inputFilter) {
+  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+    textbox.addEventListener(event, function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      }
+    });
+  });
+}
+
+setInputFilter(document.getElementById("price"), function(value) {
+  return /^\d*\.?\d*$/.test(value);
+});
+
+setInputFilter(document.getElementById("sku"), function(value) {
+  return /^\d*\.?\d*$/.test(value);
+});
+
+setInputFilter(document.getElementById("stock"), function(value) {
+  return /^\d*\.?\d*$/.test(value);
+});
+
+/************************
+END TEXTBOX NUMBERS ONLY
+************************/
+
+jQuery(function($) {
+  $("#menuContainer, .hamburger-menu").click(function(e) {
+    e.stopPropagation();
+    $(".hamburger-menu").toggleClass("is-active");
+  });
+});
 
 
 /************************

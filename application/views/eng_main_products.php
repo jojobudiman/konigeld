@@ -20,7 +20,7 @@
           <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 76.57 71.69"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Asset 14</title><g id="Layer_2" data-name="Layer 2"><g id="Olav"><path class="cls-1" d="M68.59,35.2a7,7,0,0,1,0,14H8.14a7,7,0,1,1,0-14"/><polyline class="cls-1" points="10.35 35.2 8.14 35.2 56.79 35.2"/><path class="cls-1" d="M68.44,56.72a7,7,0,0,1,0,14H8a7,7,0,1,1,0-14"/><polyline class="cls-1" points="10.2 56.72 7.99 56.72 56.64 56.72"/><path class="cls-1" d="M62.69,1.73h-.34Q61,4.36,59.72,7L53,2.39l-.12.11,1.59,2.61c.74,1.21,1.46,2.41,2.17,3.6v5H8a7,7,0,0,0,0,14H68.44a7,7,0,0,0,0-14l-.1-4.95"/><path class="cls-1" d="M53.07,2.18a.41.41,0,0,0-.4-.39.39.39,0,0,0-.4.39.38.38,0,0,0,.4.38.39.39,0,0,0,.21-.06L53,2.39A.38.38,0,0,0,53.07,2.18Z"/><path class="cls-1" d="M62.35,1.73h.34a.39.39,0,0,0,.24-.34A.4.4,0,0,0,62.52,1a.39.39,0,0,0-.4.38A.39.39,0,0,0,62.35,1.73Z"/><path class="cls-1" d="M72.25,2.65a.4.4,0,0,0,.41-.38.41.41,0,0,0-.4-.39.4.4,0,0,0-.41.39.37.37,0,0,0,.08.22l.12.1A.36.36,0,0,0,72.25,2.65Z"/><polyline class="cls-1" points="62.71 1.78 65.17 6.92 71.92 2.49 72.05 2.59 68.34 8.73"/></g></g>
           </svg>
         </button>
-        <h3>Home</h3>
+        <h3>Products</h3>
       </div>
       <div class="nav nav-actions">
         <div class="konilogo">
@@ -706,7 +706,7 @@
                       </div>
                       <div class="filter-bar-actions">
                         <div class="filter-bar-item">
-                          <button class="konibutton button-primary filter-bar-item" type="button">Export</button>
+                          <button class="konibutton button-primary filter-bar-item" type="button" data-href="<?php echo base_url();?>products_library_new">Add Product</button>
                         </div>
                       </div>
                     </div>

@@ -208,17 +208,14 @@ label {
 }
 button {
 	background: 0 0;
-	border-radius: 0
+	border: 0;
+	cursor: pointer;
 	padding: 0;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	text-transform: none;
 	line-height: normal;
 	display: inline-block;
-}
-button:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color
 }
 i {
 	color: transparent;
@@ -12802,6 +12799,10 @@ body {
 	float: left;
 }
 
+.filter-bar-item:last-child {
+	margin-right: 0;
+}
+
 .filter-bar-item--date-filter .button-left, .filter-date .button-left {
     padding: 0 11px 0 12px;
 }
@@ -12849,12 +12850,12 @@ body {
 }
 
 .konibutton:active, .konibutton:active:hover {
-	background-color: #EBEDEF;
+	background-color: #42838D;
 }
 
 .konibutton, .konibutton:hover {
-	background-color: #FFFFFF;
-	color: #000000;
+	background-color: #42838D;
+	color: #FFFFFF;
 }
 
 .grid-col {
@@ -12933,6 +12934,7 @@ body {
 .arrow-down:after {
     top: 2px;
     transform: rotate(90deg);
+		left: 2px;
 }
 
 .arrow-down:after, .arrow-left:after, .arrow-right:after, .arrow-up:after, .svg-icon {
@@ -13328,7 +13330,7 @@ body {
 }
 
 .table-header, thead {
-	background-color: rgba(59, 131, 140, 0.6);
+	background-color: rgba(59, 131, 140, 0.5);
 	text-align: left;
 }
 
@@ -13614,15 +13616,22 @@ body {
 }
 
 .button-primary {
-	background: #42838D;
+	background: #2996CC;
 	border: none;
 	line-height: 40px;
 	color: #FFFFFF;
 }
 
-.button-primary {
-	background: #2996CC;
+.button-primary:active {
+	background: #2483B3;
 	color: #FFFFFF;
+}
+
+.button-secondary {
+	background: transparent;
+	border-radius: 5px;
+	border: 1px solid #42838D;
+	color: #42838D;
 }
 
 .sales-chart-legend-item-label {
@@ -13894,9 +13903,9 @@ td .table-item-name-column {
 	cursor: default;
 }
 
-/*POPUP LAYOUT FOR INSERT, UPDAT*/
+/*POPUP LAYOUT FOR INSERT, UPDATE*/
 
-.crud-layout {
+.crud-layout-active {
 	display: flex;
   flex-flow: column;
 	width: 100%;
@@ -13904,10 +13913,14 @@ td .table-item-name-column {
 	position: fixed;
   top: 0;
   left: 0;
-  z-index: 799;
+  z-index: 999;
   transform: translate3d(0, 0, 0);
   transition: transform 0.35s ease-out;
 	background: #FFFFFF;
+}
+
+.crud-layout {
+	display: none;
 }
 
 .dialog {
@@ -13958,6 +13971,10 @@ td .table-item-name-column {
 
 .dialog-primary-actions-primary {
 	white-space: nowrap;
+}
+
+.dialog-primary-actions-primary:first-of-type {
+	margin-right: 10px;
 }
 
 .dialog-body {
@@ -14031,7 +14048,7 @@ td .table-item-name-column {
   width: calc(100% - 200px);
   width: 200px;
   font-weight: 700;
-  background-color: #ebedef;
+  background-color: rgba(59, 131, 140, 0.5);
   cursor: default;
   display: flex;
   justify-content: space-between;
@@ -14046,7 +14063,7 @@ td .table-item-name-column {
 .form-field-input {
 	display: block;
   min-height: 50.01px;
-  padding: 13px 16px;
+  padding: 14px 16px;
   color: #000000;
   font-size: 14px;
   line-height: 1.715;
@@ -14095,7 +14112,8 @@ td .table-item-name-column {
   top: 100%;
   left: 0;
   right: 0;
-  min-width: 100%;
+	z-index: 99;
+  min-width: calc(100% + 204px);
   border: 1px solid #D5D9DC;
   box-sizing: border-box;
   box-shadow: 0 2px 1px rgba(0,0,0,.07);
@@ -14125,4 +14143,38 @@ td .table-item-name-column {
   visibility: visible;
   pointer-events: all;
   transform: translateY(0);
+}
+
+.form-field-col-1-2, .form-field-col-2-4 {
+	float: left;
+	width: 50%;
+}
+
+.banner-wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 10px 20px;
+}
+
+.error-banner {
+	 background: #D92B2B;
+}
+
+.visible-banner {
+	height: auto;
+	opacity: 1;
+	transition: opacity 0.2s linear,background-color 0.2s ease-out;
+}
+
+.banner-body {
+	padding: 0 10px;
+	font-weight: 500;
+	line-height: 1.715;
+	flex: 0 1 auto;
+	max-width: 600px;
+}
+
+.banner-icon {
+	display: inline-flex;
+	margin-top: 3px;
 }
