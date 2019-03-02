@@ -412,7 +412,7 @@
         <main class="dashboard-layout">
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="#" class="dashboard-header-sidebar-link">Product Library</a>
+            <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Product Library</a>
             <a href="#" class="dashboard-header-sidebar-link">Modifiers</a>
             <a href="#" class="dashboard-header-sidebar-link">Categories</a>
             <a href="#" class="dashboard-header-sidebar-link">Discounts</a>

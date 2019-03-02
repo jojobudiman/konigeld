@@ -414,37 +414,114 @@
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
             <a href="#" class="dashboard-header-sidebar-link">Product Library</a>
             <a href="#" class="dashboard-header-sidebar-link">Modifiers</a>
-            <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Categories</a>
-            <a href="#" class="dashboard-header-sidebar-link">Discounts</a>
+            <a href="#" class="dashboard-header-sidebar-link">Categories</a>
+            <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Discounts</a>
           </div>
           <!--End Sidebar-->
           <!--Container-->
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
-                <div class="product-categories-header">
-                  <div>
-                    <h2 class="super-strong">Categories</h2>
-                    <div class="product-categories-subtext">
-                      Categories help you arrange and organize your products, and report on product sales.
+                    <div class="filter-bar">
+                      <div class="filter-bar-filters">
+                          <div class="filter-bar-item location">
+                            <div class="dropdown">
+                              <button class="konibutton dropdown-trigger" type="button">
+                                <div class="location-dropdown-button-content">
+                                  <div class="location-dropdown-button-label">
+                                    All Locations
+                                  </div>
+                                  <div class="arrow-down"></div>
+                                </div>
+                              </button>
+                              <div class="popover-fly-down popover-filter popover-list popover">
+                                <label class="location-dropdown-option location-dropdown-option-select-all form-checkbox" data-toggle="check-all">
+                                  <div class="form-checkbox-content">
+                                    <input class="form-checkbox-input" type="checkbox">
+                                    <div class="form-checkbox-check"></div>
+                                  </div>
+                                  <div class="form-checkbox-label">
+                                    <div class="form-checkbox-label-text">
+                                      All Locations
+                                    </div>
+                                  </div>
+                                </label>
+                                <div class="location-dropdown-vertical-collection-list">
+                                  <!--Di loop jika ada tambahan lokasi-->
+                                  <label class="location-dropdown-option form-checkbox">
+                                    <div class="form-checkbox-content">
+                                      <input class="form-checkbox-input" type="checkbox">
+                                      <div class="form-checkbox-check"></div>
+                                    </div>
+                                    <div class="form-checkbox-label">
+                                      <div class="form-checkbox-label-text">
+                                        Test1
+                                      </div>
+                                    </div>
+                                  </label>
+                                  <label class="location-dropdown-option form-checkbox">
+                                    <div class="form-checkbox-content">
+                                      <input class="form-checkbox-input" type="checkbox">
+                                      <div class="form-checkbox-check"></div>
+                                    </div>
+                                    <div class="form-checkbox-label">
+                                      <div class="form-checkbox-label-text">
+                                        Test2
+                                      </div>
+                                    </div>
+                                  </label>
+                                  <!--End loop-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="filter-bar-actions">
+                        <div class="filter-bar-item">
+                          <button class="konibutton button-primary filter-bar-item" type="button" data-href="<?php echo base_url();?>discounts_new">Create Discount</button>
+                        </div>
+                      </div>
                     </div>
+                    <div class="table-auto-viewport">
+                      <div class="product-outer-flex-div">
+                        <div class="product-library-catalog-table">
+                          <div class="konitable">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th colspan="1" rowspan="1" class="item-table-name super-strong">
+                                    <div class="table-name-column">Discount Name</div>
+                                  </th>
+                                  <th colspan="1" rowspan="1" class="item-table-name- super-strong">
+                                    <div class="table-name-column">Locations</div>
+                                  </th>
+                                    <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
+                                      <div class="table-name-column type-align-right">Amount</div>
+                                    </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="table-row-selectable" data-href="http://google.com">
+                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
+                                    <div class="konitable-container">
+                                      <div class="table-item-name-column">nama item</div>
+                                    </div>
+                                  </td>
+                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
+                                      <div class="table-name-column">lokasi</div><!--Kalau lebih dari 1 dinamakan x locations-->
+                                  </td>
+                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
+                                      <div class="table-name-column type-align-right">Rp 20000.00</div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
                   </div>
-                  <div class="product-categories-button">
-                    <button class="konibutton button-primary" type="button">Create Category</button>
-                  </div>
-                </div>
-                <table class="konitable table-flex">
-                  <thead>
-                    <tr class="table-row">
-                      <th class="table-header super-strong">Category Name</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table-row-selectable" data-href="https://google.com">
-                      <td>Test</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
                   <!--Kalau ada produk sampai sini-->
                   <!-- Jika tidak ada produk -->
                   <!--<div class="page-layout">

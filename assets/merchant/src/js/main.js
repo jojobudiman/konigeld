@@ -475,6 +475,13 @@ $('*[data-href]').on("click",function() {
   window.location = $(this).data('href');
 });
 
+
+$('.table-row-selectable').click(function(){
+    window.location = $(this).data('href');
+    return false;
+  });
+
+
 /************************
 END TABLE ROW HYPERLINK
 ************************/
@@ -506,7 +513,7 @@ $(".select-down").each(function() {
     });
   template += "</div></div>";
 
-  $(this).wrap('<div class="form-field-content"></div>');
+   $(this).wrap('<div class="form-field-content"></div>');
   $(this).hide();
   $(this).after(template);
 });
@@ -550,103 +557,36 @@ $(".form-select-custom-options").on("click", function() {
     .text($(this).text());
 });
 
-(function($) {
-  var CheckboxDropdown = function(el) {
-    var _this = this;
-    this.isOpen = false;
-    this.areAllChecked = false;
-    this.$el = $(el);
-    this.$label = this.$el.find('.location-dropdown-button-label');
-    this.$checkAll = this.$el.find('[data-toggle="check-all"]').first();
-    this.$inputs = this.$el.find('[type="checkbox"]');
-
-    this.onCheckBox();
-
-    this.$label.on('click', function(e) {
-      e.preventDefault();
-      _this.toggleOpen();
-    });
-
-    this.$checkAll.on('click', function(e) {
-      e.preventDefault();
-      _this.onCheckAll();
-    });
-
-    this.$inputs.on('change', function(e) {
-      _this.onCheckBox();
-    });
-  };
-
-  CheckboxDropdown.prototype.onCheckBox = function() {
-    this.updateStatus();
-  };
-
-  CheckboxDropdown.prototype.updateStatus = function() {
-    var checked = this.$el.find(':checked');
-
-    this.areAllChecked = false;
-    this.$checkAll.html('All Locations');
-
-    if(checked.length <= 0) {
-      this.$label.html('No Locations');
-    }
-    else if(checked.length === 1) {
-      this.$label.html(checked.parent('label').text());
-    }
-    else if(checked.length === this.$inputs.length) {
-      this.$label.html('All Locations');
-      this.areAllChecked = true;
-      /*this.$checkAll.html('Uncheck All');*/
-    }
-    else {
-      this.$label.html(checked.length + ' Locations');
-    }
-  };
-
-  CheckboxDropdown.prototype.onCheckAll = function(checkAll) {
-    if(!this.areAllChecked || checkAll) {
-      this.areAllChecked = true;
-      this.$checkAll.html('All Locations');
-      this.$inputs.prop('checked', true);
-    }
-    else {
-      this.areAllChecked = false;
-      this.$checkAll.html('No Locations');
-      this.$inputs.prop('checked', false);
-    }
-
-    this.updateStatus();
-  };
-
-  CheckboxDropdown.prototype.toggleOpen = function(forceOpen) {
-    var _this = this;
-    var this.$popover = this.$el.find('.popover');
-
-    if(!this.isOpen || forceOpen) {
-       this.isOpen = true;
-       this.$popover.addClass('popover-active');
-      $(document).on('click', function(e) {
-        if(!$(e.target).closest('[data-control]').length) {
-         this.toggleOpen();
-        }
-      });
-    }
-    else {
-      this.isOpen = false;
-      this.$el.removeClass('popover-active');
-      $(document).off('click');
-    }
-  };
-
-  var checkboxesDropdowns = document.querySelectorAll('[data-control="checkbox-dropdown"]');
-  for(var i = 0, length = checkboxesDropdowns.length; i < length; i++) {
-    new CheckboxDropdown(checkboxesDropdowns[i]);
-  }
-})(jQuery);
-
-/************************
+ /************************
 END CUSTOM SELECT
 ************************/
+
+/*('.form-field-with-segmented-controls button').click(function(){
+  var sum = document.getElementsByClassName("segmented-control-segment");
+  for (var i = 0; i < sum.length; i++) {
+
+    if ( $(this).hasClass('segmented-control-segment') ){
+  		$(indicator).addClass('segmented-control-segment-selected');
+    } else {
+      $(indicator).removeClass('segmented-control-segment-selected');
+    }
+  }
+
+});*/
+
+var sum = document.getElementsByClassName("segmented-control-segment");
+var money = document.getElementsByClassName("money-text");
+var percent = document.getElementsByClassName("percent-text");
+
+for (var i = 0; i < sum.length; i++) {
+  sum[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("segmented-control-segment-selected");
+  if (current.length > 0) {
+    current[0].className = current[0].className.replace(" segmented-control-segment-selected", "");
+  }
+  this.className += " segmented-control-segment-selected";
+  });
+}
 
 /************************
 TEXTBOX NUMBERS ONLY
