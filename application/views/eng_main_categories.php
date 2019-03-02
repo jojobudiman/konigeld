@@ -421,129 +421,29 @@
           <!--Container-->
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
-                    <div class="filter-bar">
-                      <div class="filter-bar-filters">
-                          <div class="filter-bar-item location">
-                            <div class="dropdown">
-                              <button class="konibutton dropdown-trigger" type="button">
-                                <div class="location-dropdown-button-content">
-                                  <div class="location-dropdown-button-label">
-                                    All Locations
-                                  </div>
-                                  <div class="arrow-down"></div>
-                                </div>
-                              </button>
-                              <div class="popover-fly-down popover-filter popover-list popover">
-                                <label class="location-dropdown-option location-dropdown-option-select-all form-checkbox" data-toggle="check-all">
-                                  <div class="form-checkbox-content">
-                                    <input class="form-checkbox-input" type="checkbox">
-                                    <div class="form-checkbox-check"></div>
-                                  </div>
-                                  <div class="form-checkbox-label">
-                                    <div class="form-checkbox-label-text">
-                                      All Locations
-                                    </div>
-                                  </div>
-                                </label>
-                                <div class="location-dropdown-vertical-collection-list">
-                                  <!--Di loop jika ada tambahan lokasi-->
-                                  <label class="location-dropdown-option form-checkbox">
-                                    <div class="form-checkbox-content">
-                                      <input class="form-checkbox-input" type="checkbox">
-                                      <div class="form-checkbox-check"></div>
-                                    </div>
-                                    <div class="form-checkbox-label">
-                                      <div class="form-checkbox-label-text">
-                                        Test1
-                                      </div>
-                                    </div>
-                                  </label>
-                                  <label class="location-dropdown-option form-checkbox">
-                                    <div class="form-checkbox-content">
-                                      <input class="form-checkbox-input" type="checkbox">
-                                      <div class="form-checkbox-check"></div>
-                                    </div>
-                                    <div class="form-checkbox-label">
-                                      <div class="form-checkbox-label-text">
-                                        Test2
-                                      </div>
-                                    </div>
-                                  </label>
-                                  <!--End loop-->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="filter-bar-item input-icon input-search">
-                            <input class="input input-icon-search-input input-icon-search-input-clear" type="text">
-                            <i class="input-icon-search-icon"></i>
-                          </div>
-                      </div>
-                      <div class="filter-bar-actions">
-                        <div class="filter-bar-item">
-                          <button class="konibutton button-primary filter-bar-item" type="button" data-href="<?php echo base_url();?>products_library_new">Add Product</button>
-                        </div>
-                      </div>
+                <div class="product-categories-header">
+                  <div>
+                    <h3>Categories</h3>
+                    <div class="product-categories-subtext">
                     </div>
-                    <div class="table-auto-viewport">
-                      <div class="product-outer-flex-div">
-                        <div class="product-library-catalog-table">
-                          <div class="konitable">
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th colspan="1" rowspan="1" class="item-table-name super-strong">
-                                    <div class="table-name-column">Products</div>
-                                  </th>
-                                  <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
-                                    <div class="table-name-column">SKU</div>
-                                  </th>
-                                    <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
-                                      <div class="table-name-column">Category</div>
-                                    </th>
-                                    <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
-                                      <div class="table-name-column">Locations</div>
-                                    </th>
-                                    <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
-                                      <div class="table-name-column type-align-right">Stock</div>
-                                    </th>
-                                    <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
-                                      <div class="table-name-column type-align-right">Price</div>
-                                    </th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr class="table-row-selectable" data-href="http://google.com">
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                    <div class="konitable-container">
-                                      <div class="table-item-name-column">nama item</div>
-                                    </div>
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">id produk</div>
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">kategori produk</div>
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">lokasi</div><!--Kalau lebih dari 1 dinamakan x locations-->
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">stok</div><!--Kalau stok habis jadi - -->
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">harga produk</div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-
                   </div>
+                  <div class="product-categories-button">
+                    <button class="konibutton button-primary" type="button">Create Category</button>
+                  </div>
+                </div>
+                <table class="konitable table-flex">
+                  <thead>
+                    <tr class="table-row">
+                      <th class="table-header">Category Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-row">
+                      <td>Test</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
                   <!--Kalau ada produk sampai sini-->
                   <!-- Jika tidak ada produk -->
                   <!--<div class="page-layout">
