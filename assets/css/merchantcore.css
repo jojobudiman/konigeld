@@ -14162,6 +14162,10 @@ td .table-item-name-column {
   transform: rotate(-135deg) translateY(-50%);
 }
 
+.hidden {
+	display: none;
+}
+
 .form-select-options {
 	position: absolute;
   display: block;

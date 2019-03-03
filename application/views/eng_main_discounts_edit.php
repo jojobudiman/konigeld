@@ -349,7 +349,7 @@
                         </svg>
                       </button>
                     </div>
-                    <h2 class="dialog-header-title">Create Discount</h2>
+                    <h2 class="dialog-header-title">Edit Discount</h2>
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -389,7 +389,7 @@
                                       <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00">
                                     </div>
                                     <div class="form-field-with-segmented-controls segmented-control">
-                                      <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment segmented-control-segment-selected" type="button" onclick="switchText(1)">%</button>
+                                      <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(1)">%</button>
                                       <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(2)">Rp</button>
                                     </div>
                                   </div>

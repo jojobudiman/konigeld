@@ -588,6 +588,11 @@ for (var i = 0; i < sum.length; i++) {
   });
 }
 
+function switchText(show) {
+  document.getElementById("text-"+show).style.display = "block";
+  document.getElementById("text-"+((show==1)?2:1)).style.display = "none";
+}
+
 /************************
 TEXTBOX NUMBERS ONLY
 ************************/
