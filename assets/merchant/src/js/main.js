@@ -561,6 +561,34 @@ $(".form-select-custom-options").on("click", function() {
 END CUSTOM SELECT
 ************************/
 
+/************************
+ADD DELETE ROW
+************************/
+
+$("#add-modif").click(function () {
+     $(".modifier-list").each(function () {
+         var tr = '<tr>';
+         jQuery.each($('tr:last td', this), function () {
+             tr += '<td class="table-cell">' + $(this).html() + '</td>';
+         });
+         tr += '</tr>';
+         if ($('tbody', this).length > 0) {
+             $('tbody', this).append(tr);
+         } else {
+             $(this).append(tr);
+         }
+     });
+});
+
+$(".modifier-remove-icon").click(function () {
+  var i = row.parentNode.parentNode.rowIndex;
+  document.getElementsByClassName('table-selectable').deleteRow(i);
+}
+
+/************************
+END ADD DELETE ROW
+************************/
+
 /*('.form-field-with-segmented-controls button').click(function(){
   var sum = document.getElementsByClassName("segmented-control-segment");
   for (var i = 0; i < sum.length; i++) {
