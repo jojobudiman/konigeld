@@ -375,7 +375,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Discount Name">
+                                  <input class="form-field-input" type="text" placeholder="Discount Name" value="">
                                 </div>
                               </div>
                             </div>
@@ -385,8 +385,8 @@
                                 <div class="form-field-content">
                                   <div class="form-field-percent-or-amount">
                                     <div class="form-field-with-segmented-control-input">
-                                      <input class="form-field-input percent-text" type="text" id="text-1" placeholder="%">
-                                      <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00">
+                                      <input class="form-field-input percent-text" type="text" id="text-1" placeholder="%" value="">
+                                      <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00" value="">
                                     </div>
                                     <div class="form-field-with-segmented-controls segmented-control">
                                       <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(1)">%</button>

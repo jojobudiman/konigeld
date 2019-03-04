@@ -375,7 +375,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Product Name">
+                                  <input class="form-field-input" value="" type="text" placeholder="Product Name">
                                 </div>
                               </div>
                             </div>
@@ -412,7 +412,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Price</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="price" type="text" placeholder="Rp 0.00">
+                                  <input class="form-field-input" id="price" type="text" placeholder="Rp 0.00" value="">
                                 </div>
                               </div>
                             </div>
@@ -420,7 +420,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">SKU</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="sku" type="text" placeholder="SKU">
+                                  <input class="form-field-input" id="sku" type="text" placeholder="SKU" value="">
                                 </div>
                               </div>
                             </div>
@@ -428,7 +428,7 @@
                               <div class="form-field">
                                 <label class="form-field-label">Stock</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock">
+                                  <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock" value="">
                                 </div>
                               </div>
                             </div>

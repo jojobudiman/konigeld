@@ -407,38 +407,6 @@
                         </div>
                       </div>
                     </fieldset>
-                    <fieldset class="form-fieldset">
-                      <legend class="form-legend">Price and Inventory</legend>
-                      <div class="grid-row">
-                        <div class="grid-col grid-col-24-24">
-                          <div class="form-table">
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label" for="">Price</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" id="price" type="text" placeholder="Rp 0.00">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label" for="">SKU</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" id="sku" type="text" placeholder="SKU">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label">Stock</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock">
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                    </fieldset>
                   </div>
                 </div>
               </div>

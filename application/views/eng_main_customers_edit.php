@@ -349,13 +349,13 @@
                         </svg>
                       </button>
                     </div>
-                    <h2 class="dialog-header-title">Edit Modifier</h2>
+                    <h2 class="dialog-header-title">Edit Customer</h2>
                     <div class="dialog-primary-actions">
-                      <div class="dialog-primary-actions-primary">
+                      <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
                         </button>
-                      </div>
+                      </div> Kalau ada delete button-->
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
@@ -373,63 +373,36 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Modifier Set Name</label>
+                                <label class="form-field-label" for="">First Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Set Name">
+                                  <input class="form-field-input" type="text" id="fname" placeholder="First Name" value="">
                                 </div>
                               </div>
                             </div>
-                            <table class="konitable table-selectable">
-                              <thead>
-                                <tr class="table-row">
-                                  <th class="table-header-cell-col-13-24">Modifier</th>
-                                  <th class="table-header-cell-col-8-24">Price</th>
-                                  <th class="table-header-cell-col-3-24"></th>
-                                </tr>
-                              </thead>
-                              <tbody class="modifier-list">
-                                <tr class="">
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text" value="">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text" value="">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modfiier-option-table-cell">
-                                      <button class="modifier-add-icon" id="add-modif" type="button">
-                                        <i></i>
-                                      </button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <script id="modifier-row" type="text/x-custom-template">
-                                <tr class="">
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text" value="">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text" value="">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modfiier-option-table-cell">
-                                      <button class="modifier-remove-icon" id="remove-modif" type="button" value="">
-                                        <i></i>
-                                      </button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                </script>
-                              </tbody>
-                            </table>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Last Name</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" id="lname" placeholder="Last Name" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Phone</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" id="phone" placeholder="Phone Number" value="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">E-mail</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" placeholder="E-mail" value="">
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
