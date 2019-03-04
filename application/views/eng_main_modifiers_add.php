@@ -380,9 +380,6 @@
                               </div>
                             </div>
                             <table class="konitable table-selectable">
-                              <button class="modifier-add-icon" id="add-modif" type="button">
-                                <i></i>
-                              </button>
                               <thead>
                                 <tr class="table-row">
                                   <th class="table-header-cell-col-13-24">Modifier</th>
@@ -404,10 +401,33 @@
                                   </td>
                                   <td class="table-cell">
                                     <div class="modfiier-option-table-cell">
-                                      <i class="modifier-remove-icon"></i>
+                                      <button class="modifier-add-icon" id="add-modif" type="button">
+                                        <i></i>
+                                      </button>
                                     </div>
                                   </td>
                                 </tr>
+                                <script id="modifier-row" type="text/x-custom-template">
+                                <tr class="">
+                                  <td class="table-cell">
+                                    <div class="modifier-option-table-cell">
+                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text">
+                                    </div>
+                                  </td>
+                                  <td class="table-cell">
+                                    <div class="modifier-option-table-cell">
+                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text">
+                                    </div>
+                                  </td>
+                                  <td class="table-cell">
+                                    <div class="modfiier-option-table-cell">
+                                      <button class="modifier-remove-icon" id="remove-modif" type="button">
+                                        <i></i>
+                                      </button>
+                                    </div>
+                                  </td>
+                                </tr>
+                                </script>
                               </tbody>
                             </table>
                           </div>

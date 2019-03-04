@@ -565,7 +565,7 @@ END CUSTOM SELECT
 ADD DELETE ROW
 ************************/
 
-$("#add-modif").click(function () {
+/*$("#add-modif").click(function () {
      $(".modifier-list").each(function () {
          var tr = '<tr>';
          jQuery.each($('tr:last td', this), function () {
@@ -583,7 +583,57 @@ $("#add-modif").click(function () {
 $(".modifier-remove-icon").click(function () {
   var i = row.parentNode.parentNode.rowIndex;
   document.getElementsByClassName('table-selectable').deleteRow(i);
-}
+}*/
+
+const dynamic_JS = ({
+}) => `<tr class="">
+  <td class="table-cell">
+    <div class="modifier-option-table-cell">
+      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text">
+    </div>
+  </td>
+  <td class="table-cell">
+    <div class="modifier-option-table-cell">
+      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text">
+    </div>
+  </td>
+  <td class="table-cell">
+    <div class="modfiier-option-table-cell">
+      <button class="modifier-remove-icon" id="remove-modif" type="button">
+        <i></i>
+      </button>
+    </div>
+  </td>
+</tr>`;
+
+var modif_add = $('#modifier-row').text();
+var dynamic_add = modif_add.split(/\$\{(.+?)\}/g);
+
+$('.table-selectable').on('input propertychange',' > tbody > tr > td:nth-child(2) > input', function() {
+  $.each($('input[type=text]'), function() {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+});
+
+$('#add-modif').on('click', function() {
+  $(".table-selectable").each(function() {
+    var tr_last = $('tbody > tr:last', this).clone();
+    var td_no = tr_last.find('td:first');
+
+    $('tbody', this).append([{
+    }].map(dynamic_JS).join(''));
+
+    var tr_first_input = $('tbody > tr:first > td:nth-child(2) > input');
+    tr_first_input.val(0);
+
+
+    return;
+  });
+});
+
+$('.modifier-list').on('click', '#remove-modif', function() {
+  $(this).closest('tr').remove();
+});
 
 /************************
 END ADD DELETE ROW

@@ -14381,23 +14381,23 @@ td .table-item-name-column {
 	background: 0 0;
 }
 
-.table-selectable .modifier-add-icon {
+.modifier-add-icon, .modifier-remove-icon {
 	border-radius: 50%;
-	height: 24px;
+	height: 35px;
 	min-width: 0;
-	padding: 0 6px;
+	padding: 0 12px;
 	line-height: 1;
-	z-index: 600;
-	position: absolute;
-	top: 13px;
-	right: -11px;
 	background: #FFFFFF;
 	border: 1px solid #000000;
 }
 
-.table-selectable .modifier-add-icon i {
+.modifier-add-icon:hover .modifier-add-icon i, .modifier-remove-icon:hover .modifier-remove-icon i {
+	background-image: url(../img/merchant/addh.png);
+}
+
+.modifier-add-icon i, .modifier-remove-icon i {
 	vertical-align: text-bottom;
-	margin-bottom: 3px;
+	margin-bottom: 1px;
 	width: 10px;
 	height: 10px;
 	background-image: url(../img/merchant/add.png);
@@ -14405,19 +14405,6 @@ td .table-item-name-column {
 	cursor: pointer;
 }
 
-.modifier-remove-icon {
-	height: 24px;
-	min-width: 0;
-}
-
-.modifier-remove-icon {
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/merchant/removemodif.png);
-	background-size: contain;
-	cursor: pointer;
-}
-
-.modifier-remove-icon:hover {
-	background-image: url(../img/merchant/removemodifh.png);
+.modifier-remove-icon i {
+	transform: rotate(135deg);
 }
