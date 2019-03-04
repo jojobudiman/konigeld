@@ -349,13 +349,13 @@
                         </svg>
                       </button>
                     </div>
-                    <h2 class="dialog-header-title">Add Modifier</h2>
+                    <h2 class="dialog-header-title">Edit Modifier</h2>
                     <div class="dialog-primary-actions">
-                      <!--<div class="dialog-primary-actions-primary">
+                      <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
                         </button>
-                      </div> Kalau ada delete button-->
+                      </div>
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>

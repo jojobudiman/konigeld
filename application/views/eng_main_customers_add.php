@@ -349,7 +349,7 @@
                         </svg>
                       </button>
                     </div>
-                    <h2 class="dialog-header-title">Add Modifier</h2>
+                    <h2 class="dialog-header-title">Add Customer</h2>
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -373,64 +373,69 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Modifier Set Name</label>
+                                <label class="form-field-label" for="">First Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Set Name">
+                                  <input class="form-field-input" type="text" id="fname" placeholder="First Name">
                                 </div>
                               </div>
                             </div>
-                            <table class="konitable table-selectable">
-                              <thead>
-                                <tr class="table-row">
-                                  <th class="table-header-cell-col-13-24">Modifier</th>
-                                  <th class="table-header-cell-col-8-24">Price</th>
-                                  <th class="table-header-cell-col-3-24"></th>
-                                </tr>
-                              </thead>
-                              <tbody class="modifier-list">
-                                <tr class="">
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modfiier-option-table-cell">
-                                      <button class="modifier-add-icon" id="add-modif" type="button">
-                                        <i></i>
-                                      </button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <script id="modifier-row" type="text/x-custom-template">
-                                <tr class="">
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modfiier-option-table-cell">
-                                      <button class="modifier-remove-icon" id="remove-modif" type="button">
-                                        <i></i>
-                                      </button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                </script>
-                              </tbody>
-                            </table>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Last Name</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" id="lname" placeholder="Last Name">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Phone</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" id="phone" placeholder="Phone Number">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">E-mail</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" placeholder="E-mail">
+                                </div>
+                              </div>
+                            </div>
                           </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form-fieldset">
+                      <legend class="form-legend">Price and Inventory</legend>
+                      <div class="grid-row">
+                        <div class="grid-col grid-col-24-24">
+                          <div class="form-table">
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Price</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" id="price" type="text" placeholder="Rp 0.00">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">SKU</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" id="sku" type="text" placeholder="SKU">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label">Stock</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock">
+                                </div>
+                              </div>
+                            </div>
                         </div>
                       </div>
                     </fieldset>

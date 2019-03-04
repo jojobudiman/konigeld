@@ -144,6 +144,9 @@ a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects
 }
+a:hover {
+	color: #42838D;
+}
 a:hover, a:active {
 	outline: 0;
 }
@@ -248,7 +251,7 @@ button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-fo
 }
 input[type=radio], input[type=checkbox] {
 	box-sizing: border-box;
-	padding: 0
+	padding: 0;
 }
 input[type=date], input[type=time], input[type=datetime-local], input[type=month] {
 	-webkit-appearance: listbox
@@ -12939,6 +12942,11 @@ body {
     line-height: 14px;
 }
 
+.arrow-up:after {
+	top: 2px;
+  transform: rotate(-90deg);
+}
+
 .arrow-down:after {
     top: 2px;
     transform: rotate(90deg);
@@ -13835,16 +13843,17 @@ body {
 	opacity: 0;
 }
 
-.form-checkbox-input:checked+.form-checkbox-check {
+.form-checkbox-input:checked + .form-checkbox-check {
 	display: block;
 }
 
-.form-checkbox-input:checked.form-checkbox-check {
+.form-checkbox-check {
 	position: absolute;
 	left: 5px;
 	top: 1px;
 	border: 2px solid #42838D;
 	border-width: 0 2px 2px 0;
+	display: none;
 	width: 6px;
 	height: 11px;
 	transform: rotate(45deg);
@@ -13856,7 +13865,6 @@ body {
 	font-weight: inherit;
 	flex: 1;
 	max-width: 600px;
-	cursor: pointer;
 }
 
 .form-checkbox-label-text {
@@ -13879,6 +13887,7 @@ body {
 
 .location-dropdown-option:hover {
 	background-color: #D4EAF5;
+	cursor: pointer;
 }
 
 
@@ -14408,3 +14417,9 @@ td .table-item-name-column {
 .modifier-remove-icon i {
 	transform: rotate(135deg);
 }
+
+.customer-list-header {
+	color: #000000;
+}
+
+.custome-
