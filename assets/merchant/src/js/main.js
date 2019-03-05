@@ -33,6 +33,28 @@ $('button.konibutton.dropdown-trigger').on('click', function(){
     }
 });
 
+$(function(){
+  var openMe = $('.dashboard-header-sidebar-parent-children'),
+      animateTime = 200,
+      dashMe = $('.dashboard-header-layout-sidebar .dashboard-header-sidebar-parent-item');
+  dashMe.click(function(){
+    if(openMe.height() === 0){
+      dashMe.addClass('dashboard-header-sidebar-parent-item--open');
+      autoHeightAnimate(openMe, animateTime);
+    } else {
+      openMe.stop().animate({ height: '0' }, animateTime);
+      dashMe.removeClass('dashboard-header-sidebar-parent-item--open');
+    }
+  });
+})
+
+/* Function to animate height: auto */
+function autoHeightAnimate(element, time) {
+  	var curHeight = element.height(), // Get Default Height
+        autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+    	  element.height(curHeight); // Reset to Default Height
+    	  element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
+}
 
 /************************
 BUTTON HYPERLINK

@@ -415,7 +415,7 @@
             <a href="#" class="dashboard-header-sidebar-parent-item">
               Reports
             </a>
-            <div class="dashboard-header-sidebar-parent-children" style="max-height: 320px;">
+            <div class="dashboard-header-sidebar-parent-children" style="height: 320px;">
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Sales Summary</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Methods</a>
