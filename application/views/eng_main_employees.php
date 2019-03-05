@@ -445,7 +445,7 @@
                                   <th colspan="1" rowspan="1" class="item-table-name super-strong">
                                     <div class="table-name-column">Assigned Location</div>
                                   </th>
-                                  <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
+                                  <th colspan="1" rowspan="1" class="item-table-name super-strong">
                                     <div class="table-name-column">Phone Number</div>
                                   </th>
                                   <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">

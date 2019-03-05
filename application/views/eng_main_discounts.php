@@ -434,11 +434,8 @@
                                 </div>
                               </button>
                               <div class="popover-fly-down popover-filter popover-list popover">
-                                <label class="location-dropdown-option location-dropdown-option-select-all form-checkbox" data-toggle="check-all">
-                                  <div class="form-checkbox-content">
-                                    <input class="form-checkbox-input" type="checkbox">
-                                    <div class="form-checkbox-check"></div>
-                                  </div>
+                                <label class="location-dropdown-option location-dropdown-option-select-all form-checkbox" data-toggle="check-all" for="all-locations">
+                                  <input class="form-checkbox-input" id="all-locations" type="checkbox">
                                   <div class="form-checkbox-label">
                                     <div class="form-checkbox-label-text">
                                       All Locations
@@ -447,25 +444,19 @@
                                 </label>
                                 <div class="location-dropdown-vertical-collection-list">
                                   <!--Di loop jika ada tambahan lokasi-->
-                                  <label class="location-dropdown-option form-checkbox">
-                                    <div class="form-checkbox-content">
-                                      <input class="form-checkbox-input" type="checkbox">
-                                      <div class="form-checkbox-check"></div>
-                                    </div>
+                                  <label class="location-dropdown-option form-checkbox" for="lokasi1">
+                                    <input class="form-checkbox-input" id="lokasi1" type="checkbox">
                                     <div class="form-checkbox-label">
                                       <div class="form-checkbox-label-text">
-                                        Test1
+                                        Lokasi1
                                       </div>
                                     </div>
                                   </label>
-                                  <label class="location-dropdown-option form-checkbox">
-                                    <div class="form-checkbox-content">
-                                      <input class="form-checkbox-input" type="checkbox">
-                                      <div class="form-checkbox-check"></div>
-                                    </div>
+                                  <label class="location-dropdown-option form-checkbox" for="lokasi2">
+                                    <input class="form-checkbox-input" id="lokasi2" type="checkbox">
                                     <div class="form-checkbox-label">
                                       <div class="form-checkbox-label-text">
-                                        Test2
+                                        Lokasi2
                                       </div>
                                     </div>
                                   </label>

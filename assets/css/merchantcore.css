@@ -13816,47 +13816,55 @@ body {
 	margin-bottom: 20px;
 }
 
-.form-checkbox-content {
-	flex: none;
-	margin-right: 12px;
-	position: relative;
-	border: 1px solid #000000;
-	border-radius: 5px;
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	cursor: pointer;
-	background: #fff;
-}
-
 .form-checkbox-input {
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	opacity: 0;
+	position: relative;
+	top: 2px;
+	margin: 0 1rem 0 0;
 	cursor: pointer;
 }
 
-.form-checkbox-check {
-	opacity: 0;
+.form-checkbox-input:checked:before {
+  -webkit-transform: rotate(-45deg) scale(1, 1);
+  -moz-transform: rotate(-45deg) scale(1, 1);
+  -ms-transform: rotate(-45deg) scale(1, 1);
+  -o-transform: rotate(-45deg) scale(1, 1);
+  transform: rotate(-45deg) scale(1, 1);
 }
 
-.form-checkbox-input:checked + .form-checkbox-check {
-	display: block;
-}
-
-.form-checkbox-check {
+.form-checkbox-input:before {
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+	-moz-transition: -moz-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+	transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+	-webkit-transform: rotate(-45deg) scale(0, 0);
+	-moz-transform: rotate(-45deg) scale(0, 0);
+	-ms-transform: rotate(-45deg) scale(0, 0);
+	-o-transform: rotate(-45deg) scale(0, 0);
+	transform: rotate(-45deg) scale(0, 0);
+	content: "";
 	position: absolute;
-	left: 5px;
-	top: 1px;
+	left: 2px;
+	top: 2px;
+	z-index: 1;
+	width: 12px;
+	height:5px;
 	border: 2px solid #42838D;
-	border-width: 0 2px 2px 0;
-	display: none;
-	width: 6px;
-	height: 11px;
-	transform: rotate(45deg);
+	border-top-style: none;
+	border-right-style: none;
+}
+
+.form-checkbox-input:after {
+	content: "";
+	position: relative;
+	display: inline-block;
+	margin-right: 12px;
+	border: 1px solid #000000;
+  border-radius: 5px;
+	top: -0.125rem;
+	left: 0;
+	width: 1rem;
+	height: 1rem;
+	background: #FFFFFF;
+	cursor: pointer;
 }
 
 .form-checkbox-label {
@@ -13865,6 +13873,7 @@ body {
 	font-weight: inherit;
 	flex: 1;
 	max-width: 600px;
+	cursor: pointer;
 }
 
 .form-checkbox-label-text {
@@ -14599,4 +14608,13 @@ td .table-item-name-column {
   border-radius: 5px;
 	width: 100%;
 	height: 40px;
+}
+
+.form-field-with-checkboxes .form-field-content {
+	padding: 16px 16px 10px;
+}
+
+.form-field-content .form-checkbox {
+	display: flex;
+	margin-bottom: 20px;
 }
