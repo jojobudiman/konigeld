@@ -12,7 +12,7 @@
         <div class="content">
           <div class="column column-fill flex-align-left"></div>
           <div class="column flex-align-center">
-            <a href="<?php echo base_url();?>" class="logo">
+            <a href="#" class="logo">
               <svg version="1.1" id="konigeld" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 viewBox="0 0 86.1 127" width="45" height="45" style="enable-background:new 0 0 86.1 127;" xml:space="preserve">
               	<style type="text/css">

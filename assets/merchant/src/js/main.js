@@ -316,6 +316,14 @@ setInputFilter(document.getElementById("lname"), function(value) {
   return /^[a-zA-Z]*$/.test(value);
 });
 
+setInputFilter(document.getElementById("bname"), function(value) {
+  return /^[a-zA-Z]*$/.test(value);
+});
+
+setInputFilter(document.getElementById("city"), function(value) {
+  return /^[a-zA-Z]*$/.test(value);
+});
+
 setInputFilter(document.getElementById("phone"), function(value) {
   return /^\d*\.?\d*$/.test(value);
 })

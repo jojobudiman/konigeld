@@ -35,6 +35,32 @@
     height: 45px;
   }
 
+  .pad-vert-medium-at-medium {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .align-left-at-medium {
+      text-align: left !important;
+  }
+
+  .align-center-at-medium {
+    text-align: center !important;
+  }
+
+  .align-right-at-medium {
+    text-align: right !important;
+  }
+
+  .grid-1-at-medium > * {
+    width: 100%;
+  }
+
+  .grid-2-at-medium > * {
+    width: 50%;
+  }
+
+
 }
 
 @media (min-width: 992px) {
@@ -44,6 +70,16 @@
 @media (min-width: 1024px) {
   .content {
     width: 868px;
+  }
+
+  .pad-horz-small-at-large {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .pad-horz-medium-at-large {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
   }
 }
 

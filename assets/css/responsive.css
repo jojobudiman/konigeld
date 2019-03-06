@@ -185,6 +185,11 @@
     height: auto;
   }
 
+  .pad-vert-medium-at-medium {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -273,7 +278,15 @@
     width: 33.3333333333%;
   }
 
-  
+  .pad-horz-small-at-large {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .pad-horz-medium-at-large {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
 
 }
 

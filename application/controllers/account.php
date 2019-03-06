@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class dashboard-test extends CI_Controller {
+class account extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,9 +20,9 @@ class dashboard-test extends CI_Controller {
 	 */
 
     function index() {
-        $this->load->view('mercss');
-        $this->load->view('mer_eng_dashboard');
-        $this->load->view('konijs');
+        $this->load->view('merchant-css');
+        $this->load->view('eng_main_account');
+        $this->load->view('merchant-js');
 	}
 
 }
