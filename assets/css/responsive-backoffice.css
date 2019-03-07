@@ -60,6 +60,13 @@
     width: 50%;
   }
 
+  .grid-3-at-medium > * {
+    width: 33.33333%;
+  }
+
+  .display-block-at-medium {
+    display: block !important;
+  }
 
 }
 

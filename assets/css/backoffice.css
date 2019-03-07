@@ -17,15 +17,6 @@ html *, html :after, html :before {
     box-sizing: inherit;
 }
 
-a, a .link {
-    color: #D45C4F;
-    font-weight: 700;
-}
-
-a {
-    text-decoration: none;
-}
-
 label {
     display: block;
     width: 100%;
@@ -40,6 +31,19 @@ label {
 
 .show-time a, .show-time a .link {
     transition: color 150ms linear;
+}
+
+a, a .link {
+    color: #D45C4F;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus, a:focus .link, a:hover, a:hover .link {
+    color: #BE2D2A;
 }
 
 input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url] {
@@ -96,11 +100,43 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     text-align: center !important;
 }
 
+.grid-flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.grid-row-space-base, .grid-space-base {
+    margin-bottom: -10px !important;
+}
+
 .grid-row-space-line, .grid-space-line {
     margin-bottom: -20px !important;
 }
 
 .grid-row-space-line > *, .grid-space-line > * {
+    margin-bottom: 20px !important;
+}
+
+.grid-row-space-small, .grid-space-small {
+    margin-bottom: -30px !important;
+}
+
+.grid-row-space-medium, .grid-space-medium {
+    margin-bottom: -60px !important;
+}
+
+.grid-row-space-large, .grid-space-large {
+    margin-bottom: -80px !important;
+}
+
+.grid > *, [class*=grid-] > * {
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 20px !important;
 }
 
@@ -112,6 +148,17 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: -20px !important;
+}
+
+.grid-flex > * {
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: auto;
+}
+
+.no-shrink {
+    -ms-flex-negative: 0 !important;
+    flex-shrink: 0 !important;
 }
 
 .border-top {
@@ -150,9 +197,18 @@ img, svg {
     padding-top: 30px !important;
 }
 
+.pad-bot-small {
+    padding-bottom: 30px !important;
+}
+
 .pad-vert-small {
     padding-top: 30px !important;
     padding-bottom: 30px !important;
+}
+
+.pad-horz-small {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
 }
 
 .gap-top-small {
@@ -246,6 +302,11 @@ section :last-child {
   margin-left: auto;
   margin-right: auto;
   max-width: 868px !important;
+}
+
+.display-inline-block {
+    display: inline-block !important;
+    vertical-align: middle;
 }
 
 .login {
@@ -400,6 +461,10 @@ button.toggle-password {
     cursor: pointer;
 }
 
+.red {
+    color: #D45C4F;
+}
+
 .button.expand, button.expand, input[type=button].expand, input[type=reset].expand, input[type=submit].expand {
     padding-left: 10px;
     padding-right: 10px;
@@ -478,4 +543,90 @@ button.toggle-password {
 #logincontainer {
     padding-left: 30px;
     margin: auto;
+}
+
+.p-description {
+
+}
+
+.active-section .fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+  transition-delay: 300ms;
+}
+
+.pad-top-line {
+    padding-top: 20px !important;
+}
+
+#login, #card {
+    font-size: 14px;
+}
+
+.card-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.card-theme {
+    color: #000000;
+    background: #FFFFFF;
+    border: 5px solid #000000;
+    border-radius: 5px;
+}
+
+.card-primary, .card-secondary {
+    flex-grow: 1;
+}
+
+.select-field .select {
+    position: relative;
+}
+
+select {
+    position: relative;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: 40px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    background: #FFFFFF;
+    color: #5F6A7D;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.select i {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.select:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    right: 1px;
+    width: 38px;
+    height: 38px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    pointer-events: none;
+    transition: background-color 300ms;
 }

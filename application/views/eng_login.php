@@ -12,7 +12,7 @@
         <div class="content">
           <div class="column column-fill flex-align-left"></div>
           <div class="column flex-align-center">
-            <a href="<?php echo base_url();?>" class="logo">
+            <a href="<?php echo base_url();. 'english_home'?>" class="logo">
               <svg version="1.1" id="konigeld" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 viewBox="0 0 86.1 127" width="45" height="45" style="enable-background:new 0 0 86.1 127;" xml:space="preserve">
               	<style type="text/css">
@@ -199,7 +199,7 @@
                             </div>
                             <div class="password-input">
                               <input type="password" name="password" id="password" placeholder="Password">
-                              <button type="button" class="toggle-password">Forget Password</button>
+                              <button type="button" class="forget-password" href="">Forget Password</button>
                             </div>
                           </div>
                         </div>
@@ -212,7 +212,7 @@
                       <div class="column">
                         <div class="column align-center">
                           <button class="expand" type="button">Sign In</button>
-                          <p id="signup align-center">Don’t have a Königeld account? <a href="#">Sign up.</a></p>
+                          <p id="signup align-center">Don’t have a Königeld account? <a href="<?php echo base_url(). 'signup'?>">Sign up.</a></p>
                         </div>
                       </div>
                     </div>
