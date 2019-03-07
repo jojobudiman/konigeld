@@ -38,9 +38,9 @@ Resources
 *********
 
 -  `User Guide <https://konigeld.com/docs>`_
--  `Facebook <http://facebook.com/>`_
--  `Twitter <https://twitter.com>`_
--  `Instagram <https://instagram.com>`_
+-  `Facebook <https://www.facebook.com/K%C3%B6nigeld-2232360990160033/>`_
+-  `Twitter <https://twitter.com/konigeldd>`_
+-  `Instagram <https://www.instagram.com/konigeld/>`_
 
 Report any issues or questions to our `mail <mailto:contact@konigeld.com>`_
 or via our contact `page <https://konigeld.com/contact>`_, thank you.
