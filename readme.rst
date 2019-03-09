@@ -4,16 +4,18 @@ What is Königeld
 
 Königeld is a point of sale system for people who build new or small businesses.
 
-*******************
+
 Documentation for Jovan
-*******************
+--------------------------------
 
 Buat database belum dibuat sama sekali maupun modelsnya kalau perlu contoh gw bakal kasih filenya ntar.
 Di folder views ada banyak bgt sih to be exact:
-eng_about : About page company profile
-eng_feature : Fitur company profile
-eng_login : Login page (Ini main db)
-eng_signup : Pembuatan akun, lanjut ke 2, ke 3, ke 4 dan redirect ke main_dashboard
+
+
+- eng_about : About page company profile
+- eng_feature : Fitur company profile
+- eng_login : Login page (Ini main db)
+- eng_signup : Pembuatan akun, lanjut ke 2, ke 3, ke 4 dan redirect ke main_dashboard
 
 
 *******************
@@ -23,8 +25,8 @@ Mengenai nama view (eng_main_xxxx) ini sudah merupakan bagian dari back-end mili
 Untuk eng_main_reports sedang diperbaiki contentnya. Sisanya main hyperlink CRUD sama kalau ada masalah langsung contact
 aja
 
-eng_main_xxx_add -> Add
-eng_main_xxx_edit -> Edit dan delete
+- eng_main_xxx_add -> Add
+- eng_main_xxx_edit -> Edit dan delete
 
 *******************
 Information
