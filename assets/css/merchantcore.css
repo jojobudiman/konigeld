@@ -12779,12 +12779,6 @@ body {
 	clear: both;
 }
 
-.reports-content {
-	float: none;
-	width: auto;
-	padding-left: 0;
-  position: relative;
-}
 
 .dashboard-header-layout-content {
 	flex: 1 1 auto;
@@ -12793,6 +12787,13 @@ body {
 
 .dashboard-header-layout-content .reports-content {
 	min-height: calc(100vh - 56px);
+}
+
+.reports-content {
+	float: none;
+	width: auto;
+	padding-left: 0;
+  position: relative;
 }
 
 .filter-bar-border {
@@ -13068,7 +13069,7 @@ body {
 	opacity: 1;
 	visibility: visible;
 	transform: translate3d(0,0,0);
-	transition: visibility 0s linear 0s,opacity .3s ease,transform .3s cubic-bezier(.175,.855,.32,1.275);
+	transition: visibility 0s linear 0s, opacity 0.3s ease, transform 0.3s cubic-bezier(.175,.855,.32,1.275);
 }
 
 .popover-fly-up {
@@ -13080,7 +13081,7 @@ body {
 .popover-fly-down {
   top: 100%;
   left: 0;
-  margin-top: 4px;
+  margin-top: 10px;
   transform: translate3d(0,-7px,0);
 }
 
@@ -13494,6 +13495,8 @@ body {
 }
 
 /*SALES TRENDS*/
+
+
 .box-divide-s {
 	border-bottom: 1px #D5D9DC solid;
 }
@@ -13513,7 +13516,7 @@ body {
 
 .sales-caps {
 	letter-spacing: 1px;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
@@ -13541,6 +13544,7 @@ body {
 
 .popover-list {
 	min-width: 200px;
+
 }
 
 .popover-list-item {
@@ -13566,8 +13570,8 @@ body {
 }
 
 .sales-chart-header-area-horizontal .sales-chart-legend-item {
-	line-height: 14px;
-	margin-bottom: 8px;
+	line-height: 26px;
+	margin-bottom: 1px;
 }
 
 .sales-chart-container {

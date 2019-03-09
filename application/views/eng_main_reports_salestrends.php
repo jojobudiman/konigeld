@@ -76,7 +76,7 @@
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="nav-dropdown-text">
               Jovan Hidayat
-              <i class="arrow-drop fa fa-angle-down"></i>
+              <i class="arrow-down"></i>
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
@@ -415,9 +415,9 @@
             <a href="#" class="dashboard-header-sidebar-parent-item">
               Reports
             </a>
-            <div class="dashboard-header-sidebar-parent-children" style="max-height: 320px;">
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Sales Summary</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
+            <div class="dashboard-header-sidebar-parent-children" style="height: 320px;">
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Summary</a>
+              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Sales Trends</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Methods</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Product Sales</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Category Sales</a>
@@ -429,248 +429,14 @@
           <!--End Sidebar-->
           <!--Container-->
           <div class="dashboard-header-layout-content">
-            <div class="page-layout-flex page-layout">
+            <div class="page-layout page-layout-flex">
               <div class="page-layout-content reports-main-viewport">
                 <div class="reports-content">
                   <div class="filter-bar-border">
                     <div class="filter-bar">
                       <div class="filter-bar-filters">
-                        <div class="filter-bar-item filter-date">
-                          <button data-role="back" class="button-segment button-first button-left arrow-left grid-col konibutton" type="button">
-                          </button>
-                          <div class="filter-segment float-left">
-                            <div class="filter-datee dropdown">
-                              <button class="dropdown-trigger fill filter-date-button button-segment arrow-down konibutton" type="button">
-                                <script>
-                                var today = new Date();
-                                var dd = today.getDate();
-                                var mm = today.getMonth()+1;
-                                var yyyy = today.getFullYear();
-
-                                if(dd<10) {
-                                  dd = '0'+dd
-                                }
-
-                                if(mm<10) {
-                                  mm = '0'+mm
-                                }
-
-                                today = dd + '/' + mm + '/' + yyyy;
-                                document.write(today);
-                                </script>
-                              </button>
-                              <div class="popover-fly-down filter-popover popover">
-                                <div class="grid-col grid-col-17-24 filter-calendar-well">
-                                  <div class="grid-row">
-                                    <div class="calendar grid-col grid-col-24-24">
-                                      <div class="calendar-header">
-                                        <div class="calendar-title-nav" data-role="calendar-back"><</div>
-                                        <div class="calendar-title">February 2019</div>
-                                        <div class="calendar-title-nav" data-rotle="calendar-forward">></div>
-                                      </div>
-                                      <div class="calendar-month">
-                                        <div class="calendar-weekdays">
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="date-filter-custom">
-                                        <div class="grid-row date-filter-custom-labels">
-                                          <div class="grid-col date-filter-custom-date">
-                                            Start
-                                          </div>
-                                          <div class="grid-col date-filter-custom-date float-right">
-                                            End
-                                          </div>
-                                        </div>
-                                        <div class="grid-row date-filter-custom-inputs">
-                                          <div class="grid-col date-filter-input date-filter-custom-date begin-date">
-                                            <input type="text" class="input date-input" name="">
-                                          </div>
-                                          -
-                                          <div class="grid-col date-filter-input date-filter-custom-date end-date float-right">
-                                            <input type="text" class="input date-input" name="">
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                <div class="grid-col grid-col-7-24 date-filter-dates">
-                                  <div class="date-filter-button">
-                                    <button class="konibutton fill date-filter-button" type="button">Today</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Yesterday</button>
-                                    <button class="konibutton fill date-filter-button" type="button">This Week</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Last Week</button>
-                                    <button class="konibutton fill date-filter-button" type="button">This Month</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Last Month</button>
-                                    <button class="konibutton fill date-filter-button" type="button">This Year</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Last Year</button>
-                                  </div>
-                                </div>
-                              </div>
-                              </div>
-                            </div>
-                            <button data-role="forward" class="button-segment button-right arrow-right grid-col konibutton" type="button">
-                            </button>
-                          </div>
+                        <input id="konicalendar" type="text" name="" value="">
+                        <span></span>
                       </div>
                       <div class="filter-bar-actions">
                         <div class="filter-bar-item">
@@ -688,29 +454,31 @@
                         <h3 class="sales-chart-comparison-subtitle">6 Feb. 2019 compared to</h3>
                         <div class="sales-chart-comparison-dropdown">
                           <div class="dropdown">
-                            <button class="dropdown-trigger-text arrow-down dropdown-trigger" type="button">Same Day Previous Week</button>
-                            <div class="popover-list popover-fly-down">
-                              <div class="popover-list-item">Same Day Previous Week</div>
-                              <div class="popover-list-item">Same Day Previous Year</div>
-                              <div class="popover-list-item">Specific Date</div>
+                            <button id="dailytrigger" class="dropdown-trigger-text arrow-down dropdown-trigger" type="button">Same Day Previous Week</button>
+                            <div class="popover popover-list popover-fly-down" id="daily">
+                              <div class="popover-list-item" id="samedayweek">Same Day Previous Week</div>
+                              <div class="popover-list-item" id="samedayyear">Same Day Previous Year</div>
+                              <div class="popover-list-item" id="specdate">Specific Date</div>
                             </div>
                           </div>
                         </div>
-                        <p class="sales-chart-subtitle">+Rp 3,311,361.66 more in sales than on 'tanggal'</p>
+                        <p id="daily" class="sales-chart-subtitle">+Rp 3,311,361.66 more in sales than on 'tanggal'</p>
+                      </div>
                         <div class="sales-chart-legend">
                           <div class="sales-chart-legend-item sales-chart-legend-item-vertical">
                             <div class="sales-chart-legend-item sales-trend-circle circle-blue"></div>
-                            <span class="strong">3 Feb - 9 Feb</span>
+                            <span class="super-strong">3 Feb - 9 Feb</span>
                           </div>
                           <div class="sales-chart-legend-item sales-chart-legend-item-vertical">
                             <div class="sales-chart-legend-item sales-trend-circle"></div>
-                            <span class="strong">4 Feb - 10 Feb</span>
+                            <span class="super-strong">4 Feb - 10 Feb</span>
                           </div>
                         </div>
-                      </div>
                     </div>
                         <div class="sales-chart-container">
-                          <canvas id="daily-gross-sales-chart" class="sales-trend-chart-graph"></canvas>
+                          <div class="sales-trend-chart-graph">
+                            <canvas id="daily-gross-sales-chart" class="double-line-chart"></canvas>
+                          </div>
                         </div>
                   </div>
                   <div class="box-divide-s">
@@ -720,25 +488,25 @@
                         <h3 class="sales-chart-comparison-subtitle">6 Feb. 2019 compared to</h3>
                         <div class="sales-chart-comparison-dropdown">
                           <div class="dropdown">
-                            <button class="dropdown-trigger-text arrow-down dropdown-trigger" type="button">Same Day Previous Week</button>
-                            <div class="popover-list popover-fly-down">
-                              <div class="popover-list-item">Previous Week</div>
-                              <div class="popover-list-item">Same Week Previous Year</div>
+                            <button id="weeklytrigger" class="dropdown-trigger-text arrow-down dropdown-trigger super-strong" type="button">Same Day Previous Week</button>
+                            <div class="popover popover-list popover-fly-down" id="weekly">
+                              <div class="popover-list-item" id="prevweek">Previous Week</div>
+                              <div class="popover-list-item" id="sameweek-prevyear">Same Week Previous Year</div>
                             </div>
                           </div>
                         </div>
                         <p class="sales-chart-subtitle">+Rp 3,311,361.66 more in sales than on 'tanggal'</p>
+                      </div>
                         <div class="sales-chart-legend">
                           <div class="sales-chart-legend-item sales-chart-legend-item-vertical">
                             <div class="sales-chart-legend-item sales-trend-circle circle-blue"></div>
-                            <span class="strong">3 Feb - 9 Feb</span> (Duit)
+                            <span class="super-strong">3 Feb - 9 Feb</span> (Duit)
                           </div>
                           <div class="sales-chart-legend-item sales-chart-legend-item-vertical">
                             <div class="sales-chart-legend-item sales-trend-circle"></div>
-                            <span class="strong">4 Feb - 10 Feb</span> (Duit)
+                            <span class="super-strong">4 Feb - 10 Feb</span> (Duit)
                           </div>
                         </div>
-                      </div>
                     </div>
                         <div class="sales-chart-container">
                           <canvas id="weekly-gross-sales-chart" class="sales-trend-chart-graph"></canvas>
@@ -750,6 +518,7 @@
                       <div class="sales-chart-header">
                         <h3 class="sales-chart-comparison-subtitle">2019 compared to previous year</h3>
                         <p class="sales-chart-subtitle">+Rp 3,311,361.66 more in sales so far than in 'previous year'</p>
+                      </div>
                         <div class="sales-chart-legend">
                           <div class="sales-chart-legend-item sales-chart-legend-item-vertical">
                             <div class="sales-chart-legend-item sales-trend-circle circle-blue"></div>
@@ -760,13 +529,12 @@
                             <span class="strong">2018</span> (Rp 0.00)
                           </div>
                         </div>
-                      </div>
                     </div>
                         <div class="sales-chart-container">
                           <canvas id="weekly-gross-sales-chart" class="sales-trend-chart-graph"></canvas>
                         </div>
                   </div>
-                </div>
+
                 <!--Overlay Layout jika memilih specific date, overlay-layout-inactive jika gk ada-->
                 <!--<div class="overlay-layout">
                   <div class="selectbox selectbox-modal selectbox-modal-divide">

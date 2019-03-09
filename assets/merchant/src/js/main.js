@@ -24,6 +24,40 @@
 
 })*/
 
+/************************
+CALENDAR
+************************/
+$(function() {
+  var start = moment().subtract(29, 'days');
+  var end = moment();
+
+  function cb(start, end) {
+    $('#konicalendar span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
+  }
+
+  $('#konicalendar').daterangepicker({
+    startDate: start,
+    endDate: end,
+    ranges: {
+      'Today': [moment(), moment()],
+      'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+      'This Week': [moment().startOf('week'), moment().endOf('week')],
+      'Last Week': [moment().subtract(6, 'days'), moment()],
+      'This Month': [moment().startOf('month'), moment().endOf('month')],
+      'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+      'This Year': [moment().startOf('year'), moment.endOf('year')],
+      'Last Year': [moment().subtract(1, 'month').startOf('year'), moment().subtract(1, 'year').endOf('year')]
+      }
+    }, cb);
+
+    cb(start, end);
+
+  });
+
+/************************
+END CALENDAR
+************************/
+
 $('button.konibutton.dropdown-trigger').on('click', function(){
     var $popover = $('.popover');
     if (!$popover.hasClass('popover-active')) {
@@ -32,6 +66,64 @@ $('button.konibutton.dropdown-trigger').on('click', function(){
         $popover.removeClass('popover-active');
     }
 });
+
+$('button#dailytrigger.dropdown-trigger-text.arrow-down.dropdown-trigger').on('click', function(){
+    var $popover = $('#daily.popover');
+    if (!$popover.hasClass('popover-active')) {
+        $popover.addClass('popover-active');
+    }
+    else if (!$popover.is(e.target) && $popover.has(e.target).length === 0) {
+     $popover.removeClass('popover-active');
+    }
+    else {
+        $popover.removeClass('popover-active');
+    }
+
+});
+
+
+$('button#weeklytrigger.dropdown-trigger-text.arrow-down.dropdown-trigger').on('click', function(){
+    var $popover = $('#weekly.popover');
+    if (!$popover.hasClass('popover-active')) {
+        $popover.addClass('popover-active');
+    } else {
+        $popover.removeClass('popover-active');
+    }
+
+});
+
+$('#samedayweek').click(function(){
+  $('#daily.popover').removeClass('popover-active');
+  $('#dailytrigger').html("Same Day Previous Week");
+  $('#daily.sales-chart-subtitle').html("");
+});
+
+$('#samedayyear').click(function(){
+  $('#daily.popover').removeClass('popover-active');
+  $('#dailytrigger').html("Same Day Previous Year");
+  $('#daily.sales-chart-subtitle').html("");
+});
+
+/* Hover overlay specific date berdasarkan calendar
+$('#specdate').click(function(){
+  $('#daily.popover').removeClass('popover-active');
+  $('#dailytrigger').html("Same Day Previous Year");
+  $('#daily.sales-chart-subtitle').html("");
+});*/
+
+/*Ambil dari PHP contoh
+cell2.innerHTML =
+<?php
+    echo '\'<select name="mainUsers" class="manageSelect">';
+    $families = getAllFamiliesByUserId($userid);
+    echo '<div id="famSelect"><option value="choose">Select a family...</option></div>';
+    while($family = mysql_fetch_array($families)) {
+        echo '<div id="famSelect"><option value="'.$family['name'].'">'.$family['name'].'</option></div>';
+    }
+    echo '</select>\';';
+?>;*/
+
+
 
 $(function(){
   var openMe = $('.dashboard-header-sidebar-parent-children'),
