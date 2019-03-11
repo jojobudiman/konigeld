@@ -11,7 +11,7 @@
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="<?php echo base_url(). 'en/home' ?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -24,7 +24,7 @@
                         <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'en/about' ?>">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/features' ?>">Features</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/pricing' ?>">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/backoffice' ?>">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/login' ?>">Login</a></li>
                         <!--<li class="nav-item dropdown submenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Blog
@@ -434,9 +434,9 @@
                         </div>
                     </div>
                         <ul class="footer_copyright_socmed">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="https://www.facebook.com/K%C3%B6nigeld-2232360990160033/"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="https://twitter.com/konigeldd"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="https://www.instagram.com/konigeld/"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                 </div>
                 <div class="footer_copyright_btm">

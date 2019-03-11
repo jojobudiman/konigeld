@@ -575,6 +575,16 @@ button.toggle-password {
     background: #FFFFFF;
     border: 5px solid #000000;
     border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.card-theme:hover {
+    background: rgba(194, 97, 83, 0.1);
+}
+
+.card-theme.active {
+    background: rgba(194, 97, 83, 0.2);
+    border: 5px solid #D45C4F;
 }
 
 .card-primary, .card-secondary {

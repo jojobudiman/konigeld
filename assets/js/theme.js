@@ -21,6 +21,11 @@
     };
     navbarFixed();
 
+    $(".card-theme").click(function() {
+      $(".card-theme").removeClass("active");
+      jQuery(this).addClass("active");
+        });
+
 
 
     /*----------------------------------------------------*/

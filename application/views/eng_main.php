@@ -12,7 +12,7 @@
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="<?php echo base_url(). 'english_home'?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -388,7 +388,7 @@
                     <div class="bd-callout">
                         <h3>Double Jo's</h3>
                         <p>Ruko Golden 8 Extension Blok G No. 8<br> Jalan Ki Hajar Dewantara, Serpong<br> Tangerang, Banten, Indonesia</p>
-                        <h4><a href="#">+62 xxxx xxxx xxxx</a> <a href="#">hello@doublejos.com</a></h4>
+                        <h4><a href="#">+62 xxxx xxxx xxxx</a> <a href="mailto:jovanhidayat@konigeld.com">hello@doublejos.com</a></h4>
                     </div>
                 </div>
             </div>
@@ -438,9 +438,9 @@
                         </div>
                     </div>
                         <ul class="footer_copyright_socmed">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="https://www.facebook.com/K%C3%B6nigeld-2232360990160033/"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="https://twitter.com/konigeldd"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="https://www.instagram.com/konigeld/"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                 </div>
                 <div class="footer_copyright_btm">

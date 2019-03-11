@@ -99,7 +99,7 @@
               <div class="border-top gap-top-small pad-top-small">
                 <div class="grid-1-at-medium grid-align-center">
                   <div class="column">
-                    <button class="expand" type="button">Sign Up</button>
+                    <button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'dashboard'?>'">Sign Up</button>
                   </div>
                 </div>
               </div>

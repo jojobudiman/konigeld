@@ -233,7 +233,7 @@
                     </div>
                   </div>
                   <div class="column">
-                    <button class="expand" type="button">Continue</button>
+                    <button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'signup_2'?>'">Continue</button>
                   </div>
                 </div>
               </div>

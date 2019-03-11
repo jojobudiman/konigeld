@@ -131,7 +131,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'en/home' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="reports" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 30.9 34.9" style="enable-background:new 0 0 30.9 34.9;" xml:space="preserve">
                     <style type="text/css">

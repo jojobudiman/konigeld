@@ -412,10 +412,10 @@
         <main class="dashboard-layout">
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="#" class="dashboard-header-sidebar-link">Product Library</a>
-            <a href="#" class="dashboard-header-sidebar-link">Modifiers</a>
-            <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Categories</a>
-            <a href="#" class="dashboard-header-sidebar-link">Discounts</a>
+            <a href="<?php echo base_url(). 'products_library'?>" class="dashboard-header-sidebar-link">Product Library</a>
+            <a href="<?php echo base_url(). 'modifiers'?>" class="dashboard-header-sidebar-link">Modifiers</a>
+            <a href="<?php echo base_url(). 'categories'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Categories</a>
+            <a href="<?php echo base_url(). 'discounts'?>" class="dashboard-header-sidebar-link">Discounts</a>
           </div>
           <!--End Sidebar-->
           <!--Container-->

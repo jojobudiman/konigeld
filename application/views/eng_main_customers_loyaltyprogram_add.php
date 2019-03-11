@@ -19,7 +19,7 @@
         <nav class="sidebar-nav">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'dashboard' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="dashboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 29 31" style="enable-background:new 0 0 29 31;" xml:space="preserve">
                   <style type="text/css">
@@ -326,14 +326,6 @@
       </div>
       <div class="animated fadeIn">
         <main class="dashboard-layout">
-          <!-- Sidebar-->
-          <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="#" class="dashboard-header-sidebar-link">Product Library</a>
-            <a href="#" class="dashboard-header-sidebar-link">Modifiers</a>
-            <a href="#" class="dashboard-header-sidebar-link">Categories</a>
-            <a href="#" class="dashboard-header-sidebar-link">Discounts</a>
-          </div>
-          <!--End Sidebar-->
           <!--Container-->
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
@@ -341,7 +333,7 @@
                 <header class="dialog-header">
                   <div class="dialog-header-content">
                     <div class="dialog-header-part">
-                      <button type="button" data-href="<?php echo base_url(); ?>products_library">
+                      <button type="button" onclick="location.href='<?php echo base_url(). 'customersprogram'?>'">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
                           <defs>
                             <style>.cls-1{fill:none;stroke:#42838D; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px; }</style>
