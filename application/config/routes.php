@@ -58,6 +58,7 @@ $route['en/home'] = 'english_home';
 $route['en/about'] = 'english_about';
 $route['en/features'] = 'english_feature';
 $route['en/pricing'] = 'english_pricing';
+$route['en/login'] = 'login';
 
 
 //CUSTOM ROUTE DASHBOARD KONIGELD

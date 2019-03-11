@@ -341,7 +341,7 @@
                 <header class="dialog-header">
                   <div class="dialog-header-content">
                     <div class="dialog-header-part">
-                      <button type="button" data-href="<?php echo base_url(); ?>products_library">
+                      <button type="button" onclick="location.href='<?php echo base_url(). 'locations'?>'">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
                           <defs>
                             <style>.cls-1{fill:none;stroke:#42838D; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px; }</style>

@@ -412,10 +412,10 @@
         <main class="dashboard-layout">
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="#" class="dashboard-header-sidebar-link">Product Library</a>
-            <a href="#" class="dashboard-header-sidebar-link">Modifiers</a>
-            <a href="#" class="dashboard-header-sidebar-link">Categories</a>
-            <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Discounts</a>
+            <a href="<?php echo base_url(). 'products_library'?>" class="dashboard-header-sidebar-link">Product Library</a>
+            <a href="<?php echo base_url(). 'modifiers' ?>" class="dashboard-header-sidebar-link">Modifiers</a>
+            <a href="<?php echo base_url(). 'categories' ?>" class="dashboard-header-sidebar-link">Categories</a>
+            <a href="<?php echo base_url(). 'discounts' ?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Discounts</a>
           </div>
           <!--End Sidebar-->
           <!--Container-->
@@ -468,7 +468,7 @@
                       </div>
                       <div class="filter-bar-actions">
                         <div class="filter-bar-item">
-                          <button class="konibutton button-primary filter-bar-item" type="button" data-href="<?php echo base_url();?>discounts_new">Create Discount</button>
+                          <button class="konibutton button-primary filter-bar-item" type="button" onclick="location.href='<?php echo base_url(). 'discounts_new'?>'">Create Discount</button>
                         </div>
                       </div>
                     </div>

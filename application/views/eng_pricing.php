@@ -24,7 +24,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/home' ?>">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/about' ?>">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/feature' ?>">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/features' ?>">Features</a></li>
                         <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'en/pricing' ?>">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/login' ?>">Login</a></li>
                         <!--<li class="nav-item dropdown submenu">

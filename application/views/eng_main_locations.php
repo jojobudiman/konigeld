@@ -412,12 +412,12 @@
         <main class="dashboard-layout">
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="#" class="dashboard-header-sidebar-link">Personal Information</a>
+            <a href="<?php echo base_url(). 'account'?>" class="dashboard-header-sidebar-link">Personal Information</a>
             <a href="#" class="dashboard-header-sidebar-parent-item">
               Business
             </a>
             <div class="dashboard-header-sidebar-parent-children" style="height: 120px;">
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Locations</a>
+              <a href="<?php echo base_url(). 'locations'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Locations</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Pricing & Subscriptions</a>
               <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Method</a>
             </div>
@@ -435,7 +435,7 @@
                       </div>
                       <div class="filter-bar-actions">
                         <div class="filter-bar-item">
-                          <button class="konibutton button-primary filter-bar-item" type="button" data-href="<?php echo base_url();?>locations_new">New Location</button>
+                          <button class="konibutton button-primary filter-bar-item" type="button" onclick="location.href='<?php echo base_url(). 'locations_new'?>'">New Location</button>
                         </div>
                       </div>
                     </div>

@@ -21,11 +21,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'english_home' ?>">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'english_about' ?>">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'english_feature' ?>">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'english_pricing' ?>">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'english_backoffice' ?>">Login</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'en/home' ?>">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/about' ?>">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/features' ?>">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/pricing' ?>">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/login' ?>">Login</a></li>
                         <!--<li class="nav-item dropdown submenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Blog
