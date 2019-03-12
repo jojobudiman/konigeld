@@ -59,6 +59,7 @@
             <h3 class="title super-strong">Let's talk about you</h3>
             <p class="p-description">We will use this to help get you set up to take payments so please tell us how you’ll use Königeld</p>
           </div>
+          <form id="signup" class="" action="<?php echo base_url().'signup/cont' ?>" method="post">
           <fieldset class="pad-vert-small t-value-props">
             <div class="grid-2-at-medium">
               <div class="column">
@@ -183,13 +184,13 @@
               <div class="border-top gap-top-small pad-top-small">
                 <div class="grid-1-at-medium grid-align-center">
                   <div class="column">
-                    <button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'signup_4'?>'">Continue</button>
+                    <button class="expand" type="submit">Continue</button>
                   </div>
                 </div>
               </div>
 
           </fieldset>
-
+        </form>
       </div>
     </section>
   </body>
