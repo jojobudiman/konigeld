@@ -504,28 +504,7 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr class="table-row-selectable" data-href="http://google.com">
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                    <div class="konitable-container">
-                                      <div class="table-item-name-column">nama item</div>
-                                    </div>
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">id produk</div>
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">kategori produk</div>
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">lokasi</div><!--Kalau lebih dari 1 dinamakan x locations-->
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">stok</div><!--Kalau stok habis jadi - -->
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">harga produk</div>
-                                  </td>
-                                </tr>
+                                
                               </tbody>
                             </table>
                           </div>

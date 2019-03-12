@@ -179,7 +179,7 @@
                   <p class="description">To keep connected with us please login with your personal information by email address and password.</p>
                 </div>
 
-                  <form id="login-form" class="" action="" method="post">
+                  <form id="login-form" class="" action="<?php echo base_url().'login/login' ?>" method="post">
                     <fieldset class="border-top pad-top-small">
                       <div class="grid-1-at-medium grid-row-space-line">
                         <div class="column">
@@ -205,18 +205,17 @@
                         </div>
                       </div>
                     </fieldset>
-                  </form>
-
-                  <div class="border-top gap-top-small pad-top-small">
+                      <div class="border-top gap-top-small pad-top-small">
                     <div class="grid-1-at-medium grid-align-center">
                       <div class="column">
                         <div class="column align-center">
-                          <button class="expand" type="button">Sign In</button>
+                          <button class="expand" type="submit">Sign In</button>
                           <p id="signup align-center">Don’t have a Königeld account? <a href="<?php echo base_url(). 'signup'?>">Sign up.</a></p>
                         </div>
                       </div>
                     </div>
                   </div>
+                  </form>
                 </div>
 
             </div>

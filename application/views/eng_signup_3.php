@@ -68,7 +68,7 @@
                   <label for="fname">First Name</label>
                 </div>
                 <div class="input-element">
-                  <input type="text" name="fname " id="fname" placeholder="First Name">
+                  <input type="text" name="fname" id="fname" placeholder="First Name">
                 </div>
               </div>
               <div class="column">

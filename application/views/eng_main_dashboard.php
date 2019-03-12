@@ -75,7 +75,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="nav-dropdown-text">
-              Jovan Hidayat
+              <?php echo $this->session->userdata("name")." ".$this->session->userdata("lname"); ?>
               <i class="arrow-drop fa fa-angle-down"></i>
             </span>
           </a>

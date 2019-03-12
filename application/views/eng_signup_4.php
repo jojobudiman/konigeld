@@ -147,6 +147,18 @@
                   </div>
                 </div>
               </div>
+              <div class="pad-top-small">
+                <div class="grid-1-at-medium">
+                  <div class="column">
+                    <div class="field-label">
+                      <label for="zip">Zip Code</label>
+                    </div>
+                    <div class="input-element">
+                      <input type="text" id="zip" name="zip" placeholder="Zip Code">
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="border-top gap-top-small pad-top-small">
                 <div class="grid-1-at-medium grid-align-center">
                   <div class="column">

@@ -332,6 +332,7 @@
               <div class="crud-layout-active dialog">
                 <header class="dialog-header">
                   <div class="dialog-header-content">
+                      <form id="add-category" action="<?php echo base_url(). 'categories/add' ?>" method="post">
                     <div class="dialog-header-part">
                       <button type="button" onclick="location.href='<?php echo base_url(). 'categories'?>'">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
@@ -342,7 +343,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Category</h2>
-                    <form id="add-category" action="<?php echo base_url(). 'categories/add' ?>" method="post">
+                    
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">

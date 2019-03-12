@@ -20,6 +20,7 @@ class products_library extends CI_Controller {
 	 */
 
     function index() {
+        
         $this->load->view('merchant-css');
         $this->load->view('eng_main_products');
         $this->load->view('merchant-js');
