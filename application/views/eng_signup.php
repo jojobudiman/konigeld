@@ -177,7 +177,7 @@
               </div>
             </div>
           </fieldset>
-          <form id="signup" class="" action="" method="post">
+          <form id="signup" class="" action="<?php echo base_url().'signup/cont' ?>" method="post">
             <fieldset class="border-top pad-top-small">
               <div class="grid-2-at-medium grid-row-space-line">
                 <div class="column">
@@ -233,7 +233,8 @@
                     </div>
                   </div>
                   <div class="column">
-                    <button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'signup_2'?>'">Continue</button>
+                    <!--<button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'signup_2'?>'">Continue</button>-->
+                    <button class="expand" type="submit">Continue</button>
                   </div>
                 </div>
               </div>

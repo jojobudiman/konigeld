@@ -103,7 +103,7 @@
                             <path id="Path_223" data-name="Path 223" d="M114.245,101.109a17.49,17.49,0,0,0,4.377-9.353" transform="translate(83.33 28.851)" fill="rgba(0,0,0,0)" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
                           </g>
                         </svg>
-                        <h2 class="pad-top-small red super-strong">Newcomer</h1>
+                        <h2 class="pad-top-small red super-strong">Newcomer</h2>
                         <div id="card">First-timers, casual use, side project, or small booths</div>
                       </div>
                     </div>
@@ -161,7 +161,7 @@
                             <path id="Path_252" data-name="Path 252" d="M106.715,224.252a3.941,3.941,0,0,0,3.633-2.414,38.271,38.271,0,0,0-6.728-3.942,3.9,3.9,0,0,0-.847,2.414A3.942,3.942,0,0,0,106.715,224.252Z" transform="translate(36.824 21.817)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
                           </g>
                         </svg>
-                        <h2 class="pad-top-small red super-strong">Experienced</h1>
+                        <h2 class="pad-top-small red super-strong">Experienced</h2>
                         <div id="card">Small business, partnership, startup</div>
                       </div>
                     </div>
@@ -184,7 +184,8 @@
               <div class="border-top gap-top-small pad-top-small">
                 <div class="grid-1-at-medium grid-align-center">
                   <div class="column">
-                    <button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'signup_3'?>'">Continue</button>
+                    <!--<button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'signup_3'?>'">Continue</button>-->
+                    <button class="expand" type="button">Continue</button>
                   </div>
                 </div>
               </div>
