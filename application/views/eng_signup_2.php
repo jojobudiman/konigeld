@@ -59,6 +59,7 @@
             <h3 class="title super-strong">Which type of merchant best describes you?</h3>
             <p class="p-description">No matter what type of merchant you are, Königeld can help you sell anywhere. You can always add more details later.</p>
           </div>
+          <form id="signup" class="" action="<?php echo base_url().'signup/cont' ?>" method="post">
           <fieldset class="pad-vert-small t-value-props">
             <div class="grid-2-at-medium grid-row-space-line pad-bot-small align-center-at-medium active-section">
               <div class="column fadeIn">
@@ -66,6 +67,7 @@
                   <div class="card-theme card-primary pad-vert-small pad-horz-small align-center">
                     <div class="grid-row-space-large grid-align-center">
                       <div class="column">
+                        <input type="hidden" id="newcomer" value="Newcomer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="175" height="175" viewBox="0 0 263.48 161.346">
                           <g id="Newcomer" transform="translate(-36.712 -63.605)">
                             <ellipse id="Ellipse_102" data-name="Ellipse 102" cx="130.521" cy="7.278" rx="130.521" ry="7.278" transform="translate(38.649 209.894)" fill="#d45c4f" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0.1"/>
@@ -115,6 +117,7 @@
                   <div class="card-theme card-secondary pad-vert-small pad-horz-small align-center">
                     <div class="grid-row-space-large grid-align-center">
                       <div class="column">
+                        <input type="hidden" id="experienced" value="Experienced">
                         <svg xmlns="http://www.w3.org/2000/svg" width="175" height="175" viewBox="0 0 277.581 215.204">
                           <g id="Experienced" transform="translate(13.586 -147.642)">
                             <path id="Path_224" data-name="Path 224" d="M-12.086,211.877l137.293-50.829v175.6l-137.293-2.991Z" transform="translate(0 3.591)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
@@ -185,12 +188,12 @@
                 <div class="grid-1-at-medium grid-align-center">
                   <div class="column">
                     <!--<button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'signup_3'?>'">Continue</button>-->
-                    <button class="expand" type="button">Continue</button>
+                    <button class="expand" type="submit">Continue</button>
                   </div>
                 </div>
               </div>
           </fieldset>
-
+          </form>
         </div>
       </div>
     </section>

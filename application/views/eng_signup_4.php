@@ -59,6 +59,7 @@
             <h3 class="title super-strong">Settle your new adventure</h3>
             <p class="p-description">Add your first product to start your new Königeld experience.</p>
           </div>
+          <form id="signup" class="" action="<?php echo base_url().'signup/cont' ?>" method="post">
           <fieldset class="pad-vert-small t-value-props">
               <div class="pad-top-small">
                 <div class="grid-1-at-medium">
@@ -99,13 +100,13 @@
               <div class="border-top gap-top-small pad-top-small">
                 <div class="grid-1-at-medium grid-align-center">
                   <div class="column">
-                    <button class="expand" type="button" onclick="location.href='<?php echo base_url(). 'dashboard'?>'">Sign Up</button>
+                    <button class="expand" type="submit">Sign Up</button>
                   </div>
                 </div>
               </div>
 
           </fieldset>
-
+        </form>
       </div>
     </section>
   </body>

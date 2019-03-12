@@ -11,91 +11,7 @@
 
   </head>
   <body class="app header-fixed sidebar-fixed aside-menu-fixed">
-    <header class="app-header navbar">
-      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
 
-      </button>
-      <div class="navbar-brand" href="#">
-        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
-          <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 76.57 71.69"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Asset 14</title><g id="Layer_2" data-name="Layer 2"><g id="Olav"><path class="cls-1" d="M68.59,35.2a7,7,0,0,1,0,14H8.14a7,7,0,1,1,0-14"/><polyline class="cls-1" points="10.35 35.2 8.14 35.2 56.79 35.2"/><path class="cls-1" d="M68.44,56.72a7,7,0,0,1,0,14H8a7,7,0,1,1,0-14"/><polyline class="cls-1" points="10.2 56.72 7.99 56.72 56.64 56.72"/><path class="cls-1" d="M62.69,1.73h-.34Q61,4.36,59.72,7L53,2.39l-.12.11,1.59,2.61c.74,1.21,1.46,2.41,2.17,3.6v5H8a7,7,0,0,0,0,14H68.44a7,7,0,0,0,0-14l-.1-4.95"/><path class="cls-1" d="M53.07,2.18a.41.41,0,0,0-.4-.39.39.39,0,0,0-.4.39.38.38,0,0,0,.4.38.39.39,0,0,0,.21-.06L53,2.39A.38.38,0,0,0,53.07,2.18Z"/><path class="cls-1" d="M62.35,1.73h.34a.39.39,0,0,0,.24-.34A.4.4,0,0,0,62.52,1a.39.39,0,0,0-.4.38A.39.39,0,0,0,62.35,1.73Z"/><path class="cls-1" d="M72.25,2.65a.4.4,0,0,0,.41-.38.41.41,0,0,0-.4-.39.4.4,0,0,0-.41.39.37.37,0,0,0,.08.22l.12.1A.36.36,0,0,0,72.25,2.65Z"/><polyline class="cls-1" points="62.71 1.78 65.17 6.92 71.92 2.49 72.05 2.59 68.34 8.73"/></g></g>
-          </svg>
-        </button>
-        <h3>Products</h3>
-      </div>
-      <div class="nav nav-actions">
-        <div class="konilogo">
-          <svg version="1.1" class="logo" width="45" height="45" id="konigeld" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 viewBox="0 0 86.1 127" style="enable-background:new 0 0 86.1 127;" xml:space="preserve">
-          		<style type="text/css">
-          			.st0{fill:#FFFFFF;}
-          		</style>
-          		<path id="g" class="st0" d="M54.3,103.8c2.2-1.7,2.7-4.8,1-7s-4.8-2.7-7-1c-0.4,0.3-0.7,0.6-1,1l-18.1,18.1L12.6,98.3V31.4
-          			l16.9-16.9l18.3,18.4c2.2,1.7,5.3,1.2,7-1c1.3-1.8,1.3-4.2,0-6L33.1,4.1c-2-1.9-5.2-1.9-7.2,0l-1.3,1.3L24.2,5l-0.1-0.1
-          			c-1.1-1.3-2.2-2.5-3.2-3.8C21,0.8,21,0.5,20.8,0.3c-0.3-0.3-0.8-0.4-1.1-0.1c-0.3,0.3-0.4,0.8-0.1,1.1c0,0,0,0,0,0
-          			c0.1,0.2,0.3,0.3,0.5,0.3c0.1,0.8,0.1,1.6-0.1,2.4c-0.9,3.6-5.3,4.9-5,6.6l-3.9-1.4c0-0.2,0-0.4-0.2-0.6c-0.3-0.3-0.8-0.4-1.1-0.1
-          			S9.6,9.2,9.9,9.6c0.1,0.2,0.3,0.3,0.6,0.3l0.7,4c-1.6-0.6-3.6,3.6-7.3,3.9c-0.8,0.1-1.6-0.1-2.3-0.3c0-0.2,0-0.4-0.2-0.6
-          			c-0.3-0.3-0.8-0.4-1.1-0.1s-0.4,0.8-0.1,1.1c0.2,0.2,0.5,0.3,0.8,0.2l3.3,3.8c0,0,0,0.1,0.1,0.1L6,23.9c0,0,0,0,0.1,0.1l-0.6,0.6
-          			c-1.7,0.8-2.8,2.6-2.8,4.5v71.4c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.1,0,0.2c0.2,1.1,0.8,2.1,1.6,2.8l20.4,20.4c0.2,0.4,0.5,0.8,0.8,1.1
-          			c1,1,2.3,1.5,3.7,1.4c1.9,0.1,3.6-0.9,4.5-2.6L54.3,103.8z"/>
-          		<path id="lbrow" class="st0" d="M43.6,43.1c0-1.6-1.3-2.9-2.9-2.9c0,0,0,0,0,0H29.5c-1.6,0-2.9,1.3-2.9,2.9c0,1.6,1.3,2.9,2.9,2.9
-          			h11.3C42.3,46,43.6,44.7,43.6,43.1C43.6,43.1,43.6,43.1,43.6,43.1z"/>
-          		<path id="rbrow" class="st0" d="M66.5,46h11.2c1.6,0,2.9-1.3,2.9-2.9c0-1.6-1.3-2.9-2.9-2.9H66.5c-1.6,0-2.9,1.3-2.9,2.9
-          			C63.7,44.7,64.9,46,66.5,46z"/>
-          		<circle id="leye" class="st0" cx="35.1" cy="51.9" r="4.8"/>
-          		<circle id="reye" class="st0" cx="72.2" cy="51.9" r="4.8"/>
-          		<path id="king" class="st0" d="M86,86.5c-0.2-0.2-0.6-0.2-0.9,0C85,86.6,85,86.7,85,86.9c-2.4-0.4-4.8-0.8-7.2-1.3l-5.2-1l3.2-8.8
-          			c0.2,0.1,0.5,0,0.7-0.1c0.3-0.2,0.3-0.6,0-0.9c-0.2-0.3-0.6-0.3-0.9,0c-0.2,0.2-0.2,0.4-0.2,0.7l-8.9,3.2c-0.3-1.8-0.7-3.5-1-5.3
-          			c-0.4-2.4-0.8-4.8-1.3-7.2c0.1,0,0.2-0.1,0.3-0.2c0.2-0.2,0.2-0.6,0-0.9c-0.2-0.2-0.6-0.2-0.9,0c-0.2,0.2-0.2,0.6,0,0.9
-          			c0.1,0.1,0.2,0.1,0.3,0.2c-0.4,1.6-0.8,3.2-1.2,4.8s-0.8,3.3-1.3,4.9l3.4,3.4l0,0l-3.4-3.4c-0.5,1.8-1.6,3.5-2.9,4.8
-          			c-1.1,1-2.3,1.8-3.7,2.3l-1.2-1.2l0.4-0.4c1.3-1.3,1.2-3.5-0.1-4.8c-1.3-1.2-3.3-1.2-4.6,0L34.7,91.3c-1.2,1.4-1.1,3.5,0.3,4.7
-          			c1.3,1.1,3.2,1.1,4.5,0l9.6-9.5l15,15l-9.6,9.5c-1.3,1.3-1.2,3.5,0.1,4.8c1.3,1.2,3.3,1.2,4.6,0L73.9,101c1.3-1.3,1.3-3.4,0-4.8l0,0
-          			c-1.3-1.3-3.4-1.3-4.8,0l-0.4,0.4l-0.4-0.4c1.2-3.2,3.8-5.6,7.1-6.6c-1.1-1.1-2.3-2.2-3.4-3.4l0,0l3.4,3.4l0,0
-          			c1.6-0.4,3.2-0.9,4.8-1.3c1.6-0.4,3.2-0.8,4.8-1.2c0,0.1,0.1,0.2,0.2,0.3c0.2,0.2,0.6,0.2,0.9,0S86.2,86.7,86,86.5L86,86.5z
-          			 M58.8,93.3c-1,0-1.7-0.8-1.7-1.7c0-1,0.8-1.7,1.7-1.7c1,0,1.7,0.8,1.7,1.7l0,0C60.5,92.6,59.7,93.3,58.8,93.3
-          			C58.8,93.3,58.8,93.3,58.8,93.3L58.8,93.3z M63,85c0-0.7,0.6-1.3,1.3-1.2h2.1c0.7,0,1.3,0.5,1.3,1.2c0,0,0,0,0,0v2.1
-          			c0,0.7-0.5,1.3-1.2,1.3c0,0,0,0,0,0h-2.1c-0.7,0-1.3-0.5-1.3-1.2c0,0,0,0,0,0V85z M60.6,81c0.4-0.4,1.1-0.4,1.6,0
-          			c0.4,0.4,0.4,1.1,0,1.6c-0.4,0.4-1.1,0.4-1.6,0C60.2,82.1,60.2,81.4,60.6,81C60.6,81,60.6,81,60.6,81z M70.4,90.8
-          			c-0.4,0.4-1.1,0.4-1.6,0c0,0,0,0,0,0c-0.4-0.4-0.4-1.1,0-1.6c0.4-0.4,1.1-0.4,1.6,0S70.8,90.4,70.4,90.8z"/>
-          </svg>
-        </div>
-        <div class="flexspacing"></div>
-      </div>
-      <!--<ul class="nav navbar-nav d-md-down-none">
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#">Users</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#">Settings</a>
-        </li>
-      </ul>-->
-      <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="nav-dropdown-text">
-              Jovan Hidayat
-              <i class="arrow-drop fa fa-angle-down"></i>
-            </span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">
-              <i class="fa fa-user"></i> Account Settings
-            </a>
-            <a class="dropdown-item" href="#">
-              <i class="fa fa-wrench"></i>Sign Out
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!--<button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>-->
-    </header>
     <div class="konilay konilay-popover konilay-visual"></div>
     <div class="konilay konilay-popover"></div>
     <div class="app-body">
@@ -103,7 +19,7 @@
         <nav class="sidebar-nav">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'dashboard' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="dashboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 29 31" style="enable-background:new 0 0 29 31;" xml:space="preserve">
                   <style type="text/css">
@@ -131,7 +47,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'reports_salessummary' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="reports" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 30.9 34.9" style="enable-background:new 0 0 30.9 34.9;" xml:space="preserve">
                     <style type="text/css">
@@ -166,7 +82,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'products_library' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="products" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 33.3 36.7" style="enable-background:new 0 0 33.3 36.7;" xml:space="preserve">
                     <style type="text/css">
@@ -202,7 +118,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'customers' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="customers" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 31.1 18.9" style="enable-background:new 0 0 31.1 18.9;" xml:space="preserve">
                     <style type="text/css">
@@ -314,7 +230,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'employees' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="employees" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 31.7 14.3" style="enable-background:new 0 0 31.7 14.3;" xml:space="preserve">
                     <style type="text/css">
@@ -353,7 +269,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'account' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="settings" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 33.9 22.2" style="enable-background:new 0 0 33.9 22.2;" xml:space="preserve">
                     <style type="text/css">
@@ -410,60 +326,59 @@
       </div>
       <div class="animated fadeIn">
         <main class="dashboard-layout">
-          <!-- Sidebar-->
-          <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="<?php echo base_url(). 'products_library'?>" class="dashboard-header-sidebar-link">Product Library</a>
-            <a href="<?php echo base_url(). 'modifiers'?>" class="dashboard-header-sidebar-link">Modifiers</a>
-            <a href="<?php echo base_url(). 'categories'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Categories</a>
-            <a href="<?php echo base_url(). 'discounts'?>" class="dashboard-header-sidebar-link">Discounts</a>
-          </div>
-          <!--End Sidebar-->
           <!--Container-->
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
-                <div class="product-categories-header">
-                  <div>
-                    <h2 class="super-strong">Categories</h2>
-                    <div class="product-categories-subtext">
-                      Categories help you arrange and organize your products, and report on product sales.
-                    </div>
-                  </div>
-                  <div class="product-categories-button">
-                    <button class="konibutton button-primary" type="button" onclick="location.href='<?php echo base_url(). 'categories_new'?>'">Create Category</button>
-                  </div>
-                </div>
-                <table class="konitable table-flex">
-                  <thead>
-                    <tr class="table-row">
-                      <th class="table-header super-strong">Category Name</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table-row-selectable" data-href="https://google.com">
-                      <td>Test</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-                  <!--Kalau ada produk sampai sini-->
-                  <!-- Jika tidak ada produk -->
-                  <!--<div class="page-layout">
-                    <div class="unavailable">
-                      <i class="no-transactions unavailable-icon"></i>
-                      <div class="unavailable-header">
-                        Your Products Library
-                      </div>
-                      <div class="unavailable-text">
-                        Products make your business grow. Create your own product that can be applied to your business.
-                      </div>
-                      <button class="konibutton button-primary" type="button" data-href="<?php echo base_url();?>products_library_new">
-                        Create a Product
+              <div class="crud-layout-active dialog">
+                <header class="dialog-header">
+                  <div class="dialog-header-content">
+                    <div class="dialog-header-part">
+                      <button type="button" onclick="location.href='<?php echo base_url(). 'categories'?>'">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
+                          <defs>
+                            <style>.cls-1{fill:none;stroke:#42838D; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px; }</style>
+                          </defs><title>Close Button</title><g id="close" data-name="close"><g id="Olav"><path class="cls-1" d="M19.57,4.14a10.66,10.66,0,1,0-15.11,15l20.29,20.4L4.14,60.06a10.66,10.66,0,1,0,15,15.11L40,54.42,60.79,75.28a10.66,10.66,0,0,0,15.12-15L55.55,39.78,76.07,19.37A10.66,10.66,0,0,0,61,4.25L40.25,24.93,29.88,14.5"/></g></g>
+                        </svg>
                       </button>
                     </div>
-                  </div>-->
+                    <h2 class="dialog-header-title">Add Category</h2>
+                    <form id="add-category" action="<?php echo base_url(). 'categories/add' ?>" method="post">
+                    <div class="dialog-primary-actions">
+                      <!--<div class="dialog-primary-actions-primary">
+                        <button class="konibutton button-secondary" type="submit">
+                          <span class="button-label">Delete</span>
+                        </button>
+                      </div> Kalau ada delete button-->
+                      <div class="dialog-primary-actions-primary">
+                        <button class="konibutton button-primary" type="submit">
+                          <span class="button-label">Save</span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
-
+                </header>
+                <div class="dialog-body">
+                  <div class="dialog-content">
+                    <fieldset class="form-fieldset">
+                      <legend class="form-legend">Details</legend>
+                      <div class="grid-row">
+                        <div class="grid-col grid-col-24-24">
+                          <div class="form-table">
+                            <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Category Name</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" id="catname" placeholder="Category Name">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
                 </div>
+              </form>
               </div>
             </div>
           </div>
