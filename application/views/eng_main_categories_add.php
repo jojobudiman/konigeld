@@ -332,7 +332,7 @@
               <div class="crud-layout-active dialog">
                 <header class="dialog-header">
                   <div class="dialog-header-content">
-                      <form id="add-category" action="<?php echo base_url(). 'categories/add' ?>" method="post">
+                      <form id="add-category" action="<?php echo base_url(). 'categories_new/add' ?>" method="post">
                     <div class="dialog-header-part">
                       <button type="button" onclick="location.href='<?php echo base_url(). 'categories'?>'">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
@@ -369,7 +369,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Category Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="catname" placeholder="Category Name">
+                                  <input class="form-field-input" type="text" id="catname" name = "catname" placeholder="Category Name">
                                 </div>
                               </div>
                             </div>
