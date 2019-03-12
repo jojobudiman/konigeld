@@ -333,7 +333,7 @@
                 <header class="dialog-header">
                   <div class="dialog-header-content">
                     <div class="dialog-header-part">
-                      <button type="button" onclick="location.href='<?php echo base_url(). 'customers'?>'">
+                      <button type="button" onclick="location.href='<?php echo base_url(). 'categories'?>'">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
                           <defs>
                             <style>.cls-1{fill:none;stroke:#42838D; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px; }</style>
@@ -341,8 +341,8 @@
                         </svg>
                       </button>
                     </div>
-                    <h2 class="dialog-header-title">Add Customer</h2>
-                    <form id="add-customer" action="<?php echo base_url(). 'customers/add' ?>" method="post">
+                    <h2 class="dialog-header-title">Add Category</h2>
+                    <form id="add-category" action="<?php echo base_url(). 'categories/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -366,33 +366,9 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">First Name</label>
+                                <label class="form-field-label" for="">Category Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="fname" placeholder="First Name">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label" for="">Last Name</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="lname" placeholder="Last Name">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label" for="">Phone</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="phone" placeholder="Phone Number">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label" for="">E-mail</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="E-mail">
+                                  <input class="form-field-input" type="text" id="catname" placeholder="Category Name">
                                 </div>
                               </div>
                             </div>
