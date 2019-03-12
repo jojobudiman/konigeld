@@ -344,11 +344,12 @@
                     <h2 class="dialog-header-title">Edit Modifier</h2>
                     <div class="dialog-primary-actions">
                       <div class="dialog-primary-actions-primary">
-                        <button class="konibutton button-secondary" type="submit">
+                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'modifiers/delete' ?>'">
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
                       <div class="dialog-primary-actions-primary">
+                        <form id="edit-modifier" action="<?php echo base_url().'modifiers/update' ?>" method="post">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
                         </button>
@@ -426,6 +427,7 @@
                         </div>
                       </div>
                     </fieldset>
+                    </form>
                   </div>
                 </div>
               </div>

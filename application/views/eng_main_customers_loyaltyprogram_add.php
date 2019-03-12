@@ -342,6 +342,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Create Loyalty Program</h2>
+                    <form id = "" action="<?php echo base_url() . 'customers_loyaltyprogram/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -449,6 +450,7 @@
                       </div>
                     </div>
                   </fieldset>
+                </form>
                 </div>
               </div>
             </div>

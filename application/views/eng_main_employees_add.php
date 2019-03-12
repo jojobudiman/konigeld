@@ -333,7 +333,7 @@
                 <header class="dialog-header">
                   <div class="dialog-header-content">
                     <div class="dialog-header-part">
-                      <button type="button" onclick="location.href='<?php echo base_url(). 'employees'?>'>
+                      <button type="button" onclick="location.href='<?php echo base_url(). 'employees'?>'">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
                           <defs>
                             <style>.cls-1{fill:none;stroke:#42838D; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px; }</style>
@@ -342,6 +342,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Employee</h2>
+                    <form id="add-employee" action="<?php echo base_url(). 'employees/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -458,6 +459,7 @@
                         </div>
                       </div>
                     </fieldset>
+                    </form>
                   </div>
                 </div>
               </div>

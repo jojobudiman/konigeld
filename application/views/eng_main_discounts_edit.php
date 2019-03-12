@@ -352,10 +352,11 @@
                     <h2 class="dialog-header-title">Edit Discount</h2>
                     <div class="dialog-primary-actions">
                       <div class="dialog-primary-actions-primary">
-                        <button class="konibutton button-secondary" type="submit">
+                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'discounts/delete' ?>'">
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
+                      <form id="edit-discount" action="<?php echo base_url(). 'discounts/update' ?>" method="post">
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
@@ -420,6 +421,7 @@
                         </div>
                       </div>
                     </fieldset>
+                  </form>
                   </div>
                 </div>
               </div>

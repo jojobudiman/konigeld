@@ -342,6 +342,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Customer</h2>
+                    <form id="add-customer" action="<?php echo base_url(). 'customers/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -401,6 +402,7 @@
                     </fieldset>
                   </div>
                 </div>
+              </form>
               </div>
             </div>
           </div>

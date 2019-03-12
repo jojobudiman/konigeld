@@ -358,6 +358,7 @@
                 </header>
                 <div class="dialog-body">
                   <div class="dialog-content">
+                    <form id="edit-permissions" action="<?php echo base_url().'employees_permissions/update' ?>" method="post">
                     <fieldset class="form-fieldset">
                       <legend class="form-legend">Permissions</legend>
                         <h5 class="form-helptext form-helptext-intro">
@@ -510,6 +511,7 @@
                           </div>
                         </div>
                     </fieldset>
+                  </form>
                   </div>
                 </div>
               </div>

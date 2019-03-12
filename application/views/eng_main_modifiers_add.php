@@ -342,6 +342,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Modifier</h2>
+                    <form id="add-modifier" action="<?php echo base_url(). 'modifiers/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -426,6 +427,7 @@
                         </div>
                       </div>
                     </fieldset>
+                  </form>
                   </div>
                 </div>
               </div>

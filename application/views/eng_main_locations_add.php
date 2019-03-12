@@ -326,14 +326,6 @@
       </div>
       <div class="animated fadeIn">
         <main class="dashboard-layout">
-          <!-- Sidebar-->
-          <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="#" class="dashboard-header-sidebar-link">Product Library</a>
-            <a href="#" class="dashboard-header-sidebar-link">Modifiers</a>
-            <a href="#" class="dashboard-header-sidebar-link">Categories</a>
-            <a href="#" class="dashboard-header-sidebar-link">Discounts</a>
-          </div>
-          <!--End Sidebar-->
           <!--Container-->
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
@@ -350,6 +342,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">New Location</h2>
+                    <form id="add-locations" action="<?php echo base_url(). 'locations/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -453,6 +446,7 @@
                         <button class="konibutton button-secondary-desct" type="button">Deactivate Location</button>
                       </p>
                     </fieldset>
+                    </form>
                   </div>
                 </div>
               </div>

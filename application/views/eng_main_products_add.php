@@ -350,6 +350,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Product</h2>
+                    <form id="add-product" action="<?php echo base_url(). 'products_library/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -435,6 +436,7 @@
                         </div>
                       </div>
                     </fieldset>
+                  </form>
                   </div>
                 </div>
               </div>
