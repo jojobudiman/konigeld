@@ -59,7 +59,7 @@
             <h3 class="title super-strong">Settle your new adventure</h3>
             <p class="p-description">Add your first product to start your new Königeld experience.</p>
           </div>
-          <form id="signup" class="" action="<?php echo base_url().'signup/cont' ?>" method="post">
+          <form id="signup" class="" action="<?php echo base_url().'signup_4/cont' ?>" method="post">
           <fieldset class="pad-vert-small t-value-props">
               <div class="pad-top-small">
                 <div class="grid-1-at-medium">
