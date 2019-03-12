@@ -57,7 +57,7 @@
         <div id="createAcc">
           <div class="align-center-at-medium">
             <h3 class="title super-strong">Settle your new adventure</h3>
-            <p class="p-description">Add your first product to start your new Königeld experience.</p>
+            <p class="p-description">Add your location credentials to start your new Königeld experience.</p>
           </div>
           <form id="signup" class="" action="<?php echo base_url().'signup_4/cont' ?>" method="post">
           <fieldset class="pad-vert-small t-value-props">
@@ -65,10 +65,10 @@
                 <div class="grid-1-at-medium">
                   <div class="column">
                     <div class="field-label">
-                      <label for="productname">Product Name</label>
+                      <label for="locaddrs1">Address</label>
                     </div>
                     <div class="input-element">
-                      <input type="text" id="productname" name="productname" placeholder="Enter name">
+                      <input type="text" id="locaddrs1" name="locaddrs1" placeholder="Address Line 1">
                     </div>
                   </div>
                 </div>
@@ -77,10 +77,10 @@
                 <div class="grid-1-at-medium">
                   <div class="column">
                     <div class="field-label">
-                      <label for="productcategory">Product Category</label>
+                      <label for="locaddrs2">Address</label>
                     </div>
                     <div class="input-element">
-                      <input type="text" id="productcategory" name="productcategory" placeholder="Enter category">
+                      <input type="text" id="locaddrs2" name="locaddrs2" placeholder="Address Line 2">
                     </div>
                   </div>
                 </div>
@@ -89,10 +89,60 @@
                 <div class="grid-1-at-medium">
                   <div class="column">
                     <div class="field-label">
-                      <label for="productprice">Product Price</label>
+                      <label for="phonenum">Phone Number</label>
                     </div>
                     <div class="input-element">
-                      <input type="text" id="productprice" name="productprice" placeholder="Enter price">
+                      <input type="text" id="phonenum" name="phonenum" placeholder="Phone Number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pad-top-small">
+                <div class="grid-1-at-medium">
+                  <div class="column select-field">
+                    <div class="field-label">
+                      <label for="province">Province</label>
+                    </div>
+                    <div class="input-element">
+                      <div class="select">
+                        <select id="province" name="province" value="Select Province..">
+                          <option value disabled>Province</option>
+                          <option value="AC">Aceh</option>
+                          <option value="BA">Bali</option>
+                          <option value="BT">Banten</option>
+                          <option value="BE">Bengkulu</option>
+                          <option value="YO">Daerah Istimewa Yogyakarta</option>
+                          <option value="JK">DKI Jakarta</option>
+                          <option value="GO">Gorontalo</option>
+                          <option value="JA">Jambi</option>
+                          <option value="JB">Jawa Barat</option>
+                          <option value="JT">Jawa Tengah</option>
+                          <option value="JI">Jawa Timur</option>
+                          <option value="KB">Kalimantan Barat</option>
+                          <option value="KS">Kalimantan Selatan</option>
+                          <option value="KT">Kalimantan Tengah</option>
+                          <option value="KI">Kalimantan Timur</option>
+                          <option value="KU">Kalimantan Utara</option>
+                          <option value="BB">Kepulauan Bangka Belitung</option>
+                          <option value="KR">Kepulauan Riau</option>
+                          <option value="LA">Lampung</option>
+                          <option value="MA">Maluku</option>
+                          <option value="MU">Maluku Utara</option>
+                          <option value="NB">Nusa Tenggara Barat</option>
+                          <option value="NT">Nusa Tenggara Timur</option>
+                          <option value="PA">Papua</option>
+                          <option value="PB">Papua Barat</option>
+                          <option value="RI">Riau</option>
+                          <option value="SR">Sulawesi Barat</option>
+                          <option value="SN">Sulawesi Selatan</option>
+                          <option value="ST">Sulawesi Tengah</option>
+                          <option value="SG">Sulawesi Tenggara</option>
+                          <option value="SA">Sulawesi Utara</option>
+                          <option value="SB">Sumatera Barat</option>
+                          <option value="SS">Sumatera Selatan</option>
+                          <option value="SU">Sumatera Utara</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
