@@ -435,8 +435,8 @@
                   <div class="filter-bar-border">
                     <div class="filter-bar">
                       <div class="filter-bar-filters">
-                        <input id="konicalendar" type="text" name="" value="">
-                        <span></span>
+                        <input type="text" id="konicalendar" class="form-control floating-label" placeholder="Date">
+                          <i class="fa fa-calendar"></i>
                       </div>
                       <div class="filter-bar-actions">
                         <div class="filter-bar-item">
@@ -478,6 +478,7 @@
                         <div class="sales-chart-container">
                           <div class="sales-trend-chart-graph">
                             <canvas id="daily-gross-sales-chart" class="double-line-chart"></canvas>
+                            <div id="chart-tooltip"></div>
                           </div>
                         </div>
                   </div>

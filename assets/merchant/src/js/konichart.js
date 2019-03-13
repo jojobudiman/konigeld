@@ -1,15 +1,142 @@
 /************************
 CHART.JS
 ************************/
+function CustomTooltips(tooltipModel) {
+  // Add unique id if not exist
+  const _setCanvasId = () => {
+    const _idMaker = () => {
+      const _hex = 16
+      const _multiplier = 0x10000
+      return ((1 + Math.random()) * _multiplier | 0).toString(_hex)
+    }
+    const _canvasId = `_canvas-${_idMaker() + _idMaker()}`
+    this._chart.canvas.id = _canvasId
+    return _canvasId
+  }
+
+  const ClassName = {
+    ABOVE                   : 'above',
+    BELOW                   : 'below',
+    CHARTJS_TOOLTIP         : 'chartjs-tooltip',
+    NO_TRANSFORM            : 'no-transform',
+    TOOLTIP_BODY            : 'tooltip-body',
+    TOOLTIP_BODY_ITEM       : 'tooltip-body-item',
+    TOOLTIP_BODY_ITEM_COLOR : 'tooltip-body-item-color',
+    TOOLTIP_BODY_ITEM_LABEL : 'tooltip-body-item-label',
+    TOOLTIP_BODY_ITEM_VALUE : 'tooltip-body-item-value',
+    TOOLTIP_HEADER          : 'tooltip-header',
+    TOOLTIP_HEADER_ITEM     : 'tooltip-header-item'
+  }
+
+  const Selector = {
+    DIV     : 'div',
+    SPAN    : 'span',
+    TOOLTIP : `${this._chart.canvas.id || _setCanvasId()}-tooltip`
+  }
+
+  let tooltip = document.getElementById(Selector.TOOLTIP)
+
+  if (!tooltip) {
+    tooltip = document.createElement('div')
+    tooltip.id = Selector.TOOLTIP
+    tooltip.className = ClassName.CHARTJS_TOOLTIP
+    this._chart.canvas.parentNode.appendChild(tooltip)
+  }
+
+  // Hide if no tooltip
+  if (tooltipModel.opacity === 0) {
+    tooltip.style.opacity = 0
+    return
+  }
+
+  // Set caret Position
+  tooltip.classList.remove(ClassName.ABOVE, ClassName.BELOW, ClassName.NO_TRANSFORM)
+  if (tooltipModel.yAlign) {
+    tooltip.classList.add(tooltipModel.yAlign)
+  } else {
+    tooltip.classList.add(ClassName.NO_TRANSFORM)
+  }
+
+  // Set Text
+  if (tooltipModel.body) {
+    const titleLines = tooltipModel.title || []
+
+    const tooltipHeader = document.createElement(Selector.DIV)
+    tooltipHeader.className = ClassName.TOOLTIP_HEADER
+
+    titleLines.forEach((title) => {
+      const tooltipHeaderTitle = document.createElement(Selector.DIV)
+      tooltipHeaderTitle.className = ClassName.TOOLTIP_HEADER_ITEM
+      tooltipHeaderTitle.innerHTML = title
+      tooltipHeader.appendChild(tooltipHeaderTitle)
+    })
+
+    const tooltipBody = document.createElement(Selector.DIV)
+    tooltipBody.className = ClassName.TOOLTIP_BODY
+
+    const tooltipBodyItems = tooltipModel.body.map((item) => item.lines)
+    tooltipBodyItems.forEach((item, i) => {
+      const tooltipBodyItem = document.createElement(Selector.DIV)
+      tooltipBodyItem.className = ClassName.TOOLTIP_BODY_ITEM
+
+      const colors = tooltipModel.labelColors[i]
+
+      const tooltipBodyItemColor = document.createElement(Selector.SPAN)
+      tooltipBodyItemColor.className = ClassName.TOOLTIP_BODY_ITEM_COLOR
+      tooltipBodyItemColor.style.backgroundColor = colors.backgroundColor
+
+      tooltipBodyItem.appendChild(tooltipBodyItemColor)
+
+      if (item[0].split(':').length > 1) {
+        const tooltipBodyItemLabel = document.createElement(Selector.SPAN)
+        tooltipBodyItemLabel.className = ClassName.TOOLTIP_BODY_ITEM_LABEL
+        tooltipBodyItemLabel.innerHTML = item[0].split(': ')[0]
+
+        tooltipBodyItem.appendChild(tooltipBodyItemLabel)
+
+        const tooltipBodyItemValue = document.createElement(Selector.SPAN)
+        tooltipBodyItemValue.className = ClassName.TOOLTIP_BODY_ITEM_VALUE
+        tooltipBodyItemValue.innerHTML = item[0].split(': ').pop()
+
+        tooltipBodyItem.appendChild(tooltipBodyItemValue)
+      } else {
+        const tooltipBodyItemValue = document.createElement(Selector.SPAN)
+        tooltipBodyItemValue.className = ClassName.TOOLTIP_BODY_ITEM_VALUE
+        tooltipBodyItemValue.innerHTML = item[0]
+
+        tooltipBodyItem.appendChild(tooltipBodyItemValue)
+      }
+
+      tooltipBody.appendChild(tooltipBodyItem)
+    })
+
+    tooltip.innerHTML = ''
+
+    tooltip.appendChild(tooltipHeader)
+    tooltip.appendChild(tooltipBody)
+  }
+
+  const positionY = this._chart.canvas.offsetTop
+  const positionX = this._chart.canvas.offsetLeft
+
+  // Display, position, and set styles for font
+  tooltip.style.opacity = 1
+  tooltip.style.left = `${positionX + tooltipModel.caretX}px`
+  tooltip.style.top = `${positionY + tooltipModel.caretY}px`
+}
+
+
 
 Chart.defaults.global.defaultFontColor = '#42838D';
 Chart.defaults.global.defaultFontFamily = 'Dosis';
 Chart.defaults.global.maintainAspectRatio = false;
 Chart.defaults.global.pointHitDetectionRadius = 1;
-Chart.defaults.global.tooltips.enabled = false;
+Chart.defaults.global.showTooltips = true;
+Chart.defaults.global.tooltipEvents = ["mousemove", "touchstart", "touchmove"];
 Chart.defaults.global.tooltips.mode = 'index';
 Chart.defaults.global.tooltips.position = 'nearest';
 Chart.defaults.global.tooltips.custom = CustomTooltips; // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 
 /*let updateChartTicks = function(scale) {
   let incrementAmount = 0;
@@ -109,6 +236,7 @@ let lineChart = new Chart(salesSummaryChart, {
       }]
     },
     tooltips: {
+      enabled: false,
       callbacks: {
           label: function(tooltipItem, data) {
                   return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
@@ -121,7 +249,97 @@ let lineChart = new Chart(salesSummaryChart, {
       }
     }
   }
-});
+  });
+
+  let dailyChart = document.getElementById('daily-gross-sales-chart').getContext('2d');
+
+  let grossDailyChart = new Chart(dailyChart, {
+    type: 'line', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+    data: {
+      labels: ["12 am", "1 am", "2 am", "3 am", "4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"],
+      datasets: [{
+        label: '24 Feb 2019',
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: 'rgb(59 ,131, 140)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgb(255, 255, 255)',
+        data: dataArray1,
+      },
+      {
+        label: "25 Feb 2018",
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: 'rgb(113, 118, 123)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgb(255, 255, 255)',
+        data: dataArray2,
+      }]
+    },
+    options: {
+
+      responsive: true,
+      showTooltips: true,
+      legend: {
+        display: false,
+      },
+      scales: {
+        xAxes: [{
+          stacked: true,
+          gridLines: {
+            display: true,
+            color: 'rgb(60, 60, 60)'
+          },
+          ticks: {
+            precision: 0,
+            fontColor: 'rgb(0, 0, 0)'
+          }
+        }],
+        yAxes: [{
+          type: 'linear',
+          /*afterBuildTicks: function(scale) {
+          scale.ticks = updateChartTicks(scale);
+            return;
+          },
+          beforeUpdate: function(oScale) {
+            return;
+          },*/
+          stacked: true,
+          gridLines: {
+            display: true,
+            color: 'rgb(60, 60, 60)'
+          },
+          ticks: {
+            beginAtZero: true,
+            callback: function(value, index, values) {
+                        return 'Rp ' + value;
+                      },
+            scaleLabel: {
+              display: true,
+              scaleOverride : true
+            },
+            /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+            maxTicksLimit: 4,
+            precision: 0,
+            fontColor: 'rgb(0, 0, 0)'
+          }
+        }]
+      },
+      tooltips: {
+        enabled: false,
+        callbacks: {
+            label: function(tooltipItem, data) {
+                    return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    }
+            }
+      },
+      plugins: {
+        filler: {
+          propagate: true
+        }
+      }
+    }
+    });
 
 /* var cardChart1 = new Chart($('#card-chart1'), {
   type: 'line',
