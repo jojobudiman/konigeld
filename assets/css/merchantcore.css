@@ -14896,3 +14896,7 @@ td .table-item-name-column {
 	border-top: 1px solid #D5D9DC;
 	padding: 20px 15px;
 }
+
+i.material-icons {
+	color: #FFFFFF !important;
+}

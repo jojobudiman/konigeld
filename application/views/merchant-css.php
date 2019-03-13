@@ -9,6 +9,11 @@
 <link href="<?php echo base_url(); ?>assets/css/merchantcore.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/daterangepicker.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+
+<link href="<?php echo base_url(); ?>assets/css/ripples.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <!-- Global site tag (gtag.js) - Google Analytics-->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
 <script>

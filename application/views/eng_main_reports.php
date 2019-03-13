@@ -435,7 +435,7 @@
                   <div class="filter-bar-border">
                     <div class="filter-bar">
                       <div class="filter-bar-filters">
-                        <div id="konicalendar" class="pull-right" style="background: #FFFFFF; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                        <input type="text" id="konicalendar" class="form-control floating-label" placeholder="Date">
                           <i class="fa fa-calendar"></i>
                         <span></span>
                         </div>
@@ -676,7 +676,7 @@
                             <button data-role="forward" class="button-segment button-right arrow-right grid-col konibutton" type="button">
                             </button>
                           </div>-->
-                      </div>
+                    
                       <div class="filter-bar-actions">
                         <div class="filter-bar-item">
                           <form class="" action="" method="post">
