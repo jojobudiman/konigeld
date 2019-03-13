@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2019 at 06:55 AM
+-- Generation Time: Mar 13, 2019 at 09:59 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -61,10 +61,20 @@ CREATE TABLE `detail_transaksi` (
 
 CREATE TABLE `diskon` (
   `id_diskon` int(11) NOT NULL,
-  `id_outlet` int(11) NOT NULL,
+  `id_merchant` int(11) NOT NULL,
   `nama_diskon` text NOT NULL,
-  `jumlah` int(11) NOT NULL
+  `jumlah` double NOT NULL,
+  `status_diskon` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `diskon`
+--
+
+INSERT INTO `diskon` (`id_diskon`, `id_merchant`, `nama_diskon`, `jumlah`, `status_diskon`) VALUES
+(1, 1, 'Diskon Pemilu', 20000, 1),
+(2, 1, 'Lebaran', 0.3, 1),
+(3, 1, 'HUT RI', 20000, 1);
 
 -- --------------------------------------------------------
 
@@ -259,6 +269,13 @@ CREATE TABLE `produk` (
   `status_produk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `id_outlet`, `id_jenis_p`, `nama_produk`, `harga`, `stok`, `status_produk`) VALUES
+(1, 1, 2, 'Bakso Goreng', '6000', 100, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -396,7 +413,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `diskon`
 --
 ALTER TABLE `diskon`
-  MODIFY `id_diskon` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_diskon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `history`
