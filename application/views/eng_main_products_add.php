@@ -350,7 +350,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Product</h2>
-                    <form id="add-product" action="<?php echo base_url(). 'products_library/add' ?>" method="post">
+                    <form id="add-product" action="<?php echo base_url(). 'products_library_new/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -376,7 +376,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Product Name">
+                                  <input class="form-field-input" type="text" placeholder="Product Name" name="name">
                                 </div>
                               </div>
                             </div>
@@ -384,10 +384,30 @@
                               <div class="form-field">
                                 <label class="form-field-label">Category</label>
                                 <div class="form-field-content">
-                                  <select class="select-down" placeholder="Select Category">
-                                    <option value="1">Test</option>
-                                    <option value="2">Test</option>
-                                    <option value="3">Test</option>
+                                  <select class="select-down" placeholder="Select Category" name="cate">
+                                    <?php foreach($cat as $list) { ?>
+                                      <option value="<?php echo $list->id_jenis_p ?>"><?php echo $list->nama_jenis ?></option>
+                                      <?php } ?>
+                                  </select>
+                                  <!--<div class="select-down">
+                                    <span class="form-select-input">Select Category</span>
+                                  </div>
+                                  <div class="form-select-options">
+                                    <span class="form-select-custom-options" data-value="Test1">Test1</span>
+                                    <span class="form-select-custom-options" data-value="Test2">Test2</span>
+                                    <span class="form-select-custom-options" data-value="Test3">Test3</span>
+                                  </div>-->
+                                </div>
+                              </div>
+                            </div>
+                              <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label">Outlet</label>
+                                <div class="form-field-content">
+                                  <select class="select-down" placeholder="Select Outlet" name="out">
+                                    <?php foreach($out as $list2) { ?>
+                                      <option value='<?php echo $list2->id_outlet ?>'><?php echo $list2->alamat_outlet ?></option>
+                                      <?php } ?>
                                   </select>
                                   <!--<div class="select-down">
                                     <span class="form-select-input">Select Category</span>
@@ -413,7 +433,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Price</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="price" type="text" placeholder="Rp 0.00">
+                                  <input class="form-field-input" id="price" type="text" placeholder="Rp 0.00" name="price">
                                 </div>
                               </div>
                             </div>
@@ -421,7 +441,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">SKU</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="sku" type="text" placeholder="SKU">
+                                  <input class ="form-field-input" id="sku" type="text" placeholder="SKU" name="sku">
                                 </div>
                               </div>
                             </div>
@@ -429,7 +449,7 @@
                               <div class="form-field">
                                 <label class="form-field-label">Stock</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock">
+                                  <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock" name="stock">
                                 </div>
                               </div>
                             </div>

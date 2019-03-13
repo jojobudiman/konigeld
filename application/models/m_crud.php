@@ -12,6 +12,14 @@ class M_crud extends CI_Model {
         return $query;
     }
     
+    function select2Condition($where, $where2, $table)
+    {
+        $this->db->where($where, 1);
+        $this->db->where($where2, $this->session->userdata('id'));
+        $query = $this->db->get($table);
+        return $query;
+    }
+    
     function select($table, $col, $val) {
         $this->db->where($col, $val);
         $query = $this->db->get($table);

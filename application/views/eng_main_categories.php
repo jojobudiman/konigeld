@@ -433,18 +433,20 @@
                   </div>
                 </div>
                 <table class="konitable table-flex">
-                  <thead>
-                    <tr class="table-row">
-                      <th class="table-header super-strong">Category Name</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table-row-selectable" data-href="https://google.com">
-                      <td>Test</td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                        <tr class="table-row">
+                            <th class="table-header super-strong">Category Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($cat as $list) { ?>
+                        <tr>
+                            <td><?php echo $list->nama_jenis ?></td>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
                 </table>
-            </div>
+              </div>
                   <!--Kalau ada produk sampai sini-->
                   <!-- Jika tidak ada produk -->
                   <!--<div class="page-layout">

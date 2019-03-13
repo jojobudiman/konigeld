@@ -350,7 +350,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Create Discount</h2>
-                    <form id="add-customer" action="<?php echo base_url(). 'discounts/add' ?>" method="post">
+                    <form id="add-customer" action="<?php echo base_url(). 'discounts_new/add' ?>" method="post">
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -376,7 +376,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Discount Name">
+                                  <input class="form-field-input" type="text" placeholder="Discount Name" name="name">
                                 </div>
                               </div>
                             </div>
@@ -386,8 +386,8 @@
                                 <div class="form-field-content">
                                   <div class="form-field-percent-or-amount">
                                     <div class="form-field-with-segmented-control-input">
-                                      <input class="form-field-input percent-text" type="text" id="text-1" placeholder="%">
-                                      <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00">
+                                      <input class="form-field-input percent-text" type="text" id="text-1" placeholder="%" name="text1">
+                                      <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00" name="text2">
                                     </div>
                                     <div class="form-field-with-segmented-controls segmented-control">
                                       <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment segmented-control-segment-selected" type="button" onclick="switchText(1)">%</button>
@@ -402,9 +402,7 @@
                                 <label class="form-field-label">Locations</label>
                                 <div class="form-field-content">
                                   <select class="select-down" placeholder="Select Location">
-                                    <option value="1">Test1</option>
-                                    <option value="2">Test2</option>
-                                    <option value="3">Test3</option>
+                                  
                                   </select>
                                   <!--<div class="select-down">
                                     <span class="form-select-input">Select Category</span>

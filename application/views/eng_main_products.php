@@ -504,7 +504,11 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                
+                                <?php foreach($product as $list) { ?>
+                                  <tr>
+                                      <td></td>
+                                  </tr>
+                                <?php } ?>
                               </tbody>
                             </table>
                           </div>
