@@ -351,12 +351,13 @@
                     </div>
                     <h2 class="dialog-header-title">Edit Discount</h2>
                     <div class="dialog-primary-actions">
+                        <?php foreach($disc as $list) { ?>
                       <div class="dialog-primary-actions-primary">
-                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'discounts/delete' ?>'">
+                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'discounts/delete/'.$list->id_diskon ?>'">
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
-                      <form id="edit-discount" action="<?php echo base_url(). 'discounts/update' ?>" method="post">
+                      <form id="edit-discount" action="<?php echo base_url(). 'discounts_edit/update' ?>" method="post">
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
@@ -376,7 +377,8 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Discount Name" value="">
+                                  <input class="form-field-input" type="text" name="name" value="<?php echo $list->nama_diskon ?>">
+                                  <input class="form-field-input" type="text" name="id" value="<?php echo $list->id_diskon ?>" hidden>
                                 </div>
                               </div>
                             </div>
@@ -386,59 +388,22 @@
                                 <div class="form-field-content">
                                   <div class="form-field-percent-or-amount">
                                     <div class="form-field-with-segmented-control-input">
-                                      <input class="form-field-input percent-text" type="text" id="text-1" placeholder="%" value="">
-                                      <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00" value="">
+                                        <?php if($list->jumlah > 1) { ?>
+                                        <input class="form-field-input money-text" name="text2" type="text" id="text-2" value="<?php echo $list->jumlah ?>">
+                                        <input class="form-field-input percent-text hidden" type="text" id="text-1" name="text1" placeholder="%" value="">
+                                        <?php } 
+                                        else { ?>
+                                            <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00" value="" name="text2">
+                                        <input class="form-field-input percent-text" name="text1" type="text" id="text-1" placeholder="%" value="<?php echo $list->jumlah*100 ?>">
+                                        <?php }
+                                        ?>
+                                      
+                                      
                                     </div>
                                     <div class="form-field-with-segmented-controls segmented-control">
                                       <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(1)">%</button>
                                       <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(2)">Rp</button>
                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label">Locations</label>
-                                <div class="form-field-content">
-                                  <div class="form-field-arrow-container">
-                                    <select class=" form-field-select" value="Province">
-                                      <option disabled="">Province</option>
-                                      <option value="AC">Aceh</option>
-                                      <option value="BA">Bali</option>
-                                      <option value="BT">Banten</option>
-                                      <option value="BE">Bengkulu</option>
-                                      <option value="YO">Daerah Istimewa Yogyakarta</option>
-                                      <option value="JK">DKI Jakarta</option>
-                                      <option value="GO">Gorontalo</option>
-                                      <option value="JA">Jambi</option>
-                                      <option value="JB">Jawa Barat</option>
-                                      <option value="JT">Jawa Tengah</option>
-                                      <option value="JI">Jawa Timur</option>
-                                      <option value="KB">Kalimantan Barat</option>
-                                      <option value="KS">Kalimantan Selatan</option>
-                                      <option value="KT">Kalimantan Tengah</option>
-                                      <option value="KI">Kalimantan Timur</option>
-                                      <option value="KU">Kalimantan Utara</option>
-                                      <option value="BB">Kepulauan Bangka Belitung</option>
-                                      <option value="KR">Kepulauan Riau</option>
-                                      <option value="LA">Lampung</option>
-                                      <option value="MA">Maluku</option>
-                                      <option value="MU">Maluku Utara</option>
-                                      <option value="NB">Nusa Tenggara Barat</option>
-                                      <option value="NT">Nusa Tenggara Timur</option>
-                                      <option value="PA">Papua</option>
-                                      <option value="PB">Papua Barat</option>
-                                      <option value="RI">Riau</option>
-                                      <option value="SR">Sulawesi Barat</option>
-                                      <option value="SN">Sulawesi Selatan</option>
-                                      <option value="ST">Sulawesi Tengah</option>
-                                      <option value="SG">Sulawesi Tenggara</option>
-                                      <option value="SA">Sulawesi Utara</option>
-                                      <option value="SB">Sumatera Barat</option>
-                                      <option value="SS">Sumatera Selatan</option>
-                                      <option value="SU">Sumatera Utara</option>
-                                    </select>
                                   </div>
                                 </div>
                               </div>
@@ -453,6 +418,7 @@
               </div>
             </div>
           </div>
+            <?php } ?>
         </main>
       </div>
   </body>

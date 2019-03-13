@@ -482,28 +482,32 @@
                                   <th colspan="1" rowspan="1" class="item-table-name super-strong">
                                     <div class="table-name-column">Discount Name</div>
                                   </th>
-                                  <th colspan="1" rowspan="1" class="item-table-name- super-strong">
-                                    <div class="table-name-column">Locations</div>
-                                  </th>
                                     <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
                                       <div class="table-name-column type-align-right">Amount</div>
                                     </th>
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr class="table-row-selectable" data-href="http://google.com">
+                                  <?php foreach($disc as $list) { ?>
+                                <tr class="table-row-selectable" data-href="<?php echo base_url().'discounts_edit/index/'.$list->id_diskon ?>">
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
                                     <div class="konitable-container">
-                                      <div class="table-item-name-column">nama item</div>
+                                      <div class="table-item-name-column"><?php echo $list->nama_diskon ?></div>
                                     </div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">lokasi</div><!--Kalau lebih dari 1 dinamakan x locations-->
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">Rp 20000.00</div>
+                                      <?php 
+                                        if($list->jumlah > 1) { ?>
+                                      <div class="table-name-column type-align-right">Rp <?php echo $list->jumlah ?></div>
+                                        <?php } 
+                                      else { ?>
+                                          <div class="table-name-column type-align-right"><?php echo $list->jumlah*100 ?> %</div>
+                                      <?php }
+                                      ?>
+                                      
                                   </td>
                                 </tr>
+                                  <?php } ?>
                               </tbody>
                             </table>
                           </div>

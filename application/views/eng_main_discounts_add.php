@@ -341,7 +341,7 @@
                 <header class="dialog-header">
                   <div class="dialog-header-content">
                     <div class="dialog-header-part">
-                      <button type="button" data-href="<?php echo base_url(); ?>products_library">
+                      <button type="button" data-href="<?php echo base_url(); ?>discounts">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
                           <defs>
                             <style>.cls-1{fill:none;stroke:#42838D; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px; }</style>
@@ -386,59 +386,13 @@
                                 <div class="form-field-content">
                                   <div class="form-field-percent-or-amount">
                                     <div class="form-field-with-segmented-control-input">
-                                      <input class="form-field-input percent-text" type="text" id="text-1" placeholder="%" name="text1">
-                                      <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00" name="text2">
+                                      <input class="form-field-input percent-text" type="number" id="text-1" placeholder="%" name="text1">
+                                      <input class="form-field-input money-text hidden" type="number" id="text-2" placeholder="Rp 0.00" name="text2">
                                     </div>
                                     <div class="form-field-with-segmented-controls segmented-control">
                                       <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment segmented-control-segment-selected" type="button" onclick="switchText(1)">%</button>
                                       <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(2)">Rp</button>
                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label">Locations</label>
-                                <div class="form-field-content">
-                                  <div class="form-field-arrow-container">
-                                    <select class=" form-field-select" value="Province">
-                                      <option disabled="">Province</option>
-                                      <option value="AC">Aceh</option>
-                                      <option value="BA">Bali</option>
-                                      <option value="BT">Banten</option>
-                                      <option value="BE">Bengkulu</option>
-                                      <option value="YO">Daerah Istimewa Yogyakarta</option>
-                                      <option value="JK">DKI Jakarta</option>
-                                      <option value="GO">Gorontalo</option>
-                                      <option value="JA">Jambi</option>
-                                      <option value="JB">Jawa Barat</option>
-                                      <option value="JT">Jawa Tengah</option>
-                                      <option value="JI">Jawa Timur</option>
-                                      <option value="KB">Kalimantan Barat</option>
-                                      <option value="KS">Kalimantan Selatan</option>
-                                      <option value="KT">Kalimantan Tengah</option>
-                                      <option value="KI">Kalimantan Timur</option>
-                                      <option value="KU">Kalimantan Utara</option>
-                                      <option value="BB">Kepulauan Bangka Belitung</option>
-                                      <option value="KR">Kepulauan Riau</option>
-                                      <option value="LA">Lampung</option>
-                                      <option value="MA">Maluku</option>
-                                      <option value="MU">Maluku Utara</option>
-                                      <option value="NB">Nusa Tenggara Barat</option>
-                                      <option value="NT">Nusa Tenggara Timur</option>
-                                      <option value="PA">Papua</option>
-                                      <option value="PB">Papua Barat</option>
-                                      <option value="RI">Riau</option>
-                                      <option value="SR">Sulawesi Barat</option>
-                                      <option value="SN">Sulawesi Selatan</option>
-                                      <option value="ST">Sulawesi Tengah</option>
-                                      <option value="SG">Sulawesi Tenggara</option>
-                                      <option value="SA">Sulawesi Utara</option>
-                                      <option value="SB">Sumatera Barat</option>
-                                      <option value="SS">Sumatera Selatan</option>
-                                      <option value="SU">Sumatera Utara</option>
-                                    </select>
                                   </div>
                                 </div>
                               </div>

@@ -352,12 +352,12 @@
                     <h2 class="dialog-header-title">Edit Product</h2>
                     <div class="dialog-primary-actions">
                       <div class="dialog-primary-actions-primary">
-
-                        <button class="konibutton button-secondary-desct" onclick="location.href='<?php echo base_url(). 'products_library/delete' ?>'">
+                          <?php foreach($produk as $list) { ?>
+                        <button class="konibutton button-secondary-desct" onclick="location.href='<?php echo base_url(). 'products_library/delete/'.$list->id_produk ?>'">
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
-                      <form id="update-product" action="<?php echo base_url().'products_library/update' ?>" method="post">
+                      <form id="update-product" action="<?php echo base_url().'products_library_edit/update' ?>" method="post">
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
@@ -377,7 +377,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" value="" type="text" placeholder="Product Name">
+                                  <input class="form-field-input" name="name" value="<?php echo $list->nama_produk ?>" type="text">
                                 </div>
                               </div>
                             </div>
@@ -386,42 +386,12 @@
                                 <label class="form-field-label">Category</label>
                                 <div class="form-field-content">
                                   <div class="form-field-arrow-container">
-                                    <select class=" form-field-select" value="Province">
-                                      <option disabled="">Province</option>
-                                      <option value="AC">Aceh</option>
-                                      <option value="BA">Bali</option>
-                                      <option value="BT">Banten</option>
-                                      <option value="BE">Bengkulu</option>
-                                      <option value="YO">Daerah Istimewa Yogyakarta</option>
-                                      <option value="JK">DKI Jakarta</option>
-                                      <option value="GO">Gorontalo</option>
-                                      <option value="JA">Jambi</option>
-                                      <option value="JB">Jawa Barat</option>
-                                      <option value="JT">Jawa Tengah</option>
-                                      <option value="JI">Jawa Timur</option>
-                                      <option value="KB">Kalimantan Barat</option>
-                                      <option value="KS">Kalimantan Selatan</option>
-                                      <option value="KT">Kalimantan Tengah</option>
-                                      <option value="KI">Kalimantan Timur</option>
-                                      <option value="KU">Kalimantan Utara</option>
-                                      <option value="BB">Kepulauan Bangka Belitung</option>
-                                      <option value="KR">Kepulauan Riau</option>
-                                      <option value="LA">Lampung</option>
-                                      <option value="MA">Maluku</option>
-                                      <option value="MU">Maluku Utara</option>
-                                      <option value="NB">Nusa Tenggara Barat</option>
-                                      <option value="NT">Nusa Tenggara Timur</option>
-                                      <option value="PA">Papua</option>
-                                      <option value="PB">Papua Barat</option>
-                                      <option value="RI">Riau</option>
-                                      <option value="SR">Sulawesi Barat</option>
-                                      <option value="SN">Sulawesi Selatan</option>
-                                      <option value="ST">Sulawesi Tengah</option>
-                                      <option value="SG">Sulawesi Tenggara</option>
-                                      <option value="SA">Sulawesi Utara</option>
-                                      <option value="SB">Sumatera Barat</option>
-                                      <option value="SS">Sumatera Selatan</option>
-                                      <option value="SU">Sumatera Utara</option>
+                                    <select class="form-field-select" name="cate">
+                                      <?php foreach($cat as $list2){ ?>
+                                        <option value="<?php echo $list2->id_jenis_p ?>">
+                                        <?php echo $list2->nama_jenis ?>
+                                        </option>
+                                      <?php } ?>
                                     </select>
                                   </div>
                                 </div>
@@ -432,42 +402,12 @@
                                 <label class="form-field-label">Outlet</label>
                                 <div class="form-field-content">
                                   <div class="form-field-arrow-container">
-                                    <select class=" form-field-select" value="Province">
-                                      <option disabled="">Province</option>
-                                      <option value="AC">Aceh</option>
-                                      <option value="BA">Bali</option>
-                                      <option value="BT">Banten</option>
-                                      <option value="BE">Bengkulu</option>
-                                      <option value="YO">Daerah Istimewa Yogyakarta</option>
-                                      <option value="JK">DKI Jakarta</option>
-                                      <option value="GO">Gorontalo</option>
-                                      <option value="JA">Jambi</option>
-                                      <option value="JB">Jawa Barat</option>
-                                      <option value="JT">Jawa Tengah</option>
-                                      <option value="JI">Jawa Timur</option>
-                                      <option value="KB">Kalimantan Barat</option>
-                                      <option value="KS">Kalimantan Selatan</option>
-                                      <option value="KT">Kalimantan Tengah</option>
-                                      <option value="KI">Kalimantan Timur</option>
-                                      <option value="KU">Kalimantan Utara</option>
-                                      <option value="BB">Kepulauan Bangka Belitung</option>
-                                      <option value="KR">Kepulauan Riau</option>
-                                      <option value="LA">Lampung</option>
-                                      <option value="MA">Maluku</option>
-                                      <option value="MU">Maluku Utara</option>
-                                      <option value="NB">Nusa Tenggara Barat</option>
-                                      <option value="NT">Nusa Tenggara Timur</option>
-                                      <option value="PA">Papua</option>
-                                      <option value="PB">Papua Barat</option>
-                                      <option value="RI">Riau</option>
-                                      <option value="SR">Sulawesi Barat</option>
-                                      <option value="SN">Sulawesi Selatan</option>
-                                      <option value="ST">Sulawesi Tengah</option>
-                                      <option value="SG">Sulawesi Tenggara</option>
-                                      <option value="SA">Sulawesi Utara</option>
-                                      <option value="SB">Sumatera Barat</option>
-                                      <option value="SS">Sumatera Selatan</option>
-                                      <option value="SU">Sumatera Utara</option>
+                                    <select class=" form-field-select" name="outlet">
+                                      <?php foreach($out as $list3){ ?>
+                                        <option value="<?php echo $list3->id_outlet ?>">
+                                        <?php echo $list3->alamat_outlet ?>
+                                        </option>
+                                      <?php } ?>
                                     </select>
                                   </div>
                                 </div>
@@ -486,7 +426,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Price</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="price" type="text" placeholder="Rp 0.00" value="">
+                                  <input class="form-field-input" name="price" type="text" value="<?php echo $list->harga ?>">
                                 </div>
                               </div>
                             </div>
@@ -494,7 +434,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">SKU</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="sku" type="text" placeholder="SKU" value="">
+                                  <input class="form-field-input" name="sku" type="text" value="<?php echo $list->id_produk ?>" readonly>
                                 </div>
                               </div>
                             </div>
@@ -502,11 +442,12 @@
                               <div class="form-field">
                                 <label class="form-field-label">Stock</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock" value="">
+                                  <input class="form-field-input" name="stock" type="text" placeholder="Enter Stock" value="<?php echo $list->stok ?>">
                                 </div>
                               </div>
                             </div>
                         </div>
+                            <?php } ?>
                       </div>
                     </fieldset>
                   </form>

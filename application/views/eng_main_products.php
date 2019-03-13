@@ -505,8 +505,13 @@
                               </thead>
                               <tbody>
                                 <?php foreach($product as $list) { ?>
-                                  <tr>
-                                      <td></td>
+                                  <tr class="table-row-selectable" data-href="<?php echo base_url().'products_library_edit/index/'.$list->id_produk ?>">
+                                      <td><?php echo $list->nama_produk ?></td>
+                                      <td><?php echo $list->id_produk ?></td>
+                                      <td><?php echo $list->nama_jenis ?></td>
+                                      <td><?php echo $list->alamat_outlet ?></td>
+                                      <td><?php echo $list->stok ?></td>
+                                      <td><?php echo $list->harga ?></td>
                                   </tr>
                                 <?php } ?>
                               </tbody>
