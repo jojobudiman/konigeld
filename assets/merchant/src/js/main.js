@@ -27,7 +27,7 @@
 /************************
 CALENDAR
 ************************/
-$(function() {
+/*$(function() {
   var start = moment().subtract(29, 'days');
   var end = moment();
 
@@ -52,6 +52,12 @@ $(function() {
 
     cb(start, end);
 
+  });*/
+
+  $('#konicalendar').bootstrapMaterialDatePicker({
+    weekStart : 0,
+    time: false,
+    format : 'DD MMMM YYYY'
   });
 
 /************************
@@ -366,7 +372,6 @@ for (var i = 0; i < sum.length; i++) {
 
 function switchText(show) {
   document.getElementById("text-"+show).style.display = "block";
-  document.getElementById("text-"+show).value = "";
   document.getElementById("text-"+((show==1)?2:1)).style.display = "none";
 }
 
