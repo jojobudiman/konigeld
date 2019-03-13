@@ -103,7 +103,7 @@
         <nav class="sidebar-nav">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'dashboard'?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="dashboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 29 31" style="enable-background:new 0 0 29 31;" xml:space="preserve">
                   <style type="text/css">
@@ -131,7 +131,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'reports_salessummary'?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="reports" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 30.9 34.9" style="enable-background:new 0 0 30.9 34.9;" xml:space="preserve">
                     <style type="text/css">
@@ -166,7 +166,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'products_library'?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="products" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 33.3 36.7" style="enable-background:new 0 0 33.3 36.7;" xml:space="preserve">
                     <style type="text/css">
@@ -202,7 +202,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'customers'?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="customers" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 31.1 18.9" style="enable-background:new 0 0 31.1 18.9;" xml:space="preserve">
                     <style type="text/css">
@@ -314,7 +314,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'employees'?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="employees" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 31.7 14.3" style="enable-background:new 0 0 31.7 14.3;" xml:space="preserve">
                     <style type="text/css">
@@ -353,7 +353,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'account'?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="settings" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 33.9 22.2" style="enable-background:new 0 0 33.9 22.2;" xml:space="preserve">
                     <style type="text/css">

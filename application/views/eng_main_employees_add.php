@@ -400,18 +400,45 @@
                               <div class="form-field">
                                 <label class="form-field-label">Role</label>
                                 <div class="form-field-content">
-                                  <select class="select-down" placeholder="Select Role">
-                                    <option value="1">Meister</option>
-                                    <option value="2">Anfänger</option>
-                                  </select>
-                                  <!--<div class="select-down">
-                                    <span class="form-select-input">Select Category</span>
+                                  <div class="form-field-arrow-container">
+                                    <select class=" form-field-select" value="Province">
+                                      <option disabled="">Province</option>
+                                      <option value="AC">Aceh</option>
+                                      <option value="BA">Bali</option>
+                                      <option value="BT">Banten</option>
+                                      <option value="BE">Bengkulu</option>
+                                      <option value="YO">Daerah Istimewa Yogyakarta</option>
+                                      <option value="JK">DKI Jakarta</option>
+                                      <option value="GO">Gorontalo</option>
+                                      <option value="JA">Jambi</option>
+                                      <option value="JB">Jawa Barat</option>
+                                      <option value="JT">Jawa Tengah</option>
+                                      <option value="JI">Jawa Timur</option>
+                                      <option value="KB">Kalimantan Barat</option>
+                                      <option value="KS">Kalimantan Selatan</option>
+                                      <option value="KT">Kalimantan Tengah</option>
+                                      <option value="KI">Kalimantan Timur</option>
+                                      <option value="KU">Kalimantan Utara</option>
+                                      <option value="BB">Kepulauan Bangka Belitung</option>
+                                      <option value="KR">Kepulauan Riau</option>
+                                      <option value="LA">Lampung</option>
+                                      <option value="MA">Maluku</option>
+                                      <option value="MU">Maluku Utara</option>
+                                      <option value="NB">Nusa Tenggara Barat</option>
+                                      <option value="NT">Nusa Tenggara Timur</option>
+                                      <option value="PA">Papua</option>
+                                      <option value="PB">Papua Barat</option>
+                                      <option value="RI">Riau</option>
+                                      <option value="SR">Sulawesi Barat</option>
+                                      <option value="SN">Sulawesi Selatan</option>
+                                      <option value="ST">Sulawesi Tengah</option>
+                                      <option value="SG">Sulawesi Tenggara</option>
+                                      <option value="SA">Sulawesi Utara</option>
+                                      <option value="SB">Sumatera Barat</option>
+                                      <option value="SS">Sumatera Selatan</option>
+                                      <option value="SU">Sumatera Utara</option>
+                                    </select>
                                   </div>
-                                  <div class="form-select-options">
-                                    <span class="form-select-custom-options" data-value="Test1">Test1</span>
-                                    <span class="form-select-custom-options" data-value="Test2">Test2</span>
-                                    <span class="form-select-custom-options" data-value="Test3">Test3</span>
-                                  </div>-->
                                 </div>
                               </div>
                             </div>
