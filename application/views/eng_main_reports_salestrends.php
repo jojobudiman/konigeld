@@ -761,11 +761,95 @@ let dataArray1 = [0.00, 0.00, 50000.00, 10000.00, 165000.00, 0.00, 200000.00, 25
 let dataArray2 = [0.00, 0.00, 50000.00, 10000.00, 165000.00, 0.00, 200000.00, 250000.00, 100000.00, 0.00, 0.00, 0.00, 0.00, 0.00, 300000.00, 350000.00, 0.00, 200000.00, 0.00, 0.00, 0.00, 50000.00, 0.00, 0.00];
 let dataArray3 = [0.00, 400000.00, 300000.00, 250000.00, 750000.00, 650000.00, 600000.00];
 let dataArray4 = [0.00, 200000.00, 100000.00, 150000.00, 450000.00, 850000.00, 300000.00];
+let dataArray5 = [1000000.00, 1200000.00, 1350000.00, 1000000.00, 750000.00, 800000.00, 1500000.00, 1000000.00, 1200000.00, 550000.00, 1250000.00, 800000.00];
+let dataArray6 = [900000.00, 1400000.00, 1850000.00, 500000.00, 950000.00, 600000.00, 1450000.00, 1100000.00, 1000000.00, 350000.00, 1350000.00, 750000.00];
 
 let maxArray1 = Math.max.apply(null, dataArray1);
 let maxArray2 = Math.max.apply(null, dataArray2);
 let maxArray3 = Math.max.apply(null, dataArray3);
 let maxArray4 = Math.max.apply(null, dataArray4);
+
+let grossYearlyChart = new Chart(yearlyChart, {
+  type: 'bar', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+  data: {
+    labels: ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."],
+    datasets: [{
+      label: '24 Feb 2019',
+      backgroundColor: 'rgb(59 ,131, 140)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray5
+    },
+    {
+      label: "25 Feb 2018",
+      backgroundColor: 'rgb(113, 118, 123)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray6
+    }]
+  },
+  options: {
+    barValueSpacing: 20,
+    responsive: true,
+    showTooltips: true,
+    legend: {
+      display: false,
+    },
+    scales: {
+      xAxes: [{
+        stacked: false,
+        gridLines: {
+          display: false,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }],
+      yAxes: [{
+        /*afterBuildTicks: function(scale) {
+        scale.ticks = updateChartTicks(scale);
+          return;
+        },
+        beforeUpdate: function(oScale) {
+          return;
+        },*/
+        stacked: false,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+                      return 'Rp ' + value;
+                    },
+          scaleLabel: {
+            display: true,
+            scaleOverride : true
+          },
+          /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+          maxTicksLimit: 4,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }]
+    },
+    tooltips: {
+      enabled: false,
+      callbacks: {
+          label: function(tooltipItem, data) {
+                  return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                  }
+          }
+    },
+    plugins: {
+      filler: {
+        propagate: true
+      }
+    }
+  }
+  });
 
 let grossWeeklyChart = new Chart(weeklyChart, {
   type: 'bar', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
