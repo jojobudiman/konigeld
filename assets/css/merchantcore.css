@@ -85,6 +85,10 @@ p {
 	margin-top: 0;
 	margin-bottom: 1rem
 }
+.strike {
+	text-decoration: line-through;
+	color: #DB524B;
+}
 abbr[title], abbr[data-original-title] {
 	text-decoration: underline;
 	-webkit-text-decoration: underline dotted;
@@ -313,7 +317,6 @@ template {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-bottom: .5rem;
 	font-family: inherit;
-	font-weight: 500;
 	line-height: 1.2;
 	color: inherit
 }
@@ -12873,6 +12876,12 @@ body {
 	color: #FFFFFF;
 }
 
+.expand {
+	min-width: 100% !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
 .grid-col {
 	float: left;
 	min-height: 1px;
@@ -14903,6 +14912,32 @@ td .table-item-name-column {
 	padding: 20px 15px;
 }
 
+.form-bill-text {
+	margin: 0 auto;
+}
+
 i.material-icons {
 	color: #FFFFFF !important;
+}
+
+.pricing-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.price-entry, .price-junior, .price-senior {
+  flex-grow: 1;
+}
+
+.entry {
+  background-color: #E4A39C;
+}
+
+.junior {
+  background-color: #D7615E;
+}
+
+.senior {
+  background-color: #D45C4F;
 }

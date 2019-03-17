@@ -477,7 +477,7 @@
                     </div>
                         <div class="sales-chart-container">
                           <div class="sales-trend-chart-graph">
-                            <canvas id="daily-gross-sales-chart" class="double-line-chart"></canvas>
+                            <canvas id="daily-gross-sales-chart" width="100%" height="230" class="double-line-chart"></canvas>
                             <div id="chart-tooltip"></div>
                           </div>
                         </div>
@@ -532,7 +532,7 @@
                         </div>
                     </div>
                         <div class="sales-chart-container">
-                          <canvas id="weekly-gross-sales-chart" class="sales-trend-chart-graph"></canvas>
+                          <canvas id="yearly-gross-sales-chart" class="sales-trend-chart-graph"></canvas>
                         </div>
                   </div>
 
@@ -748,3 +748,198 @@
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url();?>assets/js/Chart.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+
+const dailyChart = document.getElementById('daily-gross-sales-chart');
+const weeklyChart = document.getElementById('weekly-gross-sales-chart');
+const yearlyChart = document.getElementById('yearly-gross-sales-chart');
+
+let dataArray1 = [0.00, 0.00, 50000.00, 10000.00, 165000.00, 0.00, 200000.00, 250000.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 500000.00, 350000.00, 0.00, 400000.00, 0.00, 0.00, 0.00, 100000.00, 0.00, 0.00];
+let dataArray2 = [0.00, 0.00, 50000.00, 10000.00, 165000.00, 0.00, 200000.00, 250000.00, 100000.00, 0.00, 0.00, 0.00, 0.00, 0.00, 300000.00, 350000.00, 0.00, 200000.00, 0.00, 0.00, 0.00, 50000.00, 0.00, 0.00];
+let dataArray3 = [0.00, 400000.00, 300000.00, 250000.00, 750000.00, 650000.00, 600000.00];
+let dataArray4 = [0.00, 200000.00, 100000.00, 150000.00, 450000.00, 850000.00, 300000.00];
+
+let maxArray1 = Math.max.apply(null, dataArray1);
+let maxArray2 = Math.max.apply(null, dataArray2);
+let maxArray3 = Math.max.apply(null, dataArray3);
+let maxArray4 = Math.max.apply(null, dataArray4);
+
+let grossWeeklyChart = new Chart(weeklyChart, {
+  type: 'bar', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+  data: {
+    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    datasets: [{
+      label: '24 Feb 2019',
+      backgroundColor: 'rgb(59 ,131, 140)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray3
+    },
+    {
+      label: "25 Feb 2018",
+      backgroundColor: 'rgb(113, 118, 123)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray4
+    }]
+  },
+  options: {
+    barValueSpacing: 20,
+    responsive: true,
+    showTooltips: true,
+    legend: {
+      display: false,
+    },
+    scales: {
+      xAxes: [{
+        stacked: false,
+        gridLines: {
+          display: false,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }],
+      yAxes: [{
+        /*afterBuildTicks: function(scale) {
+        scale.ticks = updateChartTicks(scale);
+          return;
+        },
+        beforeUpdate: function(oScale) {
+          return;
+        },*/
+        stacked: false,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+                      return 'Rp ' + value;
+                    },
+          scaleLabel: {
+            display: true,
+            scaleOverride : true
+          },
+          /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+          maxTicksLimit: 4,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }]
+    },
+    tooltips: {
+      enabled: false,
+      callbacks: {
+          label: function(tooltipItem, data) {
+                  return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                  }
+          }
+    },
+    plugins: {
+      filler: {
+        propagate: true
+      }
+    }
+  }
+  });
+
+
+let grossDailyChart = new Chart(dailyChart, {
+  type: 'line', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+  data: {
+    labels: ["12 am", "1 am", "2 am", "3 am", "4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"],
+    datasets: [{
+      label: '24 Feb 2019',
+      lineTension: 0,
+      backgroundColor: 'transparent',
+      borderColor: 'rgb(59 ,131, 140)',
+      borderWidth: 2,
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray1,
+    },
+    {
+      label: "25 Feb 2018",
+      lineTension: 0,
+      backgroundColor: 'transparent',
+      borderColor: 'rgb(113, 118, 123)',
+      borderWidth: 2,
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray2,
+    }]
+  },
+  options: {
+
+    responsive: true,
+    showTooltips: true,
+    legend: {
+      display: false,
+    },
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }],
+      yAxes: [{
+        type: 'linear',
+        /*afterBuildTicks: function(scale) {
+        scale.ticks = updateChartTicks(scale);
+          return;
+        },
+        beforeUpdate: function(oScale) {
+          return;
+        },*/
+        stacked: true,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+                      return 'Rp ' + value;
+                    },
+          scaleLabel: {
+            display: true,
+            scaleOverride : true
+          },
+          /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+          maxTicksLimit: 4,
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }]
+    },
+    tooltips: {
+      enabled: false,
+      callbacks: {
+          label: function(tooltipItem, data) {
+                  return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                  }
+          }
+    },
+    plugins: {
+      filler: {
+        propagate: true
+      }
+    }
+  }
+  });
+}
+
+
+
+
+</script>
