@@ -342,13 +342,14 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Edit Employee</h2>
+                      <?php foreach($user as $list) { ?> 
                     <div class="dialog-primary-actions">
                       <div class="dialog-primary-actions-primary">
-                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'employees/delete' ?>'">
+                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'employees_edit/delete/'.$list->id_user ?>'">
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
-                      <form id="edit-employee" action="<?php echo base_url().'employees/update' ?>" method="post">
+                      <form id="edit-employee" action="<?php echo base_url().'employees_edit/update/'.$list->id_user ?>" method="post">
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
@@ -368,7 +369,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">First Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="fname" placeholder="First Name">
+                                  <input class="form-field-input" type="text" name="fname" value="<?php echo $list->fname_user ?>">
                                 </div>
                               </div>
                             </div>
@@ -376,7 +377,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Last Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="lname" placeholder="Last Name">
+                                  <input class="form-field-input" type="text" name="lname" value="<?php echo $list->lname_user ?>">
                                 </div>
                               </div>
                             </div>
@@ -384,7 +385,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Phone Number</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="phone" placeholder="Phone Number">
+                                  <input class="form-field-input" type="text" name="phone" value="<?php echo $list->hp_user ?>">
                                 </div>
                               </div>
                             </div>
@@ -392,7 +393,7 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">E-mail</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="email"　placeholder="Email">
+                                  <input class="form-field-input" type="email" name="email" value="<?php echo $list->email_user ?>">
                                 </div>
                               </div>
                             </div>
@@ -401,43 +402,7 @@
                                 <label class="form-field-label">Role</label>
                                 <div class="form-field-content">
                                   <div class="form-field-arrow-container">
-                                    <select class=" form-field-select" value="Province">
-                                      <option disabled="">Province</option>
-                                      <option value="AC">Aceh</option>
-                                      <option value="BA">Bali</option>
-                                      <option value="BT">Banten</option>
-                                      <option value="BE">Bengkulu</option>
-                                      <option value="YO">Daerah Istimewa Yogyakarta</option>
-                                      <option value="JK">DKI Jakarta</option>
-                                      <option value="GO">Gorontalo</option>
-                                      <option value="JA">Jambi</option>
-                                      <option value="JB">Jawa Barat</option>
-                                      <option value="JT">Jawa Tengah</option>
-                                      <option value="JI">Jawa Timur</option>
-                                      <option value="KB">Kalimantan Barat</option>
-                                      <option value="KS">Kalimantan Selatan</option>
-                                      <option value="KT">Kalimantan Tengah</option>
-                                      <option value="KI">Kalimantan Timur</option>
-                                      <option value="KU">Kalimantan Utara</option>
-                                      <option value="BB">Kepulauan Bangka Belitung</option>
-                                      <option value="KR">Kepulauan Riau</option>
-                                      <option value="LA">Lampung</option>
-                                      <option value="MA">Maluku</option>
-                                      <option value="MU">Maluku Utara</option>
-                                      <option value="NB">Nusa Tenggara Barat</option>
-                                      <option value="NT">Nusa Tenggara Timur</option>
-                                      <option value="PA">Papua</option>
-                                      <option value="PB">Papua Barat</option>
-                                      <option value="RI">Riau</option>
-                                      <option value="SR">Sulawesi Barat</option>
-                                      <option value="SN">Sulawesi Selatan</option>
-                                      <option value="ST">Sulawesi Tengah</option>
-                                      <option value="SG">Sulawesi Tenggara</option>
-                                      <option value="SA">Sulawesi Utara</option>
-                                      <option value="SB">Sumatera Barat</option>
-                                      <option value="SS">Sumatera Selatan</option>
-                                      <option value="SU">Sumatera Utara</option>
-                                    </select>
+                                    <input class="form-field-input" type="text" name="role" value="<?php echo $list->jabatan ?>">
                                   </div>
                                 </div>
                               </div>
@@ -445,6 +410,7 @@
                           </div>
                         </div>
                       </div>
+                        <?php } ?>
                     </fieldset>
                     <fieldset class="form-fieldset">
                       <legend class="form-legend">Assigned Location</legend>
@@ -455,40 +421,11 @@
                               <div class="form-field form-field-with-checkboxes">
                                 <label class="form-field-label" for="">Location</label>
                                 <div class="form-field-content">
-                                  <label class="form-checkbox" for="">
-                                    <div class="form-checkbox-content">
-                                      <input class="form-checkbox-input" type="checkbox">
-                                      <div class="form-checkbox-check"></div>
-                                    </div>
-                                    <div class="form-checkbox-label">
-                                      <div class="form-checkbox-label-text">
-                                        <div class="super-strong">
-                                          All Locations
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </label>
-                                  <!-- Loop jumlah lokasi dimulai disini-->
-                                  <label class="form-checkbox" for="">
-                                    <div class="form-checkbox-content">
-                                      <input class="form-checkbox-input" type="checkbox">
-                                      <div class="form-checkbox-check"></div>
-                                    </div>
-                                    <div class="form-checkbox-label">
-                                      <div class="form-checkbox-label-text">Lokasi1</div>
-                                    </div>
-                                  </label>
-
-                                  <label class="form-checkbox" for="">
-                                    <div class="form-checkbox-content">
-                                      <input class="form-checkbox-input" type="checkbox">
-                                      <div class="form-checkbox-check"></div>
-                                    </div>
-                                    <div class="form-checkbox-label">
-                                      <div class="form-checkbox-label-text">Lokasi2</div>
-                                    </div>
-                                  </label>
-                                  <!-- End if sampai disini -->
+                                  <select name="loc" class="form-field-select">
+                                  <?php foreach($out as $list2) { ?>
+                                  <option value="<?php echo $list2->id_outlet ?>"><?php echo $list2->alamat_outlet ?></option>
+                                  <?php } ?>
+                                </select>
                                 </div>
                               </div>
                             </div>

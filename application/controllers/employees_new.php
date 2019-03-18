@@ -3,26 +3,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class employees_new extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct() 
+    {
+        parent::__construct();
+        $this->load->model(array('m_crud'));
+    }
 
     function index() {
+        $data['out'] = $this->m_crud->select2Condition('status_outlet', 'id_merchant', 'outlet_merchant')->result();
         $this->load->view('merchant-css');
-        $this->load->view('eng_main_employees_add');
+        $this->load->view('eng_main_employees_add', $data);
         $this->load->view('merchant-js');
 	}
+    
+    function add() {
+        $getFName = $this->input->post("fname");
+        $getLName = $this->input->post("lname");
+        $getPhone = $this->input->post("phone");
+        $getEmail = $this->input->post("email");
+        $getPass = $this->input->post("pass");
+        $getRole = $this->input->post("role");
+        $getLoc = $this->input->post("loc");
+        
+        $data = array(
+            "id_user" => 0,
+            "fname_user" => $getFName,
+            "lname_user" => $getLName,
+            "email_user" => $getEmail,
+            "pass_user" => md5($getPass),
+            "jabatan" => $getRole,
+            "hp_user" => $getPhone,
+            "id_outlet" => $getLoc,
+            "id_merchant" => $this->session->userdata("id"),
+            "status_user" => 1
+        );
+        
+        $this->m_crud->insertData($data, 'user');
+        redirect('employees');
+    }
 
 }

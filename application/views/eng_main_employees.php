@@ -460,28 +460,38 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr class="table-row-selectable" data-href="http://google.com">
+                                  <?php foreach($user as $list) { ?>
+                                <tr class="table-row-selectable" data-href="<?php echo base_url().'employees_edit/index/'.$list->id_user ?>">
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
                                     <div class="konitable-container">
-                                      <div class="table-item-name-column">nama pelanggan</div>
+                                      <div class="table-item-name-column"><?php echo $list->fname_user." ".$list->lname_user ?></div>
                                     </div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">lokasi yg diberikan</div>
+                                      <div class="table-name-column"><?php echo $list->alamat_outlet ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">nomor telepon</div>
+                                      <div class="table-name-column"><?php echo $list->hp_user ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">email karyawan</div>
+                                      <div class="table-name-column type-align-right"><?php echo $list->email_user ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">peran</div>
+                                      <div class="table-name-column type-align-right"><?php echo $list->jabatan ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">status</div>
+                                      <?php if($list->status_user == 1) 
+                                        {
+                                            $stat = "Active";
+                                        }
+                                      else {
+                                          $stat = "Not Active";
+                                      }
+                                      ?>
+                                      <div class="table-name-column type-align-right"><?php echo $stat ?></div>
                                   </td>
                                 </tr>
+                                  <?php } ?>
                               </tbody>
                             </table>
                           </div>
