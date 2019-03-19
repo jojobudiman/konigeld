@@ -293,12 +293,10 @@ const dynamic_JS = ({
 }) => `<tr class="">
   <td class="table-cell">
     <div class="modifier-option-table-cell">
-      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text">
-    </div>
-  </td>
-  <td class="table-cell">
-    <div class="modifier-option-table-cell">
-      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text">
+    <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
+      <option disabled="">Nama Produk</option>
+      <option value="Nasi">Nasi</option>
+    </select>
     </div>
   </td>
   <td class="table-cell">
@@ -313,8 +311,8 @@ const dynamic_JS = ({
 var modif_add = $('#modifier-row').text();
 var dynamic_add = modif_add.split(/\$\{(.+?)\}/g);
 
-$('.table-selectable').on('input propertychange',' > tbody > tr > td:nth-child(2) > input', function() {
-  $.each($('input[type=text]'), function() {
+$('.table-selectable').on('input propertychange',' > tbody > tr > td:nth-child(2) > select', function() {
+  $.each($('select'), function() {
     this.value = this.value.replace(/[^0-9]/g, '');
   });
 });
@@ -327,7 +325,7 @@ $('#add-modif').on('click', function() {
     $('tbody', this).append([{
     }].map(dynamic_JS).join(''));
 
-    var tr_first_input = $('tbody > tr:first > td:nth-child(2) > input');
+    var tr_first_input = $('tbody > tr:first > td:nth-child(2) > select');
     tr_first_input.val(0);
 
 

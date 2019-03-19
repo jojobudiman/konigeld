@@ -342,8 +342,8 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Modifier</h2>
-                    <form id="add-modifier" action="<?php echo base_url(). 'modifiers/add' ?>" method="post">
                     <div class="dialog-primary-actions">
+                      <form id="add-modifier" action="<?php echo base_url(). 'modifiers/add' ?>" method="post">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
@@ -375,28 +375,27 @@
                             <table class="konitable table-selectable">
                               <thead>
                                 <tr class="table-row">
-                                  <th class="table-header-cell-col-13-24">Modifier</th>
-                                  <th class="table-header-cell-col-8-24">Price</th>
+                                  <th class="table-header-cell-col-21-24">Product Name</th>
                                   <th class="table-header-cell-col-3-24"></th>
                                 </tr>
                               </thead>
                               <tbody class="modifier-list">
                                 <tr class="">
                                   <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text">
+                                    <div class="modifier-option-table-cell form-field-content">
+                                          <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
+                                            <option disabled="">Nama Produk</option>
+                                            <option value="Nasi">Nasi</option>
+                                          </select>
                                     </div>
                                   </td>
                                   <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modfiier-option-table-cell">
+                                    <div class="modifier-option-table-cell form-field-content">
+                                      <div class="form-field-arrow-container">
                                       <button class="modifier-add-icon" id="add-modif" type="button">
                                         <i></i>
                                       </button>
+                                    </div>
                                     </div>
                                   </td>
                                 </tr>
@@ -404,12 +403,10 @@
                                 <tr class="">
                                   <td class="table-cell">
                                     <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text">
+                                    <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
+                                      <option disabled="">Nama Produk</option>
+                                      <option value="Nasi">Nasi</option>
+                                    </select>
                                     </div>
                                   </td>
                                   <td class="table-cell">

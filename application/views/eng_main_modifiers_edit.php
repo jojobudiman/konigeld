@@ -375,28 +375,27 @@
                             <table class="konitable table-selectable">
                               <thead>
                                 <tr class="table-row">
-                                  <th class="table-header-cell-col-13-24">Modifier</th>
-                                  <th class="table-header-cell-col-8-24">Price</th>
+                                  <th class="table-header-cell-col-21-24">Product Name</th>
                                   <th class="table-header-cell-col-3-24"></th>
                                 </tr>
                               </thead>
                               <tbody class="modifier-list">
                                 <tr class="">
                                   <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text" value="">
+                                    <div class="modifier-option-table-cell form-field-content">
+                                          <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
+                                            <option disabled="">Nama Produk</option>
+                                            <option value="Nasi">Nasi</option>
+                                          </select>
                                     </div>
                                   </td>
                                   <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text" value="">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modfiier-option-table-cell">
+                                    <div class="modifier-option-table-cell form-field-content">
+                                      <div class="form-field-arrow-container">
                                       <button class="modifier-add-icon" id="add-modif" type="button">
                                         <i></i>
                                       </button>
+                                    </div>
                                     </div>
                                   </td>
                                 </tr>
@@ -404,17 +403,15 @@
                                 <tr class="">
                                   <td class="table-cell">
                                     <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="New Option" type="text" value="">
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                      <input class="modifier-option modifier-input fill" placeholder="Rp0.00" type="text" value="">
+                                    <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
+                                      <option disabled="">Nama Produk</option>
+                                      <option value="Nasi">Nasi</option>
+                                    </select>
                                     </div>
                                   </td>
                                   <td class="table-cell">
                                     <div class="modfiier-option-table-cell">
-                                      <button class="modifier-remove-icon" id="remove-modif" type="button" value="">
+                                      <button class="modifier-remove-icon" id="remove-modif" type="button">
                                         <i></i>
                                       </button>
                                     </div>

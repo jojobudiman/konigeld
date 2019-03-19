@@ -342,8 +342,8 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Employee</h2>
-                    <form id="add-employee" action="<?php echo base_url(). 'employees_new/add' ?>" method="post">
                     <div class="dialog-primary-actions">
+                      <form id="add-employee" action="<?php echo base_url(). 'employees_new/add' ?>" method="post">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>

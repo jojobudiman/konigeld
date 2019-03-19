@@ -350,8 +350,8 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Create Discount</h2>
-                    <form id="add-customer" action="<?php echo base_url(). 'discounts_new/add' ?>" method="post">
                     <div class="dialog-primary-actions">
+                      <form id="add-discount" action="<?php echo base_url(). 'discounts_new/add' ?>" method="post">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
