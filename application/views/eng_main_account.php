@@ -1,5 +1,15 @@
 <!DOCTYPE html>
-
+<?php
+foreach($mer as $list) {
+    $id = $list->id_merchant;
+    $fname = $list->fname_merchant;
+    $lname = $list->lname_merchant;
+    $bname = $list->nama_bisnis;
+    $email = $list->email_merchant;
+    $email = $list->email_merchant;
+    $hp = $list->hp_merchant;
+}
+?>
 <html lang="en">
   <head>
     <base href="./">
@@ -436,7 +446,7 @@
                           <div class="form-field">
                             <label class="form-field-label" for="bname">Business Name</label>
                             <div class="form-field-content">
-                              <input class="form-field-input" id="bname" type="text" placeholder="Business Name">
+                              <input class="form-field-input" name="bname" type="text" value="<?php echo $bname ?>">
                             </div>
                           </div>
                         </div>
@@ -444,7 +454,7 @@
                           <div class="form-field form-field-readonly">
                             <label class="form-field-label" for="email">Email Address</label>
                             <div class="form-field-content form-field-link-wrapper">
-                              <input disabled class="form-field-input" id="email" type="text" placeholder="Email Address" value="hahaha">
+                              <input disabled class="form-field-input" name="email" type="text" value="<?php echo $email ?>">
                             </div>
                           </div>
                         </div>
@@ -452,7 +462,7 @@
                           <div class="form-field">
                             <label class="form-field-label" for="phone">Phone Number</label>
                             <div class="form-field-content">
-                              <input class="form-field-input" id="phone" type="text" placeholder="Phone Number">
+                              <input class="form-field-input" name="phone" type="text" value="<?php echo $hp ?>">
                             </div>
                           </div>
                         </div>
