@@ -343,7 +343,7 @@
                     </div>
                     <h2 class="dialog-header-title">Add Modifier</h2>
                     <div class="dialog-primary-actions">
-                      <form id="add-modifier" action="<?php echo base_url(). 'modifiers/add' ?>" method="post">
+                      <form id="add-modifier" action="<?php echo base_url(). 'modifiers_new/add' ?>" method="post">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
@@ -368,42 +368,65 @@
                               <div class="form-field">
                                 <label class="form-field-label" for="">Modifier Set Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Set Name">
+                                  <input class="form-field-input" type="text" placeholder="Set Name" name="name">
+                                </div>
+                              </div>
+                            </div>
+                              <div class="form-row">
+                                  <div class="form-field">
+                                      <label class="form-field-label" for="">Price</label>
+                                      <div class="form-field-content">
+                                          <input class="form-field-input" type="text" placeholder="Set Price" name="price">
+                                </div>
+                              </div>
+                            </div>
+                              <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label">Outlet</label>
+                                <div class="form-field-content">
+                                  <div class="form-field-arrow-container">
+                                    <select class=" form-field-select" name="out">
+                                      <?php foreach($out as $list2) { ?>
+                                        <option value="<?php echo $list2->id_outlet ?>">
+                                        <?php echo $list2->alamat_outlet ?>
+                                        </option>
+                                      <?php } ?>
+                                    </select>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <table class="konitable table-selectable">
                               <thead>
                                 <tr class="table-row">
-                                  <th class="table-header-cell-col-21-24">Product Name</th>
+                                  <th class="table-header-cell-col-21-24">List of Product</th>
                                   <th class="table-header-cell-col-3-24"></th>
                                 </tr>
                               </thead>
                               <tbody class="modifier-list">
-                                <tr class="">
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell form-field-content">
-                                          <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
-                                            <option disabled="">Nama Produk</option>
-                                            <option value="Nasi">Nasi</option>
-                                          </select>
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell form-field-content">
-                                      <div class="form-field-arrow-container">
-                                      <button class="modifier-add-icon" id="add-modif" type="button">
-                                        <i></i>
-                                      </button>
-                                    </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <script id="modifier-row" type="text/x-custom-template">
+                                  <?php foreach($produk as $list) { ?>
+                                  <tr class="">
+                                    <td class="table-cell">
+                                        <div class="modifier-option-table-cell form-field-content">
+                                            <div class="form-field-content">
+                                                <label class="form-checkbox-perm" for="anfanger">
+                                                    <input class="form-checkbox-input" id="all-locations" type="checkbox" name="pro[]" value="<?php echo $list->id_produk ?>">
+                                                    <div class="form-checkbox-label">
+                                                        <div class="form-checkbox-label-text">
+                                                            <?php echo $list->nama_produk.' -  Rp '.$list->harga.',-' ?>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                  </tr>
+                                  <?php } ?>
+                                  <!--<script id="modifier-row" type="text/x-custom-template">
                                 <tr class="">
                                   <td class="table-cell">
                                     <div class="modifier-option-table-cell">
-                                    <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
+                                    <select class="form-field-select modifier-option modifier-input fill">
                                       <option disabled="">Nama Produk</option>
                                       <option value="Nasi">Nasi</option>
                                     </select>
@@ -417,17 +440,17 @@
                                     </div>
                                   </td>
                                 </tr>
-                                </script>
-                              </tbody>
-                            </table>
+                                </script>-->
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </fieldset>
-                  </form>
-                  </div>
+                      </fieldset>
+                      </form>
+                    </div>
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
         </main>

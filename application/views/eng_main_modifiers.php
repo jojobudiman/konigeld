@@ -486,22 +486,24 @@
                                   <th colspan="1" rowspan="1" class="item-table-name super-strong">
                                     <div class="table-name-column">Modifier Set Name</div>
                                   </th>
-                                  <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
-                                    <div class="table-name-column">Options</div>
+                                    <th colspan="1" rowspan="1" class="item-table-name-2 super-strong">
+                                    <div class="table-name-column">Price</div>
                                   </th>
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr class="table-row-selectable" data-href="http://google.com">
+                                  <?php foreach($mod as $list) { ?>
+                                <tr class="table-row-selectable" data-href="<?php echo base_url().'modifiers_edit/index/'.$list->id_modifier ?>">
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
                                     <div class="konitable-container">
-                                      <div class="table-item-name-column">nama item</div>
+                                      <div class="table-item-name-column"><?php echo $list->nama_modifier ?></div>
                                     </div>
                                   </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">isi paket</div>
+                                    <td colspan="1" rowspan="1" class="item-table-name konitable">
+                                      <div class="table-name-column"><?php echo 'Rp '.$list->harga_modifier.',-' ?></div>
                                   </td>
                                 </tr>
+                                  <?php } ?>
                               </tbody>
                             </table>
                           </div>

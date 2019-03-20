@@ -431,14 +431,6 @@
                             </div>
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">SKU</label>
-                                <div class="form-field-content">
-                                  <input class ="form-field-input" id="sku" type="text" placeholder="SKU" name="sku">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field">
                                 <label class="form-field-label">Stock</label>
                                 <div class="form-field-content">
                                   <input class="form-field-input" id="stock" type="text" placeholder="Enter Stock" name="stock">

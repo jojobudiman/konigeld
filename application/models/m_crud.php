@@ -39,7 +39,7 @@ class M_crud extends CI_Model {
         $this->db->update($table, $data);
     }
 
-    function delete_data ($where,$table){
+    function delete($where,$table){
         $this->db->where($where);
         $this->db->delete($table);
     }
