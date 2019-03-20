@@ -58,6 +58,10 @@
       font-size: 10px;
       line-height: 10px; }
 
+.bg-blue {
+  background-color: #42838D;
+}
+
 .switch.switch-default {
   position: relative;
   display: inline-block;
