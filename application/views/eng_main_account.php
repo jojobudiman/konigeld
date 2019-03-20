@@ -469,8 +469,7 @@ foreach($mer as $list) {
                         </div>
                       </div>
                     </fieldset>
-                  </form>
-                  <form id="update-password" action="<?php echo base_url(). 'customers/add' ?>" method="post">
+
                     <fieldset class="form-fieldset accountsettings-layout-content-fieldset">
                       <legend class="form-legend">Password</legend>
                       <div class="form-table">
@@ -500,7 +499,6 @@ foreach($mer as $list) {
                         </div>
                       </div>
                     </fieldset>
-                  </form>
                     <fieldset class="form-fieldset accountsettings-layout-content-fieldset">
                       <legend class="form-legend">Deactivate Account</legend>
                       <p>Deactivating your Königeld account means you will be unable to receive or recover any of your payment history or account information.</p>
@@ -519,10 +517,11 @@ foreach($mer as $list) {
                     </button>
                   </li>
                   <li class="float-left">
-                    <button class="konibutton button-primary" type="button">
+                    <button class="konibutton button-primary" type="submit">
                       <span class="button-label">Save</span>
                     </button>
                   </li>
+                  </form>
                 </ul>
               </nav>
             </div>
