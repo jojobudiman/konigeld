@@ -43,11 +43,6 @@
                                     <div class="col-sm-10 float-left">
                                         <h4><strong class="card-title">Merchant Table</strong></h4>
                                     </div>
-                                    <div class="col-sm-2 text-right float-right">
-                                        <a href="<?php echo base_url(). 'namametode/add' ?>">
-                                            <button type="button" class="btn btn-outline-primary">Add Table</button>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -67,12 +62,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php foreach($admin as $list) { ?>
                                             <tr>
-                                                <td>Nama</td>
-                                                <td>Email</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
+                                                <td><?php echo $list->fname_merchant.' '.$list->lname_merchant ?></td>
+                                                <td><?php echo $list->nama_bisnis ?></td>
+                                                <td><?php echo $list->tipe_bisnis ?></td>
+                                                <td><?php echo $list->lokasi_bisnis ?></td>
+                                                <td><?php echo $list->monthly_revenue ?></td>
                                                 <td>HAHAHA</td>
                                                 <td>HAHAHA</td>
                                                 <td>HAHAHA</td>
@@ -89,6 +85,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
