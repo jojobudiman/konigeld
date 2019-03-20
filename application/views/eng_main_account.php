@@ -439,7 +439,7 @@ foreach($mer as $list) {
               <div class="page-layout-content reports-main-viewport">
                 <div class="accountsettings-layout">
                   <div class="accountsettings-layout-content">
-                    <form id="update-accountsettings" action="<?php echo base_url(). 'customers/add' ?>" method="post">
+                    <form id="update-accountsettings" action="<?php echo base_url(). 'account/update/'.$id ?>" method="post">
                     <fieldset class="form-fieldset accountsettings-layout-content-fieldset">
                       <legend class="form-legend">Basic Information</legend>
                       <div class="form-table">
@@ -455,7 +455,7 @@ foreach($mer as $list) {
                           <div class="form-field form-field-readonly">
                             <label class="form-field-label" for="email">Email Address</label>
                             <div class="form-field-content form-field-link-wrapper">
-                              <input disabled class="form-field-input" name="email" type="text" value="<?php echo $email ?>">
+                              <input class="form-field-input" name="email" type="text" readonly value="<?php echo $email ?>">
                             </div>
                           </div>
                         </div>
@@ -477,7 +477,7 @@ foreach($mer as $list) {
                           <div class="form-field">
                             <label class="form-field-label" for="cpass">Current Password</label>
                             <div class="form-field-content">
-                              <input class="form-field-input" id="cpass" type="password" placeholder="Current Password">
+                              <input class="form-field-input" name="cpass" type="password" placeholder="Current Password">
                             </div>
                           </div>
                         </div>
@@ -485,7 +485,7 @@ foreach($mer as $list) {
                           <div class="form-field">
                             <label class="form-field-label" for="newpass">New Password</label>
                             <div class="form-field-content">
-                              <input class="form-field-input" id="newpass" type="password" placeholder="New Password">
+                              <input class="form-field-input" name="newpass" type="password" placeholder="New Password">
                             </div>
                           </div>
                         </div>
@@ -493,7 +493,7 @@ foreach($mer as $list) {
                           <div class="form-field">
                             <label class="form-field-label" for="cnewpass">Confirm New Password</label>
                             <div class="form-field-content">
-                              <input class="form-field-input" id="cnewpass" type="password" placeholder="Confirm New Password">
+                              <input class="form-field-input" name="cnewpass" type="password" placeholder="Confirm New Password">
                             </div>
                           </div>
                         </div>
