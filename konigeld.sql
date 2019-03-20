@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2019 at 09:59 AM
+-- Generation Time: Mar 20, 2019 at 01:52 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -37,6 +37,17 @@ CREATE TABLE `admin` (
   `status_admin` int(11) NOT NULL,
   `hp_admin` text NOT NULL,
   `alamat_admin` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail_modifier`
+--
+
+CREATE TABLE `detail_modifier` (
+  `id_modifier` int(11) NOT NULL,
+  `id_produk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -197,7 +208,21 @@ CREATE TABLE `merchant` (
 --
 
 INSERT INTO `merchant` (`id_merchant`, `fname_merchant`, `lname_merchant`, `nama_bisnis`, `tahun_mulai_bisnis`, `tipe_bisnis`, `monthly_revenue`, `lokasi_bisnis`, `hp_merchant`, `email_merchant`, `pass_merchant`, `status_merchant`) VALUES
-(1, 'Joshua', 'Luih', 'Bisnis Luih', '2013', 'services', '500_750', 'JKT', '08123456789', 'luih@gmail.com', 'f6bc9a7a6a38809106c931490482e5c4', 1);
+(1, 'Joshua', 'Luih', 'Bisnis Joshua', '2013', 'services', '500_750', 'JKT', '08123456789', 'luih@gmail.com', 'f6bc9a7a6a38809106c931490482e5c4', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `modifier`
+--
+
+CREATE TABLE `modifier` (
+  `id_modifier` int(11) NOT NULL,
+  `id_outlet` int(11) NOT NULL,
+  `nama_modifier` text NOT NULL,
+  `harga_modifier` text NOT NULL,
+  `status_modifier` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -274,7 +299,8 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `id_outlet`, `id_jenis_p`, `nama_produk`, `harga`, `stok`, `status_produk`) VALUES
-(1, 1, 2, 'Bakso Goreng', '6000', 100, 1);
+(1, 1, 2, 'Bakso Goreng', '6000', 100, 1),
+(2, 1, 1, 'Lemon Tea', '7000', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -310,6 +336,13 @@ CREATE TABLE `user` (
   `id_merchant` int(11) NOT NULL,
   `status_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `fname_user`, `lname_user`, `email_user`, `pass_user`, `jabatan`, `hp_user`, `id_outlet`, `id_merchant`, `status_user`) VALUES
+(1, 'Eugenius', 'Pranoto', 'eugeniuspranoto98@gmail.com', '9741da9f7cdd416b0c4b63811770bd6e', 'Janitor', '08123131231', 1, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -368,6 +401,12 @@ ALTER TABLE `member`
 --
 ALTER TABLE `merchant`
   ADD PRIMARY KEY (`id_merchant`);
+
+--
+-- Indexes for table `modifier`
+--
+ALTER TABLE `modifier`
+  ADD PRIMARY KEY (`id_modifier`);
 
 --
 -- Indexes for table `order`
@@ -458,6 +497,12 @@ ALTER TABLE `merchant`
   MODIFY `id_merchant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `modifier`
+--
+ALTER TABLE `modifier`
+  MODIFY `id_modifier` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
@@ -470,6 +515,12 @@ ALTER TABLE `outlet_merchant`
   MODIFY `id_outlet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
@@ -479,7 +530,7 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
