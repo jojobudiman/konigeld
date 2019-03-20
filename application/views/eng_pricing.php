@@ -307,12 +307,6 @@
                                         <div class="table-flex-td">∞</div>
                                     </div>
                                     <div class="table-flex-tr">
-                                        <div class="table-flex-td">Locations</div>
-                                        <div class="table-flex-td">1</div>
-                                        <div class="table-flex-td">5</div>
-                                        <div class="table-flex-td">∞</div>
-                                    </div>
-                                    <div class="table-flex-tr">
                                         <div class="table-flex-td">Product Modifiers</div>
                                         <div class="table-flex-td">-</div>
                                         <div class="table-flex-td">5</div>
@@ -327,48 +321,10 @@
                                 </div>
                                 <div class="table-flex-wrap">
                                     <div class="table-flex-tr title">
-                                        <div class="table-flex-td">Customer</div>
-                                        <div class="table-flex-td"></div>
-                                        <div class="table-flex-td"></div>
-                                        <div class="table-flex-td"></div>
-                                    </div>
-                                    <div class="table-flex-tr">
-                                        <div class="table-flex-td">Loyalty Program</div>
-                                        <div class="table-flex-td">-</div>
-                                        <div class="table-flex-td"><div class="table-check"></div>(cooldown)</div>
-                                        <div class="table-flex-td"><div class="table-check"></div></div>
-                                    </div>
-                                    <div class="table-flex-tr">
-                                        <div class="table-flex-td">Point Monitoring</div>
-                                        <div class="table-flex-td">-</div>
-                                        <div class="table-flex-td"><div class="table-check"></div></div>
-                                        <div class="table-flex-td"><div class="table-check"></div></div>
-                                    </div>
-                                    <div class="table-flex-tr">
-                                        <div class="table-flex-td">Customer Profile</div>
-                                        <div class="table-flex-td">100</div>
-                                        <div class="table-flex-td">∞</div>
-                                        <div class="table-flex-td">∞</div>
-                                    </div>
-                                </div>
-                                <div class="table-flex-wrap">
-                                    <div class="table-flex-tr title">
                                         <div class="table-flex-td">Employee</div>
                                         <div class="table-flex-td"></div>
                                         <div class="table-flex-td"></div>
                                         <div class="table-flex-td"></div>
-                                    </div>
-                                    <div class="table-flex-tr">
-                                        <div class="table-flex-td">Employee Permissions</div>
-                                        <div class="table-flex-td">-</div>
-                                        <div class="table-flex-td"><div class="table-check"></div></div>
-                                        <div class="table-flex-td"><div class="table-check"></div></div>
-                                    </div>
-                                    <div class="table-flex-tr">
-                                        <div class="table-flex-td">Customer Profile</div>
-                                        <div class="table-flex-td">100</div>
-                                        <div class="table-flex-td">∞</div>
-                                        <div class="table-flex-td">∞</div>
                                     </div>
                                 </div>
                             </div>

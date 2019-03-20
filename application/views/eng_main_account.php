@@ -423,7 +423,7 @@ foreach($mer as $list) {
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
             <a href="<?php echo base_url() . 'account' ?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Personal Information</a>
-            <a href="#" class="dashboard-header-sidebar-parent-item">
+            <a class="dashboard-header-sidebar-parent-item">
               Business
             </a>
             <div class="dashboard-header-sidebar-parent-children" style="height: 120px;">
@@ -439,6 +439,7 @@ foreach($mer as $list) {
               <div class="page-layout-content reports-main-viewport">
                 <div class="accountsettings-layout">
                   <div class="accountsettings-layout-content">
+                    <form id="update-accountsettings" action="<?php echo base_url(). 'customers/add' ?>" method="post">
                     <fieldset class="form-fieldset accountsettings-layout-content-fieldset">
                       <legend class="form-legend">Basic Information</legend>
                       <div class="form-table">
@@ -468,6 +469,8 @@ foreach($mer as $list) {
                         </div>
                       </div>
                     </fieldset>
+                  </form>
+                  <form id="update-password" action="<?php echo base_url(). 'customers/add' ?>" method="post">
                     <fieldset class="form-fieldset accountsettings-layout-content-fieldset">
                       <legend class="form-legend">Password</legend>
                       <div class="form-table">
@@ -497,6 +500,7 @@ foreach($mer as $list) {
                         </div>
                       </div>
                     </fieldset>
+                  </form>
                     <fieldset class="form-fieldset accountsettings-layout-content-fieldset">
                       <legend class="form-legend">Deactivate Account</legend>
                       <p>Deactivating your Königeld account means you will be unable to receive or recover any of your payment history or account information.</p>

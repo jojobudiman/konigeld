@@ -412,7 +412,7 @@
         <main class="dashboard-layout">
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
-            <a href="#" class="dashboard-header-sidebar-parent-item">
+            <a class="dashboard-header-sidebar-parent-item">
               Reports
             </a>
             <div class="dashboard-header-sidebar-parent-children" style="max-height: 320px;">

@@ -413,7 +413,7 @@
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
             <a href="<?php echo base_url() . 'account' ?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Personal Information</a>
-            <a href="#" class="dashboard-header-sidebar-parent-item">
+            <a class="dashboard-header-sidebar-parent-item">
               Business
             </a>
             <div class="dashboard-header-sidebar-parent-children" style="height: 120px;">
