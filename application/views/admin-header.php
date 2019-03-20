@@ -12,44 +12,13 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="<?php echo base_url().'admin' ?>"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">People</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">Menu</h3><!-- /.menu-title -->
                     <li>
-                        <a href="#" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Administrators</a>
-                        <a href="#" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Users</a>
-                    </li>
-
-                    <h3 class="menu-title">Management</h3><!-- /.menu-title -->
-
-                    <li class="">
-                        <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sitemap"></i>Merchant</a>
-                        <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-archive"></i>Outlets</a>
-                        <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Members</a>
-                        <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-male"></i>Employees</a>
-                        <a href="#" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-hand-o-up"></i>Subscriptions</a>
-                    </li>
-
-                    <h3 class="menu-title">Charges</h3>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Transactions</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-list-alt"></i><a href="maps-gmap.html">Orders</a></li>
-                            <li><i class="menu-icon fa fa-th-list"></i><a href="maps-vector.html">Order Details</a></li>
-                            <li><i class="menu-icon fa fa-files-o"></i><a href="maps-vector.html">Transaction History</a></li>
-                            <li><i class="menu-icon fa fa-money"></i><a href="maps-vector.html">Transaction Details</a></li>
-                        </ul>
-                    </li>
-
-                    <h3 class="menu-title">Product</h3><!-- /.menu-title -->
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-square"></i>Products</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-square"></i><a href="page-login.html">Products</a></li>
-                            <li><i class="menu-icon fa fa-folder-open-o"></i><a href="page-register.html">Modifiers</a></li>
-                            <li><i class="menu-icon fa fa-tasks"></i><a href="#">Categories</a></li>
-                            <li><i class="menu-icon fa fa-chain"></i><a href="#">Discounts</a></li>
-                        </ul>
+                        <a href="<?php echo base_url().'admin_table_admin' ?>" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Administrators</a>
+                        <a href="<?php echo base_url().'admin_table_merchant' ?>" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sitemap"></i>Merchant</a>
+                        <a href="<?php echo base_url().'admin_table_transactionhistory' ?>" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-fa-files-o"></i>History</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

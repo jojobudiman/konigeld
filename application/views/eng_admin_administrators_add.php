@@ -42,28 +42,22 @@
                                                       <strong>Administrator Table</strong> - Add Element
                                                   </div>
                                                   <div class="card-body card-block">
-                                                      <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                                      <form name="add-admin" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                           <div class="row form-group">
-                                                              <div class="col col-md-3"><label class=" form-control-label">ID</label></div>
-                                                              <div class="col-12 col-md-9">
-                                                                  <p class="form-control-static">Nama ID Admin</p>
-                                                              </div>
-                                                          </div>
-                                                          <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="fname-admin" class=" form-control-label">First Name</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="fname-admin" name="fname-admin" placeholder="First Name" class="form-control"></div>
-                                                          </div>
-                                                          <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="lname-admin" class=" form-control-label">Last Name</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="lname-admin" name="lname-admin" placeholder="Last Name" class="form-control"></div>
+                                                              <div class="col col-md-3"><label for="name-admin" class=" form-control-label">Name</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="name-admin" name="name-admin" placeholder="Enter Name" class="form-control"></div>
                                                           </div>
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label for="email-admin" class=" form-control-label">Email</label></div>
                                                               <div class="col-12 col-md-9"><input type="email" id="email-admin" name="email-admin" placeholder="Enter Email" class="form-control"></div>
                                                           </div>
                                                           <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="pass-admin" class=" form-control-label">Password</label></div>
-                                                              <div class="col-12 col-md-9"><input type="password" id="pass-admin" name="pass-admin" placeholder="Password" class="form-control"></div>
+                                                              <div class="col col-md-3"><label for="phone-admin" class=" form-control-label">Phone</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="phone-admin" name="phone-admin" placeholder="Enter Phone" class="form-control"></div>
+                                                          </div>
+                                                          <div class="row form-group">
+                                                              <div class="col col-md-3"><label for="address-admin" class=" form-control-label">Address</label></div>
+                                                              <div class="col-12 col-md-9"><textarea name="address-admin" id="address-admin" rows="9" placeholder="Enter Address" class="form-control"></textarea></div>
                                                           </div>
                                                           <div class="row form-group">
                                                                <div class="col col-md-3"><label for="status-admin" class=" form-control-label">Status</label></div>
@@ -73,14 +67,6 @@
                                                                     <option value="1">Inactive</option>
                                                                   </select>
                                                                 </div>
-                                                          </div>
-                                                          <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="phone-admin" class=" form-control-label">Phone</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="phone-admin" name="phone-admin" placeholder="Phone" class="form-control"></div>
-                                                          </div>
-                                                          <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="address-admin" class=" form-control-label">Address</label></div>
-                                                              <div class="col-12 col-md-9"><textarea name="address-admin" id="address-admin" rows="9" placeholder="Enter Address" class="form-control"></textarea></div>
                                                           </div>
                                                       </form>
                                                   </div>

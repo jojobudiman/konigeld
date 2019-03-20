@@ -18,7 +18,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Administrators</h1>
+                        <h1>Merchant</h1>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Administrators</li>
+                            <li class="active">Merchant</li>
                         </ol>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-sm-10 float-left">
-                                        <h4><strong class="card-title">Administrator Table</strong></h4>
+                                        <h4><strong class="card-title">Merchant Table</strong></h4>
                                     </div>
                                     <div class="col-sm-2 text-right float-right">
                                         <a href="<?php echo base_url(). 'namametode/add' ?>">
@@ -55,10 +55,13 @@
                                     <div class="row">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Address</th>
+                                                <th>Merchant Name</th>
+                                                <th>Business Name</th>
+                                                <th>Business Type</th>
+                                                <th>Location</th>
+                                                <th>Monthly Revenue</th>
+                                                <th>Pricing Plan</th>
+                                                <th>Start Year</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -67,6 +70,9 @@
                                             <tr>
                                                 <td>Nama</td>
                                                 <td>Email</td>
+                                                <td>HAHAHA</td>
+                                                <td>HAHAHA</td>
+                                                <td>HAHAHA</td>
                                                 <td>HAHAHA</td>
                                                 <td>HAHAHA</td>
                                                 <td>HAHAHA</td>

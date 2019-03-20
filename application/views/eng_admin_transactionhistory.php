@@ -18,7 +18,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Administrators</h1>
+                        <h1>Transaction History</h1>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Administrators</li>
+                            <li class="active">Transaction History</li>
                         </ol>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-sm-10 float-left">
-                                        <h4><strong class="card-title">Administrator Table</strong></h4>
+                                        <h4><strong class="card-title">Transaction History Table</strong></h4>
                                     </div>
                                     <div class="col-sm-2 text-right float-right">
                                         <a href="<?php echo base_url(). 'namametode/add' ?>">
@@ -55,11 +55,13 @@
                                     <div class="row">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Address</th>
-                                                <th>Status</th>
+                                                <th>Transaction ID</th>
+                                                <th>Merchant Name</th>
+                                                <th>Pricing Plan</th>
+                                                <th>Period</th>
+                                                <th>Starting Date</th>
+                                                <th>Ending Date</th>
+                                                <th>Total</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -67,6 +69,8 @@
                                             <tr>
                                                 <td>Nama</td>
                                                 <td>Email</td>
+                                                <td>HAHAHA</td>
+                                                <td>HAHAHA</td>
                                                 <td>HAHAHA</td>
                                                 <td>HAHAHA</td>
                                                 <td>HAHAHA</td>
