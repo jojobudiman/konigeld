@@ -3,26 +3,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class modifiers_new extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct() 
+    {
+        parent::__construct();
+        $this->load->model(array('m_crud', 'm_product', 'm_modifier'));
+    }
 
     function index() {
+        $data['out'] = $this->m_crud->select2Condition('status_outlet', 'id_merchant', 'outlet_merchant')->result();
+        $data['produk'] = $this->m_product->select('status_produk', 'outlet_merchant.id_merchant')->result();
         $this->load->view('merchant-css');
-        $this->load->view('eng_main_modifiers_add');
+        $this->load->view('eng_main_modifiers_add', $data);
         $this->load->view('merchant-js');
 	}
+    
+    function add() {
+        $getName = $this->input->post("name");
+        $getPrice = $this->input->post("price");
+        $getOut = $this->input->post("out");
+        $data = array(
+            "id_modifier" => 0,
+            "id_outlet" => $getOut,
+            "nama_modifier" => $getName,
+            "harga_modifier" => $getPrice,
+            "status_modifier" => 1
+        );
+        
+        $this->m_crud->insertData($data, 'modifier');
+        
+        $mod = $this->m_modifier->select($getName, $getPrice, $getOut)->result();
+        foreach($mod as $id) {
+            $idm = $id->id_modifier;
+        }
+        $pro = $this->input->post("pro[]");
+        foreach($pro as $list) {
+            $data2 = array(
+                "id_modifier" => $idm,
+                "id_produk" => $list
+            );
+            
+            $this->m_crud->insertData($data2, 'detail_modifier');
+        }
+        
+        redirect('modifiers');
+    }
 
 }

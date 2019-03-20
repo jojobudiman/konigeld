@@ -22,11 +22,10 @@ class products_library_new extends CI_Controller {
         $getCat = $this->input->post("cate");
         $getOut = $this->input->post("out");
         $getPrice = $this->input->post("price");
-        $getSKU = $this->input->post("sku");
         $getStock = $this->input->post("stock");
         
         $data = array(
-            "id_produk" => $getSKU,
+            "id_produk" => 0,
             "id_outlet" => $getOut,
             "id_jenis_p" => $getCat,
             "nama_produk" => $getName,

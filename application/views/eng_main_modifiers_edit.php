@@ -341,15 +341,22 @@
                         </svg>
                       </button>
                     </div>
+                      <?php 
+                        foreach($mod as $list1) {
+                        $idm = $list1->id_modifier;
+                        $name = $list1->nama_modifier;
+                        $hg = $list1->harga_modifier;
+                        }
+                      ?>
                     <h2 class="dialog-header-title">Edit Modifier</h2>
                     <div class="dialog-primary-actions">
                       <div class="dialog-primary-actions-primary">
-                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'modifiers/delete' ?>'">
+                          <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url().'modifiers_edit/delete/'.$idm ?>'">
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
                       <div class="dialog-primary-actions-primary">
-                        <form id="edit-modifier" action="<?php echo base_url().'modifiers/update' ?>" method="post">
+                        <form id="edit-modifier" action="<?php echo base_url().'modifiers_edit/update/'.$idm ?>" method="post">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
                         </button>
@@ -366,9 +373,29 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Modifier Set Name</label>
+                                <label class="form-field-label" for="">Modifier's Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Set Name">
+                                  <input class="form-field-input" type="text" name="name" value="<?php echo $name ?>">
+                                </div>
+                              </div>
+                            </div>
+                              <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Modifier's Price</label>
+                                <div class="form-field-content">
+                                  <input class="form-field-input" type="text" name="price" value="<?php echo $hg ?>">
+                                </div>
+                              </div>
+                            </div>
+                              <div class="form-row">
+                              <div class="form-field">
+                                <label class="form-field-label" for="">Outlet</label>
+                                  <div class="form-field-content">
+                                      <select name="loc" class=" form-field-select">
+                                          <?php foreach($out as $loc) { ?>
+                                          <option value="<?php echo $loc->id_outlet ?>"><?php echo $loc->alamat_outlet ?></option>
+                                          <?php } ?>
+                                      </select>
                                 </div>
                               </div>
                             </div>
@@ -380,45 +407,62 @@
                                 </tr>
                               </thead>
                               <tbody class="modifier-list">
-                                <tr class="">
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell form-field-content">
-                                          <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
-                                            <option disabled="">Nama Produk</option>
-                                            <option value="Nasi">Nasi</option>
-                                          </select>
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell form-field-content">
-                                      <div class="form-field-arrow-container">
-                                      <button class="modifier-add-icon" id="add-modif" type="button">
-                                        <i></i>
-                                      </button>
-                                    </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <script id="modifier-row" type="text/x-custom-template">
-                                <tr class="">
-                                  <td class="table-cell">
-                                    <div class="modifier-option-table-cell">
-                                    <select class="form-field-select modifier-option modifier-input fill" value="Nama Produk">
-                                      <option disabled="">Nama Produk</option>
-                                      <option value="Nasi">Nasi</option>
-                                    </select>
-                                    </div>
-                                  </td>
-                                  <td class="table-cell">
-                                    <div class="modfiier-option-table-cell">
-                                      <button class="modifier-remove-icon" id="remove-modif" type="button">
-                                        <i></i>
-                                      </button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                </script>
-                              </tbody>
+                                  <?php 
+                                    $idp = array();
+                                    $namap = array();
+                                    $hgp = array();
+                                    $c = 0;
+                                    $counter = 0;
+                                    foreach($mod as $list3) {
+                                        $idp[$c] = $list3->id_produk;
+                                        $namap[$c] = $list3->nama_produk;
+                                        $hgp[$c] = $list3->harga;
+                                        $c++;
+                                    }
+                                foreach($produk as $list2) {
+                                    
+                                  ?>
+                                  <tr class="">
+                                      <td class="table-cell">
+                                          <div class="modifier-option-table-cell form-field-content">
+                                            <div class="form-field-content">
+                                                <label class="form-checkbox-perm" for="anfanger">
+                                                    <?php 
+                                    for($i = 0; $i < $c; $i++) {
+                                        if($list2->id_produk == $idp[$i]) {
+                                            $counter = 1;
+                                            break;
+                                        }
+                                        else {
+                                            $counter = 0;
+                                        }
+                                    }
+                                    if($counter == 1) 
+                                    {
+                                                    ?>
+                                                    <input class="form-checkbox-input" id="all-locations" type="checkbox" name="pro[]" value="<?php echo $list2->id_produk ?>" checked>
+                                                    <div class="form-checkbox-label">
+                                                        <div class="form-checkbox-label-text">
+                                                            <?php echo $list2->nama_produk.' -  Rp '.$list2->harga.',-' ?>
+                                                        </div>
+                                                    </div>
+                                                    <?php }
+                                    else { ?>
+                                                    <input class="form-checkbox-input" id="all-locations" type="checkbox" name="pro[]" value="<?php echo $list2->id_produk ?>">
+                                                    <div class="form-checkbox-label">
+                                                        <div class="form-checkbox-label-text">
+                                                            <?php echo $list2->nama_produk.' -  Rp '.$list2->harga.',-' ?>
+                                                        </div>
+                                                    </div>
+                                    <?php }
+                                                    ?>
+                                                </label>
+                                              </div>
+                                          </div>
+                                      </td>
+                                  </tr>
+                                  <?php } ?>
+                                </tbody>
                             </table>
                           </div>
                         </div>
