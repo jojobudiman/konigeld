@@ -26,4 +26,9 @@ class admin extends CI_Controller {
         $this->load->view('admin-js');
 	}
 
+  function logout() {
+      $this->session->sess_destroy();
+      redirect('english_home');
+  }
+
 }

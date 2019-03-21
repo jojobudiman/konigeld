@@ -25,7 +25,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                  <form action="<?php echo base_url().'login_admin/login/' ?>" method="post">
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" name="email-admin" id="email-admin" class="form-control" placeholder="Email">

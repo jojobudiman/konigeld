@@ -193,7 +193,7 @@
                 <div class="column">
                   <div class="field email-confirmation-field">
                     <div class="field-label">
-                      <label for="email-confirmation">Confirm your label</label>
+                      <label for="email-confirmation">Confirm your email</label>
                     </div>
                     <div class="input-element">
                       <input type="email" name="email-confirmation" id="email-confirmation" placeholder="you@example.com">
