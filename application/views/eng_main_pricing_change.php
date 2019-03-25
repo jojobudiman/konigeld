@@ -6,9 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
     <title>Königeld Dashboard</title>
-
   </head>
   <body class="app header-fixed sidebar-fixed aside-menu-fixed">
 
@@ -337,6 +335,69 @@
           <!--Container-->
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
+
+              <!--Modals-->
+              <div class="modal fade show" id="entryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog dialog-primary" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Confirm Pricing Plan Change</h4>
+                      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure to set Entry as your current plan?
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" type="button">Yes</button>
+                      <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade show" id="juniorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog dialog-primary" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Confirm Pricing Plan Change</h4>
+                      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure to set Junior as your current plan?
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" type="button">Yes</button>
+                      <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade show" id="seniorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog dialog-primary" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Confirm Pricing Plan Change</h4>
+                      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure to set Senior as your current plan?
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" type="button">Yes</button>
+                      <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--End Modals-->
+
               <div class="crud-layout-active dialog">
                 <header class="dialog-header">
                   <div class="dialog-header-content">
@@ -349,76 +410,124 @@
                         </svg>
                       </button>
                     </div>
-                    <h2 class="dialog-header-title">Edit Discount</h2>
+                    <h2 class="dialog-header-title">Change Subscriptions</h2>
                     <div class="dialog-primary-actions">
-                        <?php foreach($disc as $list) { ?>
-                      <div class="dialog-primary-actions-primary">
-                        <button class="konibutton button-secondary" onclick="location.href='<?php echo base_url(). 'discounts/delete/'.$list->id_diskon ?>'">
-                          <span class="button-label">Delete</span>
-                        </button>
-                      </div>
-                      <form id="edit-discount" action="<?php echo base_url(). 'discounts_edit/update' ?>" method="post">
-                      <div class="dialog-primary-actions-primary">
-                        <button class="konibutton button-primary" type="submit">
-                          <span class="button-label">Save</span>
-                        </button>
-                      </div>
+
+
+                      <form id="change-subscriptions" action="<?php echo base_url(). 'subscriptions_change/update' ?>" method="post">
                     </div>
                   </div>
                 </header>
                 <div class="dialog-body">
                   <div class="dialog-content">
-                    <fieldset class="form-fieldset">
-                      <legend class="form-legend">Discount Information</legend>
-                      <div class="grid-row">
-                        <div class="grid-col grid-col-24-24">
-                          <div class="form-table">
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label" for="">Name</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" type="text" name="name" value="<?php echo $list->nama_diskon ?>">
-                                  <input class="form-field-input" type="text" name="id" value="<?php echo $list->id_diskon ?>" hidden>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-field-with-segmented-control form-field">
-                                <label class="form-field-label" for="">Amount</label>
-                                <div class="form-field-content">
-                                  <div class="form-field-percent-or-amount">
-                                    <div class="form-field-with-segmented-control-input">
-                                        <?php if($list->jumlah > 1) { ?>
-                                        <input class="form-field-input money-text" name="text2" type="text" id="text-2" value="<?php echo $list->jumlah ?>">
-                                        <input class="form-field-input percent-text hidden" type="text" id="text-1" name="text1" placeholder="%" value="">
-                                        <?php }
-                                        else { ?>
-                                            <input class="form-field-input money-text hidden" type="text" id="text-2" placeholder="Rp 0.00" value="" name="text2">
-                                        <input class="form-field-input percent-text" name="text1" type="text" id="text-1" placeholder="%" value="<?php echo $list->jumlah*100 ?>">
-                                        <?php }
-                                        ?>
+                    <div class="grid grid-row-equal-heights grid-3-at-large">
+                        <div class="column" data-toggle="modal" data-target="#entryModal">
+                            <div class="grid grid-space-line">
+                                <div class="pricing-columns">
+                                    <div class="change-pricing-group">
+                                        <div class="price-entry entry pad-vert-small pad-horz-small">
+                                            <div class="grid-row-space-small grid-align-center">
 
-
+                                                  <div class="display-inline-block">
+                                                    <div class="h1 super-strong small-gap price-white">ENTRY</div>
+                                                    <div class="h2 super-strong price-white">Rp 25000<br>per month</div>
+                                                  </div>
+                                                <div class="display-inline-block float-left left">
+                                                    <div class="entry-price"></div>
+                                                </div>
+                                                <div class="display-inline-block">
+                                                  <div class="h3 price-white super-strong">You'll get:</div>
+                                                  <div class="h5 price-white">
+                                                    <li>1 Location</li>
+                                                    <li>No Product Modifiers</li>
+                                                    <li>2 Product Categories</li>
+                                                  </div>
+                                                </div>
+                                                <input type="hidden" id="plan-entry" name="" value="Entry">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-field-with-segmented-controls segmented-control">
-                                      <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(1)">%</button>
-                                      <button class="konibutton segmented-control-segment form-field-with-segmented-control-segment" type="button" onclick="switchText(2)">Rp</button>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
+                        </div>
+                        <div class="column">
+                        <div class="grid grid-space-line">
+                        <div class="pricing-columns">
+                            <div class="grid grid-space-line">
+                                <div class="column" data-toggle="modal" data-target="#juniorModal">
+                                    <div class="change-pricing-group">
+                                        <div class="price-junior junior pad-vert-small pad-horz-small">
+                                            <div class="grid-row-space-small grid-align-center">
+                                              <div class="column">
+                                                  <div class="display-inline-block">
+                                                    <div class="h1 super-strong small-gap price-white">JUNIOR</div>
+                                                    <div class="h2 super-strong price-white">Rp 75000<br>per month</div>
+                                                  </div>
+                                              </div>
+
+                                                  <div class="display-inline-block float-left left">
+                                                      <div class="junior-price"></div>
+                                                  </div>
+
+                                                  <div class="display-inline-block">
+                                                    <div class="h3 price-white super-strong">You'll get:</div>
+                                                    <div class="h5 price-white">
+                                                      <li>5 Locations</li>
+                                                      <li>5 Product Modifiers</li>
+                                                      <li>10 Product Categories</li>
+                                                    </div>
+                                                  </div>
+                                                  <input type="hidden" id="plan-junior" name="" value="Junior">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                       </div>
-                    </fieldset>
+                      </div>
+                      <div class="column" data-toggle="modal" data-target="#seniorModal">
+                      <div class="grid grid-space-line">
+                        <div class="pricing-columns">
+                            <div class="grid grid-space-line">
+                                <div class="column">
+                                    <div class="change-pricing-group">
+                                        <div class="price-senior senior pad-vert-small pad-horz-small">
+                                                  <div class="display-inline-block">
+                                                    <div class="h1 super-strong small-gap price-white">SENIOR</div>
+                                                    <div class="h2 super-strong price-white">Rp 150000<br>per month</div>
+                                                  </div>
+
+                                                  <div class="display-inline-block float-left left">
+                                                      <div class="senior-price"></div>
+                                                  </div>
+
+                                                  <div class="display-inline-block">
+                                                    <div class="h3 price-white super-strong">You'll get:</div>
+                                                    <div class="h5 price-white">
+                                                      <li>Unlimited Locations</li>
+                                                      <li>Unlimited Product Modifiers</li>
+                                                      <li>Unlimited Product Categories</li>
+                                                    </div>
+                                                  </div>
+                                                  <input type="hidden" id="plan-senior" name="" value="Senior">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="h5 super-strong text-center">
+                      Note: Downgrade your current plan means your latest locations, product modifiers, and categories will be adjusted to the destination plan.
+                    </div>
                   </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-            <?php } ?>
         </main>
       </div>
   </body>

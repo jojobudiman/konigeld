@@ -328,7 +328,7 @@
                                 <div class="form-field-content form-field-link-wrapper">
                                   <input disabled class="form-field-input" id="subname" type="text" value="Nama sub">
                                 </div>
-                                <a class="form-field-link form-field-content " href="#">Change Plan</a>
+                                <a class="form-field-link form-field-content " href="<?php echo base_url(). 'subscriptions_change' ?>">Change Plan</a>
                               </div>
                             </div>
                             <div class="form-row">

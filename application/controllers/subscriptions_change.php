@@ -21,7 +21,7 @@ class subscriptions_change extends CI_Controller {
 
     function index() {
         $this->load->view('merchant-css');
-        $this->load->view('eng_main_account_pricing_change');
+        $this->load->view('eng_main_pricing_change');
         $this->load->view('merchant-js');
 	}
 

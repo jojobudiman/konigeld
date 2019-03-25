@@ -2014,8 +2014,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 .btn-primary {
 	color: #fff;
-	background-color: #20a8d8;
-	border-color: #20a8d8
+	background-color: #42838D;
+	border-color: #42838D
 }
 .btn-primary:hover {
 	color: #fff;
@@ -2027,8 +2027,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 .btn-primary.disabled, .btn-primary:disabled {
 	color: #fff;
-	background-color: #20a8d8;
-	border-color: #20a8d8
+	background-color: #42838D;
+	border-color: #42838D
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show>.btn-primary.dropdown-toggle {
 	color: #fff;
@@ -9269,11 +9269,11 @@ canvas {
 	border-left: 4px solid #2f353a
 }
 .modal-primary .modal-content {
-	border-color: #20a8d8
+	border-color: #42838D
 }
 .modal-primary .modal-header {
 	color: #fff;
-	background-color: #20a8d8
+	background-color: #42838D
 }
 .modal-secondary .modal-content {
 	border-color: #c8ced3
@@ -14918,7 +14918,7 @@ i.material-icons {
 	color: #FFFFFF !important;
 }
 
-.pricing-group {
+.change-pricing-group {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -14926,16 +14926,98 @@ i.material-icons {
 
 .price-entry, .price-junior, .price-senior {
   flex-grow: 1;
+	min-height: 65%;
 }
 
 .entry {
   background-color: #E4A39C;
+	transition: all 0.2s ease-in-out;
 }
 
 .junior {
   background-color: #D7615E;
+	transition: all 0.2s ease-in-out;
 }
 
 .senior {
   background-color: #D45C4F;
+	transition: all 0.2s ease-in-out;
+}
+
+.entry:hover, .junior:hover, .senior:hover {
+	background-color: #42838D;
+}
+
+.entry:active, .junior:active, .senior:active {
+	background-color: #20A8D8;
+}
+
+.senior-price {
+	position: relative;
+	background-image: url(../img/pricing/seniorr.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 300px;
+  left: -10px;
+}
+
+.junior-price {
+	position: relative;
+	background-image: url(../img/pricing/juniorr.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 300px;
+  left: -10px;
+}
+
+.entry-price {
+	position: relative;
+	background-image: url(../img/pricing/entryy.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 300px;
+  left: -10px;
+}
+
+.pricing-columns {
+	width: 100%;
+	flex: 0 1 auto;
+}
+
+.grid-3-at-large {
+	flex-wrap: wrap;
+}
+
+.grid-row-equal-heights > * > * {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  width: 100%;
+}
+
+.grid-3-at-large > * {
+    width: 33%;
+		display: inline-block;
+}
+
+.pad-vert-small {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.pad-horz-small {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.grid-space-line>*, .grid-col-space-line>* {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.price-white {
+	color: #FFFFFF;
 }

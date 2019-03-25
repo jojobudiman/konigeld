@@ -319,14 +319,6 @@
                                         <div class="table-flex-td">∞</div>
                                     </div>
                                 </div>
-                                <div class="table-flex-wrap">
-                                    <div class="table-flex-tr title">
-                                        <div class="table-flex-td">Employee</div>
-                                        <div class="table-flex-td"></div>
-                                        <div class="table-flex-td"></div>
-                                        <div class="table-flex-td"></div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

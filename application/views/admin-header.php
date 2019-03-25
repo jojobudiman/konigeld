@@ -18,7 +18,7 @@
                     <li>
                         <a href="<?php echo base_url().'admin_table_admin' ?>" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Administrators</a>
                         <a href="<?php echo base_url().'admin_table_merchant' ?>" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sitemap"></i>Merchant</a>
-                        <a href="<?php echo base_url().'admin_table_transactionhistory' ?>" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-fa-files-o"></i>History</a>
+                        <a href="<?php echo base_url().'admin_table_transactionhistory' ?>" class="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-files-o"></i>History</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -43,11 +43,11 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Administrator
+                            <?php echo $this->session->userdata("fname")." ".$this->session->userdata("lname"); ?>
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            <a class="nav-link" href="<?php echo base_url(). 'logout' ?>"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>
 
