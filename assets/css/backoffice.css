@@ -137,7 +137,6 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 20px !important;
 }
 
 .grid, [class*=grid-] {
@@ -639,4 +638,8 @@ select {
     border-radius: 3px;
     pointer-events: none;
     transition: background-color 300ms;
+}
+
+.konierror {
+  color: #F86C6B;
 }
