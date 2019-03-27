@@ -307,7 +307,6 @@
             <div class="dashboard-header-sidebar-parent-children" style="height: 120px;">
               <a href="<?php echo base_url(). 'locations'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Locations</a>
               <a href="<?php echo base_url(). 'subscriptions'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Pricing & Subscriptions</a>
-              <a href="<?php echo base_url(). 'payment' ?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Method</a>
             </div>
           </div>
           <!--End Sidebar-->
@@ -353,7 +352,7 @@
                                     <div class="table-name-column type-align-right">Status</div>
                                   </th>
                                 </tr>
-                                  
+
                               </thead>
                               <tbody>
                                   <?php foreach($loc as $list) { ?>

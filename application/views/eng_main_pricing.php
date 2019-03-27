@@ -307,7 +307,6 @@
             <div class="dashboard-header-sidebar-parent-children" style="height: 120px;">
               <a href="<?php echo base_url(). 'locations'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Locations</a>
               <a href="<?php echo base_url(). 'subscriptions'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Pricing & Subscriptions</a>
-              <a href="<?php echo base_url(). 'accountpayment'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Method</a>
             </div>
           </div>
           <!--End Sidebar-->
