@@ -401,7 +401,9 @@
                                       <td class="type-align-right"><?php echo $list->stok ?></td>
                                       <td class="type-align-right"><?php echo $list->harga ?></td>
                                   </tr>
-                                <?php } ?>
+                                <?php
+                                $cc = 1;
+                               } ?>
                               </tbody>
                             </table>
                           </div>
@@ -410,10 +412,11 @@
                     </div>
 
 
-                  </div>
-                  <!--Kalau ada produk sampai sini-->
-                  <!-- Jika tidak ada produk -->
-                  <!--<div class="page-layout">
+                    <?php
+                    if ($cc != 1) {
+                    ?>
+
+
                     <div class="unavailable">
                       <i class="no-transactions unavailable-icon"></i>
                       <div class="unavailable-header">
@@ -426,7 +429,10 @@
                         Create a Product
                       </button>
                     </div>
-                  </div>-->
+
+                  <?php  } ?>
+                  </div>
+
                   </div>
 
                 </div>
