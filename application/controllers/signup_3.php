@@ -25,7 +25,7 @@ class signup_3 extends CI_Controller {
         $monthlyrevenue = $this->input->post("monthlyrevenue");
         $blocation = $this->input->post("blocation");
         
-        $this->session->set_userdata("fname", $fname);
+        $this->session->set_userdata("name", $fname);
         $this->session->set_userdata("lname", $lname);
         $this->session->set_userdata("phone", $phone);
         $this->session->set_userdata("year", $year);
