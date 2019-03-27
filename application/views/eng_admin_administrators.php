@@ -44,7 +44,8 @@
                                         <h4><strong class="card-title">Administrator Table</strong></h4>
                                     </div>
                                     <div class="col-sm-2 text-right float-right">
-                                        <a href="<?php echo base_url(). 'namametode/add' ?>">
+                                        <a href="<?php echo base_url(). '
+                                        admin_table_admin_add' ?>">
                                             <button type="button" class="btn btn-outline-primary">Add Table</button>
                                         </a>
                                     </div>
@@ -72,7 +73,7 @@
                                                 <td>HAHAHA</td>
                                                 <td id="buttons">
                                                     <div class="col-sm-4 offset-sm-1">
-                                                        <a href="<?php echo base_url(). 'namametode/edit' ?>">
+                                                        <a href="<?php echo base_url(). 'admin_table_admin_edit' ?>">
                                                         <button type="button" class="btn btn-outline-success">Edit</button>
                                                         </a>
                                                     </div>

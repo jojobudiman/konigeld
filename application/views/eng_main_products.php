@@ -398,8 +398,8 @@
                                       <td><?php echo $list->id_produk ?></td>
                                       <td><?php echo $list->nama_jenis ?></td>
                                       <td><?php echo $list->alamat_outlet ?></td>
-                                      <td><?php echo $list->stok ?></td>
-                                      <td><?php echo $list->harga ?></td>
+                                      <td class="type-align-right"><?php echo $list->stok ?></td>
+                                      <td class="type-align-right"><?php echo $list->harga ?></td>
                                   </tr>
                                 <?php } ?>
                               </tbody>
