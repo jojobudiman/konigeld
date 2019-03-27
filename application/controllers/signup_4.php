@@ -26,7 +26,7 @@ class signup_4 extends CI_Controller {
         
         $data_merchant = array(
             "id_merchant" => 0,
-            "fname_merchant" => $this->session->userdata('fname'),
+            "fname_merchant" => $this->session->userdata('name'),
             "lname_merchant" => $this->session->userdata('lname'),
             "tahun_mulai_bisnis" => $this->session->userdata('year'),
             "nama_bisnis" => $this->session->userdata('bname'),
@@ -55,68 +55,18 @@ class signup_4 extends CI_Controller {
         );
         $this->m_crud->insertData($data_outlet, 'outlet_merchant');
         
-        $this->load->library('email');
-
-        $subject = 'This is a test';
-        $message = '<p>This message has been sent for testing purposes.</p>';
-
-        // Get full html:
-        $body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml">
-        <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=' . strtolower(config_item('charset')) . '" />
-        <title>' . html_escape($subject) . '</title>
-        <style type="text/css">
-        body {
-            font-family: Arial, Verdana, Helvetica, sans-serif;
-            font-size: 16px;
-        }
-        </style>
-        </head>
-        <body>
-        ' . $message . '
-        </body>
-        </html>';
-        // Also, for getting full html you may use the following internal method:
-        //$body = $this->email->full_html($subject, $message);
-
-        $result = $this->email
-            ->from('konigeld@gmail.com')
-            //->reply_to('yoursecondemail@somedomain.com')    // Optional, an account where a human being reads.
-            ->to($this->session->userdata('email'))
-            ->subject($subject)
-            ->message($body)
-            ->send();
-
-        var_dump($result);
-        echo '<br />';
-        echo $this->email->print_debugger();
-        
-        /*$from_mail = 'noreply@konigeld.com';
+        $from_mail = 'konigeld@gmail.com';
         $to = $this->session->userdata('email');
+ 
         $subject = 'Welcome to Konigeld';
-        $message = 'hai';
-        //echo $subject;
-        $nama = "MIME-Version: 1.0\r\n";
-        $nama .= "Content-type: text/html; charset=iso-8859-1' . \r\n";
-        $nama .= "To: Your Name <'".$to."'>'\r\n";
-        $nama .= "From: NO-REPLY <'".$from_mail."'>'\r\n";
-        //echo $nama;
+        $message = 'Hai '.$this->session->userdata('name').'! Thank you for registering your account into Konigeld!';
+ 
+        $nama  = 'MIME-Version: 1.0' . "\r\n";
+        $nama .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $nama .= 'To: Your Name <'.$to.'>' . "\r\n";
+        $nama .= 'From: NO-REPLY <'.$from_mail.'>' . "\r\n";
         
         $sendtomail = mail($to, $subject, $message, $nama);
-        
-        if( $sendtomail ) echo 'Success';
-        else echo 'Failed';
- 
-        $headers  = 'MIME-Version: 1.0\r\n';
-        
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        
-        $headers .= 'To: Your Name <'.$to.'>' . "\r\n";
-        $headers .= 'From: NO-REPLY <'.$from_mail.'>' . "\r\n";
-        
-        $sendtomail = mail($to, $subject, $message, $headers);
-        */
-        //redirect('dashboard');
+        redirect('dashboard');
     }
 }
