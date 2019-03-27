@@ -344,14 +344,12 @@
                           <table>
                             <thead>
                               <tr>
-                                <th colspan="1" rowspan="1" class="item-table-name super-strong">Outlet Name</th>
                                 <th colspan="1" rowspan="1" class="item-table-name super-strong">Expiration Date</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td colspan="1" rowspan="1" class="item-table-name konitable">Nama1</td>
-                                <td colspan="1" rowspan="1" class="item-table-name konitable">Expired</td>
+                                <td colspan="1" rowspan="1" class="item-table-name konitable">Tanggal expired</td>
                               </tr>
                             </tbody>
                           </table>
