@@ -301,7 +301,6 @@
           <!-- Sidebar-->
           <div class="dashboard-header-layout-sidebar dashboard-header-layout-sidebar-nav">
             <a href="<?php echo base_url() . 'employees' ?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link--active">Roles</a>
-            <a href="<?php echo base_url() . 'employees_permissions' ?>" class="dashboard-header-sidebar-link">Access</a>
           </div>
           <!--End Sidebar-->
           <!--Container-->
