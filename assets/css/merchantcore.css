@@ -2515,7 +2515,7 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
 }
 .dropdown-menu {
 	position: absolute;
-	top: 124%;
+	top: 155%;
 	left: 0;
 	z-index: 1000;
 	display: none;
@@ -2527,9 +2527,9 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
 	color: #23282c;
 	text-align: left;
 	list-style: none;
-	background-color: #fff;
+	background-color: #42838D;
 	background-clip: padding-box;
-	border: 1px solid #c8ced3;
+	border: 1px solid #FFFFFF;
 	border-radius: .25rem
 }
 .dropdown-menu-right {
@@ -2633,21 +2633,20 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
 	padding: .25rem 1.5rem;
 	clear: both;
 	font-weight: 400;
-	color: #23282c;
+	color: #FFFFFF;
 	text-align: inherit;
 	white-space: nowrap;
 	background-color: transparent;
 	border: 0
 }
 .dropdown-item:hover, .dropdown-item:focus {
-	color: #181b1e;
+	color: #FFFFFF;
 	text-decoration: none;
-	background-color: #f0f3f5
+	background-color: #A0C1C5;
 }
 .dropdown-item.active, .dropdown-item:active {
 	color: #fff;
 	text-decoration: none;
-	background-color: #20a8d8
 }
 .dropdown-item.disabled, .dropdown-item:disabled {
 	color: #73818f;
@@ -2667,7 +2666,7 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
 .dropdown-item-text {
 	display: block;
 	padding: .25rem 1.5rem;
-	color: #23282c
+	color: #FFFFFF
 }
 .btn-group, .btn-group-vertical {
 	position: relative;
@@ -9035,7 +9034,7 @@ canvas {
 .dropdown-item {
 	position: relative;
 	padding: 10px 20px;
-	border-bottom: 1px solid #c8ced3
+	border-bottom: 1px solid #ffffff
 }
 .dropdown-item:last-child {
 	border-bottom: 0
@@ -9045,7 +9044,7 @@ canvas {
 	width: 20px;
 	margin-right: 10px;
 	margin-left: -10px;
-	color: #73818f;
+	color: #FFFFFF;
 	text-align: center
 }
 .dropdown-item .badge {
