@@ -6,8 +6,9 @@ class M_product extends CI_Model {
             ->from('produk')
             ->join('outlet_merchant', 'produk.id_outlet = outlet_merchant.id_outlet', 'inner')
             ->join('jenis_produk', 'produk.id_jenis_p = jenis_produk.id_jenis_p')
-            ->where($con1, 1)
-            ->where($con2, $this->session->userdata("id"));
+            ->where($con2, $this->session->userdata("id"))
+            ->where($con1, 1);
+            
         $query = $this->db->get();
         return $query;
     }

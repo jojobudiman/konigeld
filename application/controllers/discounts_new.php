@@ -19,7 +19,6 @@ class discounts_new extends CI_Controller {
         $getName = $this->input->post("name");
         $getAmount1 = $this->input->post("text1");
         $getAmount2 = $this->input->post("text2");
-        $getLoc = $this->input->post("loc");
         
         if($getAmount1 == "") {
             $amount = $getAmount2;
@@ -30,7 +29,7 @@ class discounts_new extends CI_Controller {
         
         $data = array(
             "id_diskon" => 0,
-            "id_outlet" => $getLoc,
+            "id_merchant" => $this->session->userdata("id"),
             "nama_diskon" => $getName,
             "jumlah" => $amount,
             "status_diskon" => 1

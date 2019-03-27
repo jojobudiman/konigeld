@@ -10,7 +10,7 @@ class discounts_edit extends CI_Controller {
     }
 
     function index($id) {
-        $data['disc'] = $this->m_crud->select('diskon', 'id_merchant', $id)->result();
+        $data['disc'] = $this->m_crud->select('diskon', 'id_diskon', $id)->result();
         $data['cat'] = $this->m_crud->select2Condition('status_jenis', 'id_merchant', 'jenis_produk')->result();
         $this->load->view('merchant-css');
         $this->load->view('eng_main_discounts_edit', $data);

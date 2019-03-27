@@ -353,8 +353,10 @@
                                     <div class="table-name-column type-align-right">Status</div>
                                   </th>
                                 </tr>
+                                  
                               </thead>
                               <tbody>
+                                  <?php foreach($loc as $list) { ?>
                                 <tr class="table-row-selectable" data-href="http://google.com">
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
                                     <div class="konitable-container">
@@ -362,21 +364,30 @@
                                     </div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">alamat lokasi</div>
+                                      <div class="table-name-column"><?php echo $list->alamat_outlet ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column">nomor telepon</div>
+                                      <div class="table-name-column"><?php echo $list->hp_outlet ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">kota</div>
+                                      <div class="table-name-column type-align-right"></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">provinsi</div>
+                                      <div class="table-name-column type-align-right"><?php echo $list->provinsi_outlet ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right">status</div>
+                                      <?php
+                                      if($list->status_outlet == 1) {
+                                          $st = "Open";
+                                      }
+                                      else {
+                                          $st = "Close";
+                                      }
+                                      ?>
+                                      <div class="table-name-column type-align-right"><?php echo $st ?></div>
                                   </td>
                                 </tr>
+                                  <?php } ?>
                               </tbody>
                             </table>
                           </div>
