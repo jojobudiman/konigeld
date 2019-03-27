@@ -55,41 +55,32 @@ class signup_4 extends CI_Controller {
         );
         $this->m_crud->insertData($data_outlet, 'outlet_merchant');
         
-        $this->load->library('email');
-        /*$config['protocol'] = 'sendmail';
-        $config['mailpath'] = '/usr/sbin/sendmail';
-        $config['charset'] = 'iso-8859-1';
-        $config['wordwrap'] = TRUE;*/
-        $config['protocol']='smtp';
-        $config['smtp_host']='localhost';
-        $config['smtp_port']='110';
-        $config['smtp_timeout']='30';
-        $config['smtp_user']='noreply@konigeld.com';
-        $config['smtp_pass']='qf4hjN8?sL#l';
-        $config['charset']='utf-8';
-        $config['newline']="\r\n";
-        $config['wordwrap'] = TRUE;
-        $config['mailtype'] = 'html';
-        
-        $this->email->initialize($config);
-        
-        $from = [
-            'email' => 'noreply@konigeld.com',
-            'name' => 'Konigeld'
-        ];
-        $to = array($getEmail);
+        $from_mail = 'noreply@konigeld.com';
+        $to = $this->session->userdata('email');
         $subject = 'Welcome to Konigeld';
+        $message = 'hai';
+        //echo $subject;
+        $nama = "MIME-Version: 1.0\r\n";
+        $nama .= "Content-type: text/html; charset=iso-8859-1' . \r\n";
+        $nama .= "To: Your Name <'".$to."'>'\r\n";
+        $nama .= "From: NO-REPLY <'".$from_mail."'>'\r\n";
+        //echo $nama;
         
-        $message = 'Hello, '.$this->session->userdata('fname').'<br> Thank you for   registering your account into Konigeld!';
+        $sendtomail = mail($to, $subject, $message, $nama);
         
+        if( $sendtomail ) echo 'Success';
+        else echo 'Failed';
+        /*
+ 
+        $headers  = 'MIME-Version: 1.0\r\n';
         
-        //$this->load->library('email', $emailConfig);
-        $this->email->set_newline("\r\n");
-        $this->email->from($from['email'], $from['name']);
-        $this->email->to($to);
-        $this->email->subject($subject);
-        $this->email->message($message);
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         
-        redirect("dashboard");
+        $headers .= 'To: Your Name <'.$to.'>' . "\r\n";
+        $headers .= 'From: NO-REPLY <'.$from_mail.'>' . "\r\n";
+        
+        $sendtomail = mail($to, $subject, $message, $headers);
+        */
+        //redirect('dashboard');
     }
 }
