@@ -44,10 +44,6 @@
                                         <h4><strong class="card-title">Administrator Table</strong></h4>
                                     </div>
                                     <div class="col-sm-2 text-right float-right">
-                                        <a href="<?php echo base_url(). '
-                                        admin_table_admin_add' ?>">
-                                            <button type="button" class="btn btn-outline-primary">Add Table</button>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -65,12 +61,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php foreach($admin as $list) { ?>
                                             <tr>
-                                                <td>Nama</td>
-                                                <td>Email</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
+                                                <td><?php echo $list->fname_admin." ".$list->lname_admin ?></td>
+                                                <td><?php echo $list->email_admin ?></td>
+                                                <td><?php echo $list->hp_admin ?></td>
+                                                <td><?php echo $list->alamat_admin ?></td>
+                                                <td>Active</td>
                                                 <td id="buttons">
                                                     <div class="col-sm-4 offset-sm-1">
                                                         <a href="<?php echo base_url(). 'admin_table_admin_edit' ?>">
@@ -84,6 +81,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>

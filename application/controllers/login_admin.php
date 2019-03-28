@@ -24,10 +24,12 @@ class login_admin extends CI_Controller {
                    $email = $data->email_admin;
                    $id = $data->id_admin;
                    $fname = $data->fname_admin;
+                   $lname = $data->lname_admin;
            }
 
            if ($getEmail == $email && md5($getPass) == $pw) {
                    $this->session->set_userdata("name", $fname);
+                   $this->session->set_userdata("lname", $lname);
                    $this->session->set_userdata("id", $id);
                    redirect('admin');
            }
