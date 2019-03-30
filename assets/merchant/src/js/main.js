@@ -54,12 +54,17 @@ CALENDAR
 
   });*/
 
-  $('#konicalendar').bootstrapMaterialDatePicker({
+  $('#konicalendar-start').bootstrapMaterialDatePicker({
     weekStart : 0,
     time: false,
     format : 'DD MMMM YYYY'
   });
 
+  $('#konicalendar-end').bootstrapMaterialDatePicker({
+    weekStart : 0,
+    time: false,
+    format : 'DD MMMM YYYY'
+  });
 /************************
 END CALENDAR
 ************************/

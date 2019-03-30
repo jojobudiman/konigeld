@@ -28,7 +28,7 @@ class admin extends CI_Controller {
 
   function logout() {
       $this->session->sess_destroy();
-      redirect('english_home');
+      redirect('login_admin');
   }
 
 }

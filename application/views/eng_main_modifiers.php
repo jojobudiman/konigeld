@@ -80,10 +80,10 @@
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'account' ?>">
               <i class="fa fa-user"></i> Account Settings
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'koniout/logout' ?>">
               <i class="fa fa-wrench"></i>Sign Out
             </a>
           </div>
@@ -391,7 +391,9 @@
                                       <div class="table-name-column"><?php echo 'Rp '.$list->harga_modifier.',-' ?></div>
                                   </td>
                                 </tr>
-                                  <?php } ?>
+                                <?php
+                                $cc = 1;
+                                } ?>
                               </tbody>
                             </table>
                           </div>
@@ -399,24 +401,26 @@
                       </div>
                     </div>
 
+                    <?php
+                    if ($cc != 1) {
+                    ?>
 
-                  </div>
-                  <!--Kalau ada produk sampai sini-->
-                  <!-- Jika tidak ada produk -->
-                  <!--<div class="page-layout">
                     <div class="unavailable">
                       <i class="no-transactions unavailable-icon"></i>
                       <div class="unavailable-header">
-                        Your Products Library
+                        Your Modifiers Library
                       </div>
                       <div class="unavailable-text">
-                        Products make your business grow. Create your own product that can be applied to your business.
+                        Modifiers make various groups of products. Create your modifiers that can be applied to your business.
                       </div>
-                      <button class="konibutton button-primary" type="button" data-href="<?php echo base_url();?>products_library_new">
-                        Create a Product
+                      <button class="konibutton button-primary" type="button" data-href="<?php echo base_url(). 'modifiers_new'?>">
+                        Create a Modifier
                       </button>
                     </div>
-                  </div>-->
+
+                  <?php  } ?>
+
+                  </div>
                   </div>
 
                 </div>

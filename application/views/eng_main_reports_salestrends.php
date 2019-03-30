@@ -435,7 +435,9 @@
                   <div class="filter-bar-border">
                     <div class="filter-bar">
                       <div class="filter-bar-filters">
-                        <input type="text" id="konicalendar" class="form-control floating-label" placeholder="Date">
+                        <input type="text" id="konicalendar-start" class="form-control floating-label" placeholder="Starting Date">
+                          <i class="fa fa-calendar"></i>
+                        <input type="text" id="konicalendar-end" class="form-control floating-label" placeholder="Ending Date">
                           <i class="fa fa-calendar"></i>
                       </div>
                       <div class="filter-bar-actions">

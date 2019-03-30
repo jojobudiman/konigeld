@@ -98,7 +98,7 @@
                         <h1 class="balance-text" style="">Königeld Point of Sale<br data-owner="balance-text">the new way to be jack of sales.</h1>
                     <div class="small-btn">
                         <div class="col-md-auto">
-                            <a class="more_btn" href="signup">Try for free</a></div>
+                            <a class="more_btn" href="<?php echo base_url(). 'login' ?> ">Try for free</a></div>
                         </div>
                     </div>
         </section>
@@ -165,7 +165,6 @@
                             </div>
                             <h4>Future Payment Network</h4>
                             <p>Easy to use, very light, fast, and reliable point of sale.</p>
-                            <a class="more_btn" href="#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -175,7 +174,6 @@
                             </div>
                             <h4>User Friendly Design</h4>
                             <p>Königeld is very practical and easy to use by your cashier staff. The initial setup process is fast, in just a few minutes you can sell and use Königeld as a cash register.</p>
-                            <a class="more_btn" href="#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -185,7 +183,6 @@
                             </div>
                             <h4>Complete Sales Report</h4>
                             <p>You can access all real-time sales reports from smartphones, tablets and computers. Anytime and anywhere!</p>
-                            <a class="more_btn" href="#">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -345,18 +342,15 @@
             <div class="container">
                 <div class="row get_touch_inner">
                     <div class="col-lg-6">
-                        <form class="contact_us_form row" action="contact_process.php <?php echo base_url(). '' ?>" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
-                            <div class="form-group col-lg-6">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        <form class="contact_us_form row" action="<?php echo base_url(). '' ?>" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
+                            <div class="form-group col-lg-12">
+                                <input type="text" class="form-control" id="name" name="cname" placeholder="Name">
                             </div>
                             <div class="form-group col-lg-12">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject*">
+                                <input type="text" class="form-control" id="subject" name="csubject" placeholder="Subject*">
                             </div>
                             <div class="form-group col-lg-12">
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="1" placeholder="Message"></textarea>
                             </div>
                             <div class="form-group col-lg-12">
                                 <button type="submit" value="submit" class="konibutton submit_btn form-control">SEND</button>

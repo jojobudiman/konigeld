@@ -80,10 +80,10 @@
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'account' ?>">
               <i class="fa fa-user"></i> Account Settings
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'koniout/logout' ?>">
               <i class="fa fa-wrench"></i>Sign Out
             </a>
           </div>

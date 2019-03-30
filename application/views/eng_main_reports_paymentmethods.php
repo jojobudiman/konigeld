@@ -76,14 +76,14 @@
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="nav-dropdown-text">
               <?php echo $this->session->userdata("fname")." ".$this->session->userdata("lname"); ?>
-              <i class="arrow-drop fa fa-angle-down"></i>
+              <i class="arrow-down"></i>
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'account' ?>">
               <i class="fa fa-user"></i> Account Settings
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'koniout/logout' ?>">
               <i class="fa fa-wrench"></i>Sign Out
             </a>
           </div>
@@ -103,7 +103,7 @@
         <nav class="sidebar-nav">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url().'dashboard' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="dashboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 29 31" style="enable-background:new 0 0 29 31;" xml:space="preserve">
                   <style type="text/css">
@@ -131,7 +131,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url(). 'reports_salessummary' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="reports" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 30.9 34.9" style="enable-background:new 0 0 30.9 34.9;" xml:space="preserve">
                     <style type="text/css">
@@ -166,7 +166,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url().'products_library' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="products" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 33.3 36.7" style="enable-background:new 0 0 33.3 36.7;" xml:space="preserve">
                     <style type="text/css">
@@ -314,7 +314,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url().'employees' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="employees" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 31.7 14.3" style="enable-background:new 0 0 31.7 14.3;" xml:space="preserve">
                     <style type="text/css">
@@ -353,7 +353,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?php echo base_url().'account' ?>">
                 <svg version="1.1" class="nav-icon" width="56" height="56" id="settings" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 33.9 22.2" style="enable-background:new 0 0 33.9 22.2;" xml:space="preserve">
                     <style type="text/css">
@@ -415,262 +415,30 @@
             <a class="dashboard-header-sidebar-parent-item">
               Reports
             </a>
-            <div class="dashboard-header-sidebar-parent-children" style="max-height: 320px;">
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Sales Summary</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Methods</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Product Sales</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Category Sales</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Employee Sales</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Discounts</a>
-              <a href="#" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Modifier Sales</a>
+            <div class="dashboard-header-sidebar-parent-children" style="height: 320px;">
+              <a href="<?php echo base_url(). 'reports_salessummary'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Summary</a>
+              <a href="<?php echo base_url(). 'reports_salestrends'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
+              <a href="<?php echo base_url(). 'reports_paymentmethods'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Payment Methods</a>
+              <a href="<?php echo base_url(). 'reports_productsales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Product Sales</a>
+              <a href="<?php echo base_url(). 'reports_categorysales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Category Sales</a>
+              <a href="<?php echo base_url(). 'reports_employeesales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Employee Sales</a>
+              <a href="<?php echo base_url(). 'reports_discountsales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Discounts</a>
+              <a href="<?php echo base_url(). 'reports_modifiersales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Modifier Sales</a>
             </div>
           </div>
           <!--End Sidebar-->
           <!--Container-->
           <div class="dashboard-header-layout-content">
-            <div class="page-layout-flex page-layout">
+            <div class="page-layout page-layout-flex">
               <div class="page-layout-content reports-main-viewport">
                 <div class="reports-content">
                   <div class="filter-bar-border">
                     <div class="filter-bar">
                       <div class="filter-bar-filters">
-                        <div class="filter-bar-item filter-date">
-                          <button data-role="back" class="button-segment button-first button-left arrow-left grid-col konibutton" type="button">
-                          </button>
-                          <div class="filter-segment float-left">
-                            <div class="filter-datee dropdown">
-                              <button class="dropdown-trigger fill filter-date-button button-segment arrow-down konibutton" type="button">
-                                <script>
-                                var today = new Date();
-                                var dd = today.getDate();
-                                var mm = today.getMonth()+1;
-                                var yyyy = today.getFullYear();
-
-                                if(dd<10) {
-                                  dd = '0'+dd
-                                }
-
-                                if(mm<10) {
-                                  mm = '0'+mm
-                                }
-
-                                today = dd + '/' + mm + '/' + yyyy;
-                                document.write(today);
-                                </script>
-                              </button>
-                              <div class="popover-fly-down filter-popover popover">
-                                <div class="grid-col grid-col-17-24 filter-calendar-well">
-                                  <div class="grid-row">
-                                    <div class="calendar grid-col grid-col-24-24">
-                                      <div class="calendar-header">
-                                        <div class="calendar-title-nav" data-role="calendar-back"><</div>
-                                        <div class="calendar-title">February 2019</div>
-                                        <div class="calendar-title-nav" data-rotle="calendar-forward">></div>
-                                      </div>
-                                      <div class="calendar-month">
-                                        <div class="calendar-weekdays">
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-weekday">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                        <div class="calendar-week">
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">M</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">W</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">T</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">F</div>
-                                          </div>
-                                          <div class="calendar-day">
-                                            <div class="calendar-day-number">S</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="date-filter-custom">
-                                        <div class="grid-row date-filter-custom-labels">
-                                          <div class="grid-col date-filter-custom-date">
-                                            Start
-                                          </div>
-                                          <div class="grid-col date-filter-custom-date float-right">
-                                            End
-                                          </div>
-                                        </div>
-                                        <div class="grid-row date-filter-custom-inputs">
-                                          <div class="grid-col date-filter-input date-filter-custom-date begin-date">
-                                            <input type="text" class="input date-input" name="">
-                                          </div>
-                                          -
-                                          <div class="grid-col date-filter-input date-filter-custom-date end-date float-right">
-                                            <input type="text" class="input date-input" name="">
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                <div class="grid-col grid-col-7-24 date-filter-dates">
-                                  <div class="date-filter-button">
-                                    <button class="konibutton fill date-filter-button" type="button">Today</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Yesterday</button>
-                                    <button class="konibutton fill date-filter-button" type="button">This Week</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Last Week</button>
-                                    <button class="konibutton fill date-filter-button" type="button">This Month</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Last Month</button>
-                                    <button class="konibutton fill date-filter-button" type="button">This Year</button>
-                                    <button class="konibutton fill date-filter-button" type="button">Last Year</button>
-                                  </div>
-                                </div>
-                              </div>
-                              </div>
-                            </div>
-                            <button data-role="forward" class="button-segment button-right arrow-right grid-col konibutton" type="button">
-                            </button>
-                          </div>
+                        <input type="text" id="konicalendar-start" class="form-control floating-label" placeholder="Starting Date">
+                          <i class="fa fa-calendar"></i>
+                        <input type="text" id="konicalendar-end" class="form-control floating-label" placeholder="Ending Date">
+                          <i class="fa fa-calendar"></i>
                       </div>
                       <div class="filter-bar-actions">
                         <div class="filter-bar-item">
@@ -681,58 +449,233 @@
                       </div>
                     </div>
                   </div>
-                  <div class="table-auto-viewport">
-                    <div class="super-table table-flex">
-                      <div class="payment-method-container">
-                        <div class="table-row table-header super-table-header">
-                          <div class="table-cell super-table-cell super-table-fixed-column super-table-cell-header type-align-left">
-                            <span class="super-table-row-content">Payment Method</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column super-table-cell-header type-align-right">
-                            <span class="super-table-row-content">Transactions</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column super-table-cell-header type-align-right">
-                            <span class="super-table-row-content">Total Collected</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column super-table-cell-header type-align-right">
-                            <span class="super-table-row-content">Net Total</span>
-                          </div>
+                  <div class="reports-table-transition">
+                    <div class="reports-table table table-flex">
+                      <div class="table-header">
+                        <div class="table-row strong">
+                          <div class="table-header-cell">Payment Method</div>
+                          <div class="table-header-cell right">Transactions</div>
+                          <div class="table-header-cell right">Total Collected</div>
+                          <div class="table-header-cell right">Net Total</div>
                         </div>
-                        <!--Buat difor-->
+                      </div>
+                      <div class="table-set">
                         <div class="table-row">
-                          <div class="table-cell super-table-cell right super-table-fixed-column type-align-left">
-                            <span class="super-table-row-content">Metode pembayaran</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column type-align-right">
-                            <span class="super-table-row-content">Jumlah transaksi</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column type-align-right">
-                            <span class="super-table-row-content">Jumlah terkumpul</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column type-align-right">
-                            <span class="super-table-row-content">Pendapatan bersih</span>
-                          </div>
+                          <div class="table-cell">Cash</div>
+                          <div class="table-cell right">Total transaksi</div>
+                          <div class="table-cell right">Total terkunmpul</div>
+                          <div class="table-cell right">Total pendapatan bersih</div>
                         </div>
-                        <!--End for-->
-                        <div class="table-row">
-                          <div class="table-cell super-table-cell right super-table-fixed-column super-table-cell-header type-align-left">
-                            <span class="super-table-row-content">Total</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column super-table-cell-header type-align-right">
-                            <span class="super-table-row-content">Jumlah transaksi</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column super-table-cell-header type-align-right">
-                            <span class="super-table-row-content">Jumlah terkumpul</span>
-                          </div>
-                          <div class="table-cell super-table-cell right super-table-fixed-column super-table-cell-header type-align-right">
-                            <span class="super-table-row-content">Pendapatan bersih</span>
-                          </div>
+                        <div class="table-row super-strong">
+                          <div class="table-cell"><span class="table-label">Total</span></div>
+                          <div class="table-cell right">Amount</div>
+                          <div class="table-cell right">Collec</div>
+                          <div class="table-cell right">Nett</div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-
+                <!--Overlay Layout jika memilih specific date, overlay-layout-inactive jika gk ada-->
+                <!--<div class="overlay-layout">
+                  <div class="selectbox selectbox-modal selectbox-modal-divide">
+                    <header class="selectbox-header selectbox-modal-header">
+                      <div class="selectbox-header-content">
+                        <div class="selectbox-header-container">
+                          <button class="selectbox-header-close" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" height="18" width="18" class="svg-icon"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Asset 15</title><g id="Layer_2" data-name="Layer 2"><g id="Olav"><path class="cls-1" d="M19.57,4.14a10.66,10.66,0,1,0-15.11,15l20.29,20.4L4.14,60.06a10.66,10.66,0,1,0,15,15.11L40,54.42,60.79,75.28a10.66,10.66,0,0,0,15.12-15L55.55,39.78,76.07,19.37A10.66,10.66,0,0,0,61,4.25L40.25,24.93,29.88,14.5"/></g></g>
+                            </svg>
+                          </button>
+                        </div>
+                        <h2 class="selectbox-header-title selectbox-modal-header-title">Select a Date</h2>
+                      </div>
+                    </header>
+                    <div class="selectbox-body selectbox-modal-body">
+                      <div class="selectbox-modal-content">
+                        <div class="single-date-calendar calendar-input grid-row">
+                          <div class="calendar grid-col grid-col-24-24">
+                            <div class="calendar-header">
+                              <div class="calendar-title-nav" data-role="calendar-back"><</div>
+                              <div class="calendar-title">February</div>
+                              <div class="calendar-title-nav" data-role="calendar-forward">></div>
+                            </div>
+                            <div class="calendar-month">
+                              <div class="calendar-weekdays">
+                                <div class="calendar-weekday">
+                                  <div class="calendar-day-number">S</div>
+                                </div>
+                                <div class="calendar-weekday">
+                                  <div class="calendar-day-number">M</div>
+                                </div>
+                                <div class="calendar-weekday">
+                                  <div class="calendar-day-number">T</div>
+                                </div>
+                                <div class="calendar-weekday">
+                                  <div class="calendar-day-number">W</div>
+                                </div>
+                                <div class="calendar-weekday">
+                                  <div class="calendar-day-number">T</div>
+                                </div>
+                                <div class="calendar-weekday">
+                                  <div class="calendar-day-number">F</div>
+                                </div>
+                                <div class="calendar-weekday">
+                                  <div class="calendar-day-number">S</div>
+                                </div>
+                              </div>
+                              <div class="calendar-week">
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">27</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">28</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">29</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">30</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">31</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">1</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">2</div>
+                                </div>
+                              </div>
+                              <div class="calendar-week">
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">27</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">28</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">29</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">30</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">31</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">1</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">2</div>
+                                </div>
+                              </div>
+                              <div class="calendar-week">
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">27</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">28</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">29</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">30</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">31</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">1</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">2</div>
+                                </div>
+                              </div>
+                              <div class="calendar-week">
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">27</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">28</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">29</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">30</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">31</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">1</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">2</div>
+                                </div>
+                              </div>
+                              <div class="calendar-week">
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">27</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">28</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">29</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">30</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">31</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">1</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">2</div>
+                                </div>
+                              </div>
+                              <div class="calendar-week">
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">27</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">28</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">29</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">30</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">31</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">1</div>
+                                </div>
+                                <div class="calendar-day">
+                                  <div class="calendar-day-number">2</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="date-filter-input fill">
+                              <input class="date-input input" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="selectbox-footer selectbox-modal-footer selectbox">
+                      <button class="konibutton selectbox-modal-button-primary selectbox-modal-button button-primary" type="submit">
+                        <span class="button-label">Done</span>
+                      </button>
+                    </div>
+                  </div>
+                </div> -->
                       </div>
                     </div>
                   </div>
@@ -745,3 +688,282 @@
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url();?>assets/js/Chart.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+
+const dailyChart = document.getElementById('daily-gross-sales-chart');
+const weeklyChart = document.getElementById('weekly-gross-sales-chart');
+const yearlyChart = document.getElementById('yearly-gross-sales-chart');
+
+let dataArray1 = [0.00, 0.00, 50000.00, 10000.00, 165000.00, 0.00, 200000.00, 250000.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 500000.00, 350000.00, 0.00, 400000.00, 0.00, 0.00, 0.00, 100000.00, 0.00, 0.00];
+let dataArray2 = [0.00, 0.00, 50000.00, 10000.00, 165000.00, 0.00, 200000.00, 250000.00, 100000.00, 0.00, 0.00, 0.00, 0.00, 0.00, 300000.00, 350000.00, 0.00, 200000.00, 0.00, 0.00, 0.00, 50000.00, 0.00, 0.00];
+let dataArray3 = [0.00, 400000.00, 300000.00, 250000.00, 750000.00, 650000.00, 600000.00];
+let dataArray4 = [0.00, 200000.00, 100000.00, 150000.00, 450000.00, 850000.00, 300000.00];
+let dataArray5 = [1000000.00, 1200000.00, 1350000.00, 1000000.00, 750000.00, 800000.00, 1500000.00, 1000000.00, 1200000.00, 550000.00, 1250000.00, 800000.00];
+let dataArray6 = [900000.00, 1400000.00, 1850000.00, 500000.00, 950000.00, 600000.00, 1450000.00, 1100000.00, 1000000.00, 350000.00, 1350000.00, 750000.00];
+
+let maxArray1 = Math.max.apply(null, dataArray1);
+let maxArray2 = Math.max.apply(null, dataArray2);
+let maxArray3 = Math.max.apply(null, dataArray3);
+let maxArray4 = Math.max.apply(null, dataArray4);
+
+let grossYearlyChart = new Chart(yearlyChart, {
+  type: 'bar', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+  data: {
+    labels: ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."],
+    datasets: [{
+      label: '24 Feb 2019',
+      backgroundColor: 'rgb(59 ,131, 140)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray5
+    },
+    {
+      label: "25 Feb 2018",
+      backgroundColor: 'rgb(113, 118, 123)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray6
+    }]
+  },
+  options: {
+    barValueSpacing: 20,
+    responsive: true,
+    showTooltips: true,
+    legend: {
+      display: false,
+    },
+    scales: {
+      xAxes: [{
+        stacked: false,
+        gridLines: {
+          display: false,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }],
+      yAxes: [{
+        /*afterBuildTicks: function(scale) {
+        scale.ticks = updateChartTicks(scale);
+          return;
+        },
+        beforeUpdate: function(oScale) {
+          return;
+        },*/
+        stacked: false,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+                      return 'Rp ' + value;
+                    },
+          scaleLabel: {
+            display: true,
+            scaleOverride : true
+          },
+          /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+          maxTicksLimit: 4,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }]
+    },
+    tooltips: {
+      enabled: false,
+      callbacks: {
+          label: function(tooltipItem, data) {
+                  return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                  }
+          }
+    },
+    plugins: {
+      filler: {
+        propagate: true
+      }
+    }
+  }
+  });
+
+let grossWeeklyChart = new Chart(weeklyChart, {
+  type: 'bar', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+  data: {
+    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    datasets: [{
+      label: '24 Feb 2019',
+      backgroundColor: 'rgb(59 ,131, 140)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray3
+    },
+    {
+      label: "25 Feb 2018",
+      backgroundColor: 'rgb(113, 118, 123)',
+      borderColor: 'transparent',
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray4
+    }]
+  },
+  options: {
+    barValueSpacing: 20,
+    responsive: true,
+    showTooltips: true,
+    legend: {
+      display: false,
+    },
+    scales: {
+      xAxes: [{
+        stacked: false,
+        gridLines: {
+          display: false,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }],
+      yAxes: [{
+        /*afterBuildTicks: function(scale) {
+        scale.ticks = updateChartTicks(scale);
+          return;
+        },
+        beforeUpdate: function(oScale) {
+          return;
+        },*/
+        stacked: false,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+                      return 'Rp ' + value;
+                    },
+          scaleLabel: {
+            display: true,
+            scaleOverride : true
+          },
+          /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+          maxTicksLimit: 4,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }]
+    },
+    tooltips: {
+      enabled: false,
+      callbacks: {
+          label: function(tooltipItem, data) {
+                  return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                  }
+          }
+    },
+    plugins: {
+      filler: {
+        propagate: true
+      }
+    }
+  }
+  });
+
+
+let grossDailyChart = new Chart(dailyChart, {
+  type: 'line', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+  data: {
+    labels: ["12 am", "1 am", "2 am", "3 am", "4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"],
+    datasets: [{
+      label: '24 Feb 2019',
+      lineTension: 0,
+      backgroundColor: 'transparent',
+      borderColor: 'rgb(59 ,131, 140)',
+      borderWidth: 2,
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray1,
+    },
+    {
+      label: "25 Feb 2018",
+      lineTension: 0,
+      backgroundColor: 'transparent',
+      borderColor: 'rgb(113, 118, 123)',
+      borderWidth: 2,
+      pointBackgroundColor: 'rgb(255, 255, 255)',
+      data: dataArray2,
+    }]
+  },
+  options: {
+
+    responsive: true,
+    showTooltips: true,
+    legend: {
+      display: false,
+    },
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }],
+      yAxes: [{
+        type: 'linear',
+        /*afterBuildTicks: function(scale) {
+        scale.ticks = updateChartTicks(scale);
+          return;
+        },
+        beforeUpdate: function(oScale) {
+          return;
+        },*/
+        stacked: true,
+        gridLines: {
+          display: true,
+          color: 'rgb(60, 60, 60)'
+        },
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+                      return 'Rp ' + value;
+                    },
+          scaleLabel: {
+            display: true,
+            scaleOverride : true
+          },
+          /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+          maxTicksLimit: 4,
+          precision: 0,
+          fontColor: 'rgb(0, 0, 0)'
+        }
+      }]
+    },
+    tooltips: {
+      enabled: false,
+      callbacks: {
+          label: function(tooltipItem, data) {
+                  return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                  }
+          }
+    },
+    plugins: {
+      filler: {
+        propagate: true
+      }
+    }
+  }
+  });
+}
+
+
+
+
+</script>

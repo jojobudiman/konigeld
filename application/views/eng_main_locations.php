@@ -80,10 +80,10 @@
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'account' ?>">
               <i class="fa fa-user"></i> Account Settings
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'koniout/logout' ?>">
               <i class="fa fa-wrench"></i>Sign Out
             </a>
           </div>
@@ -380,13 +380,15 @@
                                           $st = "Open";
                                       }
                                       else {
-                                          $st = "Close";
+                                          $st = "Closed";
                                       }
                                       ?>
                                       <div class="table-name-column type-align-right"><?php echo $st ?></div>
                                   </td>
                                 </tr>
-                                  <?php } ?>
+                                  <?php
+                                  $cc = 1;
+                                } ?>
                               </tbody>
                             </table>
                           </div>
@@ -394,6 +396,25 @@
                       </div>
                     </div>
 
+
+                    <?php
+                    if ($cc != 1) {
+                    ?>
+
+                    <div class="unavailable">
+                      <i class="no-transactions unavailable-icon"></i>
+                      <div class="unavailable-header">
+                        Your Locations
+                      </div>
+                      <div class="unavailable-text">
+                        Locations make your business grow. Create your locations that can be applied to your business.
+                      </div>
+                      <button class="konibutton button-primary" type="button" data-href="<?php echo base_url(). 'locations_new'?>">
+                        Add a New Location
+                      </button>
+                    </div>
+
+                  <?php  } ?>
 
                   </div>
                   <!--Kalau ada produk sampai sini-->

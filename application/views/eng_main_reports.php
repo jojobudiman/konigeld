@@ -80,10 +80,10 @@
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'account' ?>">
               <i class="fa fa-user"></i> Account Settings
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'koniout/logout' ?>">
               <i class="fa fa-wrench"></i>Sign Out
             </a>
           </div>
@@ -435,8 +435,10 @@
                   <div class="filter-bar-border">
                     <div class="filter-bar">
                       <div class="filter-bar-filters">
-                        <input type="text" id="konicalendar" class="form-control floating-label" placeholder="Date">
+                        <input type="text" id="konicalendar-start" class="form-control floating-label" placeholder="Date">
                           <i class="fa fa-calendar"></i>
+                          <input type="text" id="konicalendar-end" class="form-control floating-label" placeholder="Ending Date">
+                            <i class="fa fa-calendar"></i>
                         <span></span>
                         </div>
 

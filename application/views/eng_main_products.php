@@ -80,10 +80,10 @@
             </span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'account' ?>">
               <i class="fa fa-user"></i> Account Settings
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url(). 'koniout/logout' ?>">
               <i class="fa fa-wrench"></i>Sign Out
             </a>
           </div>
@@ -416,7 +416,6 @@
                     if ($cc != 1) {
                     ?>
 
-
                     <div class="unavailable">
                       <i class="no-transactions unavailable-icon"></i>
                       <div class="unavailable-header">
@@ -425,7 +424,7 @@
                       <div class="unavailable-text">
                         Products make your business grow. Create your own product that can be applied to your business.
                       </div>
-                      <button class="konibutton button-primary" type="button" data-href="<?php echo base_url();?>products_library_new">
+                      <button class="konibutton button-primary" type="button" data-href="<?php echo base_url(). 'products_library_new'?>">
                         Create a Product
                       </button>
                     </div>
