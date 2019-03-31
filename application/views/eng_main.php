@@ -279,7 +279,7 @@
                     <div class="grid grid-space-base">
                         <div class="column">
                             <div class="display-inline-block">
-                                <a class="button gap-none" href="">SHOW ME</a>
+                                <a class="button gap-none" href="<?php echo base_url(). 'english_features' ?> ">SHOW ME</a>
                             </div>
                         </div>
                     </div>

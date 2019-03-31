@@ -44,20 +44,24 @@
                                                   <div class="card-body card-block">
                                                       <form name="add-admin" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                           <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="name-admin" class=" form-control-label">Name</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="name-admin" name="name-admin" placeholder="Enter Name" class="form-control" value=""></div>
+                                                              <div class="col col-md-3"><label for="fname-admin" class=" form-control-label">First Name</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="fname-admin" name="fname-admin" placeholder="Enter First Name" class="form-control" value="<?php echo $list->fname_admin ?>"></div>
+                                                          </div>
+                                                          <div class="row form-group">
+                                                              <div class="col col-md-3"><label for="lname-admin" class=" form-control-label">Last Name</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="lname-admin" name="lname-admin" placeholder="Enter Last Name" class="form-control" value="<?php echo $list->lname_admin ?>"></div>
                                                           </div>
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label for="email-admin" class=" form-control-label">Email</label></div>
-                                                              <div class="col-12 col-md-9"><input type="email" id="email-admin" name="email-admin" placeholder="Enter Email" class="form-control" value=""></div>
+                                                              <div class="col-12 col-md-9"><input type="email" id="email-admin" name="email-admin" placeholder="Enter Email" class="form-control" value="<?php echo $list->email_admin ?>"></div>
                                                           </div>
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label for="phone-admin" class=" form-control-label">Phone</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="phone-admin" name="phone-admin" placeholder="Enter Phone" class="form-control" value=""></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="phone-admin" name="phone-admin" placeholder="Enter Phone" class="form-control" value="<?php echo $list->hp_admin ?>"></div>
                                                           </div>
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label for="address-admin" class=" form-control-label">Address</label></div>
-                                                              <div class="col-12 col-md-9"><textarea name="address-admin" id="address-admin" rows="9" placeholder="Enter Address" class="form-control" value=""></textarea></div>
+                                                              <div class="col-12 col-md-9"><textarea name="address-admin" id="address-admin" rows="9" placeholder="Enter Address" class="form-control" value="<?php echo $list->alamat_admin ?>"></textarea></div>
                                                           </div>
                                                           <div class="row form-group">
                                                                <div class="col col-md-3"><label for="status-admin" class=" form-control-label">Status</label></div>

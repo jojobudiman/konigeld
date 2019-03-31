@@ -75,9 +75,9 @@
                                                 <td><?php echo $list->tipe_bisnis ?></td>
                                                 <td><?php echo $list->lokasi_bisnis ?></td>
                                                 <td><?php echo $list->monthly_revenue ?></td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
+                                                <td><?php echo $list->fname_admin ?></td> <!--Tolong ditambahkan jenis paket -->
+                                                <td><?php echo $list->fname_admin ?></td> <!--Tambah mulai tahun-->
+                                                <td><?php echo $list->fname_admin ?></td> <!--Tambah status -->
                                                 <td id="buttons">
                                                     <div class="col-sm-4 offset-sm-1">
                                                         <a href="<?php echo base_url(). 'admin_table_merchant_edit' ?>">

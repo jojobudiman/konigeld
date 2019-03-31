@@ -44,8 +44,12 @@
                                                   <div class="card-body card-block">
                                                       <form name="add-admin" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                           <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="name-admin" class=" form-control-label">Name</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="name-admin" name="name-admin" placeholder="Enter Name" class="form-control"></div>
+                                                              <div class="col col-md-3"><label for="fname-admin" class=" form-control-label">First Name</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="fname-admin" name="fname-admin" placeholder="Enter First Name" class="form-control"></div>
+                                                          </div>
+                                                          <div class="row form-group">
+                                                              <div class="col col-md-3"><label for="fname-admin" class=" form-control-label">Last Name</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="lname-admin" name="lname-admin" placeholder="Enter Last Name" class="form-control"></div>
                                                           </div>
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label for="email-admin" class=" form-control-label">Email</label></div>
