@@ -13,15 +13,15 @@ $.validator.setDefaults({
         required: true,
         email:true
       },
-      email-confirmation: {
+      email_confirmation: {
         required: true,
         equalTo: '#email'
       },
-      password {
+      password: {
         required: true,
         minlength: 6
       },
-      password-confirmation {
+      password_confirmation: {
         required: true,
         minlength: 6,
         equalTo: '#password'
@@ -33,16 +33,16 @@ $.validator.setDefaults({
         required: 'Please enter your email address',
         email: 'Please enter a valid email address'
       },
-      email-confirmation {
+      email_confirmation: {
         required: 'Please enter your confirmation email address',
         email: 'Please enter a valid email address',
         equalTo: 'Please enter the same email'
       },
-      password {
+      password: {
         required: 'Please enter your password',
         minlength: 'Your password must be at least 6 characters long'
       },
-      password-confirmation {
+      password_confirmation: {
         required: 'Please enter your confirm password',
         minlength: 'Your password must be at least 6 characters long',
         equalTo: 'Please enter the same password'

@@ -3292,6 +3292,9 @@ h4#companyname {
   color: #F86C6B;
 }
 
+.error {
+  color: #BE2D2A; !important;
+}
 
 
 /* End Footer Area css

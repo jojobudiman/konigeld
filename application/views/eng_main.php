@@ -342,7 +342,7 @@
             <div class="container">
                 <div class="row get_touch_inner">
                     <div class="col-lg-6">
-                        <form class="contact_us_form row" action="<?php echo base_url(). '' ?>" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
+                        <form class="contact_us_form row" action="<?php echo base_url(). 'contactus' ?>" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
                             <div class="form-group col-lg-12">
                                 <input type="text" class="form-control" id="name" name="cname" placeholder="Name">
                             </div>
@@ -350,7 +350,7 @@
                                 <input type="text" class="form-control" id="subject" name="csubject" placeholder="Subject*">
                             </div>
                             <div class="form-group col-lg-12">
-                                <textarea class="form-control" id="message" name="message" rows="1" placeholder="Message"></textarea>
+                                <textarea class="form-control" id="message" name="cmessage" rows="1" placeholder="Message"></textarea>
                             </div>
                             <div class="form-group col-lg-12">
                                 <button type="submit" value="submit" class="konibutton submit_btn form-control">SEND</button>

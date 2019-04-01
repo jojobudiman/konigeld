@@ -193,10 +193,10 @@
                 <div class="column">
                   <div class="field email-confirmation-field">
                     <div class="field-label">
-                      <label for="email-confirmation">Confirm your email</label>
+                      <label for="email_confirmation">Confirm your email</label>
                     </div>
                     <div class="input-element">
-                      <input type="email" name="email-confirmation" id="email-confirmation" placeholder="you@example.com">
+                      <input type="email" name="email_confirmation" id="email_confirmation" placeholder="you@example.com">
                     </div>
                   </div>
                 </div>
@@ -207,20 +207,18 @@
                     <div class="field-label">
                       <label for="password">Create your password</label>
                     </div>
-                    <div class="password-input">
+                    <div class="input-element">
                       <input type="password" name="password" id="password" placeholder="Password">
-                      <button type="button" class="toggle-password">Show</button>
                     </div>
                   </div>
                 </div>
                 <div class="column">
                   <div class="field password-confirmation-field">
                     <div class="field-label">
-                      <label for="password-confirmation">Confirm your password</label>
+                      <label for="password_confirmation">Confirm your password</label>
                     </div>
-                    <div class="password-input">
-                      <input type="password" name="password-confirmation" id="password-confirmation" placeholder="Password">
-                      <button type="button" class="toggle-password">Show</button>
+                    <div class="input-element">
+                      <input type="password" name="password_confirmation" id="password-confirmation" placeholder="Password">
                     </div>
                   </div>
                 </div>

@@ -17,6 +17,10 @@ html *, html :after, html :before {
     box-sizing: inherit;
 }
 
+.error {
+    color: #BE2D2A; !important;
+}
+
 label {
     display: block;
     width: 100%;

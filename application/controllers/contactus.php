@@ -12,13 +12,22 @@ class contactus extends CI_Controller {
     function index() { //Bikin tabel contactus (?)
         $mailTo = "konigeld@gmail.com";
         $headers = "From:" .$mailFrom;
-        $cname = $this->input->post("phonenum"); //Ambil nama
-        $cemail = $this->input->post("phonenum"); //Ambil email
-        $csubject = $this->input->post("phonenum"); //Ambil subjek
-        $cmessage = $this->input->post("phonenum"); //Ambil pesan
+        $cname = $this->input->post("cname"); //Ambil nama
+        $csubject = $this->input->post("csubject"); //Ambil subjek
+        $cmessage = $this->input->post("cmessage"); //Ambil pesan
+
         $text = "You've received an e-mail from ".$cname.".\n\n".$cmessage;
 
-        mail($mailTo, $subject, $text, $headers);
+        $data = array(
+        'contact_id'=>NULL,
+        'contact_name'=>$tangkapNama,
+        'contact_subject'=>$tangkapSubject,
+        'contact_message'=>$tangkapIsi,
+        );
+
+        /*$this->m_contactus->insertData($data,'contactUs');*/
+
+        mail($mailTo, $csubject, $text, $headers);
         header('location:index.php?mailsend');
 	}
 

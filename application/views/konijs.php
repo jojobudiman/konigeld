@@ -22,5 +22,6 @@
     <script src="<?php echo base_url(); ?>assets/js/smoothscroll.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/validation.js"></script>
 
     <script src="<?php echo base_url(); ?>assets/js/theme.js"></script>

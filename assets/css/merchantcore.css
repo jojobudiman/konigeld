@@ -14397,6 +14397,9 @@ td .table-item-name-column {
 	padding: 10px 20px;
 }
 
+.error {
+  color: #BE2D2A; !important;
+}
 .error-banner {
 	 background: #D92B2B;
 }
