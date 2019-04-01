@@ -44,12 +44,16 @@
                                                   <div class="card-body card-block">
                                                       <form name="edit-merchant" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                           <div class="row form-group">
-                                                              <div class="col col-md-3"><label for="name-merchant" class=" form-control-label">Merchant Name</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="name-merchant" name="name-merchant" placeholder="Enter Name" class="form-control" value=""></div>
+                                                              <div class="col col-md-3"><label for="fname-merchant" class=" form-control-label">Merchant First Name</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="fname-merchant" name="fname-merchant" placeholder="Enter First Name" class="form-control" value="<?php echo $list->fname_merchant ?>"></div>
+                                                          </div>
+                                                          <div class="row form-group">
+                                                              <div class="col col-md-3"><label for="lname-merchant" class=" form-control-label">Merchant Last Name</label></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="lname-merchant" name="lname-merchant" placeholder="Enter Last Name" class="form-control" value="<?php echo $list->lname_merchant ?>"></div>
                                                           </div>
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label for="name-business" class=" form-control-label">Business Name</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="name-merchant" name="name-merchant" placeholder="Enter Business Name" class="form-control" value=""></div>
+                                                              <div class="col-12 col-md-9"><input type="text" id="name-merchant" name="name-merchant" placeholder="Enter Business Name" class="form-control" value="<?php echo $list->nama_bisnis ?>"></div>
                                                           </div>
                                                           <div class="row form-group">
                                                                <div class="col col-md-3"><label for="type-business" class=" form-control-label">Business Type</label></div>
