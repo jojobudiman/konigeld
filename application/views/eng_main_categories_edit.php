@@ -327,6 +327,7 @@
       <div class="animated fadeIn">
         <main class="dashboard-layout">
           <!--Container-->
+          <form id="editcategory" action="<?php echo base_url().'categories/update' ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">
@@ -348,7 +349,6 @@
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
-                      <form id="edit-customer" action="<?php echo base_url().'categories/update' ?>" method="post">
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
@@ -372,17 +372,49 @@
                                 </div>
                               </div>
                             </div>
+                            <div class="error-text"></div>
                           </div>
                         </div>
                       </div>
                     </fieldset>
-                  </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          </form>
         </main>
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var editcategory =$('#editcategory');
+editcategory.validate({
+
+  rules: {
+    catname: {
+      required: true
+    }
+  },
+  messages: {
+    catname: {
+      required: 'Please enter your category name'
+    }
+  },
+
+  errorElement : 'div',
+  errorLabelContainer: '.error-text'
+
+});
+
+</script>

@@ -59,7 +59,7 @@
             <h3 class="title super-strong">Which type of merchant best describes you?</h3>
             <p class="p-description">No matter what type of merchant you are, Königeld can help you sell anywhere. You can always add more details later.</p>
           </div>
-          <form id="signup" class="" action="<?php echo base_url().'signup_2/cont' ?>" method="post">
+          <form id="signup2" class="" action="<?php echo base_url().'signup_2/cont' ?>" method="post">
           <fieldset class="pad-vert-small t-value-props">
             <div class="grid-2-at-medium grid-row-space-line pad-bot-small align-center-at-medium active-section">
               <div class="column fadeIn">
@@ -199,3 +199,48 @@
     </section>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+  var signup2 =$('#signup2');
+  signup2.validate({
+    rules: {
+      newcomer: {
+        number: true,
+        min: 1,
+        required: true
+      },
+      experienced: {
+        number: true,
+        min: 1,
+        required: true
+      },
+      bname: {
+        required: true
+      }
+    },
+    messages: {
+      newcomer: {
+        number: "Test",
+        min: "Minimum 1",
+        required: 'Please select your level'
+      },
+      experienced: {
+        number: "Test",
+        min: "Minimum 1",
+        required: 'Please select your level'
+      },
+      bname: {
+        required: 'Please enter your business name'
+      }
+    }
+  });
+</script>

@@ -9,9 +9,6 @@
 <script src="<?php echo base_url();?>assets/js/Chart.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/bootstrap-material-datetimepicker.js"></script>
 <script src="<?php echo base_url();?>assets/js/ripples.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/validation.js"></script>
 
 
 <!-- Plugins and scripts required by this view-->

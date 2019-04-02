@@ -59,9 +59,9 @@
             <h3 class="title super-strong">Let's talk about you</h3>
             <p class="p-description">We will use this to help get you set up to take payments so please tell us how you’ll use Königeld</p>
           </div>
-            
+
           <fieldset class="pad-vert-small t-value-props">
-              <form id="signup" class="" action="<?php echo base_url().'signup_3/cont' ?>" method="post">
+              <form id="signup3" class="" action="<?php echo base_url().'signup_3/cont' ?>" method="post">
             <div class="grid-2-at-medium">
               <div class="column">
                 <div class="field-label">
@@ -167,7 +167,7 @@
                     </div>
                     <div class="input-element">
                       <div class="select">
-                        <select id="blocation" name="blocation" value="Select Location..">
+                        <select id="blocation" name="blocation" value="Select Location.." required>
                           <option value disabled>Select Location..</option>
                           <option value="JKT">DKI Jakarta</option>
                           <option value="BGR">Bogor</option>
@@ -196,3 +196,66 @@
     </section>
   </body>
 </html>
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+  var signup3 =$('#signup3');
+  signup3.validate({
+    rules: {
+      fname: {
+        required: true
+      },
+      lname: {
+        required: true
+      },
+      phonenum: {
+        required: true,
+        number: true,
+        minlength: 12
+      },
+      startyear: {
+        required: true
+      },
+      btype: {
+        required: true
+      },
+      monthlyrevenue: {
+        required: true
+      },
+      blocation: {
+        required: true
+      }
+    },
+    messages: {
+      fname: {
+        required: 'Please enter your first name'
+      },
+      lname: {
+        required: 'Please enter your last name'
+      },
+      phonenum: {
+        required: 'Please enter your phone number',
+        number: 'Only numbers are allowed',
+        minlength: 'Enter your phone number at least 12 characters'
+      },
+      startyear: {
+        required: 'Please select your starting year'
+      },
+      btype: {
+        required: 'Please select your business type'
+      },
+      monthlyrevenue: {
+        required: 'Please select your estimated monthly revenue'
+      },
+      blocation: {
+        required: 'Please select your business location'
+      }
+    }
+  });
+</script>

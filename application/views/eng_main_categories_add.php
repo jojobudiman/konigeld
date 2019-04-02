@@ -327,12 +327,12 @@
       <div class="animated fadeIn">
         <main class="dashboard-layout">
           <!--Container-->
+          <form id="addcategory" action="<?php echo base_url(). 'categories_new/add' ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">
                 <header class="dialog-header">
                   <div class="dialog-header-content">
-                      <form id="add-category" action="<?php echo base_url(). 'categories_new/add' ?>" method="post">
                     <div class="dialog-header-part">
                       <button type="button" onclick="location.href='<?php echo base_url(). 'categories'?>'">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
@@ -343,7 +343,7 @@
                       </button>
                     </div>
                     <h2 class="dialog-header-title">Add Category</h2>
-                    <form id="add-category" action="<?php echo base_url(). 'categories/add' ?>" method="post">
+
                     <div class="dialog-primary-actions">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
@@ -358,6 +358,7 @@
                     </div>
                   </div>
                 </header>
+
                 <div class="dialog-body">
                   <div class="dialog-content">
                     <fieldset class="form-fieldset">
@@ -367,11 +368,14 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Category Name</label>
+                                <label class="form-field-label" for="catname">Category Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="catname" name = "catname" placeholder="Category Name">
+                                  <input class="form-field-input" type="text" id="catname" name="catname" placeholder="Category Name">
                                 </div>
                               </div>
+                            </div>
+                            <div class="error-text">
+                              <span id="error1"></span>
                             </div>
                           </div>
                         </div>
@@ -379,11 +383,48 @@
                     </fieldset>
                   </div>
                 </div>
-              </form>
               </div>
             </div>
           </div>
+        </form>
         </main>
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var addcategory =$('#addcategory');
+addcategory.validate({
+
+  rules: {
+    catname: {
+      required: true
+    }
+  },
+  messages: {
+    catname: {
+      required: 'Please enter your category name'
+    }
+  },
+
+  errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+
+});
+
+</script>

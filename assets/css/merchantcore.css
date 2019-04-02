@@ -14398,8 +14398,11 @@ td .table-item-name-column {
 }
 
 .error {
-  color: #BE2D2A; !important;
+  color: #BE2D2A !important;
+	padding-left: 16px;
+	font-weight: 700;
 }
+
 .error-banner {
 	 background: #D92B2B;
 }

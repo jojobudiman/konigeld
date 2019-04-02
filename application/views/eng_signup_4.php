@@ -59,13 +59,13 @@
             <h3 class="title super-strong">Settle your new adventure</h3>
             <p class="p-description">Add your location credentials to start your new Königeld experience.</p>
           </div>
-          <form id="signup" class="" action="<?php echo base_url().'signup_4/cont' ?>" method="post">
+          <form id="signup4" class="" action="<?php echo base_url().'signup_4/cont' ?>" method="post">
           <fieldset class="pad-vert-small t-value-props">
               <div class="pad-top-small">
                 <div class="grid-1-at-medium">
                   <div class="column">
                     <div class="field-label">
-                      <label for="locaddrs1">Address</label>
+                      <label for="locaddrs1">Address Line 1</label>
                     </div>
                     <div class="input-element">
                       <input type="text" id="locaddrs1" name="locaddrs1" placeholder="Address Line 1">
@@ -77,7 +77,7 @@
                 <div class="grid-1-at-medium">
                   <div class="column">
                     <div class="field-label">
-                      <label for="locaddrs2">Address</label>
+                      <label for="locaddrs2">Address Line 2</label>
                     </div>
                     <div class="input-element">
                       <input type="text" id="locaddrs2" name="locaddrs2" placeholder="Address Line 2">
@@ -151,10 +151,10 @@
                 <div class="grid-1-at-medium">
                   <div class="column">
                     <div class="field-label">
-                      <label for="zip">Zip Code</label>
+                      <label for="zip">Postal Code</label>
                     </div>
                     <div class="input-element">
-                      <input type="text" id="zip" name="zip" placeholder="Zip Code">
+                      <input type="text" id="zip" name="zip" placeholder="Postal Code">
                     </div>
                   </div>
                 </div>
@@ -173,3 +173,66 @@
     </section>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var signup4 =$('#signup4');
+signup4.validate({
+  rules: {
+    locaddrs1: {
+      required: true,
+      minlength: 10
+    },
+    locaddrs2: {
+      required: true,
+      minlength: 10
+    },
+    phonenum: {
+      required: true,
+      number: true
+    },
+    province: {
+      required: true
+    },
+    zip: {
+      required: true,
+      number: true,
+      minlength: 5,
+      maxlength: 5
+    }
+  },
+
+  messages: {
+    locaddrs1: {
+      required: 'Please enter your location address',
+      minlength: 'Your location address is too short'
+    },
+    locaddrs2: {
+      required: 'Please enter your location address',
+      minlength: 'Your location address is too short'
+    },
+    phonenum: {
+      required: 'Please enter your phone number',
+      number: 'Only numbers are allowed'
+    },
+    province: {
+      required: 'Please select your province'
+    },
+    zip: {
+      required: 'Please enter your postal code',
+      number: 'Only numbers are allowed',
+      minlength: 'Please enter a valid postal code',
+      maxlength: 'Please enter a valid postal code'
+    }
+  }
+});
+
+</script>

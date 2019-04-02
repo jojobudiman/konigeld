@@ -327,6 +327,7 @@
       <div class="animated fadeIn">
         <main class="dashboard-layout">
           <!--Container-->
+          <form id="addcustomer" action="<?php echo base_url(). 'customers/add' ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">
@@ -343,7 +344,6 @@
                     </div>
                     <h2 class="dialog-header-title">Add Customer</h2>
                     <div class="dialog-primary-actions">
-                      <form id="add-customer" action="<?php echo base_url(). 'customers/add' ?>" method="post">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
@@ -380,6 +380,7 @@
                                 </div>
                               </div>
                             </div>
+                            <div class="error-text"></div>
                             <div class="form-row">
                               <div class="form-field">
                                 <label class="form-field-label" for="">Phone</label>
@@ -388,25 +389,58 @@
                                 </div>
                               </div>
                             </div>
+                            <div class="error-text"></div>
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">E-mail</label>
+                                <label class="form-field-label" for="email">E-mail</label>
                                 <div class="form-field-content">
                                   <input class="form-field-input" type="text" placeholder="E-mail">
                                 </div>
                               </div>
                             </div>
+                            <div class="error-text"></div>
                           </div>
                         </div>
                       </div>
                     </fieldset>
                   </div>
                 </div>
-              </form>
               </div>
             </div>
           </div>
+        </form>
         </main>
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var addcategory =$('#addcustomer');
+addcategory.validate({
+
+  rules: {
+    catname: {
+      required: true
+    }
+  },
+  messages: {
+    catname: {
+      required: 'Please enter your category name'
+    }
+  },
+
+  errorElement : 'div',
+  errorLabelContainer: '.error-text'
+
+});
+
+</script>
