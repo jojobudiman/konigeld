@@ -327,6 +327,7 @@
       <div class="animated fadeIn">
         <main class="dashboard-layout">
           <!--Container-->
+          <form id="add-modifier" action="<?php echo base_url(). 'modifiers_new/add' ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">
@@ -343,7 +344,6 @@
                     </div>
                     <h2 class="dialog-header-title">Add Modifier</h2>
                     <div class="dialog-primary-actions">
-                      <form id="add-modifier" action="<?php echo base_url(). 'modifiers_new/add' ?>" method="post">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
@@ -366,19 +366,25 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Modifier Set Name</label>
+                                <label class="form-field-label" for="name">Modifier Set Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Set Name" name="name">
+                                  <input class="form-field-input" type="text" placeholder="Set Name" id="name" name="name">
                                 </div>
                               </div>
                             </div>
+                            <div class="error-text" data-error="error1">
+                              <span id="error1"></span>
+                            </div>
                               <div class="form-row">
                                   <div class="form-field">
-                                      <label class="form-field-label" for="">Price</label>
+                                      <label class="form-field-label" for="price">Price</label>
                                       <div class="form-field-content">
-                                          <input class="form-field-input" type="text" placeholder="Set Price" name="price">
+                                          <input class="form-field-input" type="text" placeholder="Set Price" id="price" name="price">
                                 </div>
                               </div>
+                            </div>
+                            <div class="error-text" data-error="error2">
+                              <span id="error2"></span>
                             </div>
                               <div class="form-row">
                               <div class="form-field">
@@ -409,7 +415,7 @@
                                     <td class="table-cell">
                                         <div class="modifier-option-table-cell form-field-content">
                                             <div class="form-field-content">
-                                                <label class="form-checkbox-perm" for="anfanger">
+                                                <label class="form-checkbox-perm" for="pro">
                                                     <input class="form-checkbox-input" id="all-locations" type="checkbox" name="pro[]" value="<?php echo $list->id_produk ?>">
                                                     <div class="form-checkbox-label">
                                                         <div class="form-checkbox-label-text">
@@ -447,13 +453,58 @@
                           </div>
                         </div>
                       </fieldset>
-                      </form>
                     </div>
                     </div>
                 </div>
             </div>
           </div>
+        </form>
         </main>
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var addmodifier =$('#add-modifier');
+addmodifier.validate({
+
+  rules: {
+    name: {
+      required: true
+    },
+    price: {
+      required: true,
+      number: true
+    }
+  },
+  messages: {
+    name: {
+      required: 'Please enter your modifier name'
+    },
+    price: {
+      required: 'Please enter your modifier price',
+      number: 'Please enter a valid price'
+    }
+  },
+
+  errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+
+});
+
+</script>

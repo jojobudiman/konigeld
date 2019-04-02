@@ -25,4 +25,29 @@ class categories_edit extends CI_Controller {
         $this->load->view('merchant-js');
 	}
 
+  function update() {
+      $getName = $this->input->post("name");
+      $getAmount1 = $this->input->post("text1");
+      $getAmount2 = $this->input->post("text2");
+      $id = $this->input->post("id");
+
+      if($getAmount1 == "") {
+          $amount = $getAmount2;
+      }
+      else {
+          $amount = number_format((float) $getAmount1, 2, '.','')/100;
+      }
+
+      $data = array(
+          "nama_diskon" => $getName,
+          "jumlah" => $amount
+      );
+      $where = array(
+          "id_diskon" => $id
+      );
+
+      $this->m_crud->update_data($where, $data, 'diskon');
+      redirect('discounts');
+  }
+
 }

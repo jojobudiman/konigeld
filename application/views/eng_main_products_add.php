@@ -325,7 +325,6 @@
                             <div class="error-text" data-error="error2">
                               <span id="error2"></span>
                             </div>
-                            <div class="error-text"></div>
                             <div class="form-row">
                               <div class="form-field">
                                 <label class="form-field-label" for="stock">Stock</label>
@@ -390,7 +389,7 @@ addproduct.validate({
       number: 'Please enter a valid number'
     }
   },
-
+  
   errorPlacement: function(error, element) {
       var placement = $(element).data('error');
       if (placement) {

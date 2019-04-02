@@ -327,6 +327,7 @@
       <div class="animated fadeIn">
         <main class="dashboard-layout">
           <!--Container-->
+          <form id="edit-modifier" action="<?php echo base_url().'modifiers_edit/update/'.$idm ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">
@@ -341,7 +342,7 @@
                         </svg>
                       </button>
                     </div>
-                      <?php 
+                      <?php
                         foreach($mod as $list1) {
                         $idm = $list1->id_modifier;
                         $name = $list1->nama_modifier;
@@ -356,7 +357,6 @@
                         </button>
                       </div>
                       <div class="dialog-primary-actions-primary">
-                        <form id="edit-modifier" action="<?php echo base_url().'modifiers_edit/update/'.$idm ?>" method="post">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
                         </button>
@@ -373,17 +373,17 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Modifier's Name</label>
+                                <label class="form-field-label" for="name">Modifier's Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" name="name" value="<?php echo $name ?>">
+                                  <input class="form-field-input" type="text" id="name" name="name" value="<?php echo $name ?>">
                                 </div>
                               </div>
                             </div>
                               <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Modifier's Price</label>
+                                <label class="form-field-label" for="price">Modifier's Price</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" name="price" value="<?php echo $hg ?>">
+                                  <input class="form-field-input" type="text" id="price" name="price" value="<?php echo $hg ?>">
                                 </div>
                               </div>
                             </div>
@@ -407,7 +407,7 @@
                                 </tr>
                               </thead>
                               <tbody class="modifier-list">
-                                  <?php 
+                                  <?php
                                     $idp = array();
                                     $namap = array();
                                     $hgp = array();
@@ -420,14 +420,14 @@
                                         $c++;
                                     }
                                 foreach($produk as $list2) {
-                                    
+
                                   ?>
                                   <tr class="">
                                       <td class="table-cell">
                                           <div class="modifier-option-table-cell form-field-content">
                                             <div class="form-field-content">
                                                 <label class="form-checkbox-perm" for="anfanger">
-                                                    <?php 
+                                                    <?php
                                     for($i = 0; $i < $c; $i++) {
                                         if($list2->id_produk == $idp[$i]) {
                                             $counter = 1;
@@ -437,7 +437,7 @@
                                             $counter = 0;
                                         }
                                     }
-                                    if($counter == 1) 
+                                    if($counter == 1)
                                     {
                                                     ?>
                                                     <input class="form-checkbox-input" id="all-locations" type="checkbox" name="pro[]" value="<?php echo $list2->id_produk ?>" checked>
@@ -468,13 +468,58 @@
                         </div>
                       </div>
                     </fieldset>
-                    </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </form>
         </main>
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var editmodifier =$('#edit-modifier');
+editmodifier.validate({
+
+  rules: {
+    name: {
+      required: true
+    },
+    price: {
+      required: true,
+      number: true
+    }
+  },
+  messages: {
+    name: {
+      required: 'Please enter your modifier name'
+    },
+    price: {
+      required: 'Please enter your modifier price',
+      number: 'Please enter a valid price'
+    }
+  },
+
+  errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+
+});
+
+</script>

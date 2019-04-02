@@ -327,7 +327,7 @@
       <div class="animated fadeIn">
         <main class="dashboard-layout">
           <!--Container-->
-          <form id="editcategory" action="<?php echo base_url().'categories/update' ?>" method="post">
+          <form id="editcategory" action="<?php echo base_url().'categories_edit/update' ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">

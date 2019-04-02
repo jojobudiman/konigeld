@@ -335,13 +335,14 @@
           </div>
           <!--End Sidebar-->
           <!--Container-->
+          <form id="adddiscount" action="<?php echo base_url(). 'discounts_new/add' ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">
                 <header class="dialog-header">
                   <div class="dialog-header-content">
                     <div class="dialog-header-part">
-                      <button type="button" data-href="<?php echo base_url(); ?>discounts">
+                      <button type="button" data-href="<?php echo base_url(). 'discounts' ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.21 79.43" width="30" height="30" class="svg-icon svg-icon-close">
                           <defs>
                             <style>.cls-1{fill:none;stroke:#42838D; stroke-linecap:round; stroke-linejoin:round; stroke-width:5px; }</style>
@@ -351,7 +352,6 @@
                     </div>
                     <h2 class="dialog-header-title">Create Discount</h2>
                     <div class="dialog-primary-actions">
-                      <form id="add-discount" action="<?php echo base_url(). 'discounts_new/add' ?>" method="post">
                       <!--<div class="dialog-primary-actions-primary">
                         <button class="konibutton button-secondary" type="submit">
                           <span class="button-label">Delete</span>
@@ -374,15 +374,18 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Name</label>
+                                <label class="form-field-label" for="name">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" placeholder="Discount Name" name="name">
+                                  <input class="form-field-input" type="text" placeholder="Discount Name" id="name" name="name">
                                 </div>
                               </div>
                             </div>
+                            <div class="error-text" data-error="error1">
+                              <span id="error1"></span>
+                            </div>
                             <div class="form-row">
                               <div class="form-field-with-segmented-control form-field">
-                                <label class="form-field-label" for="">Amount</label>
+                                <label class="form-field-label" for="amount">Amount</label>
                                 <div class="form-field-content">
                                   <div class="form-field-percent-or-amount">
                                     <div class="form-field-with-segmented-control-input">
@@ -397,17 +400,73 @@
                                 </div>
                               </div>
                             </div>
+                            <div class="error-text" data-error="error2">
+                              <span id="error2"></span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </fieldset>
-                  </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </form>
         </main>
       </div>
   </body>
 </html>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var add_discount =$('#adddiscount');
+add_discount.validate({
+
+  rules: {
+    name: {
+      required: true
+    },
+    text1: {
+      required: true,
+      number: true
+    },
+    text2: {
+      required: true
+      number: true
+    }
+  },
+  messages: {
+    name: {
+      required: 'Please enter your discount name'
+    },
+    text1: {
+      required: 'Please enter your discount amount',
+      number: 'Please enter a valid amount'
+    },
+    text2: {
+      required: 'Please enter your discount amount',
+      number: 'Please enter a valid amount'
+    }
+  },
+
+  errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+
+});
+
+</script>

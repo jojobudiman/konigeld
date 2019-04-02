@@ -223,6 +223,7 @@
           </div>
           <!--End Sidebar-->
           <!--Container-->
+          <form id="update-product" action="<?php echo base_url().'products_library_edit/update' ?>" method="post">
           <div class="dashboard-header-layout-content">
             <div class="page-layout product-library-parent">
               <div class="crud-layout-active dialog">
@@ -245,7 +246,6 @@
                           <span class="button-label">Delete</span>
                         </button>
                       </div>
-                      <form id="update-product" action="<?php echo base_url().'products_library_edit/update' ?>" method="post">
                       <div class="dialog-primary-actions-primary">
                         <button class="konibutton button-primary" type="submit">
                           <span class="button-label">Save</span>
@@ -263,11 +263,14 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Name</label>
+                                <label class="form-field-label" for="name">Name</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" name="name" value="<?php echo $list->nama_produk ?>" type="text">
+                                  <input class="form-field-input" id="name" name="name" value="<?php echo $list->nama_produk ?>" type="text">
                                 </div>
                               </div>
+                            </div>
+                            <div class="error-text" data-error="error1">
+                              <span id="error1"></span>
                             </div>
                             <div class="form-row">
                               <div class="form-field">
@@ -312,39 +315,86 @@
                           <div class="form-table">
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label" for="">Price</label>
+                                <label class="form-field-label" for="price">Price</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" name="price" type="text" value="<?php echo $list->harga ?>">
+                                  <input class="form-field-input" id="price" name="price" type="text" value="<?php echo $list->harga ?>">
                                 </div>
                               </div>
                             </div>
-                            <div class="form-row">
-                              <div class="form-field">
-                                <label class="form-field-label" for="">SKU</label>
-                                <div class="form-field-content">
-                                  <input class="form-field-input" name="sku" type="text" value="<?php echo $list->id_produk ?>" readonly>
-                                </div>
-                              </div>
+                            <div class="error-text" data-error="error2">
+                              <span id="error2"></span>
                             </div>
                             <div class="form-row">
                               <div class="form-field">
-                                <label class="form-field-label">Stock</label>
+                                <label class="form-field-label" for="stock">Stock</label>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" name="stock" type="text" placeholder="Enter Stock" value="<?php echo $list->stok ?>">
+                                  <input class="form-field-input" id="stock" name="stock" type="text" placeholder="Enter Stock" value="<?php echo $list->stok ?>">
                                 </div>
                               </div>
+                            </div>
+                            <div class="error-text" data-error="error3">
+                              <span id="error3"></span>
                             </div>
                         </div>
                             <?php } ?>
                       </div>
                     </fieldset>
-                  </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </form>
         </main>
       </div>
   </body>
 </html>
+<script type="text/javascript">
+$.validator.setDefaults({
+  submitHandler: function() {
+    form.submit();
+  }
+});
+
+var updateproduct =$('#update-product');
+updateproduct.validate({
+
+  rules: {
+    name: {
+      required: true
+    },
+    price: {
+      required: true,
+      number: true
+    },
+    stock: {
+      required: true,
+      number: true
+    }
+  },
+  messages: {
+    name: {
+      required: 'Please enter your product name'
+    },
+    price: {
+      required: 'Please enter your product price',
+      number: 'Please enter a valid price'
+    },
+    stock: {
+      required: 'Please enter your product stock',
+      number: 'Please enter a valid number'
+    }
+  },
+
+  errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+
+});
+
+</script>
