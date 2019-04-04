@@ -367,8 +367,13 @@
                             <div class="form-row">
                               <div class="form-field">
                                 <label class="form-field-label" for="">Category Name</label>
+                                  <?php foreach($out as $list) {
+                                        $catname = $list->nama_jenis;
+                                        $idc = $list->id_jenis_p;
+                                    } ?>
                                 <div class="form-field-content">
-                                  <input class="form-field-input" type="text" id="catname" placeholder="Category Name" value="">
+                                  <input class="form-field-input" type="text" name="catname" value="<?php echo $catname ?>">
+                                    <input class="form-field-input" type="text" name="idc" value="<?php echo $idc ?>" hidden>
                                 </div>
                               </div>
                             </div>

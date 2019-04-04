@@ -3,51 +3,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class categories_edit extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct() 
+    {
+        parent::__construct();
+        $this->load->model(array('m_crud'));
+    }
 
-    function index() {
+    function index($id) {
+        $data['out'] = $this->m_crud->select('jenis_produk', 'id_jenis_p', $id)->result();
         $this->load->view('merchant-css');
-        $this->load->view('eng_main_categories_edit');
+        $this->load->view('eng_main_categories_edit', $data);
         $this->load->view('merchant-js');
 	}
 
-  function update() {
-      $getName = $this->input->post("name");
-      $getAmount1 = $this->input->post("text1");
-      $getAmount2 = $this->input->post("text2");
-      $id = $this->input->post("id");
+    function update() {
+        $getName = $this->input->post("catname");
+        $id = $this->input->post("idc");
 
-      if($getAmount1 == "") {
-          $amount = $getAmount2;
-      }
-      else {
-          $amount = number_format((float) $getAmount1, 2, '.','')/100;
-      }
 
-      $data = array(
-          "nama_diskon" => $getName,
-          "jumlah" => $amount
-      );
-      $where = array(
-          "id_diskon" => $id
-      );
+        $data = array(
+            "nama_jenis" => $getName
+        );
+        $where = array(
+            "id_jenis_p" => $id
+        );
 
-      $this->m_crud->update_data($where, $data, 'diskon');
-      redirect('discounts');
-  }
+        $this->m_crud->update_data($where, $data, 'jenis_produk');
+        redirect('categories');
+    }
 
 }
