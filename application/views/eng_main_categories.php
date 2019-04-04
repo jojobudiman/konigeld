@@ -328,7 +328,7 @@
                     </thead>
                     <tbody>
                         <?php foreach($cat as $list) { ?>
-                        <tr>
+                        <tr class="table-row-selectable" data-href="<?php echo base_url().'categories_edit/index/' .$list->id_jenis_p ?>">
                             <td><?php echo $list->nama_jenis ?></td>
                         </tr>
                         <?php } ?>
