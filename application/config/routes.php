@@ -59,6 +59,11 @@ $route['en/about'] = 'english_about';
 $route['en/features'] = 'english_feature';
 $route['en/pricing'] = 'english_pricing';
 $route['en/login'] = 'login';
+$route['id/home'] = 'bahasa_home';
+$route['id/about'] = 'bahasa_about';
+$route['id/features'] = 'bahasa_feature';
+$route['id/pricing'] = 'bahasa_pricing';
+$route['id/login'] = 'bahasa_login';
 
 
 //CUSTOM ROUTE DASHBOARD KONIGELD
