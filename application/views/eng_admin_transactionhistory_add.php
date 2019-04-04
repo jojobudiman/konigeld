@@ -42,30 +42,26 @@
                                                       <strong>Transaction History Table</strong> - Add Element
                                                   </div>
                                                   <div class="card-body card-block">
-                                                      <form name="add-transactionhistory" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                                          <div class="row form-group">
-                                                             <div class="col col-md-3"><label class=" form-control-label">ID</label></div>
-                                                             <div class="col-12 col-md-9">
-                                                                 <p class="form-control-static">Nama ID Transaksi</p>
-                                                             </div>
-                                                         </div>
+                                                      <form name="add-transactionhistory" action="<?php echo base_url().'admin_table_transactionhistory_add/add/' ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label for="name-merchant" class=" form-control-label">Merchant Name</label></div>
-                                                              <div class="col-12 col-md-9"><input type="text" id="name-merchant" name="name-merchant" placeholder="Enter Name" class="form-control"></div>
+                                                              <div class="col-12 col-md-9">
+                                                                  <select name="id_merchant" class="form-control">
+                                                                    <?php foreach($merchant as $list) { ?>
+                                                                      <option value="<?php echo $list->id_merchant ?>"><?php echo $list->id_merchant.'-'.$list->fname_merchant.' '.$list->lname_merchant ?></option>
+                                                                    <?php } ?>
+                                                                  </select>
+                                                              </div>
                                                           </div>
                                                           <div class="row form-group">
                                                               <div class="col col-md-3"><label class=" form-control-label">Pricing Plan</label></div>
                                                               <div class="col col-md-9">
                                                                 <div class="form-check-inline form-check">
-                                                                  <label for="entry" class="form-check-label ">
-                                                                    <input type="radio" id="entry" name="inline-radios" value="Entry" class="form-check-input">Entry
-                                                                  </label>
-                                                                  <label for="junior" class="form-check-label ">
-                                                                    <input type="radio" id="junior" name="inline-radios" value="Junior" class="form-check-input">Junior
-                                                                  </label>
-                                                                  <label for="senior" class="form-check-label ">
-                                                                    <input type="radio" id="senior" name="inline-radios" value="Senior" class="form-check-input">Senior
-                                                                  </label>
+                                                                    <select name="pricing" class="form-control">
+                                                                        <option value="1">Entry</option>
+                                                                        <option value="2">Junior</option>
+                                                                        <option value="3">Senior</option>
+                                                                    </select>
                                                                 </div>
                                                               </div>
                                                           </div>
@@ -90,7 +86,6 @@
                                                               <div class="col col-md-3"><label for="total-price" class=" form-control-label">Total Price</label></div>
                                                               <div class="col-12 col-md-9"><input type="number" id="total-price" name="total-price" placeholder="Enter Total Price" class="form-control"></div>
                                                           </div>
-                                                      </form>
                                                   </div>
                                                   <div class="card-footer text">
                                                       <button type="submit" class="btn btn-primary btn-lg">
@@ -101,6 +96,7 @@
                                                       </button>
                                                   </div>
                                               </div>
+                          </form>
                     </div>
                 </div>
             </div><!-- .animated -->

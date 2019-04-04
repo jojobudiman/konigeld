@@ -54,7 +54,7 @@ class signup_4 extends CI_Controller {
             "status_outlet" => 1
         );
         $this->m_crud->insertData($data_outlet, 'outlet_merchant');
-        $mail->isHTML(true);
+        //$mail->isHTML(true);
         $from_mail = 'konigeld@gmail.com';
         $to = $this->session->userdata('email');
 
