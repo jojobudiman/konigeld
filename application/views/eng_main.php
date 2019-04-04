@@ -61,8 +61,9 @@
                             </svg>ENG</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="nav-item active">
-                                    <a class="nav-link active" href="<?php echo base_url(). 'indo_main' ?>"><svg height="10pt" viewBox="0 72 512 512" width="20pt" xmlns="http://www.w3.org/2000/svg"><path d="m512 176.550781v158.898438c-.027344 9.738281-7.914062 17.625-17.65625 17.65625h-476.6875c-9.742188-.03125-17.6289062-7.917969-17.65625-17.65625v-158.898438zm0 0" fill="#e6e7e8"></path><path d="m512 17.65625v158.894531h-512v-158.894531c.0273438-9.742188 7.914062-17.6289062 17.65625-17.65625h476.6875c9.742188.0273438 17.628906 7.917969 17.65625 17.65625zm0 0" fill="#c03a2b"></path></svg>IND</a></li>
-                                <li class="nav-item"><a class="nav-link" href=""><svg version="1.1" id="Layer_1" height="10pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    <a class="nav-link active" href="<?php echo base_url(). 'id/home' ?>"><svg height="10pt" viewBox="0 72 512 512" width="20pt" xmlns="http://www.w3.org/2000/svg"><path d="m512 176.550781v158.898438c-.027344 9.738281-7.914062 17.625-17.65625 17.65625h-476.6875c-9.742188-.03125-17.6289062-7.917969-17.65625-17.65625v-158.898438zm0 0" fill="#e6e7e8"></path><path d="m512 17.65625v158.894531h-512v-158.894531c.0273438-9.742188 7.914062-17.6289062 17.65625-17.65625h476.6875c9.742188.0273438 17.628906 7.917969 17.65625 17.65625zm0 0" fill="#c03a2b"></path></svg>IND</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/home' ?> "><svg version="1.1" id="Layer_1" height="10pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 	 viewBox="0 72 512 512" width="20pt" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                                 <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38
                                 	c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621
@@ -399,7 +400,7 @@
                         <div class="left footer_dropdown">
                             <ul class="lang-title footer_dropdown">
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo base_url(). 'en/home' ?>">
                                         <svg version="1.1" id="Layer_1" height="10pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                          viewBox="0 72 512 512" width="20pt" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                                         <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38
@@ -424,7 +425,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo base_url(). 'id/home'?>">
                                         <svg height="10pt" viewBox="0 72 512 512" width="20pt" xmlns="http://www.w3.org/2000/svg"><path d="m512 176.550781v158.898438c-.027344 9.738281-7.914062 17.625-17.65625 17.65625h-476.6875c-9.742188-.03125-17.6289062-7.917969-17.65625-17.65625v-158.898438zm0 0" fill="#e6e7e8"></path><path d="m512 17.65625v158.894531h-512v-158.894531c.0273438-9.742188 7.914062-17.6289062 17.65625-17.65625h476.6875c9.742188.0273438 17.628906 7.917969 17.65625 17.65625zm0 0" fill="#c03a2b"></path></svg>Bahasa Indonesia
                                     </a>
                                 </li>
