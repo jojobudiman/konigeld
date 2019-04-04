@@ -40,14 +40,8 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="row">
-                                    <div class="col-sm-10 float-left">
+                                    <div class="col-sm-12 float-left">
                                         <h4><strong class="card-title">Merchant Table</strong></h4>
-                                    </div>
-                                    <div class="col-sm-2 text-right float-right">
-                                        <a href="<?php echo base_url(). '
-                                        admin_table_merchant_add' ?>">
-                                            <button type="button" class="btn btn-outline-primary">Add Table</button>
-                                        </a>
                                     </div>
                                 </div>
                             </div>

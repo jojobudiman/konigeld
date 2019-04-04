@@ -67,21 +67,16 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Nama</td>
-                                                <td>Email</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
-                                                <td>HAHAHA</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
                                                 <td id="buttons">
-                                                    <div class="col-sm-4 offset-sm-1">
-                                                        <a href="<?php echo base_url(). 'admin_table_transactionhistory_edit' ?>">
-                                                        <button type="button" class="btn btn-outline-success">Edit</button>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-sm-4 offset-sm-1">
-                                                        <a href="<?php echo base_url(). 'namametod/delete' ?>">
+                                                    <div class="col-sm-6">
+                                                        <a href="<?php echo base_url(). 'admin_table/transaction/delete' ?>">
                                                         <button type="button" class="btn btn-outline-danger">Delete</button>
                                                         </a>
                                                     </div>

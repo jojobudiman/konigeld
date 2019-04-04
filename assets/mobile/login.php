@@ -5,8 +5,6 @@ $user="root";
 $DBpass="root";
 $DB="konigeld";
 
-$hname = "103.126.226.70";
-
 $conn = mysqli_connect($host, $user, $DBpass, $DB);
 
 if (!$conn) {
