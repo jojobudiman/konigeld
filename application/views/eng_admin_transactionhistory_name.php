@@ -18,7 +18,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Transaction History</h1>
+                        <h1>Transaction Approval</h1>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Transaction History</li>
+                            <li class="active">Transaction Approval</li>
                         </ol>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div class="col-md-12">
                       <div class="card">
                                                   <div class="card-header">
-                                                      <strong>Transaction History Table</strong> - Edit Element
+                                                      <strong>Transaction Approval Table</strong> - Confirm Approval
                                                   </div>
                                                   <div class="card-body card-block">
                                                       <form name="add-transactionhistory" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -94,10 +94,10 @@
                                                   </div>
                                                   <div class="card-footer text">
                                                       <button type="submit" class="btn btn-primary btn-lg">
-                                                          <i class="fa fa-rocket"></i> Submit
+                                                          <i class="fa fa-thumbs-up"></i> Approve
                                                       </button>
                                                       <button type="reset" class="btn btn-danger btn-lg">
-                                                          <i class="fa fa-circle-o"></i> Reset
+                                                          <i class="fa fa-thumbs-down"></i> Decline
                                                       </button>
                                                   </div>
                                               </div>
