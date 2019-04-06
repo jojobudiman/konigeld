@@ -99,6 +99,18 @@
               </div>
               <div class="pad-top-small">
                 <div class="grid-1-at-medium">
+                  <div class="column">
+                    <div class="field-label">
+                      <label for="city">City</label>
+                    </div>
+                    <div class="input-element">
+                      <input type="text" id="city" name="city" placeholder="City">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pad-top-small">
+                <div class="grid-1-at-medium">
                   <div class="column select-field">
                     <div class="field-label">
                       <label for="province">Province</label>
@@ -107,40 +119,40 @@
                       <div class="select">
                         <select id="province" name="province" value="Select Province..">
                           <option value disabled>Province</option>
-                          <option value="AC">Aceh</option>
-                          <option value="BA">Bali</option>
-                          <option value="BT">Banten</option>
-                          <option value="BE">Bengkulu</option>
-                          <option value="YO">Daerah Istimewa Yogyakarta</option>
-                          <option value="JK">DKI Jakarta</option>
-                          <option value="GO">Gorontalo</option>
-                          <option value="JA">Jambi</option>
-                          <option value="JB">Jawa Barat</option>
-                          <option value="JT">Jawa Tengah</option>
-                          <option value="JI">Jawa Timur</option>
-                          <option value="KB">Kalimantan Barat</option>
-                          <option value="KS">Kalimantan Selatan</option>
-                          <option value="KT">Kalimantan Tengah</option>
-                          <option value="KI">Kalimantan Timur</option>
-                          <option value="KU">Kalimantan Utara</option>
-                          <option value="BB">Kepulauan Bangka Belitung</option>
-                          <option value="KR">Kepulauan Riau</option>
-                          <option value="LA">Lampung</option>
-                          <option value="MA">Maluku</option>
-                          <option value="MU">Maluku Utara</option>
-                          <option value="NB">Nusa Tenggara Barat</option>
-                          <option value="NT">Nusa Tenggara Timur</option>
-                          <option value="PA">Papua</option>
-                          <option value="PB">Papua Barat</option>
-                          <option value="RI">Riau</option>
-                          <option value="SR">Sulawesi Barat</option>
-                          <option value="SN">Sulawesi Selatan</option>
-                          <option value="ST">Sulawesi Tengah</option>
-                          <option value="SG">Sulawesi Tenggara</option>
-                          <option value="SA">Sulawesi Utara</option>
-                          <option value="SB">Sumatera Barat</option>
-                          <option value="SS">Sumatera Selatan</option>
-                          <option value="SU">Sumatera Utara</option>
+                          <option value="Aceh">Aceh</option>
+                          <option value="Bali">Bali</option>
+                          <option value="Banten">Banten</option>
+                          <option value="Bengkulu">Bengkulu</option>
+                          <option value="Daerah Istimewa Yogyakarta">Daerah Istimewa Yogyakarta</option>
+                          <option value="DKI Jakarta">DKI Jakarta</option>
+                          <option value="Gorontalo">Gorontalo</option>
+                          <option value="Jambi">Jambi</option>
+                          <option value="Jawa Barat">Jawa Barat</option>
+                          <option value="Jawa Tengah">Jawa Tengah</option>
+                          <option value="Jawa Timur">Jawa Timur</option>
+                          <option value="Kalimantan Barat">Kalimantan Barat</option>
+                          <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                          <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                          <option value="Kalimantan Timur">Kalimantan Timur</option>
+                          <option value="Kalimantan Utara">Kalimantan Utara</option>
+                          <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                          <option value="Kepulauan Riau">Kepulauan Riau</option>
+                          <option value="Lampung">Lampung</option>
+                          <option value="Maluku">Maluku</option>
+                          <option value="Maluku Utara">Maluku Utara</option>
+                          <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                          <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                          <option value="Papua">Papua</option>
+                          <option value="Papua Barat">Papua Barat</option>
+                          <option value="Riau">Riau</option>
+                          <option value="Sulawesi Barat">Sulawesi Barat</option>
+                          <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                          <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                          <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                          <option value="Sulawesi Utara">Sulawesi Utara</option>
+                          <option value="Sumatera Barat">Sumatera Barat</option>
+                          <option value="Sumatera Selatan">Sumatera Selatan</option>
+                          <option value="Sumatera Utara">Sumatera Utara</option>
                         </select>
                       </div>
                     </div>

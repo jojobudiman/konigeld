@@ -22,6 +22,7 @@ class signup_4 extends CI_Controller {
         $loc = $locaddrs1." ".$locaddrs2;
         $number = $this->input->post("phonenum");
         $province = $this->input->post("province");
+        $city = $this->input->post("city");
         $zip = $this->input->post("zip");
 
         $data_merchant = array(
@@ -49,12 +50,14 @@ class signup_4 extends CI_Controller {
             "id_merchant" => $id_m,
             "alamat_outlet" => $loc,
             "hp_outlet" => $number,
+            "kota" => $city,
             "provinsi_outlet" => $province,
             "kodepos_outlet" => $zip,
             "status_outlet" => 1
         );
         $this->m_crud->insertData($data_outlet, 'outlet_merchant');
         //$mail->isHTML(true);
+        
         $from_mail = 'konigeld@gmail.com';
         $to = $this->session->userdata('email');
 
@@ -70,6 +73,8 @@ class signup_4 extends CI_Controller {
         $nama .= 'From: NO-REPLY <'.$from_mail.'>' . "\r\n";
 
         $sendtomail = mail($to, $subject, $message, $nama);
+        if( $sendtomail ) echo 'Success';
+        else echo 'Failed';
         redirect('dashboard');
     }
 }
