@@ -350,7 +350,7 @@
                       Are you sure to set Entry as your current plan?
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-primary" type="button">Yes</button>
+                      <button class="btn btn-primary" type="button" data-href="<?php echo base_url().'subscriptions/indexx/1' ?>">Yes</button>
                       <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
                     </div>
                   </div>
@@ -370,7 +370,7 @@
                       Are you sure to set Junior as your current plan?
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-primary" type="button">Yes</button>
+                      <button class="btn btn-primary" type="button" data-href="<?php echo base_url().'subscriptions/indexx/2' ?>">Yes</button>
                       <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
                     </div>
                   </div>
@@ -390,7 +390,7 @@
                       Are you sure to set Senior as your current plan?
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-primary" type="button">Yes</button>
+                      <button class="btn btn-primary" type="button" data-href="<?php echo base_url().'subscriptions/indexx/3' ?>">Yes</button>
                       <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
                     </div>
                   </div>
