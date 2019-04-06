@@ -15030,3 +15030,31 @@ i.material-icons {
 .konierror {
   color: #F86C6B;
 }
+
+.konialert-primary {
+	color: #FFFFFF;
+	font-weight: 700;
+	background-color: #42838D;
+	border-color: #42838D;
+}
+
+.konialert-primary .alert-link {
+	color: #FFFFFF;
+}
+
+.konialert-success {
+	font-weight: 700;
+	background-color: #D4EDDA;
+	border-color: #D4EDDA;
+}
+
+.konialert {
+	position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.konifade {
+    transition: opacity .15s linear;
+}

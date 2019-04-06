@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class subscriptions extends CI_Controller {
 
-	function __construct() 
+	function __construct()
     {
         parent::__construct();
         $this->load->model(array('m_crud', 'm_ajax'));
@@ -14,21 +14,21 @@ class subscriptions extends CI_Controller {
         $this->load->view('eng_main_pricing');
         $this->load->view('merchant-js');
 	}
-    
+
     function indexx($price) {
         $data['pricing'] = $this->m_crud->select('kategori', 'id_kategori', $price)->result();
         $this->load->view('merchant-css');
         $this->load->view('eng_main_pricing', $data);
         $this->load->view('merchant-js');
     }
-    
+
     function getAjax() {
         $bil = $this->input->post('bill');
         $sub = $this->session->userdata("idk");
         $total = 0;
         //echo "<script type='text/javascript'>alert('$bil');</script>";
 
-        
+
         if($sub == 1) {
             if($bil == 1) {
                 $awal = 25000;
@@ -80,15 +80,15 @@ class subscriptions extends CI_Controller {
             'total' => $total,
             'idk' => $sub
         );
-        
+
         //$data['bi'] = '{"awal": 20000}';
         echo json_encode($data);
     }
-    
+
     function pay() {
         $getDate = date("Y-m-d");
         $getTotal = $this->input->post("total2");
-        
+
         $data = array(
             "id_transaksi" => 0,
             "id_admin" => 0,
@@ -98,15 +98,15 @@ class subscriptions extends CI_Controller {
             "tipe_transaksi" => "Transfer",
             "status_transaksi" => 1
         );
-        
+
         $this->m_crud->insertData($data, 'transaksi');
-        
+
         $where = array(
             "id_merchant" => $this->session->userdata("id"),
             "tgl_transaksi" => $getDate,
             "total_transaksi" => $getTotal
         );
-        
+
         $tr = $this->m_crud->selectWhere($where, 'transaksi')->result();
         foreach($tr as $tn) {
             $idt = $tn->id_transaksi;
@@ -121,7 +121,7 @@ class subscriptions extends CI_Controller {
             $effectiveDate = date('Y-m-d', strtotime("+12 months", strtotime($effectiveDate)));
             $jangka = "12 month";
         }
-        
+
         $data2 = array(
             "id_transaksi" => $idt,
             "id_kategori" => $getIDK,
@@ -129,8 +129,9 @@ class subscriptions extends CI_Controller {
             "tanggal_awal" => $getDate,
             "tanggal_akhir" => $effectiveDate
         );
-        
+
         $this->m_crud->insertData($data2, 'detail_transaksi');
+		$this->session->set_flashdata('success', 'Payment successfully processed');
         redirect('dashboard');
     }
 }

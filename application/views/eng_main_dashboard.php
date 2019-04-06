@@ -301,8 +301,21 @@
         </div>
 
         <div class="koni-index-body">
-          <div class="animated fadeIn">
 
+          <div class="animated fadeIn">
+            <?php if($this->session->has_userdata('success')) { ?>
+            <div class="alert konialert konialert-success alert-dismissible fade show" role="alert">
+              Payment successfully processed
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          <?php } ?>
+          <!-- If free trial
+            <div class="konialert konialert-primary" role="alert">
+                <a href="<?php echo base_url(). 'subscriptions' ?> " class="alert-link">You have xxx days left. Click here to renew your subscription.</a>
+            </div>
+          -->
               <div class="fluid-layout static-body">
                 <!--No Transactions-->
                 <!--<div class="fluid-box">
