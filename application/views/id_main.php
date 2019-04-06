@@ -12,7 +12,7 @@
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="<?php echo base_url(). 'english_home'?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="<?php echo base_url(). 'id/home'?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -21,11 +21,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'en/home' ?>">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/about' ?>">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/features' ?>">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/pricing' ?>">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/login' ?>">Login</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'id/home' ?>">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/about' ?>">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/features' ?>">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/pricing' ?>">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/login' ?>">Login</a></li>
                         <!--<li class="nav-item dropdown submenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Blog
@@ -38,52 +38,35 @@
                         </li>-->
                         <li class="nav-item dropdown submenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown">
-                            <svg version="1.1" id="Layer_1" height="10pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 72 512 512" width="20pt" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38
-                                c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621
-                                C512,105.443,494.833,88.276,473.655,88.276z"/>
-                                <path style="fill:#F5F5F5;" d="M511.469,120.282c-3.022-18.159-18.797-32.007-37.814-32.007h-9.977l-163.54,107.147V88.276h-88.276
-                                    v107.147L48.322,88.276h-9.977c-19.017,0-34.792,13.847-37.814,32.007l139.778,91.58H0v88.276h140.309L0.531,391.717
-                                    c3.022,18.159,18.797,32.007,37.814,32.007h9.977l163.54-107.147v107.147h88.276V316.577l163.54,107.147h9.977
-                                    c19.017,0,34.792-13.847,37.814-32.007l-139.778-91.58H512v-88.276H371.691L511.469,120.282z"/>
-                                <g>
-                                    <polygon style="fill:#FF4B55;" points="282.483,88.276 229.517,88.276 229.517,229.517 0,229.517 0,282.483 229.517,282.483
-                                        229.517,423.724 282.483,423.724 282.483,282.483 512,282.483 512,229.517 282.483,229.517 	"/>
-                                    <path style="fill:#FF4B55;" d="M24.793,421.252l186.583-121.114h-32.428L9.224,410.31
-                                        C13.377,415.157,18.714,418.955,24.793,421.252z"/>
-                                    <path style="fill:#FF4B55;" d="M346.388,300.138H313.96l180.716,117.305c5.057-3.321,9.277-7.807,12.287-13.075L346.388,300.138z"
-                                        />
-                                    <path style="fill:#FF4B55;" d="M4.049,109.475l157.73,102.387h32.428L15.475,95.842C10.676,99.414,6.749,104.084,4.049,109.475z"/>
-                                    <path style="fill:#FF4B55;" d="M332.566,211.862l170.035-110.375c-4.199-4.831-9.578-8.607-15.699-10.86L300.138,211.862H332.566z"
-                                        />
-                                </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-                            </svg>ENG</a>
+                            <svg height="10pt" viewBox="0 72 512 512" width="20pt" xmlns="http://www.w3.org/2000/svg"><path d="m512 176.550781v158.898438c-.027344 9.738281-7.914062 17.625-17.65625 17.65625h-476.6875c-9.742188-.03125-17.6289062-7.917969-17.65625-17.65625v-158.898438zm0 0" fill="#e6e7e8"></path><path d="m512 17.65625v158.894531h-512v-158.894531c.0273438-9.742188 7.914062-17.6289062 17.65625-17.65625h476.6875c9.742188.0273438 17.628906 7.917969 17.65625 17.65625zm0 0" fill="#c03a2b"></path></svg>IND</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo base_url(). 'en/home' ?>">
+                                        <svg version="1.1" id="Layer_1" height="10pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                	 viewBox="0 72 512 512" width="20pt" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38
+                                        	c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621
+                                        	C512,105.443,494.833,88.276,473.655,88.276z"/>
+                                        <path style="fill:#F5F5F5;" d="M511.469,120.282c-3.022-18.159-18.797-32.007-37.814-32.007h-9.977l-163.54,107.147V88.276h-88.276
+                                        	v107.147L48.322,88.276h-9.977c-19.017,0-34.792,13.847-37.814,32.007l139.778,91.58H0v88.276h140.309L0.531,391.717
+                                        	c3.022,18.159,18.797,32.007,37.814,32.007h9.977l163.54-107.147v107.147h88.276V316.577l163.54,107.147h9.977
+                                        	c19.017,0,34.792-13.847,37.814-32.007l-139.778-91.58H512v-88.276H371.691L511.469,120.282z"/>
+                                        <g>
+                                        	<polygon style="fill:#FF4B55;" points="282.483,88.276 229.517,88.276 229.517,229.517 0,229.517 0,282.483 229.517,282.483
+                                        		229.517,423.724 282.483,423.724 282.483,282.483 512,282.483 512,229.517 282.483,229.517 	"/>
+                                        	<path style="fill:#FF4B55;" d="M24.793,421.252l186.583-121.114h-32.428L9.224,410.31
+                                        		C13.377,415.157,18.714,418.955,24.793,421.252z"/>
+                                        	<path style="fill:#FF4B55;" d="M346.388,300.138H313.96l180.716,117.305c5.057-3.321,9.277-7.807,12.287-13.075L346.388,300.138z"
+                                        		/>
+                                        	<path style="fill:#FF4B55;" d="M4.049,109.475l157.73,102.387h32.428L15.475,95.842C10.676,99.414,6.749,104.084,4.049,109.475z"/>
+                                        	<path style="fill:#FF4B55;" d="M332.566,211.862l170.035-110.375c-4.199-4.831-9.578-8.607-15.699-10.86L300.138,211.862H332.566z"
+                                        		/>
+                                        </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                        </svg>ENG</a>
+                                </li>
                                 <li class="nav-item active">
                                     <a class="nav-link active" href="<?php echo base_url(). 'id/home' ?>"><svg height="10pt" viewBox="0 72 512 512" width="20pt" xmlns="http://www.w3.org/2000/svg"><path d="m512 176.550781v158.898438c-.027344 9.738281-7.914062 17.625-17.65625 17.65625h-476.6875c-9.742188-.03125-17.6289062-7.917969-17.65625-17.65625v-158.898438zm0 0" fill="#e6e7e8"></path><path d="m512 17.65625v158.894531h-512v-158.894531c.0273438-9.742188 7.914062-17.6289062 17.65625-17.65625h476.6875c9.742188.0273438 17.628906 7.917969 17.65625 17.65625zm0 0" fill="#c03a2b"></path></svg>IND</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'en/home' ?> "><svg version="1.1" id="Layer_1" height="10pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                	 viewBox="0 72 512 512" width="20pt" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38
-                                	c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621
-                                	C512,105.443,494.833,88.276,473.655,88.276z"/>
-                                <path style="fill:#F5F5F5;" d="M511.469,120.282c-3.022-18.159-18.797-32.007-37.814-32.007h-9.977l-163.54,107.147V88.276h-88.276
-                                	v107.147L48.322,88.276h-9.977c-19.017,0-34.792,13.847-37.814,32.007l139.778,91.58H0v88.276h140.309L0.531,391.717
-                                	c3.022,18.159,18.797,32.007,37.814,32.007h9.977l163.54-107.147v107.147h88.276V316.577l163.54,107.147h9.977
-                                	c19.017,0,34.792-13.847,37.814-32.007l-139.778-91.58H512v-88.276H371.691L511.469,120.282z"/>
-                                <g>
-                                	<polygon style="fill:#FF4B55;" points="282.483,88.276 229.517,88.276 229.517,229.517 0,229.517 0,282.483 229.517,282.483
-                                		229.517,423.724 282.483,423.724 282.483,282.483 512,282.483 512,229.517 282.483,229.517 	"/>
-                                	<path style="fill:#FF4B55;" d="M24.793,421.252l186.583-121.114h-32.428L9.224,410.31
-                                		C13.377,415.157,18.714,418.955,24.793,421.252z"/>
-                                	<path style="fill:#FF4B55;" d="M346.388,300.138H313.96l180.716,117.305c5.057-3.321,9.277-7.807,12.287-13.075L346.388,300.138z"
-                                		/>
-                                	<path style="fill:#FF4B55;" d="M4.049,109.475l157.73,102.387h32.428L15.475,95.842C10.676,99.414,6.749,104.084,4.049,109.475z"/>
-                                	<path style="fill:#FF4B55;" d="M332.566,211.862l170.035-110.375c-4.199-4.831-9.578-8.607-15.699-10.86L300.138,211.862H332.566z"
-                                		/>
-                                </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-                                </svg>ENG</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -96,10 +79,10 @@
         <!--================Slider Area =================-->
         <section class="new_area">
                     <div class="content">
-                        <h1 class="balance-text" style="">Königeld Point of Sale<br data-owner="balance-text">the new way to be jack of sales.</h1>
+                        <h1 class="balance-text" style="">Königeld Point of Sale<br data-owner="balance-text">cara terbaru menjadi penjual profesional.</h1>
                     <div class="small-btn">
                         <div class="col-md-auto">
-                            <a class="more_btn" href="<?php echo base_url(). 'login' ?> ">Try for free</a></div>
+                            <a class="more_btn" href="<?php echo base_url(). 'login' ?> ">Coba gratis</a></div>
                         </div>
                     </div>
         </section>
@@ -130,7 +113,7 @@
             <div class="content">
                 <div class="intro">
                     <div class="font-size-large align-center">
-                        <h2 class="balance-text h2" style="">Built for simplicity, and trusted by more<br data-owner="balance-text">than 1000 businesses globally.</h2><p>Set up your Königeld Point of Sale system with ease. The intuitive order and payment flow makes POS transactions a snap and let you effortlessly manage employees and your entire business.</p>
+                        <h2 class="balance-text h2" style="">Dibangun untuk kesederhanaan, dan dipercaya lebih <br data-owner="balance-text">dari 1000 bisnis mendunia.</h2><p>Bangunankan sistem Königeld Point of Salemu dengan kemudahan. Pemesanan yang intuitif dan alur pembayaran transaksi POS secara sekejap dan membiarkan anda dengan mudah mengatur karyawan dan seluruh bisnismu.</p>
                         <div class="grid grid-space-base">
                             <div class="column">
                                 <a class="video-player-link display-inline-block" data-entry-id="7GvbB2VTk4GKcAqUsQkSs" href="https://www.youtube.com/watch?v=NfCFAsJsNp8&amp;feature=youtu.be">
@@ -138,7 +121,7 @@
                                         <div class="column">
                                             <div class="icon-play icon-play-small"></div>
                                         </div>
-                                        <div class="column">Watch the video</div>
+                                        <div class="column">Nonton video</div>
                                     </div>
                                 </a>
                             </div>
@@ -155,8 +138,8 @@
             <div class="container">
                 <div class="c_title">
                     <img src="<?php echo base_url(); ?>assets/img/icon/title-icon2.png" alt="">
-                    <h6>Why Königeld?</h6>
-                    <h2>With Königeld, it’s easy to get work:</h2>
+                    <h6>Kenapa Königeld?</h6>
+                    <h2>Dengan Königeld, akan sangat mudah untuk bekerja:</h2>
                 </div>
                 <div class="row feature_inner">
                     <div class="col-lg-4 col-sm-6">
@@ -164,8 +147,8 @@
                             <div class="f_icon">
                                 <img src="<?php echo base_url(); ?>assets/img/icon/f-icon-1.png" alt="">
                             </div>
-                            <h4>Future Payment Network</h4>
-                            <p>Easy to use, very light, fast, and reliable point of sale.</p>
+                            <h4>Jaringan Pembayaran Masa Depan</h4>
+                            <p>Easy to use, very light, fast, and reliable point of sale yang mudah digunakan, sangat ringan, cepat, dan dapat diandalkan.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -173,8 +156,8 @@
                             <div class="f_icon">
                                 <img src="<?php echo base_url(); ?>assets/img/icon/f-icon-2.png" alt="">
                             </div>
-                            <h4>User Friendly Design</h4>
-                            <p>Königeld is very practical and easy to use by your cashier staff. The initial setup process is fast, in just a few minutes you can sell and use Königeld as a cash register.</p>
+                            <h4>Desain Berbasis Ramah Pengguna</h4>
+                            <p>Königeld sangat praktikal dan mudah digunakan oleh karyawan kasirmu. Dalam memulai proses instalasi dengan cepat sehingga hanya beberapa menit anda dapat menjual dan menggunakan Königeld sebagai pendaftaran tunai.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -182,8 +165,8 @@
                             <div class="f_icon">
                                 <img src="<?php echo base_url(); ?>assets/img/icon/f-icon-3.png" alt="">
                             </div>
-                            <h4>Complete Sales Report</h4>
-                            <p>You can access all real-time sales reports from smartphones, and computers. Anytime and anywhere!</p>
+                            <h4>Laporan Penjualan Lengkap</h4>
+                            <p>Anda dapat mengakses laporan penjualan secara real-time dari berbagai smartphone, dan komputer. Dimana saja dan kapan saja!</p>
                         </div>
                     </div>
                 </div>
@@ -206,8 +189,8 @@
                             </div>
                             <div class="column align-left content-cell-padding-left">
                                 <div class="general-1">
-                                    <h3 class="general-text">Manage your products</h3>
-                                    <p>Adjust your owned products by add different features such as product IDs, and stocks dynamically.</p>
+                                    <h3 class="general-text">Atur produk anda</h3>
+                                    <p>Sesuaikan produk anda melalui menambah fitur-fitur yang berbeda seperti ID produk, dan stok secara dinamis.</p>
                                 </div>
                             </div>
                         </div>
@@ -223,8 +206,8 @@
                             </div>
                             <div class="column align-left content-cell-padding-right">
                                 <div class="general-2">
-                                    <h3 class="general-text">Excellent for business basics</h3>
-                                    <p>Through your Königeld account, you could learn various unique features inside and very user-friendly interface for new users.</p>
+                                    <h3 class="general-text">Sangat bagus untuk dasar bisnis</h3>
+                                    <p>Melalui akun Königeld anda, anda dapat belajar berbagai fitur unik di dalam dan tampilan antarmuka yang ramah untuk pengguna baru.</p>
                                 </div>
                             </div>
                         </div>
@@ -240,8 +223,8 @@
                             </div>
                             <div class="column align-left content-cell-padding-left">
                                 <div class="general-1">
-                                    <h3 class="general-text">Do it all with Deustch style </h3>
-                                    <p>Sign in anytime, anywhere from any device and compare results day over day, or year over year, to see what's working best.</p>
+                                    <h3 class="general-text">Lakukanlah semua dengan gaya Deustch</h3>
+                                    <p>Masuk dimana saja, kapan saja dari perangkat apa saja dan membandingkan hasil hari ke hari, atau tahun ke tahun, untuk melihat apa yang berhasil dikerjakan.</p>
                                 </div>
                             </div>
                         </div>
@@ -257,8 +240,8 @@
                             </div>
                             <div class="column align-left content-cell-padding-right">
                                 <div class="general-2">
-                                    <h3 class="general-text">Be a jack of all sales</h3>
-                                    <p>Königeld gives you more informed decisions and analytics for your entire business. Through this process, you could be a king of transactions.</p>
+                                    <h3 class="general-text">Menjadi penjual profesional</h3>
+                                    <p>Königeld memberikan anda keputusan lebih pasti dan analsis yang tepat untuk seluruh bisnis anda. Melalui proses ini, anda dapat menjadi raja transaksi.</p>
                                 </div>
                             </div>
                         </div>
@@ -275,12 +258,12 @@
                 <div class="intro">
                     <div class="font-size-large align-center white">
                         <h2 class="bold">Bargeld ist König</h2>
-                        <p>For a better online transaction processing, take a look how Königeld is valuable for you.</p>
+                        <p>Untuk menjadi online transaction processing yang lebih baik, mari lihat bagaimana Königeld bernilai untuk anda.</p>
                     </div>
                     <div class="grid grid-space-base">
                         <div class="column">
                             <div class="display-inline-block">
-                                <a class="button gap-none" href="<?php echo base_url(). 'english_features' ?> ">SHOW ME</a>
+                                <a class="button gap-none" href="<?php echo base_url(). 'id/features' ?> ">TUNJUKKAN SAYA</a>
                             </div>
                         </div>
                     </div>

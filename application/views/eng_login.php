@@ -199,7 +199,7 @@
                             </div>
                             <div class="password-input">
                               <input type="password" name="password" id="password" placeholder="Password">
-                              <button type="button" class="forget-password" href="<?php echo base_url(). 'forgotpass'?>">Forget Password</button>
+                              <a href="<?php echo base_url(). 'forgotpass'?>"><button type="button" class="forget-password">Forget Password</button></a>
                             </div>
                           </div>
                         </div>

@@ -60,6 +60,11 @@
                                 <i class="flag-icon flag-icon-us"></i>
                             </div>
                         </div>
+                        <div class="dropdown-menu" aria-labelledby="language">
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-id"></i>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

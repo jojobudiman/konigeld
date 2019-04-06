@@ -22,7 +22,7 @@ class contactus extends CI_Controller {
         'contact_id'=>NULL,
         'contact_name'=>$tangkapNama,
         'contact_subject'=>$tangkapSubject,
-        'contact_message'=>$tangkapIsi,
+        'contact_message'=>$tangkapIsi
         );
 
         /*$this->m_contactus->insertData($data,'contactUs');*/
