@@ -55,7 +55,7 @@ class subscriptions extends CI_Controller {
                 $total = $bulanan*12;
             }
         }
-        else {
+        else if($sub == 3){
             if($bil == 1) {
                 $awal = 150000;
                 $bulanan = 150000;
@@ -68,13 +68,69 @@ class subscriptions extends CI_Controller {
                 $total = $bulanan*12;
             }
         }
+        else {
+            $awal = "-";
+            $disc = "-";
+            $bulanan = "-";
+            $total = "-";
+        }
         $data['bi'] = array(
             'awal' => $awal,
             'bulanan' => $bulanan,
-            'total' => $total
+            'total' => $total,
+            'idk' => $sub
         );
         
         //$data['bi'] = '{"awal": 20000}';
         echo json_encode($data);
+    }
+    
+    function pay() {
+        $getDate = date("Y-m-d");
+        $getTotal = $this->input->post("total2");
+        
+        $data = array(
+            "id_transaksi" => 0,
+            "id_admin" => 0,
+            "id_merchant" => $this->session->userdata("id"),
+            "tgl_transaksi" => $getDate,
+            "total_transaksi" => $getTotal,
+            "tipe_transaksi" => "Transfer",
+            "status_transaksi" => 1
+        );
+        
+        $this->m_crud->insertData($data, 'transaksi');
+        
+        $where = array(
+            "id_merchant" => $this->session->userdata("id"),
+            "tgl_transaksi" => $getDate,
+            "total_transaksi" => $getTotal
+        );
+        
+        $tr = $this->m_crud->selectWhere($where, 'transaksi')->result();
+        foreach($tr as $tn) {
+            $idt = $tn->id_transaksi;
+        }
+        $getIDK = $this->input->post("idk2");
+        $getPeriod = $this->input->post("bill");
+        if($getPeriod == 1) {
+            $effectiveDate = date('Y-m-d', strtotime("+1 months", strtotime($effectiveDate)));
+            $jangka = "1 month";
+        }
+        else {
+            $effectiveDate = date('Y-m-d', strtotime("+12 months", strtotime($effectiveDate)));
+            $jangka = "12 month";
+        }
+        
+        $data2 = array(
+            "id_transaksi" => $idt,
+            "id_kategori" => $getIDK,
+            "jangka_periode" => $jangka,
+            "tanggal_awal" => $getDate,
+            "tanggal_akhir" => $effectiveDate
+        );
+        
+        $this->m_crud->insertData($data2, 'detail_transaksi');
+        redirect('dashboard');
     }
 }

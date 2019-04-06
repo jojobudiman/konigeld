@@ -375,6 +375,8 @@
                     <div class="pricing-section">
                       <div class="pricing-column pricing-intro">
                         <h2 class="super-strong">Billing</h2>
+                          <!-- Start Form -->
+                          <form action="<?php echo base_url().'subscriptions/pay/' ?>" method="post">
                         <div class="billing">
                           <div class="form-billing-receipt"></div>
                           <div class="form-bill">
@@ -421,6 +423,9 @@
                               <div class="row">
                                 <div class="col-md-6">
                                     <div class="super-strong h2 form-bill-text">Total Amount</div>
+                                    <input type="text" hidden id="total2" name="total2" value="">
+                                    <input type="text" hidden id="idk2" name="idk2" value="">
+                                    <!--<input type="text" hidden id="" name="" value="">-->
                                   </div>
                                   <div class="col-md-6">
                                     <div class="h2 form-bill-text float-right" id="total" name="total">Please Choose Billing Cycle</div>
@@ -432,6 +437,8 @@
                             </div>
                           </div>
                         </div>
+                    </form>
+                          <!-- End Form -->
                       </div>
                     </div>
                   </div>
@@ -463,9 +470,17 @@
                 data : {bill:bill},
                 success : function(data) {
                     for(i in data) {
+                        if(bill == 1) {
+                            $('#awal').hide();
+                        }
+                        else {
+                            $('#awal').show();
+                        }
                         $('#awal').html("Rp "+data[i].awal);
                         $('#akhir').html("Rp "+data[i].bulanan+"/month");
                         $('#total').html("Rp "+data[i].total);
+                        $("#total2").val(data[i].total);
+                        $("#idk2").val(data[i].idk);
                     }
                 }
             });
