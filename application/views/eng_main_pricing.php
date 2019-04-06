@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php error_reporting(0); ?>
 
 <html lang="en">
   <head>
@@ -325,7 +326,19 @@
                               <div class="form-field">
                                 <label class="form-field-label form-field-sub-label" for="subname">Your Current Subscription</label>
                                 <div class="form-field-content form-field-link-wrapper">
-                                  <input disabled class="form-field-input" id="subname" type="text" value="Nama sub">
+                                    <?php
+                                        if($pricing != "") {
+                                            foreach($pricing as $list) {
+                                                $idp = $list->id_kategori;
+                                                $namap = $list->nama_kategori;
+                                            }
+                                            $idp = $this->session->set_userdata("idk", $idp);
+                                        }
+                                        else {
+                                            $namap = "No subs";
+                                        }
+                                    ?>
+                                  <input class="form-field-input" id="subname" type="text" value="<?php echo $namap ?>" readonly>
                                 </div>
                                 <a class="form-field-link form-field-content " href="<?php echo base_url(). 'subscriptions_change' ?>">Change Plan</a>
                               </div>
@@ -362,6 +375,8 @@
                     <div class="pricing-section">
                       <div class="pricing-column pricing-intro">
                         <h2 class="super-strong">Billing</h2>
+                          <!-- Start Form -->
+                          <form action="<?php echo base_url().'subscriptions/pay/' ?>" method="post">
                         <div class="billing">
                           <div class="form-billing-receipt"></div>
                           <div class="form-bill">
@@ -372,10 +387,19 @@
                                     <div class="form-field">
                                       <label class="form-field-label" for="subname">Billing Cycle</label>
                                       <div class="form-field-content">
-                                        <select class="form-field-select" value="">
-                                          <option value="Annual">Annual</option>
-                                          <option value="Monthly">Monthly</option>
+                                        <select class="form-field-select" id="bill" name="bill">
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option value="1">Annual</option>
+                                            <option value="2">Monthly</option>
                                         </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <div class="form-row">
+                                    <div class="form-field">
+                                      <label class="form-field-label" for="subname">Next Plan</label>
+                                      <div class="form-field-content">
+                                        <input class="form-field-input" type="text" value="<?php echo $namap ?>" readonly>
                                       </div>
                                     </div>
                                   </div>
@@ -385,13 +409,13 @@
                             <div class="form-bill-content">
                               <div class="row">
                                 <div class="col-md-4">
-                                    <div class="super-strong form-bill-text">Entry Package</div>
+                                    <div class="super-strong form-bill-text"><?php echo $namap ?> Package</div>
                                   </div>
                                   <div class="col-md-4">
-                                    <p class="strike form-bill-text float-left">299000</p> <!-- Hanya ditampilkan jika pilih Annual-->
+                                    <p class="strike form-bill-text float-left" id="awal" name="awal"></p> <!-- Hanya ditampilkan jika pilih Annual-->
                                   </div>
                                   <div class="col-md-4">
-                                    <p class="form-bill-text float-right">Rp 25000/month</p>
+                                    <p class="form-bill-text float-right" id="akhir" name="akhir">Please Choose Billing Cycle</p>
                                   </div>
                                 </div> <!-- Loop jika lokasi lebih dari satu-->
                             </div>
@@ -399,9 +423,12 @@
                               <div class="row">
                                 <div class="col-md-6">
                                     <div class="super-strong h2 form-bill-text">Total Amount</div>
+                                    <input type="text" hidden id="total2" name="total2" value="">
+                                    <input type="text" hidden id="idk2" name="idk2" value="">
+                                    <!--<input type="text" hidden id="" name="" value="">-->
                                   </div>
                                   <div class="col-md-6">
-                                    <div class="h2 form-bill-text float-right">Rp 2500000</div>
+                                    <div class="h2 form-bill-text float-right" id="total" name="total">Please Choose Billing Cycle</div>
                                   </div>
                                 </div>
                             </div>
@@ -410,6 +437,8 @@
                             </div>
                           </div>
                         </div>
+                    </form>
+                          <!-- End Form -->
                       </div>
                     </div>
                   </div>
@@ -427,3 +456,34 @@
       </div>
   </body>
 </html>
+<script src="<?php echo base_url().'assets/js/jquery.js' ;?>"></script>
+<script>
+    $(document).ready(function() {
+        
+        $('#bill').change(function() {
+            var bill = $(this).val();
+            
+            $.ajax({
+                type : 'POST',
+                url : "<?php echo base_url().'subscriptions/getAjax/'?>",
+                dataType : "JSON",
+                data : {bill:bill},
+                success : function(data) {
+                    for(i in data) {
+                        if(bill == 1) {
+                            $('#awal').hide();
+                        }
+                        else {
+                            $('#awal').show();
+                        }
+                        $('#awal').html("Rp "+data[i].awal);
+                        $('#akhir').html("Rp "+data[i].bulanan+"/month");
+                        $('#total').html("Rp "+data[i].total);
+                        $("#total2").val(data[i].total);
+                        $("#idk2").val(data[i].idk);
+                    }
+                }
+            });
+        });
+    });
+</script>
