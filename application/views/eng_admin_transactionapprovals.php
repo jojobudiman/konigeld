@@ -5,6 +5,11 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
+    <?php 
+    if($this->session->userdata("id") == "") {
+        redirect('english_home');
+    }
+    ?>
 
 <head>
     <meta charset="utf-8">
@@ -51,15 +56,36 @@
                                         <thead>
                                             <tr>
                                                 <th>Transaction ID</th>
-                                                <th>Transaction Requests</th>
+                                                <th>Merchant's Name</th>
+                                                <th>Business' Name</th>
+                                                <th>Date</th>
+                                                <th>Type</th>
+                                                <th>Subscriptions</th>
+                                                <th>Period</th>
+                                                <th>Total Payment</th>
                                                 <th>Approval</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>123</td>
-                                                <td><a href="<?php echo base_url(). 'admin_transactionhistory_name' ?>"><button type="button" class="btn btn-outline-success"><i class="fa fa-folder-open"></i>&nbsp; Check Confirmation</button></a> </td>
+                                                <?php foreach($trans as $list) ?>
+                                                <td><?php echo $list->id_transaksi ?></td>
+                                                <td><?php echo $list->fname_merchant." ".$list->lname_merchant ?></td>
+                                                <td><?php echo $list->nama_bisnis ?></td>
+                                                <td><?php echo $list->tgl_transaksi ?></td>
+                                                <td><?php echo $list->tipe_transaksi ?></td>
+                                                <td><?php echo $list->nama_kategori ?></td>
+                                                <td><?php echo $list->jangka_periode ?></td>
+                                                <td><?php echo $list->total_transaksi ?></td>
+                                                <td>
+                                                    <a href="<?php echo base_url(). 'admin_transactionhistory_name' ?>">
+                                                        <button type="button" class="btn btn-outline-success">
+                                                            <i class="fa fa-folder-open"></i>
+                                                            &nbsp; Check Confirmation
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                                <?php ?>
                                             </tr>
                                         </tbody>
                                     </table>

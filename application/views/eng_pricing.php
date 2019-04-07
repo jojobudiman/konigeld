@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php 
+    if($this->session->userdata("id") == "") {
+        redirect('english_home');
+    }
+?>
 <html lang="en">
     <head>
         <meta charset="utf-8">

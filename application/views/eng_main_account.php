@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<?php
+<?php 
+    if($this->session->userdata("id") == "") {
+        redirect('english_home');
+    }
 foreach($mer as $list) {
     $id = $list->id_merchant;
     $fname = $list->fname_merchant;

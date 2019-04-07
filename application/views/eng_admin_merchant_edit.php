@@ -5,6 +5,11 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
+    <?php 
+    if($this->session->userdata("id") == "") {
+        redirect('english_home');
+    }
+    ?>
 
 <head>
     <meta charset="utf-8">

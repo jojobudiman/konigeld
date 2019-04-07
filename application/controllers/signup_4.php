@@ -75,6 +75,8 @@ class signup_4 extends CI_Controller {
         $sendtomail = mail($to, $subject, $message, $nama);
         if( $sendtomail ) echo 'Success';
         else echo 'Failed';
+        
+        $this->session->set_userdata("id", $id_m);
         redirect('dashboard');
     }
 }

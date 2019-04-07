@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<?php error_reporting(0); ?>
+<?php 
+error_reporting(0); 
+    if($this->session->userdata("id") == "") {
+        redirect('english_home');
+    }
+?>
 
 <html lang="en">
   <head>

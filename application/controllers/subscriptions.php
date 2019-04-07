@@ -114,11 +114,11 @@ class subscriptions extends CI_Controller {
         $getIDK = $this->input->post("idk2");
         $getPeriod = $this->input->post("bill");
         if($getPeriod == 1) {
-            $effectiveDate = date('Y-m-d', strtotime("+1 months", strtotime($effectiveDate)));
+            $end = date('Y-m-d', strtotime('+1 months'));
             $jangka = "1 month";
         }
         else {
-            $effectiveDate = date('Y-m-d', strtotime("+12 months", strtotime($effectiveDate)));
+            $end = date('Y-m-d', strtotime('+1 years'));
             $jangka = "12 month";
         }
 
@@ -127,7 +127,7 @@ class subscriptions extends CI_Controller {
             "id_kategori" => $getIDK,
             "jangka_periode" => $jangka,
             "tanggal_awal" => $getDate,
-            "tanggal_akhir" => $effectiveDate
+            "tanggal_akhir" => $end
         );
 
         $this->m_crud->insertData($data2, 'detail_transaksi');

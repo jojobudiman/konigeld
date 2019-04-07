@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php 
+    if($this->session->userdata("id") == "") {
+        redirect('english_home');
+    }
+?>
 
 <html lang="en">
   <head>
@@ -334,9 +339,6 @@
                               <thead>
                                 <tr>
                                   <th colspan="1" rowspan="1" class="item-table-name super-strong">
-                                    <div class="table-name-column arrow-up"><a class="customer-list-header" href="#">Outlet Name</a></div>
-                                  </th>
-                                  <th colspan="1" rowspan="1" class="item-table-name super-strong">
                                     <div class="table-name-column">Address</div>
                                   </th>
                                   <th colspan="1" rowspan="1" class="item-table-name super-strong">
@@ -358,18 +360,13 @@
                                   <?php foreach($loc as $list) { ?>
                                 <tr class="table-row-selectable" data-href="http://google.com">
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                    <div class="konitable-container">
-                                      <div class="table-item-name-column">nama lokasi</div>
-                                    </div>
-                                  </td>
-                                  <td colspan="1" rowspan="1" class="item-table-name konitable">
                                       <div class="table-name-column"><?php echo $list->alamat_outlet ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
                                       <div class="table-name-column"><?php echo $list->hp_outlet ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
-                                      <div class="table-name-column type-align-right"></div>
+                                      <div class="table-name-column type-align-right"><?php echo $list->kota ?></div>
                                   </td>
                                   <td colspan="1" rowspan="1" class="item-table-name konitable">
                                       <div class="table-name-column type-align-right"><?php echo $list->provinsi_outlet ?></div>
