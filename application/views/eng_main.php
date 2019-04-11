@@ -99,7 +99,7 @@
                         <h1 class="balance-text" style="">Königeld Point of Sale<br data-owner="balance-text">the new way to be jack of sales.</h1>
                     <div class="small-btn">
                         <div class="col-md-auto">
-                            <a class="more_btn" href="<?php echo base_url(). 'login' ?> ">Try for free</a></div>
+                            <a class="more_btn" href="<?php echo base_url(). 'signup' ?> ">Try for free</a></div>
                         </div>
                     </div>
         </section>
@@ -365,9 +365,9 @@
                                 <h6>Get in touch</h6>
                                 <h2>Contact Us</h2>
                             </div>
-                            <p>Have any questions? We will support your help as soon as possible!</p>
+                            <p>Have any questions? We will support your request as soon as possible!</p>
                             <a href="#"><h5>Contact us now</h5></a>
-                            <a href="#"><h4>hello@doublejos.com</h4></a>
+                            <a href="#"><h4>konigeld@gmail.com</h4></a>
                         </div>
                     </div>
                 </div>
@@ -383,7 +383,7 @@
                     <div class="bd-callout">
                         <h3>Double Jo's</h3>
                         <p>Ruko Golden 8 Extension Blok G No. 8<br> Jalan Ki Hajar Dewantara, Serpong<br> Tangerang, Banten, Indonesia</p>
-                        <h4><a href="#">+62 xxxx xxxx xxxx</a> <a href="mailto:jovanhidayat@konigeld.com">hello@doublejos.com</a></h4>
+                        <h4><a href="#">+62 xxxx xxxx xxxx</a> <a href="mailto:konigeld@gmail.com">hello@doublejos.com</a></h4>
                     </div>
                 </div>
             </div>

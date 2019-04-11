@@ -23,7 +23,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Transaction Approvals</h1>
+                        <h1>Message Requests</h1>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Transaction Approvals</li>
+                            <li class="active">Message Requests</li>
                         </ol>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-sm-12 float-left">
-                                        <h4><strong class="card-title">Transaction Approvals</strong></h4>
+                                        <h4><strong class="card-title">Message Requests</strong></h4>
                                     </div>
                                 </div>
                             </div>
@@ -55,15 +55,11 @@
                                     <div class="row">
                                         <thead>
                                             <tr>
-                                                <th>Transaction ID</th>
-                                                <th>Merchant's Name</th>
-                                                <th>Business' Name</th>
-                                                <th>Date</th>
-                                                <th>Type</th>
-                                                <th>Subscriptions</th>
-                                                <th>Period</th>
-                                                <th>Total Payment</th>
-                                                <th>Approval</th>
+                                                <th>Contact Us ID</th>
+                                                <th>Contact Name</th>
+                                                <th>Contact Subject</th>
+                                                <th>Contact Message</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -73,10 +69,6 @@
                                                 <td><?php echo $list->fname_merchant." ".$list->lname_merchant ?></td>
                                                 <td><?php echo $list->nama_bisnis ?></td>
                                                 <td><?php echo $list->tgl_transaksi ?></td>
-                                                <td><?php echo $list->tipe_transaksi ?></td>
-                                                <td><?php echo $list->nama_kategori ?></td>
-                                                <td><?php echo $list->jangka_periode ?></td>
-                                                <td><?php echo $list->total_transaksi ?></td>
                                                 <td>
                                                     <a href="<?php echo base_url(). 'admin_transactionhistory_name' ?>">
                                                         <button type="button" class="btn btn-outline-success">

@@ -101,7 +101,7 @@
                             <div class="about_title">
                                 <img src="<?php echo base_url(); ?>assets/img/icon/feature-icon.png" alt="">
                                 <h6 class="f-red">UANG ADALAH RAJA</h6>
-                                <h2 class="h1 bold">We believe the economy is better when everyone has access</h2>
+                                <h2 class="h1 bold">Kami percaya perekonomian menjadi lebih baik ketika semua memiliki akses</h2>
                             </div>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
                         </div>
@@ -133,7 +133,7 @@
                             <div class="about_title">
                                 <img class="flip-hori" src="<?php echo base_url(); ?>assets/img/icon/feature-icon.png" alt="">
                                 <h6 class="f-red">DASAR POINT OF SALE</h6>
-                                <h2 class="h1 bold">Every person learn to become a better one through sales</h2>
+                                <h2 class="h1 bold">Setiap orang belajar menjadi lebih baik melalui penjualan</h2>
                             </div>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
                         </div>

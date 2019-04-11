@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
-    <?php 
+    <?php
     if($this->session->userdata("id") == "") {
         redirect('english_home');
     }
@@ -79,14 +79,9 @@
                                                 <td><?php echo $list->tahun_mulai_bisnis ?></td> <!--Tambah mulai tahun-->
                                                 <td><?php echo "Active" ?></td> <!--Tambah status -->
                                                 <td id="buttons">
-                                                    <div class="col-sm-4 offset-sm-1">
-                                                        <a href="<?php echo base_url(). 'admin_table_merchant_edit' ?>">
-                                                        <button type="button" class="btn btn-outline-success">Edit</button>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-sm-4 offset-sm-1">
+                                                    <div class="col-sm-12">
                                                         <a href="<?php echo base_url(). 'namametod/delete' ?>">
-                                                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                                                        <button type="button" class="btn btn-outline-danger">Deactivate</button>
                                                         </a>
                                                     </div>
                                                 </td>

@@ -21,11 +21,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'id/home' ?>">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/about' ?>">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/features' ?>">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/pricing' ?>">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/login' ?>">Login</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'id/home' ?>">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/about' ?>">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/features' ?>">Fitur</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/pricing' ?>">Harga</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'id/login' ?>">Masuk</a></li>
                         <!--<li class="nav-item dropdown submenu">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Blog
@@ -82,7 +82,7 @@
                         <h1 class="balance-text" style="">Königeld Point of Sale<br data-owner="balance-text">cara terbaru menjadi penjual profesional.</h1>
                     <div class="small-btn">
                         <div class="col-md-auto">
-                            <a class="more_btn" href="<?php echo base_url(). 'login' ?> ">Coba gratis</a></div>
+                            <a class="more_btn" href="<?php echo base_url(). 'signup' ?> ">Coba gratis</a></div>
                         </div>
                     </div>
         </section>
@@ -148,7 +148,7 @@
                                 <img src="<?php echo base_url(); ?>assets/img/icon/f-icon-1.png" alt="">
                             </div>
                             <h4>Jaringan Pembayaran Masa Depan</h4>
-                            <p>Easy to use, very light, fast, and reliable point of sale yang mudah digunakan, sangat ringan, cepat, dan dapat diandalkan.</p>
+                            <p>Point of sale yang mudah digunakan, sangat ringan, cepat, dan dapat diandalkan.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -337,7 +337,7 @@
                                 <textarea class="form-control" id="message" name="cmessage" rows="1" placeholder="Message"></textarea>
                             </div>
                             <div class="form-group col-lg-12">
-                                <button type="submit" value="submit" class="konibutton submit_btn form-control">SEND</button>
+                                <button type="submit" value="submit" class="konibutton submit_btn form-control">KIRIM</button>
                             </div>
                         </form>
                     </div>
@@ -345,12 +345,12 @@
                         <div class="touch_details">
                             <div class="l_title">
                                 <img src="<?php echo base_url(); ?>assets/img/icon/title-icon3.png" alt="">
-                                <h6>Get in touch</h6>
-                                <h2>Contact Us</h2>
+                                <h6>Menghubungkan Sesama</h6>
+                                <h2>Hubungi Kami</h2>
                             </div>
-                            <p>Have any questions? We will support your help as soon as possible!</p>
-                            <a href="#"><h5>Contact us now</h5></a>
-                            <a href="#"><h4>hello@doublejos.com</h4></a>
+                            <p>Anda memiliki pertanyaan? Kami akan mendukung permintaan anda secepat mungkin!</p>
+                            <a href="#"><h5>Hubungi kami sekarang</h5></a>
+                            <a href="#"><h4>konigeld@gmail.com</h4></a>
                         </div>
                     </div>
                 </div>
@@ -366,7 +366,7 @@
                     <div class="bd-callout">
                         <h3>Double Jo's</h3>
                         <p>Ruko Golden 8 Extension Blok G No. 8<br> Jalan Ki Hajar Dewantara, Serpong<br> Tangerang, Banten, Indonesia</p>
-                        <h4><a href="#">+62 xxxx xxxx xxxx</a> <a href="mailto:jovanhidayat@konigeld.com">hello@doublejos.com</a></h4>
+                        <h4><a href="#">+62 xxxx xxxx xxxx</a> <a href="mailto:konigeld@gmail.com">konigeld@gmail.com</a></h4>
                     </div>
                 </div>
             </div>

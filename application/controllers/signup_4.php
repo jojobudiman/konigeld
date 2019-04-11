@@ -57,7 +57,7 @@ class signup_4 extends CI_Controller {
         );
         $this->m_crud->insertData($data_outlet, 'outlet_merchant');
         //$mail->isHTML(true);
-        
+
         $from_mail = 'konigeld@gmail.com';
         $to = $this->session->userdata('email');
 
@@ -65,17 +65,18 @@ class signup_4 extends CI_Controller {
         $message = '<h1>Hello '.$this->session->userdata('name').'</h1>'
                     . "\n"
                     . 'Welcome to Königeld '.$this->session->userdata('name')
-                    . ',you have just begun your new journey to be a jack of sales. A free guidebook for you to learn how to use the website and application! In Königeld, you could manage your business easily through our features inside such as dashboard, reports, products, employees, and settings.';
+                    . ',you have just begun your new journey to be a jack of sales.'
+					. 'A <a href="http://tiny.cc/koniusermanual">free guidebook</a> for you to learn how to use the website and application! In Königeld, you could manage your business easily through our features inside such as dashboard, reports, products, employees, and settings.';
 
         $nama  = 'MIME-Version: 1.0' . "\r\n";
         $nama .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         $nama .= 'To: Your Name <'.$to.'>' . "\r\n";
-        $nama .= 'From: NO-REPLY <'.$from_mail.'>' . "\r\n";
+        $nama .= 'From: Königeld Team <'.$from_mail.'>' . "\r\n";
 
         $sendtomail = mail($to, $subject, $message, $nama);
         if( $sendtomail ) echo 'Success';
         else echo 'Failed';
-        
+
         $this->session->set_userdata("id", $id_m);
         redirect('dashboard');
     }
