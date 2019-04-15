@@ -12,10 +12,9 @@ if (!$conn) {
 }
 //echo "Connected successfully<br>";
 $idout=$_GET['id_outlet'];
+$nm = $_GET['nm'];
 
-$sql = "SELECT * FROM produk JOIN jenis_produk ON produk.id_jenis_p = jenis_produk.id_jenis_p
-WHERE produk.id_outlet = '$idout' AND produk.status_produk = 1";
-//$sql = "SELECT * FROM user WHERE email_user = '$email' AND status_user = 1";
+$sql = "SELECT * FROM `produk` INNER JOIN outlet_merchant ON outlet_merchant.id_outlet = produk.id_outlet INNER JOIN jenis_produk ON jenis_produk.id_jenis_p = produk.id_jenis_p WHERE outlet_merchant.id_outlet = ".$idout." AND jenis_produk.nama_jenis = '".$nm."'";
 
 $hasil=mysqli_query($conn, $sql);
 $result = array();
@@ -35,29 +34,14 @@ $result = array();
   $counter = 0;
   while($row = mysqli_fetch_array($hasil))
   {
-        $id = $row['id_produk'];
-        $id_jenis = $row['id_jenis_p'];
+        $id_produk = $row['id_produk'];
         $nama_produk = $row['nama_produk'];
-        $hg = $row['harga'];
-        $stok = $row['stok'];
-        $nama_jenis = $row['nama_jenis'];
-
-        /*$isi[$id] = array(
-          "id_produk" => $id,
-          "id_jenis" => $id_jenis,
-          "nama_produk" => $nama_produk,
-          "harga" => $hg,
-          "stok" => $stok,
-          "nama_jenis" => $nama_jenis
-        );*/
+        $harga = $row['harga'];
 
         $isi[] = array(
-          "id_produk" => $id,
-          "id_jenis" => $id_jenis,
+          "id_produk" => $id_produk,
           "nama_produk" => $nama_produk,
-          "harga" => $hg,
-          "stok" => $stok,
-          "nama_jenis" => $nama_jenis
+          "harga" => $harga
         );
       }
 

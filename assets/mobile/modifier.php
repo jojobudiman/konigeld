@@ -13,9 +13,7 @@ if (!$conn) {
 //echo "Connected successfully<br>";
 $idout=$_GET['id_outlet'];
 
-$sql = "SELECT * FROM produk JOIN jenis_produk ON produk.id_jenis_p = jenis_produk.id_jenis_p
-WHERE produk.id_outlet = '$idout' AND produk.status_produk = 1";
-//$sql = "SELECT * FROM user WHERE email_user = '$email' AND status_user = 1";
+$sql = "SELECT * FROM modifier WHERE id_outlet =".$idout." AND status_modifier = 1";
 
 $hasil=mysqli_query($conn, $sql);
 $result = array();
@@ -35,29 +33,14 @@ $result = array();
   $counter = 0;
   while($row = mysqli_fetch_array($hasil))
   {
-        $id = $row['id_produk'];
-        $id_jenis = $row['id_jenis_p'];
-        $nama_produk = $row['nama_produk'];
-        $hg = $row['harga'];
-        $stok = $row['stok'];
-        $nama_jenis = $row['nama_jenis'];
-
-        /*$isi[$id] = array(
-          "id_produk" => $id,
-          "id_jenis" => $id_jenis,
-          "nama_produk" => $nama_produk,
-          "harga" => $hg,
-          "stok" => $stok,
-          "nama_jenis" => $nama_jenis
-        );*/
+        $id_mod = $row['id_modifier'];
+        $nama_mod = $row['nama_modifier'];
+        $harga_mod = $row['harga_modifier'];
 
         $isi[] = array(
-          "id_produk" => $id,
-          "id_jenis" => $id_jenis,
-          "nama_produk" => $nama_produk,
-          "harga" => $hg,
-          "stok" => $stok,
-          "nama_jenis" => $nama_jenis
+          "id_modifier" => $id_mod,
+          "nama_modifier" => $nama_mod,
+          "harga_modifier" => $harga_mod
         );
       }
 
