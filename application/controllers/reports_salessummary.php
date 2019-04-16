@@ -2,27 +2,27 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class reports_salessummary extends CI_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+    
+    function __construct() 
+    {
+        parent::__construct();
+        $this->load->model(array('m_crud', 'm_ajax'));
+    }
 
     function index() {
         $this->load->view('merchant-css');
         $this->load->view('eng_main_reports');
         $this->load->view('merchant-js');
 	}
+    
+    function getAjax() {
+        $date = $this->input->post('konicalendar-start');
+        $newDate = date("Y-m-d", strtotime($date));
+        //echo "<script>console.log( 'Debug Objects: " . $date . "' );</script>";
+
+        $data = $this->m_ajax->getAjax($newDate)->result();
+        
+        echo json_encode($data);
+    }
 
 }

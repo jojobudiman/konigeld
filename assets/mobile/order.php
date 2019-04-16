@@ -81,8 +81,19 @@ while ($row2 = mysqli_fetch_array($hasil3)) {
     $idnya = $row2['id_order'];
 }
 
-$detail = "INSERT INTO order_details VALUES(0, $idnya, $id_produk, $id_diskon, $id_modifier, 1)";
-$sip = mysqli_query($conn, $detail);
+$hasil5 = mysqli_query($conn, $sql);
+
+while ($row3 = mysqli_fetch_array($hasil5)) {
+    $id_produk2 = $row3['id_produk'];
+    $id_modifier2 = $row3['id_modifier'];
+    $id_diskon2 = $row3['id_diskon'];
+    $tot2 = $row3['total'];
+    
+    $detail = "INSERT INTO order_details VALUES(0, $idnya, $id_produk, $id_diskon, $id_modifier, 1)";
+    $sip = mysqli_query($conn, $detail);
+}
+
+
 
 $hist = "INSERT INTO history VALUES(0, $idnya, '$date', '$total', 1)";
 $yess = mysqli_query($conn, $hist);

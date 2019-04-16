@@ -78,13 +78,13 @@
                                                 <td><?php echo $list->jangka_periode ?></td>
                                                 <td><?php echo $list->total_transaksi ?></td>
                                                 <td>
-                                                    <a href="<?php echo base_url(). 'admin_transactionhistory_name' ?>">
+                                                    <a href="<?php echo base_url(). 'admin_transactionapproval/approve' ?>">
                                                         <button type="button" class="btn btn-outline-success">
                                                             <i class="fa fa-thumbs-up"></i>
                                                             &nbsp; Approve
                                                         </button>
                                                     </a>
-                                                    <a href=""></a>
+                                                    <a href="<?php echo base_url(). 'admin_transactionapproval/decline' ?>"></a>
                                                     <button type="button" class="btn btn-outline-danger">
                                                       <i class="fa fa-thumbs-down"></i>&nbsp; Decline</button>
                                                 </td>
