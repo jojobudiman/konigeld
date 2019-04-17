@@ -1,22 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 08, 2019 at 02:56 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- Host: localhost:8889
+-- Generation Time: Apr 16, 2019 at 04:52 AM
+-- Server version: 5.7.25
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `konigeld`
@@ -44,7 +36,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `fname_admin`, `lname_admin`, `email_admin`, `pass_admin`, `status_admin`, `hp_admin`, `alamat_admin`) VALUES
-(1, 'Jovan', 'Hidayat', 'hidayatjovan@gmail.com', 'b59c6e9b344bae1a36fe427a42889265', 1, '081212841621', 'Citra Raya');
+(1, 'Jovan', 'Hidayat', 'hidayatjovan@gmail.com', 'b59c6e9b344bae1a36fe427a42889265', 1, '081212841621', 'Citra Raya'),
+(2, 'Jonathan', 'Budiman', 'jojobudiman@gmail.com', '101a6ec9f938885df0a44f20458d2eb4', 1, '087868888866', 'XD Street');
 
 -- --------------------------------------------------------
 
@@ -71,6 +64,14 @@ CREATE TABLE `detail_modifier` (
   `id_modifier` int(11) NOT NULL,
   `id_produk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_modifier`
+--
+
+INSERT INTO `detail_modifier` (`id_modifier`, `id_produk`) VALUES
+(1, 1),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -107,6 +108,13 @@ CREATE TABLE `diskon` (
   `status_diskon` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `diskon`
+--
+
+INSERT INTO `diskon` (`id_diskon`, `id_merchant`, `nama_diskon`, `jumlah`, `status_diskon`) VALUES
+(1, 1, 'Hari Buruh Nasional', 0.2, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -117,7 +125,7 @@ CREATE TABLE `history` (
   `id_history` int(11) NOT NULL,
   `id_order` int(11) NOT NULL,
   `tanggal` date NOT NULL,
-  `total` int(11) NOT NULL,
+  `total` text NOT NULL,
   `status_history` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -147,6 +155,14 @@ CREATE TABLE `jenis_produk` (
   `nama_jenis` text NOT NULL,
   `status_jenis` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jenis_produk`
+--
+
+INSERT INTO `jenis_produk` (`id_jenis_p`, `id_merchant`, `nama_jenis`, `status_jenis`) VALUES
+(1, 1, 'Foods', 1),
+(2, 1, 'Drinks', 1);
 
 -- --------------------------------------------------------
 
@@ -228,6 +244,13 @@ CREATE TABLE `modifier` (
   `status_modifier` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `modifier`
+--
+
+INSERT INTO `modifier` (`id_modifier`, `id_outlet`, `nama_modifier`, `harga_modifier`, `status_modifier`) VALUES
+(1, 1, 'Paket Super Hemat', '10000', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -237,10 +260,9 @@ CREATE TABLE `modifier` (
 CREATE TABLE `order` (
   `id_order` int(11) NOT NULL,
   `id_outlet` int(11) NOT NULL,
-  `id_merchant` int(11) NOT NULL,
   `tanggal_order` date NOT NULL,
-  `waktu_order` time NOT NULL,
-  `total_order` int(11) NOT NULL,
+  `waktu_order` text NOT NULL,
+  `total_order` text NOT NULL,
   `status_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -251,12 +273,12 @@ CREATE TABLE `order` (
 --
 
 CREATE TABLE `order_details` (
+  `id_details` int(11) NOT NULL,
   `id_order` int(11) NOT NULL,
   `id_produk` int(11) NOT NULL,
   `id_diskon` int(11) NOT NULL,
   `id_paket` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `poin_member` int(11) NOT NULL
+  `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -299,6 +321,32 @@ CREATE TABLE `produk` (
   `status_produk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `id_outlet`, `id_jenis_p`, `nama_produk`, `harga`, `stok`, `status_produk`) VALUES
+(1, 1, 1, 'Bakso Goreng', '7000', 10, 1),
+(2, 1, 2, 'Lemon Tea', '5000', 10, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temporary_order`
+--
+
+CREATE TABLE `temporary_order` (
+  `id_temporary` int(11) NOT NULL,
+  `id_outlet` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_produk` text NOT NULL,
+  `id_modifier` text NOT NULL,
+  `id_diskon` text NOT NULL,
+  `total` text NOT NULL,
+  `date` text NOT NULL,
+  `status_temp` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- --------------------------------------------------------
 
 --
@@ -340,6 +388,14 @@ CREATE TABLE `user` (
   `id_merchant` int(11) NOT NULL,
   `status_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `fname_user`, `lname_user`, `email_user`, `pass_user`, `jabatan`, `hp_user`, `id_outlet`, `id_merchant`, `status_user`) VALUES
+(1, 'Alvira', 'Putri', 'alvirap7@gmail.com', '202cb962ac59075b964b07152d234b70', 'Cashier', '08131321312', 1, 1, 1),
+(2, 'Eugenius', 'Pranoto', 'eugeniuspranoto98@gmail.com', '9741da9f7cdd416b0c4b63811770bd6e', 'Janitor', '08134234242', 1, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -412,6 +468,12 @@ ALTER TABLE `order`
   ADD PRIMARY KEY (`id_order`);
 
 --
+-- Indexes for table `order_details`
+--
+ALTER TABLE `order_details`
+  ADD PRIMARY KEY (`id_details`);
+
+--
 -- Indexes for table `outlet_merchant`
 --
 ALTER TABLE `outlet_merchant`
@@ -422,6 +484,12 @@ ALTER TABLE `outlet_merchant`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`);
+
+--
+-- Indexes for table `temporary_order`
+--
+ALTER TABLE `temporary_order`
+  ADD PRIMARY KEY (`id_temporary`);
 
 --
 -- Indexes for table `transaksi`
@@ -443,7 +511,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -455,7 +523,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `diskon`
 --
 ALTER TABLE `diskon`
-  MODIFY `id_diskon` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_diskon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `history`
@@ -473,7 +541,7 @@ ALTER TABLE `history_transaksi`
 -- AUTO_INCREMENT for table `jenis_produk`
 --
 ALTER TABLE `jenis_produk`
-  MODIFY `id_jenis_p` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_jenis_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -497,13 +565,19 @@ ALTER TABLE `merchant`
 -- AUTO_INCREMENT for table `modifier`
 --
 ALTER TABLE `modifier`
-  MODIFY `id_modifier` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_modifier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
   MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `order_details`
+--
+ALTER TABLE `order_details`
+  MODIFY `id_details` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `outlet_merchant`
@@ -515,7 +589,13 @@ ALTER TABLE `outlet_merchant`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `temporary_order`
+--
+ALTER TABLE `temporary_order`
+  MODIFY `id_temporary` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
@@ -527,9 +607,4 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

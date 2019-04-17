@@ -12,24 +12,23 @@ if (!$conn) {
 }
 //echo "Connected successfully<br>";
 $idout = $_GET['id_outlet'];
-$id_user = $_GET['id_user'];
-$date = date("Y-m-d");
 
-$sql = "SELECT * FROM temporary_order WHERE 'id_outlet' = $idout AND 'id_user' = $id_user AND date = '$date'";
-
+$sql = "SELECT * FROM `order` WHERE id_outlet = $idout ORDER BY tanggal_order DESC, waktu_order DESC";
 $hasil = mysqli_query($conn, $sql);
 $result = array();
 $isi = array();
 
 while ($row = mysqli_fetch_assoc($hasil)) {
-  $id_p = $row['id_produk'];
-  $id_d = $row['id_diskon'];
-  $id_paket = $row['id_paket'];
+  $id_o = $row['id_order'];
+  $date = $row['tanggal_order'];
+  $time = $row['waktu_order'];
+  $total = $row['total_order'];
 
   $isi[] = array(
-    "id_produk" => $id_p,
-    "id_modifier" => $id_paket,
-    "id_diskon" => $id_d
+    "id_order" => $id_o,
+    "date" => $date,
+    "waktu" => $time,
+    "total_order" => $total
   );
 }
 $output = json_encode($isi);
@@ -38,7 +37,7 @@ array_push($output);
 http_response_code(200);
 
 //print(json_encode(array('item' => $isi)));
-print($isi);
+//print($isi);
 mysqli_free_result($hasil);
 mysqli_close($conn);
 ?>

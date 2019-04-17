@@ -20,7 +20,7 @@ $id_diskon = $_GET['id_diskon'];
 $total = $_GET['total'];
 $date = date("Y-m-d");
 
-$sql = "INSERT INTO temporary_order VALUES ($id_temp, $idout, $id_user, '$id_produk', '$id_modifier', '$id_diskon', '$total', '$date', 1)";
+$sql = "INSERT INTO temporary_order VALUES ($id_temp, $idout, $id_user, $id_produk, $id_modifier, $id_diskon, '$total', '$date', 1)";
 
 $hasil = mysqli_query($conn, $sql);
 
