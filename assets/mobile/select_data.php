@@ -21,6 +21,16 @@ $tt = "0";
 
 while ($row = mysqli_fetch_assoc($hasil)) {
   $id_o = $row['id_order'];
+  $id_produk = 0;
+  $id_modifier = 0;
+  $id_diskon = 0;
+  $hg = null;
+  $nama = null;
+  $hgm = null;
+  $nama_mod = null;
+  $diskon = null;
+  $nama_dis = null;
+
   $id_produk = $row['id_produk'];
   $id_modifier = $row['id_modifier'];
   $id_diskon = $row['id_diskon'];

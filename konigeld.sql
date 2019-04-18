@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 16, 2019 at 04:52 AM
+-- Generation Time: Apr 18, 2019 at 09:44 AM
 -- Server version: 5.7.25
 -- PHP Version: 7.3.1
 
@@ -128,6 +128,18 @@ CREATE TABLE `history` (
   `total` text NOT NULL,
   `status_history` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `history`
+--
+
+INSERT INTO `history` (`id_history`, `id_order`, `tanggal`, `total`, `status_history`) VALUES
+(1, 1, '2019-04-18', '4000', 1),
+(2, 2, '2019-04-18', '11200', 1),
+(3, 3, '2019-04-18', '14000', 1),
+(4, 4, '2019-04-18', '19000', 1),
+(5, 5, '2019-04-18', '0', 1),
+(6, 6, '2019-04-18', '14000', 1);
 
 -- --------------------------------------------------------
 
@@ -266,6 +278,18 @@ CREATE TABLE `order` (
   `status_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`id_order`, `id_outlet`, `tanggal_order`, `waktu_order`, `total_order`, `status_order`) VALUES
+(1, 1, '2019-04-18', '11:02:44', '4000', 1),
+(2, 1, '2019-04-18', '11:21:38', '11200', 1),
+(3, 1, '2019-04-18', '14:05:24', '14000', 1),
+(4, 1, '2019-04-18', '14:11:45', '19000', 1),
+(5, 1, '2019-04-18', '14:46:48', '0', 1),
+(6, 1, '2019-04-18', '15:55:30', '14000', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -277,9 +301,27 @@ CREATE TABLE `order_details` (
   `id_order` int(11) NOT NULL,
   `id_produk` int(11) NOT NULL,
   `id_diskon` int(11) NOT NULL,
-  `id_paket` int(11) NOT NULL,
+  `id_modifier` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_details`
+--
+
+INSERT INTO `order_details` (`id_details`, `id_order`, `id_produk`, `id_diskon`, `id_modifier`, `quantity`) VALUES
+(1, 1, 2, 0, 0, 1),
+(2, 1, 0, 1, 0, 1),
+(3, 2, 1, 0, 0, 1),
+(4, 2, 1, 0, 0, 1),
+(5, 2, 0, 1, 0, 1),
+(6, 3, 1, 0, 0, 1),
+(7, 3, 1, 0, 0, 1),
+(8, 4, 1, 0, 0, 1),
+(9, 4, 1, 0, 0, 1),
+(10, 4, 2, 0, 0, 1),
+(11, 6, 1, 0, 0, 1),
+(12, 6, 1, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -339,9 +381,9 @@ CREATE TABLE `temporary_order` (
   `id_temporary` int(11) NOT NULL,
   `id_outlet` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_produk` text NOT NULL,
-  `id_modifier` text NOT NULL,
-  `id_diskon` text NOT NULL,
+  `id_produk` int(11) NOT NULL,
+  `id_modifier` int(11) NOT NULL,
+  `id_diskon` int(11) NOT NULL,
   `total` text NOT NULL,
   `date` text NOT NULL,
   `status_temp` int(11) NOT NULL
@@ -529,7 +571,7 @@ ALTER TABLE `diskon`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `history_transaksi`
@@ -571,13 +613,13 @@ ALTER TABLE `modifier`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id_details` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_details` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `outlet_merchant`
@@ -595,7 +637,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `temporary_order`
 --
 ALTER TABLE `temporary_order`
-  MODIFY `id_temporary` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_temporary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
