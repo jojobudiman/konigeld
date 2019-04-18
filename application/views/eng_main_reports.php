@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php 
+<?php
     if($this->session->userdata("id") == "") {
         redirect('english_home');
     }
@@ -424,11 +424,6 @@
               <a href="<?php echo base_url(). 'reports_salessummary'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Sales Summary</a>
               <a href="<?php echo base_url(). 'reports_salestrends'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
               <a href="<?php echo base_url(). 'reports_paymentmethods'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Payment Methods</a>
-              <a href="<?php echo base_url(). 'reports_productsales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Product Sales</a>
-              <a href="<?php echo base_url(). 'reports_categorysales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Category Sales</a>
-              <a href="<?php echo base_url(). 'reports_employeesales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Employee Sales</a>
-              <a href="<?php echo base_url(). 'reports_discountsales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Discounts</a>
-              <a href="<?php echo base_url(). 'reports_modifiersales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Modifier Sales</a>
             </div>
           </div>
           <!--End Sidebar-->
@@ -797,7 +792,7 @@
            var start = reformatDate($(this).val());
            var ttl = 0;
            console.log(start);
-           
+
            $.ajax({
                type : 'POST',
                url : "<?php echo base_url().'reports_salessummary/getAjax/'?>",
@@ -827,7 +822,7 @@
                        if(countt == 0) {
                            datoo.push(0);
                        }
-                       
+
                        /*var wktu = jam[c].split(":");
                        console.log(jam[c]+ " " + c);
                        var d;
@@ -857,7 +852,7 @@
         var mo = getMonth(dArr[1]);
         return dArr[2]+ "-" + "0"+mo + "-" +dArr[0]; //ex out: "18/01/10"
     }
-    
+
     const salesSummaryChart = document.getElementById('sales-summary-chart');
 
         let dataArray1 = datoo;
@@ -892,7 +887,7 @@
                 ]
             },
             options: {
-                
+
                 responsive: true,
                 showTooltips: true,
                 legend: {
@@ -964,7 +959,7 @@
             //console.log(start);
             var apa = [];
             var jam = [];
-        
+
             $.ajax({
                 type : 'POST',
                 url : "<?php echo base_url().'reports_salessummary/getAjax/'?>",
@@ -1014,7 +1009,7 @@
                 ]
             },
             options: {
-                
+
                 responsive: true,
                 showTooltips: true,
                 legend: {
