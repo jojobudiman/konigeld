@@ -16,7 +16,7 @@ class reports_salessummary extends CI_Controller {
 	}
     
     function getAjax() {
-        $date = $this->input->post('konicalendar-start');
+        $date = $this->input->post('start');
         $newDate = date("Y-m-d", strtotime($date));
         //echo "<script>console.log( 'Debug Objects: " . $date . "' );</script>";
 
