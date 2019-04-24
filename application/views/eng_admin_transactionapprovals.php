@@ -68,7 +68,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <?php foreach($trans as $list) ?>
+                                                <?php foreach($trans as $list) { ?>
                                                 <td><?php echo $list->id_transaksi ?></td>
                                                 <td><?php echo $list->fname_merchant." ".$list->lname_merchant ?></td>
                                                 <td><?php echo $list->nama_bisnis ?></td>
@@ -78,17 +78,17 @@
                                                 <td><?php echo $list->jangka_periode ?></td>
                                                 <td><?php echo $list->total_transaksi ?></td>
                                                 <td>
-                                                    <a href="<?php echo base_url(). 'admin_transactionapproval/approve' ?>">
+                                                    <a href="<?php echo base_url(). 'admin_transactionapproval/approve/'.$list->id_transaksi ?>">
                                                         <button type="button" class="btn btn-outline-success">
                                                             <i class="fa fa-thumbs-up"></i>
                                                             &nbsp; Approve
                                                         </button>
                                                     </a>
-                                                    <a href="<?php echo base_url(). 'admin_transactionapproval/decline' ?>"></a>
+                                                    <a href="<?php echo base_url(). 'admin_transactionapproval/decline/'.$list->id_transaksi ?>"></a>
                                                     <button type="button" class="btn btn-outline-danger">
                                                       <i class="fa fa-thumbs-down"></i>&nbsp; Decline</button>
                                                 </td>
-                                                <?php ?>
+                                                <?php } ?>
                                             </tr>
                                         </tbody>
                                     </table>

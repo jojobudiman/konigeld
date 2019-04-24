@@ -345,7 +345,7 @@
                     <div class="col-lg-6">
                         <form class="contact_us_form row" action="<?php echo base_url(). 'contactus' ?>" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
                             <div class="form-group col-lg-12">
-                                <input type="text" class="form-control" id="name" name="cname" placeholder="Name">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Your Email">
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="text" class="form-control" id="subject" name="csubject" placeholder="Subject*">

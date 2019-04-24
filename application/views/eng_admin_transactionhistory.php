@@ -67,25 +67,27 @@
                                                 <th>Starting Date</th>
                                                 <th>Ending Date</th>
                                                 <th>Total</th>
-                                                <th>Action</th>
+                                                <!--<th>Action</th>-->
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td id="buttons">
+                                                <?php foreach($hist as $list) { ?>
+                                                <td><?php echo $list->id_transaksi ?></td>
+                                                <td><?php echo $list->fname_merchant." ".$list->lname_merchant." from ".$list->nama_bisnis ?></td>
+                                                <td><?php echo $list->nama_kategori ?></td>
+                                                <td><?php echo $list->jangka_periode ?></td>
+                                                <td><?php echo $list->tanggal_awal ?></td>
+                                                <td><?php echo $list->tanggal_akhir ?></td>
+                                                <td><?php echo $list->total_transaksi ?></td>
+                                                <!--<td id="buttons">
                                                     <div class="col-sm-6">
                                                         <a href="<?php echo base_url(). 'admin_table/transaction/delete' ?>">
                                                         <button type="button" class="btn btn-outline-danger">Delete</button>
                                                         </a>
                                                     </div>
-                                                </td>
+                                                </td>-->
+                                                <?php } ?>
                                             </tr>
                                         </tbody>
                                     </table>

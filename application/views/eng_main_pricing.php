@@ -340,7 +340,7 @@ error_reporting(0);
                                             $idp = $this->session->set_userdata("idk", $idp);
                                         }
                                         else {
-                                            $namap = "No subs";
+                                            $namap = $this->session->userdata("plan");
                                         }
                                     ?>
                                   <input class="form-field-input" id="subname" type="text" value="<?php echo $namap ?>" readonly>
@@ -352,7 +352,7 @@ error_reporting(0);
                               <div class="form-field">
                                 <label class="form-field-label" for="lastpay">Last Payment</label>
                                 <div class="form-field-content form-field-link-wrapper">
-                                  <input disabled class="form-field-input" id="lastpay" type="text" value="Terakhir bayar kapan">
+                                  <input disabled class="form-field-input" id="lastpay" type="text" value="<?php echo $this->session->userdata("last") ?>">
                                 </div>
                               </div>
                             </div>
@@ -367,7 +367,7 @@ error_reporting(0);
                             </thead>
                             <tbody>
                               <tr>
-                                <td colspan="1" rowspan="1" class="item-table-name konitable">Tanggal expired</td>
+                                <td colspan="1" rowspan="1" class="item-table-name konitable"><?php echo $this->session->userdata("exp") ?></td>
                               </tr>
                             </tbody>
                           </table>
@@ -475,7 +475,7 @@ error_reporting(0);
                 data : {bill:bill},
                 success : function(data) {
                     for(i in data) {
-                        if(bill == 1) {
+                        if(bill == 2) {
                             $('#awal').hide();
                         }
                         else {

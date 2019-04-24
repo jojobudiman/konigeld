@@ -5,8 +5,8 @@ class login_admin extends CI_Controller {
 
         function __construct()
          {
-                  parent::__construct();
-                  $this->load->model(array('m_crud', 'm_admin'));
+            parent::__construct();
+            $this->load->model(array('m_crud', 'm_admin'));
          }
 
          function index() {

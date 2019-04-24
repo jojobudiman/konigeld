@@ -6,10 +6,21 @@ class subscriptions extends CI_Controller {
 	function __construct()
     {
         parent::__construct();
-        $this->load->model(array('m_crud', 'm_ajax'));
+        $this->load->model(array('m_crud', 'm_ajax', 'm_subs'));
     }
 
     function index() {
+        $where = array(
+            'transaksi.id_merchant' => $this->session->userdata("id"),
+            'transaksi.status_transaksi' => 2
+        );
+        $pricing = $this->m_subs->select2($where)->result();
+        foreach($pricing as $list) {
+            //$newDate = date("m-d-Y", strtotime($origDate));
+            $this->session->set_userdata("plan", $list->nama_kategori);
+            $this->session->set_userdata("last", date("l, j F Y", strtotime($list->tgl_transaksi)));
+            $this->session->set_userdata("exp", date("l, j F Y", strtotime($list->tanggal_akhir)));
+        }
         $this->load->view('merchant-css');
         $this->load->view('eng_main_pricing');
         $this->load->view('merchant-js');
@@ -29,8 +40,8 @@ class subscriptions extends CI_Controller {
         //echo "<script type='text/javascript'>alert('$bil');</script>";
 
 
-        if($sub == 1) {
-            if($bil == 1) {
+        if($sub == 2) {
+            if($bil == 2) {
                 $awal = 25000;
                 $bulanan = 25000;
                 $total = 25000;
@@ -43,7 +54,7 @@ class subscriptions extends CI_Controller {
             }
         }
         else if($sub == 2) {
-            if($bil == 1) {
+            if($bil == 2) {
                 $awal = 75000;
                 $bulanan = 75000;
                 $total = 75000;
@@ -56,7 +67,7 @@ class subscriptions extends CI_Controller {
             }
         }
         else if($sub == 3){
-            if($bil == 1) {
+            if($bil == 2) {
                 $awal = 150000;
                 $bulanan = 150000;
                 $total = 150000;

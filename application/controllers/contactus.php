@@ -10,25 +10,35 @@ class contactus extends CI_Controller {
     }
 
     function index() { //Bikin tabel contactus (?)
-        $mailTo = "konigeld@gmail.com";
-        $headers = "From:" .$mailFrom;
-        $cname = $this->input->post("cname"); //Ambil nama
-        $csubject = $this->input->post("csubject"); //Ambil subjek
-        $cmessage = $this->input->post("cmessage"); //Ambil pesan
-
-        $text = "You've received an e-mail from ".$cname.".\n\n".$cmessage;
-
+        $email = $this->input->post("email");
+        $sub = $this->input->post("csubject");
+        $message = $this->input->post("cmessage");
+        $date = date("Y-m-d");
+        
         $data = array(
-        'contact_id'=>NULL,
-        'contact_name'=>$tangkapNama,
-        'contact_subject'=>$tangkapSubject,
-        'contact_message'=>$tangkapIsi
+            'id_contact' => 0,
+            'email' => $email,
+            'subject_contact' => $sub,
+            'isi' => $message,
+            'date_contact' => $date,
+            'status_contact' => 1
         );
-
-        /*$this->m_contactus->insertData($data,'contactUs');*/
-
-        mail($mailTo, $csubject, $text, $headers);
-        header('location:index.php?mailsend');
+        
+        $this->m_crud->insertData($data, 'contact');
+        redirect('en/home');
 	}
+    
+    function replied($id) {
+        $where = array(
+            'id_contact' => $id
+        );
+        
+        $data = array(
+            'status_contact' => 0
+        );
+        
+        $this->m_crud->update_data($where, $data, 'contact');
+        redirect('admin_messagerequests');
+    }
 
 }

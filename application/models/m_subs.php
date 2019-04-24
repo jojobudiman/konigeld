@@ -11,4 +11,26 @@ class M_subs extends CI_Model {
         $query = $this->db->get();
         return $query;
     }
+    
+    function select2($where) {
+        $this->db->select('*')
+            ->from('transaksi')
+            ->join('merchant', 'merchant.id_merchant = transaksi.id_merchant', 'inner')
+            ->join('detail_transaksi', 'transaksi.id_transaksi = detail_transaksi.id_transaksi', 'inner')
+            ->join('kategori', 'kategori.id_kategori = detail_transaksi.id_kategori', 'inner')
+            ->where($where);
+        $query = $this->db->get();
+        return $query;
+    }
+    
+    function check($where) {
+        $this->db->select("*")
+            ->from('transaksi')
+            ->join('merchant', 'merchant.id_merchant = transaksi.id_merchant'. 'inner')
+            ->join('detail_transaksi', 'detail_transaksi.id_transaksi = transaksi.id_transaksi', 'inner')
+            ->join('kategori', 'detail_transaksi.id_kategori = kategori.id_kategori', 'inner')
+            ->where($where);
+        $query = $this->db->get();
+        return $query;
+    }
 }

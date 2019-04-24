@@ -703,12 +703,12 @@
                               Gross sales on dd/mm/yyy were 'insert amount'. This was <span class="sales-summary-chart-desc-positive">up Rp 85000.00</span> from the closeset Saturday the previous year.
                           </p>
                         </div>
-                        <div class="sales-summary-chart-legend">
+                        <div class="sales-summary-chart-legend" hidden>
                           <div class="sales-summary-chart-legend-item">
                             <spam class="sales-summary-chart-legend-item-label">24 Feb 2019</spam>
                             <div class="sales-summary-chart-legend-item-label sales-circle circle-blue"></div>
                           </div>
-                          <div class="sales-summary-chart-legend-item">
+                        <div class="sales-summary-chart-legend-item" hidden>
                             <spam class="sales-summary-chart-legend-item-label">25 Feb 2018</spam>
                             <div class="sales-summary-chart-legend-item-label sales-circle"></div>
                           </div>
@@ -793,7 +793,10 @@
         var datoo = [];
         var jam = [];
         var jm = 0;
+        var patok = [];
        $('#konicalendar-start').change(function() {
+           datoo = [];
+           jam = [];
            var start = reformatDate($(this).val());
            var ttl = 0;
            console.log(start);
@@ -813,40 +816,132 @@
                        jm++;
                    }
                    var c;
-                   var coun = 0;
                    var z;
+                   console.log(jam);
+                   //console.log(apa);
                    for(c = 0; c < 23; c++) {
                        var countt = 0;
                        for(z = 0; z < jm; z++) {
+                           var ccc = 0;
                            var wktu = jam[z].split(":");
                            if(wktu[0] == c) {
-                               datoo.push(apa[z]);
-                               countt = 1;
+                               if(patok.includes(wktu[0])) {
+                                   datoo[c] = parseFloat(parseInt(datoo[c]) + parseFloat(apa[z])).toFixed(2);
+                                   ccc = 1;
+                               }
+                               if(ccc == 0) {
+                                   datoo.push(parseFloat(apa[z]).toFixed(2));
+                                   countt = 1;
+                                   patok.push(wktu[0]);
+                               }
                            }
                        }
                        if(countt == 0) {
-                           datoo.push(0);
+                           datoo.push(parseFloat("0").toFixed(2));
                        }
-                       
-                       /*var wktu = jam[c].split(":");
-                       console.log(jam[c]+ " " + c);
-                       var d;
-                       var flg = 0;
-                       for(d = 0; d < 24; d++) {
-                           if(wktu[0] == d) {
-                               datoo.push(apa[c]);
-                               break;
-                           }
-                           flg = 1;
-                       }
-                       if(flg = 1) {
-                           datoo.push(0);
-                       }*/
                    }
                    console.log(datoo);
                    $('#oi').html("Rp "+ttl);
+                   const salesSummaryChart = document.getElementById('sales-summary-chart');
+
+        let dataArray1 = datoo;
+        let dataArray2 = [0.00];
+
+        let maxArray1 = Math.max.apply(null, dataArray1);
+        let maxArray2 = Math.max.apply(null, dataArray2);
+
+        let lineChart = new Chart(salesSummaryChart, {
+            type: 'line', //Could be bar, horizontal bar, pie, line, doughnut, radar, polar area, etx
+            data: {
+                labels: ["12 am", "1 am", "2 am", "3 am", "4 am", "5 am", "6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm"],
+                datasets: [
+                    {
+                        //label: '24 Feb 2019',
+                        lineTension: 0,
+                        backgroundColor: 'transparent',
+                        borderColor: 'rgb(59 ,131, 140)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgb(255, 255, 255)',
+                        data: dataArray1,
+                    },
+                    {
+                        //label: "25 Feb 2018",
+                        lineTension: 0,
+                        backgroundColor: 'transparent',
+                        borderColor: 'rgb(113, 118, 123)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgb(255, 255, 255)',
+                        data: dataArray2,
+                    }
+                ]
+            },
+            options: {
+                
+                responsive: true,
+                showTooltips: true,
+                legend: {
+                    display: false,
+                },
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                        gridLines: {
+                            display: true,
+                            color: 'rgb(60, 60, 60)'
+                        },
+                        ticks: {
+                            precision: 0,
+                            fontColor: 'rgb(0, 0, 0)'
+                        }
+                    }],
+                    yAxes: [{
+                        type: 'linear',
+                        /*afterBuildTicks: function(scale) {
+                        scale.ticks = updateChartTicks(scale);
+                        return;
+                        },
+                        beforeUpdate: function(oScale) {
+                        return;
+                        },*/
+                        stacked: true,
+                        gridLines: {
+                            display: true,
+                            color: 'rgb(60, 60, 60)'
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function(value, index, values) {
+                                return 'Rp ' + value;
+                            },
+                            scaleLabel: {
+                                display: true,
+                                scaleOverride : true
+                            },
+                            /*max: Math.max.apply(dataArray1, dataArray2) + 100000,*/
+                            maxTicksLimit: 4,
+                            precision: 0,
+                            fontColor: 'rgb(0, 0, 0)'
+                        }
+                    }]
+                },
+                tooltips: {
+                    enabled: false,
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                        }
+                    }
+                },
+                plugins: {
+                    filler: {
+                        propagate: true
+                    }
+                }
+            }
+        });
                }
            });
+           
        });
     function getMonth(monthStr){
         return new Date(monthStr+'-1-01').getMonth()+1
@@ -860,8 +955,8 @@
     
     const salesSummaryChart = document.getElementById('sales-summary-chart');
 
-        let dataArray1 = datoo;
-        let dataArray2 = [0.00, 0.00, 50000.00, 10000.00, 165000.00, 0.00, 200000.00, 250000.00, 100000.00, 0.00, 0.00, 0.00, 0.00, 0.00, 300000.00, 350000.00, 0.00, 200000.00, 0.00, 0.00, 0.00, 50000.00, 0.00, 0.00];
+        let dataArray1 = [datoo];
+        let dataArray2 = [datoo];
 
         let maxArray1 = Math.max.apply(null, dataArray1);
         let maxArray2 = Math.max.apply(null, dataArray2);

@@ -6,7 +6,7 @@ class categories_new extends CI_Controller {
 	function __construct() 
     {
         parent::__construct();
-        $this->load->model('m_crud');
+        $this->load->model(array('m_crud', 'm_subs', 'm_merchant'));
     }
 
     function index() {
@@ -25,8 +25,31 @@ class categories_new extends CI_Controller {
             "status_jenis" => 1
         );
         
-        $this->m_crud->insertData($data, 'jenis_produk');
-        redirect('categories');
+        $where = array(
+            'transaksi.status_transaksi' => 2,
+            'transaksi.id_merchant' => $this->session->userdata("id")
+        );
+        
+        $check = $this->m_subs->check($where)->result();
+        foreach($check as $cek) {
+            $kategori = $cek->batas_kategori;
+        }
+        
+        $where2 = array(
+            'id_merchant' => $this->session->userdata("id");
+        );
+        $check2 = $this->m_merchant->cekCate($where2)->result();
+        $count = 0;
+        foreach($check2 as $cek2) {
+            $count++;
+        }
+        if($count <= $kategori) {
+            $this->m_crud->insertData($data, 'jenis_produk');
+            redirect('categories');
+        }
+        else {
+            echo "<script type='text/javascript'>alert('Sorry you have reach your maximum amount of categories. Please upgrade your pricing plan to add more');</script>";
+        }
     }
 
 }

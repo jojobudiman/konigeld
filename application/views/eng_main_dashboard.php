@@ -352,13 +352,21 @@
                       </div>
                     </div>
                     <div class="konihead-footer">
-                      <a href="#" class="konihead-footer-link">2 Transactions</a>
+                        <?php
+                        $count = 0;
+                        $total = 0;
+                        foreach($sale as $z) {
+                            $total = $total + $z->total_order;
+                            $count++;
+                        }
+                        ?>
+                      <a href="#" class="konihead-footer-link"><?php echo $count." Transactions" ?></a>
                     </div>
                     <div class="konihead-body">
                       <a href="#" class="konihead-body-link">
                         <div class="konihead-text konihead-text-sales">
                           <div class="konihead-text--body type-prose-line-height">
-                            <div class="konihead-text-header">Rp 85000.00</div>
+                            <div class="konihead-text-header"><?php echo "Rp ".$total.".00" ?></div>
                             <div class="konihead-text-salecomparison"></div>
                           </div>
                         </div>
@@ -379,15 +387,7 @@
                       <a href="#" class="konihead-body-link">
                         <div class="konihead-bar konihead-bar-one">
                           <div class="konihead-bar-label">Cash</div>
-                          <div class="konihead-bar-amount">Rp 85000.00</div>
-                        </div>
-                        <div class="konihead-bar konihead-bar-two">
-                          <div class="konihead-bar-label">Other</div>
-                          <div class="konihead-bar-amount">Rp 0.00</div>
-                        </div>
-                        <div class="konihead-bar konihead-bar-three">
-                          <div class="konihead-bar-label">Card</div>
-                          <div class="konihead-bar-amount">Rp 0.00</div>
+                          <div class="konihead-bar-amount"><?php echo "Rp ".$total.".00" ?></div>
                         </div>
                       </a>
                     </div>
@@ -406,10 +406,31 @@
                         <table class="konihead-table">
                           <tbody>
                             <tr>
+                                <?php 
+                                $counter = 0;
+                                foreach($detail as $list) {
+                                    $counter++;
+                                }
+                                $array = array();
+                                foreach($detail as $list2) {
+                                    for($i = 0; $i < $counter; $i++) {
+                                        $array[$i] = array();
+                                        $array[$i]['name'] = $list2->nama_produk;
+                                        $array[$i]['quan'] = 1;
+                                        for($j = 0; $j < $i; $j++) {
+                                            if($list2->nama_produk == $array[$i]['name']) {
+                                                $array[$i]['quan'] = $array[$i]['quan'] + 1;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                ?>
                               <td class="konihead-item-sales-index-col">1</td>
                               <td class="konihead-item-sales-desc-col strong">Kopi Jovan</td>
                               <td class="konihead-sales-gross-col text-right">Rp 85000.00</td>
                               <td class="konihead-sales-count-col text-right">2</td>
+                                
                             </tr>
                           </tbody>
                         </table>

@@ -6,6 +6,7 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
     <?php
+    error_reporting(0);
     if($this->session->userdata("id") == "") {
         redirect('english_home');
     }
@@ -56,7 +57,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Contact Us ID</th>
-                                                <th>Contact Name</th>
+                                                <th>Contact Email</th>
                                                 <th>Contact Subject</th>
                                                 <th>Contact Message</th>
                                                 <th>Action</th>
@@ -64,19 +65,19 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <?php foreach($trans as $list) ?>
-                                                <td><?php echo $list->id_transaksi ?></td>
-                                                <td><?php echo $list->fname_merchant." ".$list->lname_merchant ?></td>
-                                                <td><?php echo $list->nama_bisnis ?></td>
-                                                <td><?php echo $list->tgl_transaksi ?></td>
+                                                <?php foreach($contact as $list) ?>
+                                                <td><?php echo $list->id_contact ?></td>
+                                                <td><?php echo $list->email ?></td>
+                                                <td><?php echo $list->subject_contact ?></td>
+                                                <td><?php echo $list->isi ?></td>
                                                 <td>
-                                                    <a href="<?php echo base_url(). 'admin_transactionhistory_name' ?>">
+                                                    <a href="<?php echo base_url(). 'contactus/replied/'.$list->id_contact ?>">
                                                         <button type="button" class="btn btn-outline-success">
                                                             <i class="fa fa-thumbs-up"></i>
-                                                            &nbsp; Approve
+                                                            &nbsp; Replied
                                                         </button>
                                                     </a>
-                                                    <a href=""></a>
+                                                    <a href="<?php echo base_url(). 'contactus/replied/'.$list->id_contact ?>"></a>
                                                     <button type="button" class="btn btn-outline-danger">
                                                       <i class="fa fa-thumbs-down"></i>&nbsp; Decline</button>
                                                 </td>

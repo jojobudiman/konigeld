@@ -6,7 +6,7 @@ class modifiers_new extends CI_Controller {
 	function __construct() 
     {
         parent::__construct();
-        $this->load->model(array('m_crud', 'm_product', 'm_modifier'));
+        $this->load->model(array('m_crud', 'm_product', 'm_modifier', 'm_subs', 'm_merchant'));
     }
 
     function index() {
@@ -18,7 +18,22 @@ class modifiers_new extends CI_Controller {
 	}
     
     function add() {
-        $getName = $this->input->post("name");
+        $where = array(
+            'transaksi.status_transaksi' => 2,
+            'transaksi.id_merchant' => $this->session->userdata("id")
+        );
+        $check = $this->m_subs->select($where)->result();
+        foreach($check as $cek) {
+            $mod = $cek->batas_modifier;
+        }
+        
+        $check2 = $this->m_merchant->selectMod($where2)->result();
+        $count = 0;
+        foreach($check2 as $cek2) {
+            $count++;
+        }
+        if($count <= $kategori) {
+            $getName = $this->input->post("name");
         $getPrice = $this->input->post("price");
         $getOut = $this->input->post("out");
         $data = array(
@@ -46,6 +61,10 @@ class modifiers_new extends CI_Controller {
         }
         
         redirect('modifiers');
+        }
+        else {
+            echo "<script type='text/javascript'>alert('Sorry you have reach your maximum amount of modifiers. Please upgrade your pricing plan to add more');</script>";
+        }
     }
 
 }
