@@ -100,7 +100,7 @@
                                 <h6 class="f-red">PERKEMBANGAN LAPORAN PENJUALAN</h6>
                                 <h2 class="h1 bold">Jurnal Jürgen</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Melalui Jurnal Jürgen, anda dapat memantau hasil transaksi yang akan dikirimkan menuju laporan pertumbuhan penjualan. Analisa grafik anda secara serentak untuk membuat sebuah perkembangan baru dalam bisnis anda.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 feature_img">
@@ -133,7 +133,7 @@
                                 <h6 class="f-red">DASHBOARD KÖNIGELD</h6>
                                 <h2 class="h1 bold">Kövaluate</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Evaluasi hasil rata-rata anda dengan dashboard terbaru kami yang telah diimprovisasi. Anda dapat melihat poin penting yang diperlukan untuk bisnis anda.</p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                                 <h6 class="f-red">KARYAWAN-KARYAWAN KÖNIGELD</h6>
                                 <h2 class="h1 bold">Pekerjaan Macam Jürgen</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Pekerjaan Macam Jürgen terdiri dari kustomisasi pekerjaan karyawan anda! Anda dapat membiarkan mereka bekerja secara efektif dan efisien melalui aplikasi kami.</p>
                         </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                                 <h6 class="f-red">MANAJEMEN PRODUK</h6>
                                 <h2 class="h1 bold">Perlengkapan Olav</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Pusing mengatur produk bisnis anda? Perlengkapan Olav adalah salah satu solusi yang dapat membantu kebutuhan anda sehari-hari.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 feature_img">
@@ -213,7 +213,7 @@
                                 <h6 class="f-red">DUKUNGAN YANG BERKEMBANG</h6>
                                 <h2 class="h1 bold">Perkembangan Berkelanjutan</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Tim kami selalu mengembangkan produk utuh secara berkelanjutan untuk menjadi salah satu sistem point of sale unik di Indonesia. Tunggu dari pemberitahuan kami!</p>
                         </div>
                     </div>
                 </div>

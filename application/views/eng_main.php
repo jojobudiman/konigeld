@@ -383,7 +383,7 @@
                     <div class="bd-callout">
                         <h3>Double Jo's</h3>
                         <p>Ruko Golden 8 Extension Blok G No. 8<br> Jalan Ki Hajar Dewantara, Serpong<br> Tangerang, Banten, Indonesia</p>
-                        <h4><a href="#">+62 xxxx xxxx xxxx</a> <a href="mailto:konigeld@gmail.com">hello@doublejos.com</a></h4>
+                        <h4><a href="#">+62 8778 4679 630</a> <a href="mailto:konigeld@gmail.com">hello@doublejos.com</a></h4>
                     </div>
                 </div>
             </div>
