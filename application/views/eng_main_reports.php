@@ -800,6 +800,7 @@
            var start = reformatDate($(this).val());
            var ttl = 0;
            console.log(start);
+
            
            $.ajax({
                type : 'POST',
@@ -837,7 +838,23 @@
                            }
                        }
                        if(countt == 0) {
+<<<<<<< HEAD
                            datoo.push(parseFloat("0").toFixed(2));
+=======
+                           datoo.push(0);
+                       }
+
+                       /*var wktu = jam[c].split(":");
+                       console.log(jam[c]+ " " + c);
+                       var d;
+                       var flg = 0;
+                       for(d = 0; d < 24; d++) {
+                           if(wktu[0] == d) {
+                               datoo.push(apa[c]);
+                               break;
+                           }
+                           flg = 1;
+>>>>>>> f3b5952297f849bd0cfdfb79da4eeee808b18771
                        }
                    }
                    console.log(datoo);
@@ -935,7 +952,7 @@
                 plugins: {
                     filler: {
                         propagate: true
-                    }
+                    } 
                 }
             }
         });
@@ -952,7 +969,7 @@
         var mo = getMonth(dArr[1]);
         return dArr[2]+ "-" + "0"+mo + "-" +dArr[0]; //ex out: "18/01/10"
     }
-    
+
     const salesSummaryChart = document.getElementById('sales-summary-chart');
 
         let dataArray1 = [datoo];
@@ -971,6 +988,7 @@
                         lineTension: 0,
                         backgroundColor: 'transparent',
                         borderColor: 'rgb(59 ,131, 140)',
+                        
                         borderWidth: 2,
                         pointBackgroundColor: 'rgb(255, 255, 255)',
                         data: dataArray1,
@@ -987,7 +1005,7 @@
                 ]
             },
             options: {
-                
+
                 responsive: true,
                 showTooltips: true,
                 legend: {
@@ -1059,7 +1077,7 @@
             //console.log(start);
             var apa = [];
             var jam = [];
-        
+
             $.ajax({
                 type : 'POST',
                 url : "<?php echo base_url().'reports_salessummary/getAjax/'?>",
@@ -1109,7 +1127,7 @@
                 ]
             },
             options: {
-                
+
                 responsive: true,
                 showTooltips: true,
                 legend: {

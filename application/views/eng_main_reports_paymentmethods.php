@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php 
+<?php
     if($this->session->userdata("id") == "") {
         redirect('english_home');
     }
@@ -424,12 +424,7 @@
               <a href="<?php echo base_url(). 'reports_salessummary'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Summary</a>
               <a href="<?php echo base_url(). 'reports_salestrends'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Sales Trends</a>
               <a href="<?php echo base_url(). 'reports_paymentmethods'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child dashboard-header-sidebar-link--active">Payment Methods</a>
-              <a href="<?php echo base_url(). 'reports_productsales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Product Sales</a>
-              <a href="<?php echo base_url(). 'reports_categorysales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Category Sales</a>
-              <a href="<?php echo base_url(). 'reports_employeesales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Employee Sales</a>
-              <a href="<?php echo base_url(). 'reports_discountsales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Discounts</a>
-              <a href="<?php echo base_url(). 'reports_modifiersales'?>" class="dashboard-header-sidebar-link dashboard-header-sidebar-link-child">Modifier Sales</a>
-            </div>
+              \</div>
           </div>
           <!--End Sidebar-->
           <!--Container-->
