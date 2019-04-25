@@ -1,14 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Apr 18, 2019 at 09:44 AM
--- Server version: 5.7.25
--- PHP Version: 7.3.1
+-- Host: 127.0.0.1
+-- Generation Time: Apr 25, 2019 at 02:59 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `konigeld`
@@ -47,12 +55,19 @@ INSERT INTO `admin` (`id_admin`, `fname_admin`, `lname_admin`, `email_admin`, `p
 
 CREATE TABLE `contact` (
   `id_contact` int(11) NOT NULL,
-  `id_merchant` int(11) NOT NULL,
   `email` text NOT NULL,
+  `subject_contact` text NOT NULL,
   `isi` text NOT NULL,
   `date_contact` text NOT NULL,
   `status_contact` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id_contact`, `email`, `subject_contact`, `isi`, `date_contact`, `status_contact`) VALUES
+(1, 'hidayatjovan@gmail.com', 'Test', 'Konigeld mantap', '2019-04-24', 1);
 
 -- --------------------------------------------------------
 
@@ -151,9 +166,15 @@ CREATE TABLE `history_transaksi` (
   `id_history_transaksi` int(11) NOT NULL,
   `id_transaksi` int(11) NOT NULL,
   `tanggal` date NOT NULL,
-  `total` text NOT NULL,
   `status_history` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `history_transaksi`
+--
+
+INSERT INTO `history_transaksi` (`id_history_transaksi`, `id_transaksi`, `tanggal`, `status_history`) VALUES
+(1, 1, '2019-04-24', 1);
 
 -- --------------------------------------------------------
 
@@ -186,6 +207,8 @@ CREATE TABLE `kategori` (
   `id_kategori` int(11) NOT NULL,
   `nama_kategori` text NOT NULL,
   `batas_cabang` int(11) NOT NULL,
+  `batas_modifier` int(11) NOT NULL,
+  `batas_kategori` int(11) NOT NULL,
   `harga` int(11) NOT NULL,
   `status_kategori` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -194,10 +217,10 @@ CREATE TABLE `kategori` (
 -- Dumping data for table `kategori`
 --
 
-INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `batas_cabang`, `harga`, `status_kategori`) VALUES
-(1, 'Entry', 1, 25000, 1),
-(2, 'Junior', 5, 75000, 1),
-(3, 'Senior', 999999, 150000, 1);
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `batas_cabang`, `batas_modifier`, `batas_kategori`, `harga`, `status_kategori`) VALUES
+(1, 'Entry', 1, 0, 2, 25000, 1),
+(2, 'Junior', 5, 5, 10, 75000, 1),
+(3, 'Senior', 999999, 999999, 999999, 150000, 1);
 
 -- --------------------------------------------------------
 
@@ -240,7 +263,8 @@ CREATE TABLE `merchant` (
 --
 
 INSERT INTO `merchant` (`id_merchant`, `fname_merchant`, `lname_merchant`, `nama_bisnis`, `tahun_mulai_bisnis`, `tipe_bisnis`, `monthly_revenue`, `lokasi_bisnis`, `hp_merchant`, `email_merchant`, `pass_merchant`, `status_merchant`) VALUES
-(1, 'Jovan', 'Hidayat', 'Martabak Enak', '2014', 'restaurant', '1500_3000', 'JKT', '081212841621', 'hidayatjovan@gmail.com', 'af288a5c008c7fc65f215853051e6f18', 1);
+(1, 'Jovan', 'Hidayat', 'Martabak Enak', '2014', 'restaurant', '1500_3000', 'JKT', '081212841621', 'hidayatjovan@gmail.com', 'af288a5c008c7fc65f215853051e6f18', 1),
+(2, 'Jonathan', 'Budiman', 'Jonathan Cafe', '2017', 'coffee_shop', '500_750', 'JKT', '081231313121', 'jojobudiman@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1);
 
 -- --------------------------------------------------------
 
@@ -345,7 +369,8 @@ CREATE TABLE `outlet_merchant` (
 --
 
 INSERT INTO `outlet_merchant` (`id_outlet`, `id_merchant`, `alamat_outlet`, `hp_outlet`, `kota`, `provinsi_outlet`, `kodepos_outlet`, `status_outlet`) VALUES
-(1, 1, 'Jl. Gunung Sahari Ancol, Jakarta Utara', '081212841621', 'Jakarta Utara', 'DKI Jakarta', '15150', 1);
+(1, 1, 'Jl. Gunung Sahari Ancol, Jakarta Utara', '081212841621', 'Jakarta Utara', 'DKI Jakarta', '15150', 1),
+(2, 2, 'Ruko Golden Alam Sutera', '081231313121', 'Tangerang', 'Banten', '14014', 1);
 
 -- --------------------------------------------------------
 
@@ -410,7 +435,7 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_admin`, `id_merchant`, `tgl_transaksi`, `total_transaksi`, `tipe_transaksi`, `status_transaksi`) VALUES
-(1, 0, 1, '2019-04-07', '720000', 'Transfer', 1);
+(1, 1, 1, '2019-04-07', '720000', 'Transfer', 2);
 
 -- --------------------------------------------------------
 
@@ -559,7 +584,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `diskon`
@@ -577,7 +602,7 @@ ALTER TABLE `history`
 -- AUTO_INCREMENT for table `history_transaksi`
 --
 ALTER TABLE `history_transaksi`
-  MODIFY `id_history_transaksi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_history_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jenis_produk`
@@ -601,7 +626,7 @@ ALTER TABLE `langganan`
 -- AUTO_INCREMENT for table `merchant`
 --
 ALTER TABLE `merchant`
-  MODIFY `id_merchant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_merchant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `modifier`
@@ -625,7 +650,7 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `outlet_merchant`
 --
 ALTER TABLE `outlet_merchant`
-  MODIFY `id_outlet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_outlet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `produk`
@@ -637,7 +662,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `temporary_order`
 --
 ALTER TABLE `temporary_order`
-  MODIFY `id_temporary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_temporary` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
@@ -650,3 +675,8 @@ ALTER TABLE `transaksi`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
