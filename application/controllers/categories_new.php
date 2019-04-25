@@ -38,7 +38,7 @@ class categories_new extends CI_Controller {
         $where2 = array(
             'id_merchant' => $this->session->userdata("id");
         );
-        $check2 = $this->m_merchant->cekCate($where2)->result();
+        $check2 = $this->m_crud->selectWhere($where2, 'jenis_produk')->result();
         $count = 0;
         foreach($check2 as $cek2) {
             $count++;

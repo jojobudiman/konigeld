@@ -11,4 +11,14 @@ class M_merchant extends CI_Model {
         $query = $this->db->get();
         return $query;
     }
+    
+    function selectMod($where) {
+        $this->db->select("*")
+            ->from('modifier')
+            ->join('outlet_merchant', 'outlet_merchant.id_outlet = modifier.id_outlet', 'inner')
+            ->join('merchant', 'merchant.id_merchant = outlet_merchant.id_merchant', 'inner')
+            ->where($where);
+        $query = $this->db->get();
+        return $query;
+    }
 }
