@@ -103,7 +103,7 @@
                                 <h6 class="f-red">UANG ADALAH RAJA</h6>
                                 <h2 class="h1 bold">Kami percaya perekonomian menjadi lebih baik ketika semua memiliki akses</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Perekonomian di Indonesia cenderung memiliki angka yang rendah terutama dengan banyak pedagang tradisional yang memiliki kekurangan pengetahuan mengenai online transaction processing. Banyak online transaction processing jaman sekarang membuat sedikit konten digital dan hanya memfokuskan pada perusahaan besar.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 about_img">
@@ -135,7 +135,7 @@
                                 <h6 class="f-red">DASAR POINT OF SALE</h6>
                                 <h2 class="h1 bold">Setiap orang belajar menjadi lebih baik melalui penjualan</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Melalui penjualan yang berjalan terus-menerus, jangan khawatir jika anda tidak bisa menjual produk anda. Kami dapat membantu anda untuk menumbuhkan bisnis anda menjadi lebih baik melalui demonstrasi privat dan buku manual yang sudah terlampirkan. Sistem Königeld telah dibuat untuk bisnis baru atau kecil yang menerima kekurangan pengetahuan mengenai online transaction processing.</p>
                         </div>
                     </div>
                 </div>

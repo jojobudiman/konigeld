@@ -115,7 +115,7 @@
                                 <h6 class="f-red">SALES REPORT GROWTH</h6>
                                 <h2 class="h1 bold">Jürgen’s Journal</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Through Jürgen’s Journal, you could monitor your transaction results which will be sent to the sales growth report. Analyze your graph simultaneously to create a new improvement for your business.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 feature_img">
@@ -148,7 +148,7 @@
                                 <h6 class="f-red">KÖNIGELD DASHBOARD</h6>
                                 <h2 class="h1 bold">Kövaluate</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Evaluate your overall results with our latest improvised dashboard. You could see your required business keypoints for your business.</p>
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                                 <h6 class="f-red">KÖNIGELD EMPLOYEES</h6>
                                 <h2 class="h1 bold">Jürgen Custom Works</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Jürgen Custom Works consists of customizing your employee works! You can let them work effectively and efficiently by using our application.</p>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                                 <h6 class="f-red">PRODUCT MANAGEMENT</h6>
                                 <h2 class="h1 bold">Olav Logistics</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Hard to manage your business products? Olav Logistics is the only solution that could relieve your daily needs.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 feature_img">
@@ -228,7 +228,7 @@
                                 <h6 class="f-red">ENDLESS SUPPORT</h6>
                                 <h2 class="h1 bold">Continuous Development</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Our team always continuously develop the whole product to become one of the unique point of sale system in Indonesia. Stay tuned on our updates!</p>
                         </div>
                     </div>
                 </div>

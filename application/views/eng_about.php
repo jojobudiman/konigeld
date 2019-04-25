@@ -120,7 +120,7 @@
                                 <h6 class="f-red">CASH IS KING</h6>
                                 <h2 class="h1 bold">We believe the economy is better when everyone has access</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Economies in Indonesia tend to be low especially with many traditional merchants available who lack of online transaction processing knowledge. Lots of online transaction processing nowadays creates less digital content and focuses on bigger companies.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 about_img">
@@ -152,7 +152,7 @@
                                 <h6 class="f-red">POINT OF SALE FOR BASICS</h6>
                                 <h2 class="h1 bold">Every person learn to become a better one through sales</h2>
                             </div>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                            <p>Through endless sales, don't worry if you can't sell your products. We could help you to grow your business better with private demonstrations and given guidebooks. Königeld system has been built for small or new businesses who recieve lack of online transaction processing knowledge.</p>
                         </div>
                     </div>
                 </div>
